@@ -51,20 +51,25 @@ void gen_ConstMath(char* filename, char* classname, char* super,
     int num_cases) 
 {
     FILE* file = fopen(filename, "w");
+    fprintf(file, "package ch.compiler.misc.nodes.constantExpression.math;\n");
+    fprintf(file, "import ch.compiler.misc.nodes.constantExpression.ConstBinaryExp;\n");
+    fprintf(file, "import ch.compiler.misc.nodes.constantExpression.ConstExpNode;\n");
+    fprintf(file, "import ch.compiler.misc.nodes.constantExpression.literals.*;\n");
+
     fprintf(file, "\n\npublic class %s extends %s {\n\n", classname, super);
     fprintf(file, "\tpublic %s (ConstExpNode left, ConstExpNode right) {\n", classname);
     fprintf(file, "\t\tsuper(left, right);\n\t}\n\n");
     fprintf(file, "\tpublic ConstExpNode evaluate() {\n\t\t");
     fprintf(file, "ConstExpNode leftEvaluated = left.evaluate();\n\t\t");
     fprintf(file, "ConstExpNode rightEvaluated = right.evaluate();\n\t\t");
-    fprintf(file, "switch(evalueateType()) {\n");
+    fprintf(file, "switch(evaluateType()) {\n");
     for (int i = 0; i < num_cases; i++) {
         fprintf(file, "\t\t\t case %s: {\n", types_lit[i]);
         fprintf(file, "\t\t\t\t %s leftExp = ((%s)leftEvaluated).getValue();\n",
             types_prim[i], types_class[i]);
-        fprintf(file, "\t\t\t\t %s leftExp = ((%s)rightEvaluated).getValue();\n",
+        fprintf(file, "\t\t\t\t %s rightExp = ((%s)rightEvaluated).getValue();\n",
             types_prim[i], types_class[i]);
-        fprintf(file, "\t\t\t\treturn new %s(leftExp %s rightExp);\n\t\t\t}\n", types_class[i], op);
+        fprintf(file, "\t\t\t\treturn new %s((%s)(leftExp %s rightExp));\n\t\t\t}\n", types_class[i], types_prim[i], op);
     }
     fprintf(file, "\t\t}\n\t\treturn null;\n\t}\n\n}");
     fclose(file);
@@ -73,7 +78,9 @@ void gen_ConstMath(char* filename, char* classname, char* super,
 void gen_literal(char* filename, char* classname, char* prim_type, char* super, char* prim_lit)
 {
     FILE* file = fopen(filename, "w");
-    fprintf(file, "\n\n\npublic class %s extends %s {\n\t\n", classname, super);
+    fprintf(file, "package ch.compiler.misc.nodes.constantExpression.literals;\n");
+    fprintf(file, "import ch.compiler.misc.nodes.constantExpression.ConstExpNode;\n");
+    fprintf(file, "\npublic class %s extends %s {\n\t\n", classname, super);
     fprintf(file, "\tprivate final %s value;\n\n\t", prim_type);
     fprintf(file, "public %s(%s value) {\n\t\t", classname, prim_type);
     fprintf(file, "this.value = value;\n\t}\n\n");
@@ -96,9 +103,9 @@ void gen_literal(char* filename, char* classname, char* prim_type, char* super, 
 int main(void) {
 
     char* types_class[] = {
-        "IntLiteral",
+        "IntegerLiteral",
         "DoubleLiteral",
-        "CharLiteral",
+        "CharacterLiteral",
         "StringLiteral"
     };
 
@@ -114,13 +121,13 @@ int main(void) {
     GEN_COSNT_MATH(types_prim, types_class, types_lit, ConstBinaryExp, -, Sub);
     GEN_COSNT_MATH(types_prim, types_class, types_lit, ConstBinaryExp, *, Mul);
     GEN_COSNT_MATH(types_prim, types_class, types_lit, ConstBinaryExp, /, Div);
-    GEN_COSNT_MATH(types_prim, types_class, types_lit, ConstBinaryExp, ^, Expo);
+    GEN_COSNT_MATH(types_prim, types_class, types_lit, ConstBinaryExp, ???, Expo);
     GEN_COSNT_MATH(types_prim, types_class, types_lit, ConstBinaryExp, %, Mod);
     
     GEN_LIT(Double, ConstExpNode, DOUBLE);
-    GEN_LIT(Int, ConstExpNode, INT);
+    GEN_LIT(Integer, ConstExpNode, INT);
     GEN_LIT(String, ConstExpNode, STRING);
-    GEN_LIT(Char, ConstExpNode, CHAR);
+    GEN_LIT(Character, ConstExpNode, CHAR);
     GEN_LIT(Boolean, ConstExpNode, BOOLEAN);
 
 	return 0;

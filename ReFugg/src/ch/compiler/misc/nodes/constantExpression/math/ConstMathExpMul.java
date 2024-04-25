@@ -4,9 +4,9 @@ import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
 import ch.compiler.misc.nodes.constantExpression.literals.*;
 
 
-public class ConstMathExpAdd extends ConstBinaryExp {
+public class ConstMathExpMul extends ConstBinaryExp {
 
-	public ConstMathExpAdd (ConstExpNode left, ConstExpNode right) {
+	public ConstMathExpMul (ConstExpNode left, ConstExpNode right) {
 		super(left, right);
 	}
 
@@ -17,22 +17,12 @@ public class ConstMathExpAdd extends ConstBinaryExp {
 			 case INT: {
 				 int leftExp = ((IntegerLiteral)leftEvaluated).getValue();
 				 int rightExp = ((IntegerLiteral)rightEvaluated).getValue();
-				return new IntegerLiteral((int)(leftExp + rightExp));
+				return new IntegerLiteral((int)(leftExp * rightExp));
 			}
 			 case DOUBLE: {
 				 double leftExp = ((DoubleLiteral)leftEvaluated).getValue();
 				 double rightExp = ((DoubleLiteral)rightEvaluated).getValue();
-				return new DoubleLiteral((double)(leftExp + rightExp));
-			}
-			 case CHAR: {
-				 char leftExp = ((CharacterLiteral)leftEvaluated).getValue();
-				 char rightExp = ((CharacterLiteral)rightEvaluated).getValue();
-				return new CharacterLiteral((char)(leftExp + rightExp));
-			}
-			 case STRING: {
-				 String leftExp = ((StringLiteral)leftEvaluated).getValue();
-				 String rightExp = ((StringLiteral)rightEvaluated).getValue();
-				return new StringLiteral((String)(leftExp + rightExp));
+				return new DoubleLiteral((double)(leftExp * rightExp));
 			}
 		}
 		return null;
