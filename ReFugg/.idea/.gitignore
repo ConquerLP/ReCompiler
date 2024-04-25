@@ -2,3 +2,6 @@
 /shelf/
 /workspace.xml
 *.class
+.idea
+/out
+/Compiler ReFugg
