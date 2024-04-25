@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\Stefan\OneDrive - ZHAW\Unterlagen\Projekte\Compiler ReFugg\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1389921077.index
+3413270776.index
+2091035069.index
