@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="antlr4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/antlr4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/antlr4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/antlr4.jar!/org/antlr/runtime/tree" />
+      <root url="jar://$PROJECT_DIR$/lib/antlr4.jar!/org/antlr/v4/runtime/tree" />
+      <root url="jar://$PROJECT_DIR$/lib/antlr4.jar!/org/antlr/v4/runtime/tree/pattern" />
+    </SOURCES>
+  </library>
+</component>

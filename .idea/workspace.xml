@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/../Compiler old_fugg" beforeDir="false" afterPath="$PROJECT_DIR$/../Compiler old_fugg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2fKTdRY7Dyzcd0kfVagcMWb7UqG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Projekte/Fugg&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ZHAW INF\OneDrive - ZHAW\Unterlagen\Projekte\ReFugg\src\ch\compiler\misc\nodes\constantExpression\math" />
+      <recent name="E:\ZHAW INF\OneDrive - ZHAW\Unterlagen\Projekte\ReFugg\src\ch\compiler\misc\nodes\constantExpression\literals" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch.compiler.misc.nodes.expression.unary" />
+      <recent name="ch.compiler.misc.nodes.expression.calls" />
+      <recent name="ch.compiler.misc.nodes.constantExpression.literals" />
+      <recent name="ch.compiler.misc.nodes.expression.bool" />
+      <recent name="ch.compiler.misc.nodes.expression.math" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="" />
+      <created>1714029775333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714029775333</updated>
+      <workItem from="1714029776403" duration="1246000" />
+      <workItem from="1714040550244" duration="666000" />
+      <workItem from="1714046389761" duration="2870000" />
+      <workItem from="1714130252261" duration="175000" />
+      <workItem from="1714130443696" duration="1588000" />
+      <workItem from="1714133051784" duration="29000" />
+      <workItem from="1714143511343" duration="630000" />
+      <workItem from="1714146230159" duration="2277000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="added generated files" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorArgList.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>222</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
+          <line>227</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/Type.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="15" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((java.util.ArrayList)((ConstEQContext)((ArrayList)((ConstJoinContext)((ArrayList)((ConstExprContext)((ArrayList)((ConstExprManyContext)((ArrayList)((ConstListNoSubContext)((ArrayList)((ConstExprListContext)((ArrayList)((ConstUnaryContext)((ArrayList)((ConstExpoContext)((ArrayList)((ConstTermContext)((ArrayList)((ConstLogicContext)((ArrayList)((ConstRelContext)((ArrayList)((ConstEQContext)((ArrayList)((ConstJoinContext)((ArrayList)((ConstExprContext)o).children).get(0)).children).get(0)).children).get(0)).children).get(0)).children).get(0)).children).get(0)).children).get(0)).children).get(0)).children).get(0)).children).get(1)).children).get(0)).children).get(0)).children).get(0)).children).get(0)" custom="ch.compiler.parser.ReFuggParser.ConstListNoSubContext,ch.compiler.parser.ReFuggParser.ConstExprManyContext,ch.compiler.parser.ReFuggParser.ConstLogicContext,ch.compiler.parser.ReFuggParser.ConstTermContext,ch.compiler.parser.ReFuggParser.ConstExpoContext,ch.compiler.parser.ReFuggParser.ConstExprContext,ch.compiler.parser.ReFuggParser.ConstExprListContext,ch.compiler.parser.ReFuggParser.ConstUnaryContext,ch.compiler.parser.ReFuggParser.ConstRelContext,ch.compiler.parser.ReFuggParser.ConstJoinContext,java.util.ArrayList,ch.compiler.parser.ReFuggParser.ConstEQContext" />
+        <watch expression="ctx" />
+        <watch expression="initialValue" />
+        <watch expression="initialValue" />
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

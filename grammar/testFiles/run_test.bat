@@ -1,0 +1,1 @@
+grun ReFugg program test01.txt -gui
