@@ -479,16 +479,6 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitConstUnknownArraysize(ReFuggParser.ConstUnknownArraysizeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ReFuggParser#constDelc}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstDelc(ReFuggParser.ConstDelcContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ReFuggParser#constDelc}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstDelc(ReFuggParser.ConstDelcContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code constListNoSub}
 	 * labeled alternative in {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
@@ -1034,6 +1024,46 @@ public interface ReFuggListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIdentifier(ReFuggParser.IdentifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#doubleRule}.
+	 * @param ctx the parse tree
+	 */
+	void enterDoubleRule(ReFuggParser.DoubleRuleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#doubleRule}.
+	 * @param ctx the parse tree
+	 */
+	void exitDoubleRule(ReFuggParser.DoubleRuleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#intRule}.
+	 * @param ctx the parse tree
+	 */
+	void enterIntRule(ReFuggParser.IntRuleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#intRule}.
+	 * @param ctx the parse tree
+	 */
+	void exitIntRule(ReFuggParser.IntRuleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#stringRule}.
+	 * @param ctx the parse tree
+	 */
+	void enterStringRule(ReFuggParser.StringRuleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#stringRule}.
+	 * @param ctx the parse tree
+	 */
+	void exitStringRule(ReFuggParser.StringRuleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#charRule}.
+	 * @param ctx the parse tree
+	 */
+	void enterCharRule(ReFuggParser.CharRuleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#charRule}.
+	 * @param ctx the parse tree
+	 */
+	void exitCharRule(ReFuggParser.CharRuleContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#or}.
 	 * @param ctx the parse tree
