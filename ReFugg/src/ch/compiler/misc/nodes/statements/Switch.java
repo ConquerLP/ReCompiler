@@ -1,13 +1,12 @@
 package ch.compiler.misc.nodes.statements;
 
 import java.util.List;
-import java.util.ArrayList;
 
-import ch.compiler.misc.nodes.expression.Expression;
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
 public class Switch extends Statement{
 	
-	public Expression expression;
+	public ExpressionNode expression;
 	public List<CaseBlock> caseBlocks;
 	
 }

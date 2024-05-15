@@ -1,13 +1,13 @@
 package ch.compiler.misc.nodes.constantExpression.math;
 import ch.compiler.misc.nodes.constantExpression.ConstBinaryExp;
 import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
-import ch.compiler.misc.nodes.constantExpression.literals.*;
+import ch.compiler.misc.nodes.expression.literals.IntegerLiteral;
 
 
 public class ConstMathExpMod extends ConstBinaryExp {
 
-	public ConstMathExpMod (ConstExpNode left, ConstExpNode right) {
-		super(left, right);
+	public ConstMathExpMod (ConstExpNode left, ConstExpNode right, int type) {
+		super(left, right, type);
 	}
 
 	public ConstExpNode evaluate() {

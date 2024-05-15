@@ -57,14 +57,13 @@ assign: identifier index assignOP expr
 
 //static declarations
 globalVar: GLOBAL type identifier constArray* ';' 					# globalNoInit
-	| GLOBAL type identifier  constArray* '=' constDelc ';' 		# globalYesInit
+	| GLOBAL type identifier  constArray* '=' constExpr ';' 		# globalYesInit
 	;
 
 constArray: '[' constExpr ']' 				# constKnownArraysize
 	| '[' ']' 								# constUnknownArraysize
 	;
 
-constDelc: constExpr | constList ;
 constList: '{' constExprMany '}' 				# constListNoSub
 	| '{' constSubList (',' constSubList)+ '}' 	# constListYesSub
 	;
@@ -148,9 +147,14 @@ logicOp: '<' | '<=' | '>' | '>=' ;
 assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '^=' | '%=' ;
 postOP: '++' | '--' ;	
 	
-constant: DOUBLE_LIT | INT_LIT | STRING_LIT | CHAR_LIT | TRUE | FALSE | THIS | NULL ;	
+constant: doubleRule | intRule | stringRule | charRule | TRUE | FALSE | THIS | NULL ;	
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
+
+doubleRule: DOUBLE_LIT ;
+intRule: INT_LIT ;
+stringRule: STRING_LIT ;
+charRule: CHAR_LIT ;
 	
 //Tokens
 MAIN: 'main:' ;

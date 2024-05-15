@@ -289,12 +289,6 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstUnknownArraysize(ReFuggParser.ConstUnknownArraysizeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ReFuggParser#constDelc}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstDelc(ReFuggParser.ConstDelcContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code constListNoSub}
 	 * labeled alternative in {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
@@ -618,6 +612,30 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitIdentifier(ReFuggParser.IdentifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#doubleRule}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDoubleRule(ReFuggParser.DoubleRuleContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#intRule}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntRule(ReFuggParser.IntRuleContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#stringRule}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStringRule(ReFuggParser.StringRuleContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#charRule}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCharRule(ReFuggParser.CharRuleContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#or}.
 	 * @param ctx the parse tree

@@ -531,18 +531,6 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstDelc(ReFuggParser.ConstDelcContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstDelc(ReFuggParser.ConstDelcContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterConstListNoSub(ReFuggParser.ConstListNoSubContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1150,6 +1138,54 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitIdentifier(ReFuggParser.IdentifierContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDoubleRule(ReFuggParser.DoubleRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDoubleRule(ReFuggParser.DoubleRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIntRule(ReFuggParser.IntRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIntRule(ReFuggParser.IntRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStringRule(ReFuggParser.StringRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStringRule(ReFuggParser.StringRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCharRule(ReFuggParser.CharRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCharRule(ReFuggParser.CharRuleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

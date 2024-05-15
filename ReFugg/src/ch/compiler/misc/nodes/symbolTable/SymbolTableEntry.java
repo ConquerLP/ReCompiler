@@ -1,11 +1,5 @@
 package ch.compiler.misc.nodes.symbolTable;
 
-import java.util.List;
-
-import ch.compiler.misc.nodes.symbolTable.value.Value;
-
-import java.util.ArrayList;
-
 public abstract class SymbolTableEntry {
 
 	protected String name;

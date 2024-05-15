@@ -5,7 +5,8 @@ public abstract class ConstBinaryExp extends ConstExpNode {
 	protected ConstExpNode left;
 	protected ConstExpNode right;
 	
-	public ConstBinaryExp(ConstExpNode left, ConstExpNode right){
+	public ConstBinaryExp(ConstExpNode left, ConstExpNode right, int type){
+		super(type);
 		this.left = left;
 		this.right = right;
 	}

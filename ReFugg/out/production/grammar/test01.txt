@@ -1,15 +1,13 @@
 
-func: int f0(int[] a, int[2+1] b){}
-func: int[] f1(){}
+global: int i[] = {};
 
-main: {
-	
-	
-}
+
 
 /*
-	
-
-
-
+func: int f0(int[] a, int[2+1] b){}
+func: int[] f1(){}
 */
+main: {
+
+
+}

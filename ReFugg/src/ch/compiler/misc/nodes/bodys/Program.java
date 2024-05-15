@@ -2,7 +2,7 @@ package ch.compiler.misc.nodes.bodys;
 
 import java.util.List;
 
-import ch.compiler.misc.nodes.expression.GlobalVarDec;
+import ch.compiler.misc.nodes.declaration.GlobalDeclaration;
 import ch.compiler.misc.nodes.statements.Label;
 import ch.compiler.misc.nodes.symbolTable.SymbolTable;
 
@@ -12,7 +12,7 @@ public class Program {
 	
 	private List<Function> functions;
 	private List<ClassDec> classes;
-	private List<GlobalVarDec> globals;
+	private List<GlobalDeclaration> globals;
 	private List<Label> labels;
 	private MainFunction main;
 	private SymbolTable globalSymbols;
@@ -33,7 +33,7 @@ public class Program {
 		classes.add(c);
 	}
 	
-	public void addGlobalVar(GlobalVarDec g) {
+	public void addGlobalVar(GlobalDeclaration g) {
 		globals.add(g);
 	}
 	

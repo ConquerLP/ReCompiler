@@ -2,8 +2,14 @@ package ch.compiler.misc.nodes.constantExpression;
 
 public abstract class ConstExpNode {
 	
-	protected final static int INT = 0, DOUBLE = 1, CHAR = 2, STRING = 3, BOOLEAN = 4, ARRAY = 5, VOID = 6;
-	
+	public final static int INT = 0, DOUBLE = 1, CHAR = 2, STRING = 3, BOOLEAN = 4,
+			ARRAY = 5, NULL = 6, THIS = 7;
+	protected final int type;
+
+	public ConstExpNode(int type){
+		this.type = type;
+	}
+
 	public abstract ConstExpNode evaluate();
 	public abstract int evaluateType();
 	
@@ -19,7 +25,7 @@ public abstract class ConstExpNode {
         return (left == CHAR || left == STRING) && (right == CHAR || right == STRING);
 	}
 	
-	protected static int resultType(int left, int right){
+	public static int resultType(int left, int right){
 		if(left == right) return left;
 		else if(matchIntDouble(left, right)) return DOUBLE;
 		else if(matchIntChar(left, right)) return CHAR;

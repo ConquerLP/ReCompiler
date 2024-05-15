@@ -59,7 +59,7 @@ void gen_ConstMath(char* filename, char* classname, char* super,
     fprintf(file, "\n\npublic class %s extends %s {\n\n", classname, super);
     fprintf(file, "\tpublic %s (ConstExpNode left, ConstExpNode right) {\n", classname);
     fprintf(file, "\t\tsuper(left, right);\n\t}\n\n");
-    fprintf(file, "\tpublic ConstExpNode evaluate() {\n\t\t");
+    fprintf(file, "\t@Override\n\tpublic ConstExpNode evaluate() {\n\t\t");
     fprintf(file, "ConstExpNode leftEvaluated = left.evaluate();\n\t\t");
     fprintf(file, "ConstExpNode rightEvaluated = right.evaluate();\n\t\t");
     fprintf(file, "switch(evaluateType()) {\n");
@@ -84,7 +84,7 @@ void gen_literal(char* filename, char* classname, char* prim_type, char* super, 
     fprintf(file, "\tprivate final %s value;\n\n\t", prim_type);
     fprintf(file, "public %s(%s value) {\n\t\t", classname, prim_type);
     fprintf(file, "this.value = value;\n\t}\n\n");
-    fprintf(file, "\tpublic ConstExpNode evaluate() {\n\t\treturn this;\n\t}\n\n");
+    fprintf(file, "\t@Override\n\tpublic ConstExpNode evaluate() {\n\t\treturn this;\n\t}\n\n");
     fprintf(file, "\tpublic %s getValue() {\n\t\treturn value;\n\t}\n\n", prim_type);
     fprintf(file, "\tpublic int evaluateType() {\n\t\treturn %s;\n\t}", prim_lit);
     fprintf(file, "\n}\n");
