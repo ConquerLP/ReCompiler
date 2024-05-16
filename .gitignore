@@ -1,3 +1,6 @@
 .idea
 *.class
 /out
+/grammar/testFiles
+*.log
+

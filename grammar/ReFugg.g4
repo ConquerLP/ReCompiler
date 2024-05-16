@@ -30,31 +30,27 @@ stmt: ifStmt				# ifStatement
 	| label					# labelStatement
 	| block					# blockStatement
 	| varDec ';'			# varDecStatement
-	| assign ';'			# asssignStatement
-	| expr ';'				# exprStatement
+	| expression ';'		# exprStatement
 	| jumpStmt ';'			# jumpStatement
 	;
 ifStmt: IF check stmt (ELSE stmt)? ;
 whileStmt: WHILE check block ;
 doWhileStmt: DO block WHILE check ;
-forStmt: FOR '(' (varDec | expr)? ';' expr? ';' expr? ')' block ;
+forStmt: FOR '(' (varDec | orExpression)? ';' orExpression? ';' orExpression? ')' block ;
 jumpStmt: BREAK			# breakStatement
 	| CONTINUE			# continueStatement
 	| GOTO identifier	# gotoStatement
-	| RETURN expr? 		# returnStatement
+	| RETURN orExpression? 		# returnStatement
 	;
 label: LABEL identifier block ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
 caseBlock: CASE constExpr ':' block		# caseStatement
 	| DEFAULT ':' block					# defaultStatement
 	;
-check: '(' expr ')' ;
+check: '(' orExpression ')' ;
 
 //declaration & assignment
-varDec: type constArray* identifier ('=' expr)? ;
-assign: identifier index assignOP expr
-	| thisAccess index assignOP expr
-	;
+varDec: type constArray* identifier ('=' orExpression)? ;
 
 //static declarations
 globalVar: GLOBAL typemodifier? type constArray* identifier '=' constExpr ';' ;
@@ -69,14 +65,14 @@ constExprMany: constExpr (',' constExpr)* ;
 constVar: identifier ;
 constArrayAccess: identifier constArray+ ;
 
-constExpr: constExpr or constJoin | constJoin ;
-constJoin: constJoin and constEQ | constEQ ;
+constExpr: constExpr orOP constJoin | constJoin ;
+constJoin: constJoin andOP constEQ | constEQ ;
 constEQ: constEQ eqOP constRel | constRel ;
-constRel: constRel logicOp constLogic | constLogic ;
-constLogic: constLogic add constTerm | constTerm ;
-constTerm: constTerm mult constExpo | constExpo ;
-constExpo: constExpo expoOp constUnary | constUnary ;
-constUnary: notNeg constFactor | constFactor;
+constRel: constRel relOP constLogic | constLogic ;
+constLogic: constLogic addOP constTerm | constTerm ;
+constTerm: constTerm multOP constExpo | constExpo ;
+constExpo: constExpo expOP constUnary | constUnary ;
+constUnary: preOP constFactor | constFactor;
 constFactor:  constant 			# constExprConst
 	| '(' constExpr ')' 		# constExprParenth
 	| constList					# constExprList
@@ -84,59 +80,40 @@ constFactor:  constant 			# constExprConst
 	| constArrayAccess			# constExprArrayAccess
 	;
 
-//declarations
-expr: expr or join
-	| join
-	;
-join: join and eq
-	| eq
-	;
-eq: eq eqOP rel
-	| rel
-	;
-rel: rel logicOp logic
-	| logic
-	;
-logic: logic add term
-	| term
-	;
-term: term mult expo
-	| expo
-	;
-expo: expo expoOp unary
-	| unary
-	;
-unary: notNeg factor
-	| factor
-	;
-factor: '(' expr ')'			#exprParenth
-	| fCall						#exprfCall
-	| methCall 					#exprmethCall
-	| identifier postOP?		#expridentifier
-	| identifier index postOP?	#expridentifierIndex
-	| create					#exprCreate
-	| constant 					#exprConstant
-	| thisAccess postOP?		#exprThis
-	| list 						#exprList
-	;
+arrayAccess: '[' expression ']' ;
+methodCall: identifier fArgs ;
+newObject: NEW identifier fArgs arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
+fCall: identifier fArgs arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
 
-fCall: identifier fArgs ;
-methCall: identifier index methCallTail+	#MethCallidentifier
-	| thisAccess methCallTail+		#MethCallThis
-	;
-methCallTail: '.' fCall index ;
+thisAcces: THIS ('.' (identifier | methodCall) arrayAccess*)* ;
+varAcces: identifier arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
 
-create: NEW identifier fArgs index methCallTail* ;
-fArgs: '(' (expr (',' expr)*)? ')' ;
-index: ('[' expr ']')* ;
-thisAccess: THIS ('.' identifier index)* ;
+lh_expression: thisAcces | varAcces ;
 
-//list
-list: '{' exprMany '}' 					#exprListNoSub
-	| '{' subList (',' subList)+ '}' 	#exprListYesSub
-	;
-subList: '{' exprMany '}' ;
-exprMany: expr (',' expr)* ;
+expression: lh_expression assignOP expression | orExpression;
+orExpression: orExpression orOP andExpression | andExpression;
+andExpression: andExpression andOP equalityExpression | equalityExpression;
+equalityExpression: equalityExpression eqOP relationalExpression | relationalExpression;
+relationalExpression: relationalExpression relOP additiveExpression | additiveExpression;
+additiveExpression: additiveExpression addOP multiplicativeExpression | multiplicativeExpression;
+multiplicativeExpression: multiplicativeExpression multOP exponentiationExpression | exponentiationExpression;
+exponentiationExpression: exponentiationExpression expOP unaryExpression | unaryExpression;
+unaryExpression: preOP unaryExpression | postExpression;
+postExpression: primary postOP | primary;
+primary: '(' orExpression ')'
+    | newObject
+    | fCall
+    | varAcces
+    | thisAcces
+    | list
+    | constant
+    ;
+
+list: '{' expressionMany '}'
+    | '{' subList (',' subList)+ '}' ;
+subList: '{' expressionMany '}' ;
+expressionMany: orExpression (',' orExpression)*;
+fArgs: '(' expressionMany? ')' ;
 
 //const & type
 returntype: VOID
@@ -144,11 +121,18 @@ returntype: VOID
 	;
 
 //Operators
-logicOp: '<' | '<=' | '>' | '>=' ;
-assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '^=' | '%=' ;
+assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '%=' ;
+orOP: '||' | 'or' ;
+andOP: '&&' | 'and' ;
+eqOP: '==' | '!=' | 'is' | 'is not' ;
+relOP: '<' | '<=' | '>' | '>=' ;
+addOP: '+' | '-' ;
+multOP: '*' | '/' | '%' ;
+expOP: '^' ;
+preOP: '!' | '-' | '+' ;
 postOP: '++' | '--' ;
 
-constant: doubleRule | intRule | stringRule | charRule | booleanRule | RefRule ;
+constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
 typemodifier: STATIC ;
@@ -158,7 +142,7 @@ intRule: INT_LIT ;
 stringRule: STRING_LIT ;
 charRule: CHAR_LIT ;
 booleanRule: TRUE | FALSE ;
-RefRule: THIS | NULL ;
+refRule: THIS | NULL ;
 
 //Tokens
 MAIN: 'main:' ;
@@ -196,14 +180,6 @@ FALSE: 'false' ;
 THIS: 'this' ;
 NULL: 'null' ;
 NEW: 'new' ;
-
-or: 'or' | '||' ;
-and: 'and' | '&&' ; 
-notNeg: 'not' | '!' | '-' ;
-eqOP: '==' | 'is' | '!=' | 'is not' ;
-add: '+' | '-' ;
-mult: '*' | '/' | '%' ;
-expoOp: '^' ;
 
 //MISC
 INT_LIT: [0-9]+ ;
