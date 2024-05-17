@@ -16,11 +16,7 @@ public class Type {
     public final static int UNKNOWN_DIM = -1;
     private boolean isArray;
 
-    public Type(ReFuggParser.GlobalYesInitContext ctx) {
-        init(ctx);
-    }
-
-    public Type(ReFuggParser.GlobalNoInitContext ctx) {
+    public Type(ReFuggParser.GlobalVarContext ctx) {
         init(ctx);
     }
 
@@ -38,13 +34,11 @@ public class Type {
         ConstExpNode node;
         for (int i = 2; i < ctx.getChildCount(); i++) {
             Object o = ctx.getChild(i);
-            if (o instanceof ReFuggParser.ConstUnknownArraysizeContext) {
-                node = new VisitorConstantExpression().visitConstUnknownArraysize((ReFuggParser.ConstUnknownArraysizeContext) o);
-            } else if (o instanceof ReFuggParser.ConstKnownArraysizeContext) {
-                node = new VisitorConstantExpression().visitConstKnownArraysize((ReFuggParser.ConstKnownArraysizeContext) o);
-            } else if (o instanceof ReFuggParser.ConstKnownArraysizeContext) {
-                node = new VisitorConstantExpression().visitConstKnownArraysize((ReFuggParser.ConstKnownArraysizeContext) o);
-            }  else {
+            if (o instanceof ReFuggParser.GlobalVarContext) {
+                node = new VisitorConstantExpression().visitConstArray((ReFuggParser.ConstArrayContext) o);
+            } else if (o instanceof ReFuggParser.VarDecContext) {
+                node = new VisitorConstantExpression().visitConstArray((ReFuggParser.VarDecContext) o);
+            } else {
                 continue;
             }
             if (node instanceof IntegerLiteral) {

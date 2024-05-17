@@ -19,13 +19,12 @@ import static ch.compiler.misc.nodes.constantExpression.ConstExpNode.resultType;
 public class VisitorConstantExpression extends ReFuggBaseVisitor<ConstExpNode> {
 
     @Override
-    public ConstExpNode visitConstKnownArraysize(ReFuggParser.ConstKnownArraysizeContext ctx) {
-        return visitConstExpr((ConstExprContext) ctx.getChild(1));
-    }
-
-    @Override
-    public ConstExpNode visitConstUnknownArraysize(ReFuggParser.ConstUnknownArraysizeContext ctx) {
-        return new IntegerLiteral(Type.UNKNOWN_DIM);
+    public ConstExpNode visitConstArray(ReFuggParser.ConstArrayContext ctx) {
+        if(ctx.getChildCount() > 2){
+            return visitConstExpr((ConstExprContext) ctx.getChild(1));
+        } else {
+            return new IntegerLiteral(Type.UNKNOWN_DIM);
+        }
     }
 
     @Override

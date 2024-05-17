@@ -4,28 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="setup">
-      <change afterPath="$PROJECT_DIR$/grammar/test.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Compiler old_fugg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="update grammar">
+      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/TypeModifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo.fugg" beforeDir="false" afterPath="$PROJECT_DIR$/demo.fugg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/Fugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/Fugg.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/antlr-2024-04-26-20.43.28.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFugg.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFugg.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFugg.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser$AddContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser$AndContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser$ArgListContext.class" beforeDir="false" />
@@ -142,21 +130,14 @@
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser$WhileStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser$WhileStmtContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/testFiles/antlr-2024-04-26-20.43.03.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/java.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorArgList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorArgList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,8 +147,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -200,7 +181,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stefan/OneDrive - ZHAW/Unterlagen/Projekte/ReFugg&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stefan/OneDrive - ZHAW/Unterlagen/Semester2/Programmieren 2/Woche_12/Uebung/11_FunctionalStreams-Code&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -247,8 +228,19 @@
       <workItem from="1714146230159" duration="2277000" />
       <workItem from="1715857010531" duration="103000" />
       <workItem from="1715857151891" duration="118000" />
-      <workItem from="1715857473891" duration="60000" />
+      <workItem from="1715857473891" duration="833000" />
+      <workItem from="1715859193177" duration="736000" />
+      <workItem from="1715863285964" duration="598000" />
     </task>
+    <task id="LOCAL-00001" summary="update grammar">
+      <option name="closed" value="true" />
+      <created>1715857697961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715857697961</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,75 +263,66 @@
     <MESSAGE value="test" />
     <MESSAGE value="dfhbg" />
     <MESSAGE value="setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup" />
+    <MESSAGE value="update grammar" />
+    <option name="LAST_COMMIT_MESSAGE" value="update grammar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorArgList.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java</url>
-          <line>26</line>
+          <line>29</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>70</line>
+          <line>69</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>81</line>
+          <line>80</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>92</line>
+          <line>91</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>128</line>
+          <line>127</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>144</line>
+          <line>143</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>162</line>
+          <line>161</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>173</line>
+          <line>172</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>195</line>
+          <line>194</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>222</line>
+          <line>221</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>227</line>
+          <line>226</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/Type.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.RuntimeException" package="java.lang" />

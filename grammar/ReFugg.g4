@@ -18,7 +18,7 @@ poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam block ;
 method: METH fHeader fParam block ;
-classField: FIELD type constArray* identifier ';' ;
+classField: FIELD typemodifier? type constArray* identifier ';' ;
 
 //programflow & statements
 block: '{' stmt* '}' ;
@@ -63,7 +63,7 @@ constList: '{' constExprMany '}' 				# constListNoSub
 constSubList: '{' constExprMany '}' ;
 constExprMany: constExpr (',' constExpr)* ;
 constVar: identifier ;
-constArrayAccess: identifier constArray+ ;
+constArrayAccess: identifier ('[' constExpr ']')* ;
 
 constExpr: constExpr orOP constJoin | constJoin ;
 constJoin: constJoin andOP constEQ | constEQ ;
@@ -135,7 +135,7 @@ postOP: '++' | '--' ;
 constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
-typemodifier: STATIC ;
+typemodifier: STATIC | FINAL ;
 
 doubleRule: DOUBLE_LIT ;
 intRule: INT_LIT ;
@@ -160,6 +160,7 @@ PRIVATE: 'private:' ;
 PUBLIC: 'public:' ;
 PROTECTED: 'protected:' ;
 STATIC: 'static' ;
+FINAL: 'final' ;
 
 IF: 'if' ;
 ELSE: 'else' ;

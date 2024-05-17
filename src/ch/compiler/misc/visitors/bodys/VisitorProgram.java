@@ -13,19 +13,17 @@ public class VisitorProgram extends ReFuggBaseVisitor<Program> {
     public Program visitProgram(ReFuggParser.ProgramContext ctx) {
         Program prg = new Program();
         for (int i = 0; i < ctx.getChildCount(); i++) {
-            Object o = ctx.getChild(i);
-            if (o instanceof FuncContext) {
-                prg.addFunction(new VisitorFunction().visitFunc((FuncContext) o));
-            } else if (o instanceof ClassDecContext) {
-                prg.addClass(new VisitorClass().visitClassDec((ClassDecContext) o));
-            } else if (o instanceof ReFuggParser.GlobalYesInitContext) {
-                prg.addGlobalVar(new VisitorGlobalVarDec().visitGlobalYesInit((ReFuggParser.GlobalYesInitContext) o));
-            } else if (o instanceof ReFuggParser.GlobalNoInitContext) {
-                prg.addGlobalVar(new VisitorGlobalVarDec().visitGlobalNoInit((ReFuggParser.GlobalNoInitContext) o));
-            } else if (o instanceof LabelContext) {
-                prg.addLabel(new VisitorLabel().visitLabel((LabelContext) o));
-            } else if (o instanceof ReFuggParser.MainContext) {
-                prg.setMain(new VisitorMainFunction().visitMain((ReFuggParser.MainContext) o));
+            Object child = ctx.getChild(i);
+            if (child instanceof FuncContext) {
+                prg.addFunction(new VisitorFunction().visitFunc((FuncContext) child));
+            } else if (child instanceof ClassDecContext) {
+                prg.addClass(new VisitorClass().visitClassDec((ClassDecContext) child));
+            } else if (child instanceof ReFuggParser.GlobalVarContext) {
+                prg.addGlobalVar(new VisitorGlobalVarDec().visitGlobalVar((ReFuggParser.GlobalVarContext) child));
+            } else if (child instanceof LabelContext) {
+                prg.addLabel(new VisitorLabel().visitLabel((LabelContext) child));
+            } else if (child instanceof ReFuggParser.MainContext) {
+                prg.setMain(new VisitorMainFunction().visitMain((ReFuggParser.MainContext) child));
             }
         }
         return prg;
