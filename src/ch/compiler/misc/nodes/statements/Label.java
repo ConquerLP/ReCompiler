@@ -1,11 +1,13 @@
 package ch.compiler.misc.nodes.statements;
 
-import java.util.List;
-import java.util.ArrayList;
+public class Label extends Statement {
 
-public class Label extends Statement{
-	
-	public String id;
-	public Block block;
-	
+    private String id;
+    private Block block;
+
+    public Label(Block block, String id) {
+        this.block = block;
+        this.id = id;
+    }
+
 }

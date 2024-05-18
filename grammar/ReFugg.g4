@@ -8,30 +8,31 @@ main: MAIN block ;
 func: FUNC fHeader fParam block ;
 fHeader: returntype ('[' ']')* identifier ;
 fParam: '(' argList? ')' ;
-argList: type constArray* identifier (',' type constArray* identifier)* ;
+argList: complexType identifier (',' complexType identifier)* ;
 
 //class
 classDec: CLASS identifier poly? 
-	'{' (visibilty classInsides+)* '}' ;
-classInsides: (classConstructor | classField | method) ;
+	'{' complexClassInsides* '}' ;
+complexClassInsides: visibilty classInsides+ ;
+classInsides: classConstructor | classField | method ;
 poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam block ;
 method: METH fHeader fParam block ;
-classField: FIELD typemodifier? type constArray* identifier ';' ;
+classField: FIELD typemodifier? complexType identifier ';' ;
 
 //programflow & statements
 block: '{' stmt* '}' ;
-stmt: ifStmt				# ifStatement
-	| whileStmt				# whileStatement
-	| doWhileStmt ';'		# doWhileStatement
-	| forStmt				# forStatement
-	| switchCase			# switchStatement
-	| label					# labelStatement
-	| block					# blockStatement
-	| varDec ';'			# varDecStatement
-	| expression ';'		# exprStatement
-	| jumpStmt ';'			# jumpStatement
+stmt: ifStmt
+	| whileStmt
+	| doWhileStmt ';'
+	| forStmt
+	| switchCase
+	| label
+	| block
+	| varDec ';'
+	| expression ';'
+	| jumpStmt ';'
 	;
 ifStmt: IF check stmt (ELSE stmt)? ;
 whileStmt: WHILE check block ;
@@ -50,10 +51,10 @@ caseBlock: CASE constExpr ':' block		# caseStatement
 check: '(' orExpression ')' ;
 
 //declaration & assignment
-varDec: type constArray* identifier ('=' orExpression)? ;
+varDec: complexType identifier ('=' orExpression)? ;
 
 //static declarations
-globalVar: GLOBAL typemodifier? type constArray* identifier '=' constExpr ';' ;
+globalVar: GLOBAL typemodifier? complexType identifier '=' constExpr ';' ;
 
 constArray: '[' constExpr? ']' ;
 
@@ -117,7 +118,7 @@ fArgs: '(' expressionMany? ')' ;
 
 //const & type
 returntype: VOID
-	| type
+	| complexType
 	;
 
 //Operators
@@ -133,7 +134,8 @@ preOP: '!' | '-' | '+' ;
 postOP: '++' | '--' ;
 
 constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
-type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
+complexType: type constArray* ;
+type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier ;
 identifier: ID ;
 typemodifier: STATIC | FINAL ;
 

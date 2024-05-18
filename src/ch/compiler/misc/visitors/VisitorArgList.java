@@ -2,35 +2,32 @@ package ch.compiler.misc.visitors;
 
 import ch.compiler.misc.nodes.symbolTable.EntryVariable;
 import ch.compiler.misc.nodes.symbolTable.SymbolTable;
+import ch.compiler.misc.nodes.symbolTable.Type;
+import ch.compiler.misc.visitors.expression.type.VisitorComplexType;
 import ch.compiler.parser.ReFuggBaseVisitor;
+import ch.compiler.parser.ReFuggParser;
 import ch.compiler.parser.ReFuggParser.ArgListContext;
 import ch.compiler.parser.ReFuggParser.IdentifierContext;
-import ch.compiler.parser.ReFuggParser.TypeContext;
 
 public class VisitorArgList extends ReFuggBaseVisitor<SymbolTable> {
 
     @Override
     public SymbolTable visitArgList(ArgListContext ctx) {
-        String dataType = "";
-        String id = "";
+        Type type = null;
+        String id = null;
         SymbolTable table = new SymbolTable();
         for (int i = 0; i < ctx.getChildCount(); i++) {
-            if (ctx.getChild(i) instanceof TypeContext) {
-                dataType = ctx.getChild(i).getText();
-            } else if (ctx.getChild(i) instanceof IdentifierContext) {
-                id = ctx.getChild(i).getText();
-                table.add(constructEntry(id, dataType));
-                dataType = "";
-                id = "";
+            Object child = ctx.getChild(i);
+            if(child instanceof ReFuggParser.ComplexTypeContext) {
+                type = new VisitorComplexType().visitComplexType((ReFuggParser.ComplexTypeContext) child);
+            } else if(child instanceof IdentifierContext) {
+                id = ((IdentifierContext) child).getText();
+                table.add(new EntryVariable(id, type));
+                type = null;
+                id = null;
             }
         }
         return table;
     }
-
-    private EntryVariable constructEntry(String id, String type) {
-        EntryVariable e = new EntryVariable(id);
-        return e;
-    }
-
 
 }

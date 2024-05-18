@@ -1,6 +1,5 @@
 package ch.compiler.misc.nodes.declaration;
 
-
 import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
 import ch.compiler.misc.nodes.symbolTable.Type;
 

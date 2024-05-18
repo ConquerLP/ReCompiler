@@ -78,6 +78,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitClassDec(ReFuggParser.ClassDecContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#complexClassInsides}.
+	 * @param ctx the parse tree
+	 */
+	void enterComplexClassInsides(ReFuggParser.ComplexClassInsidesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#complexClassInsides}.
+	 * @param ctx the parse tree
+	 */
+	void exitComplexClassInsides(ReFuggParser.ComplexClassInsidesContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#classInsides}.
 	 * @param ctx the parse tree
 	 */
@@ -148,125 +158,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitBlock(ReFuggParser.BlockContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
+	 * Enter a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(ReFuggParser.IfStatementContext ctx);
+	void enterStmt(ReFuggParser.StmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
+	 * Exit a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(ReFuggParser.IfStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterWhileStatement(ReFuggParser.WhileStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitWhileStatement(ReFuggParser.WhileStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code doWhileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterDoWhileStatement(ReFuggParser.DoWhileStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code doWhileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitDoWhileStatement(ReFuggParser.DoWhileStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code forStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterForStatement(ReFuggParser.ForStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code forStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitForStatement(ReFuggParser.ForStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code switchStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterSwitchStatement(ReFuggParser.SwitchStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code switchStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitSwitchStatement(ReFuggParser.SwitchStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code labelStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterLabelStatement(ReFuggParser.LabelStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code labelStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitLabelStatement(ReFuggParser.LabelStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlockStatement(ReFuggParser.BlockStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlockStatement(ReFuggParser.BlockStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code varDecStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterVarDecStatement(ReFuggParser.VarDecStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code varDecStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitVarDecStatement(ReFuggParser.VarDecStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprStatement(ReFuggParser.ExprStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprStatement(ReFuggParser.ExprStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code jumpStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterJumpStatement(ReFuggParser.JumpStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code jumpStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitJumpStatement(ReFuggParser.JumpStatementContext ctx);
+	void exitStmt(ReFuggParser.StmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#ifStmt}.
 	 * @param ctx the parse tree
@@ -983,6 +883,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitConstant(ReFuggParser.ConstantContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#complexType}.
+	 * @param ctx the parse tree
+	 */
+	void enterComplexType(ReFuggParser.ComplexTypeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#complexType}.
+	 * @param ctx the parse tree
+	 */
+	void exitComplexType(ReFuggParser.ComplexTypeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#type}.
 	 * @param ctx the parse tree

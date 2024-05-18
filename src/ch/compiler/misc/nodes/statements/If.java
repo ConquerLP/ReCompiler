@@ -4,9 +4,19 @@ import ch.compiler.misc.nodes.expression.ExpressionNode;
 
 public class If extends Statement{
 	
-	public ExpressionNode expression;
-	public Block trueBlock;
-	public Block falseBlock;
-	public If nextIfStatement;
-	
+	private ExpressionNode expression;
+	private Statement trueBlock;
+	private Statement falseBlock;
+
+	public If(ExpressionNode expression, Statement trueBlock) {
+		this.expression = expression;
+		this.trueBlock = trueBlock;
+	}
+
+	public If(ExpressionNode expression, Statement trueBlock, Statement falseBlock) {
+		this.expression = expression;
+		this.trueBlock = trueBlock;
+		this.falseBlock = falseBlock;
+	}
+
 }

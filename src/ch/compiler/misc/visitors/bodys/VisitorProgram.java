@@ -1,6 +1,8 @@
 package ch.compiler.misc.visitors.bodys;
 
 import ch.compiler.misc.nodes.bodys.Program;
+import ch.compiler.misc.visitors.bodys.classes.VisitorClass;
+import ch.compiler.misc.visitors.bodys.function.VisitorFunction;
 import ch.compiler.misc.visitors.expression.constant.VisitorGlobalVarDec;
 import ch.compiler.misc.visitors.statements.VisitorLabel;
 import ch.compiler.parser.ReFuggBaseVisitor;
