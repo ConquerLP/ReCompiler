@@ -1,6 +1,7 @@
-package ch.compiler.misc.visitors.bodys;
+package ch.compiler.misc.visitors.bodys.classes;
 
 import ch.compiler.misc.nodes.bodys.ClassConstructor;
+import ch.compiler.misc.visitors.bodys.function.VisitorFParam;
 import ch.compiler.misc.visitors.statements.VisitorBlock;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;

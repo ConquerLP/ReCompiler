@@ -3,11 +3,10 @@ import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
 
 public class ThisLiteral extends PointerLiteral {
 
-	private final int value;
+	private int value;
 
-	public ThisLiteral(int value) {
+	public ThisLiteral() {
 		super(NULL);
-		this.value = value;
 	}
 
 	@Override
@@ -20,6 +19,6 @@ public class ThisLiteral extends PointerLiteral {
 	}
 
 	public int evaluateType() {
-		return NULL;
+		return THIS;
 	}
 }

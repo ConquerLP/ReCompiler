@@ -8,7 +8,7 @@ public class Block extends Statement{
 	public List<Statement> statements;
 
 	public Block() {
-		statements = new ArrayList<Statement>();
+		statements = new ArrayList<>();
 	}
 
 	public void addStatement(Statement statement) {

@@ -4,13 +4,13 @@ import ch.compiler.misc.nodes.statements.Block;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser.BlockContext;
 
-public class VisitorBlock extends ReFuggBaseVisitor<Block>{
+public class VisitorBlock extends ReFuggBaseVisitor<Block> {
 
-	@Override
-	public Block visitBlock(BlockContext ctx) {
-		Block block = new Block();
-		ctx.stmt().forEach();
-		return block;
-	}
+    @Override
+    public Block visitBlock(BlockContext ctx) {
+        Block block = new Block();
+        ctx.stmt().forEach(b -> block.addStatement(new VisitorStatement().visitStmt(b)));
+        return block;
+    }
 
 }

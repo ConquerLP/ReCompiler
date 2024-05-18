@@ -256,49 +256,13 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBreakStatement(ReFuggParser.BreakStatementContext ctx) { }
+	@Override public void enterJumpStmt(ReFuggParser.JumpStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBreakStatement(ReFuggParser.BreakStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterContinueStatement(ReFuggParser.ContinueStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitContinueStatement(ReFuggParser.ContinueStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterGotoStatement(ReFuggParser.GotoStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitGotoStatement(ReFuggParser.GotoStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterReturnStatement(ReFuggParser.ReturnStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitReturnStatement(ReFuggParser.ReturnStatementContext ctx) { }
+	@Override public void exitJumpStmt(ReFuggParser.JumpStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -328,25 +292,13 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCaseStatement(ReFuggParser.CaseStatementContext ctx) { }
+	@Override public void enterCaseBlock(ReFuggParser.CaseBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCaseStatement(ReFuggParser.CaseStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterDefaultStatement(ReFuggParser.DefaultStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitDefaultStatement(ReFuggParser.DefaultStatementContext ctx) { }
+	@Override public void exitCaseBlock(ReFuggParser.CaseBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -400,25 +352,13 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstListNoSub(ReFuggParser.ConstListNoSubContext ctx) { }
+	@Override public void enterConstList(ReFuggParser.ConstListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstListNoSub(ReFuggParser.ConstListNoSubContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstListYesSub(ReFuggParser.ConstListYesSubContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstListYesSub(ReFuggParser.ConstListYesSubContext ctx) { }
+	@Override public void exitConstList(ReFuggParser.ConstListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -568,61 +508,13 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstExprConst(ReFuggParser.ConstExprConstContext ctx) { }
+	@Override public void enterConstFactor(ReFuggParser.ConstFactorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstExprConst(ReFuggParser.ConstExprConstContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstExprParenth(ReFuggParser.ConstExprParenthContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstExprParenth(ReFuggParser.ConstExprParenthContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstExprList(ReFuggParser.ConstExprListContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstExprList(ReFuggParser.ConstExprListContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstExprVar(ReFuggParser.ConstExprVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstExprVar(ReFuggParser.ConstExprVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstExprArrayAccess(ReFuggParser.ConstExprArrayAccessContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstExprArrayAccess(ReFuggParser.ConstExprArrayAccessContext ctx) { }
+	@Override public void exitConstFactor(ReFuggParser.ConstFactorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

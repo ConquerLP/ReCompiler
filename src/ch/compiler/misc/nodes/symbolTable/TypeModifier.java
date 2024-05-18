@@ -16,4 +16,11 @@ public enum TypeModifier {
         }
     },
 
+    NONE {
+        @Override
+        public String toString() {
+            return "";
+        }
+    }
+
 }

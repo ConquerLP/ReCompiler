@@ -8,11 +8,11 @@ public class VisitorTypeModifier extends ReFuggBaseVisitor<TypeModifier> {
 
     @Override
     public TypeModifier visitTypemodifier(ReFuggParser.TypemodifierContext ctx) {
+        if(ctx == null) return TypeModifier.NONE;
         if (ctx.getText().equals(TypeModifier.STATIC.toString())) {
             return TypeModifier.STATIC;
-        } else if (ctx.getText().equals(TypeModifier.FINAL.toString())) {
+        } else {
             return TypeModifier.FINAL;
         }
-        return null;
     }
 }

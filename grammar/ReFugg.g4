@@ -38,15 +38,15 @@ ifStmt: IF check stmt (ELSE stmt)? ;
 whileStmt: WHILE check block ;
 doWhileStmt: DO block WHILE check ;
 forStmt: FOR '(' (varDec | orExpression)? ';' orExpression? ';' orExpression? ')' block ;
-jumpStmt: BREAK			# breakStatement
-	| CONTINUE			# continueStatement
-	| GOTO identifier	# gotoStatement
-	| RETURN orExpression? 		# returnStatement
+jumpStmt: BREAK
+	| CONTINUE
+	| GOTO identifier
+	| RETURN orExpression?
 	;
 label: LABEL identifier block ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
-caseBlock: CASE constExpr ':' block		# caseStatement
-	| DEFAULT ':' block					# defaultStatement
+caseBlock: CASE constExpr ':' block
+	| DEFAULT ':' block
 	;
 check: '(' orExpression ')' ;
 
@@ -58,13 +58,13 @@ globalVar: GLOBAL typemodifier? complexType identifier '=' constExpr ';' ;
 
 constArray: '[' constExpr? ']' ;
 
-constList: '{' constExprMany '}' 				# constListNoSub
-	| '{' constSubList (',' constSubList)+ '}' 	# constListYesSub
+constList: '{' constExprMany '}'
+	| '{' constSubList (',' constSubList)+ '}'
 	;
 constSubList: '{' constExprMany '}' ;
 constExprMany: constExpr (',' constExpr)* ;
 constVar: identifier ;
-constArrayAccess: identifier ('[' constExpr ']')* ;
+constArrayAccess: identifier ('[' constExpr ']')+ ;
 
 constExpr: constExpr orOP constJoin | constJoin ;
 constJoin: constJoin andOP constEQ | constEQ ;
@@ -74,11 +74,11 @@ constLogic: constLogic addOP constTerm | constTerm ;
 constTerm: constTerm multOP constExpo | constExpo ;
 constExpo: constExpo expOP constUnary | constUnary ;
 constUnary: preOP constFactor | constFactor;
-constFactor:  constant 			# constExprConst
-	| '(' constExpr ')' 		# constExprParenth
-	| constList					# constExprList
-	| constVar					# constExprVar
-	| constArrayAccess			# constExprArrayAccess
+constFactor:  constant
+	| '(' constExpr ')'
+	| constList
+	| constVar
+	| constArrayAccess
 	;
 
 arrayAccess: '[' expression ']' ;

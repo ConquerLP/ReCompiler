@@ -9,11 +9,6 @@ public class VisitorFParam extends ReFuggBaseVisitor<SymbolTable> {
 
     @Override
     public SymbolTable visitFParam(ReFuggParser.FParamContext ctx) {
-        if(ctx.getChildCount() < 2) {
-            return new VisitorArgList().visitArgList((ReFuggParser.ArgListContext) ctx.getChild(1));
-
-        } else {
-            return new SymbolTable();
-        }
+        return new VisitorArgList().visitArgList(ctx.argList());
     }
 }

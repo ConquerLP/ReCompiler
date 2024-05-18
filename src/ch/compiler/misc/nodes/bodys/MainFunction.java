@@ -6,11 +6,8 @@ public class MainFunction {
 	
 	private Block block;
 	
-	public MainFunction() {
-	}
-	
-	public void setBlock(Block block) {
+	public MainFunction(Block block) {
 		this.block = block;
 	}
-	
+
 }

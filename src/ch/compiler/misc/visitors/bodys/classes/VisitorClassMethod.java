@@ -1,8 +1,9 @@
-package ch.compiler.misc.visitors.bodys;
+package ch.compiler.misc.visitors.bodys.classes;
 
 import ch.compiler.misc.nodes.bodys.ClassMethod;
 import ch.compiler.misc.nodes.symbolTable.Type;
-import ch.compiler.misc.visitors.expression.VisitorReturnType;
+import ch.compiler.misc.visitors.expression.type.*;
+import ch.compiler.misc.visitors.bodys.function.*;
 import ch.compiler.misc.visitors.statements.VisitorBlock;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
