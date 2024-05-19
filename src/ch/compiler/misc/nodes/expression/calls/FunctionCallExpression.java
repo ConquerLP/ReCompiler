@@ -2,10 +2,16 @@ package ch.compiler.misc.nodes.expression.calls;
 
 import ch.compiler.misc.nodes.expression.ExpressionNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FunctionCallExpression extends ExpressionNode {
 
-    public FunctionCallExpression(int type) {
-        super(type);
+    private List<ExpressionNode> arguments;
+
+    public FunctionCallExpression() {
+        super(CALL);
+        arguments = new ArrayList<>();
     }
 
     @Override
@@ -17,4 +23,9 @@ public class FunctionCallExpression extends ExpressionNode {
     public int evaluateType() {
         return 0;
     }
+
+    public void addArgument(List<ExpressionNode> arguments) {
+        arguments.addAll(arguments);
+    }
+
 }

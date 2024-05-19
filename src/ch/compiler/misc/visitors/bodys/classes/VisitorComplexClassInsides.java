@@ -1,7 +1,8 @@
-package ch.compiler.misc.visitors.bodys;
+package ch.compiler.misc.visitors.bodys.classes;
 
 import ch.compiler.misc.nodes.bodys.ClassInside;
 import ch.compiler.misc.nodes.symbolTable.Access;
+import ch.compiler.misc.visitors.bodys.*;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 

@@ -1,6 +1,7 @@
 package ch.compiler.misc.nodes.expression.literals;
 
 import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,18 +10,12 @@ public class ArrayLiteral extends ConstExpNode {
     private final List<ConstExpNode> values = new ArrayList<>();
     private int arrayType;
 
-    public ArrayLiteral(ConstExpNode initialValue) {
-        super(ARRAY);
-        this.arrayType = initialValue.evaluateType();
-        values.add(initialValue);
-    }
-
     public ArrayLiteral() {
         super(ARRAY);
     }
 
     public void add(ConstExpNode value) {
-        if(values.isEmpty()) {
+        if (values.isEmpty()) {
             arrayType = value.evaluateType();
         }
         if (value.evaluateType() != arrayType) {
@@ -28,6 +23,10 @@ public class ArrayLiteral extends ConstExpNode {
         } else {
             values.add(value);
         }
+    }
+
+    public void add() {
+
     }
 
     @Override
@@ -42,10 +41,6 @@ public class ArrayLiteral extends ConstExpNode {
     @Override
     public int evaluateType() {
         return ARRAY;
-    }
-
-    public int getArrayType() {
-        return arrayType;
     }
 
 }

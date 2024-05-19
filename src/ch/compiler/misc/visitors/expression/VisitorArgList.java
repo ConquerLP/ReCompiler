@@ -1,4 +1,4 @@
-package ch.compiler.misc.visitors;
+package ch.compiler.misc.visitors.expression;
 
 import ch.compiler.misc.nodes.symbolTable.EntryVariable;
 import ch.compiler.misc.nodes.symbolTable.SymbolTable;

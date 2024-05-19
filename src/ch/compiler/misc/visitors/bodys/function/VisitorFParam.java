@@ -1,7 +1,7 @@
 package ch.compiler.misc.visitors.bodys.function;
 
 import ch.compiler.misc.nodes.symbolTable.SymbolTable;
-import ch.compiler.misc.visitors.VisitorArgList;
+import ch.compiler.misc.visitors.expression.VisitorArgList;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 

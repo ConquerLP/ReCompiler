@@ -1,26 +1,22 @@
 package ch.compiler.misc.nodes.statements;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Block extends Statement{
+public class Block extends Statement {
 
-	public List<Statement> statements;
+    public List<Statement> statements;
 
-	public Block() {
-		statements = new ArrayList<>();
-	}
+    public Block() {
+        statements = new ArrayList<>();
+    }
 
-	public void addStatement(Statement statement) {
-		statements.add(statement);
-	}
+    public void addStatement(Statement statement) {
+        statements.add(statement);
+    }
 
-	public List<Statement> getStatements() {
-		return statements;
-	}
-
-	public void addStatement(List<Statement> statements){
-		this.statements.addAll(statements);
-	}
+    public List<Statement> getStatements() {
+        return statements;
+    }
 
 }

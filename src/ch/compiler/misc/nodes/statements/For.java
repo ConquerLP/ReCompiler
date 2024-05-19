@@ -5,11 +5,11 @@ import ch.compiler.misc.nodes.expression.ExpressionNode;
 
 public class For extends Statement{
 
-	private Block block = null;
-	private ExpressionNode first = null;
-	private ExpressionNode second = null;
-	private ExpressionNode third = null;
-	private VarDeclaration varDeclaration = null;
+	private Block block;
+	private ExpressionNode first;
+	private ExpressionNode second;
+	private ExpressionNode third;
+	private VarDeclaration varDeclaration;
 
 	public For(VarDeclaration varDeclaration, ExpressionNode first, ExpressionNode second, ExpressionNode third, Block block) {
 		this.varDeclaration = varDeclaration;

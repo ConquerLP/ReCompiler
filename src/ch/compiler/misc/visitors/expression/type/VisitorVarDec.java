@@ -1,8 +1,9 @@
-package ch.compiler.misc.visitors.expression;
+package ch.compiler.misc.visitors.expression.type;
 
 import ch.compiler.misc.nodes.declaration.VarDeclaration;
 import ch.compiler.misc.nodes.symbolTable.Type;
 import ch.compiler.misc.nodes.symbolTable.TypeModifier;
+import ch.compiler.misc.visitors.expression.VisitorExpression;
 import ch.compiler.misc.visitors.expression.type.VisitorComplexType;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
