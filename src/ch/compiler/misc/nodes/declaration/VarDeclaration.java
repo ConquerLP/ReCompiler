@@ -5,15 +5,12 @@ import ch.compiler.misc.nodes.symbolTable.Type;
 
 public class VarDeclaration extends Declaration {
 
-    private ExpressionNode exp;
+    public VarDeclaration(Type type, String identifier, ExpressionNode exp) {
+        super(type, identifier, exp);
+    }
 
     public VarDeclaration(Type type, String identifier) {
-        super(type, identifier);
+        super(type, identifier, null);
     }
 
-    public VarDeclaration(Type type, String identifier, ExpressionNode exp) {
-        super(type, identifier);
-        this.exp = exp;
-    }
-    
 }

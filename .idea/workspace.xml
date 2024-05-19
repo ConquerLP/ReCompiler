@@ -4,34 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="refactor const Expressions">
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="start refactor grammar, constant nodes">
       <change afterPath="$PROJECT_DIR$/../Compiler/Compiler old_fugg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorFArgs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/ConstExpNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/ConstExpNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReFugg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ReFugg.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/ConstBinaryExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/ConstExpNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/VisitorConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/bool/ConstBooleanExpAnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/bool/ConstBooleanExpOr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpAdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpDiv.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpExpo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpMul.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpSub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpEQ.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpGE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpGT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpLE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpLT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpNE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/unary/ConstNegExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/unary/ConstNotExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/unary/ConstPosExp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/constantExpression/unary/ConstUnaryExp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/Declaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/Declaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/GlobalDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/GlobalDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/VarDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/VarDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/BinaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/ExpressionNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/ExpressionNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/AccessExp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/AccessExp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/IndexAccessExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/IndexAccessExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/calls/FunctionCallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/calls/FunctionCallExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/calls/MethodCallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/calls/MethodCallExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/ArrayLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/ArrayLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/BooleanLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/BooleanLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/CharacterLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/CharacterLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/DoubleLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/DoubleLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/IntegerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/IntegerLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/NullLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/NullLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/PointerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/PointerLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/StringLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/StringLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/ThisLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/ThisLiteral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/CaseBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/CaseBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/For.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/For.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Jump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Jump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/VisitorArgList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorArgList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassInside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassInside.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorComplexClassInsides.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorComplexClassInsides.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorPoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorPoly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/function/VisitorFParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/function/VisitorFParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorMainFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorMainFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/function/VisitorFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/function/VisitorFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorVarDec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorComplexType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorComplexType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +77,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -67,26 +102,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stefan/OneDrive - ZHAW/Unterlagen/Semester2/Programmieren 2/Woche_12/Uebung/11_FunctionalStreams-Code&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "noConstant",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Stefan/OneDrive - ZHAW/Unterlagen/Semester2/Programmieren 2/Woche_12/Uebung/11_FunctionalStreams-Code",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ZHAW INF\OneDrive - ZHAW\Unterlagen\Projekte\ReFugg\grammar" />
@@ -167,46 +202,12 @@
     <MESSAGE value="update grammar" />
     <MESSAGE value="working" />
     <MESSAGE value="refactor const Expressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor const Expressions" />
+    <MESSAGE value="start refactor grammar, constant nodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="start refactor grammar, constant nodes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.java</url>
-          <line>153</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="15" />

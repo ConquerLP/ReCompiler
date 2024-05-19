@@ -2,7 +2,6 @@ package ch.compiler.misc.visitors.statements;
 
 import ch.compiler.misc.nodes.statements.*;
 import ch.compiler.misc.visitors.expression.*;
-import ch.compiler.misc.visitors.expression.constant.VisitorConstantExpression;
 import ch.compiler.misc.visitors.expression.type.VisitorVarDec;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
@@ -87,7 +86,7 @@ public class VisitorStatement extends ReFuggBaseVisitor<Statement> {
         if("default".equals(ctx.getText())) {
             return new CaseBlock(visitBlock(ctx.block()));
         } else {
-            return new CaseBlock(new VisitorConstantExpression().visitConstExpr(ctx.constExpr()),
+            return new CaseBlock(new VisitorExpression().visitConstant(ctx.constant()),
                     visitBlock(ctx.block()));
         }
     }

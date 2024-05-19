@@ -45,7 +45,7 @@ jumpStmt: BREAK
 	;
 label: LABEL identifier block ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
-caseBlock: CASE constExpr ':' block
+caseBlock: CASE constant ':' block
 	| DEFAULT ':' block
 	;
 check: '(' orExpression ')' ;
@@ -54,40 +54,17 @@ check: '(' orExpression ')' ;
 varDec: complexType identifier ('=' orExpression)? ;
 
 //static declarations
-globalVar: GLOBAL typemodifier? complexType identifier '=' constExpr ';' ;
+globalVar: GLOBAL typemodifier? complexType identifier ('=' constant)? ';' ;
 
-constArray: '[' constExpr? ']' ;
-
-constList: '{' constExprMany '}'
-	| '{' constSubList (',' constSubList)+ '}'
-	;
-constSubList: '{' constExprMany '}' ;
-constExprMany: constExpr (',' constExpr)* ;
-constVar: identifier ;
-constArrayAccess: identifier ('[' constExpr ']')+ ;
-
-constExpr: constExpr orOP constJoin | constJoin ;
-constJoin: constJoin andOP constEQ | constEQ ;
-constEQ: constEQ eqOP constRel | constRel ;
-constRel: constRel relOP constLogic | constLogic ;
-constLogic: constLogic addOP constTerm | constTerm ;
-constTerm: constTerm multOP constExpo | constExpo ;
-constExpo: constExpo expOP constUnary | constUnary ;
-constUnary: preOP constFactor | constFactor;
-constFactor:  constant
-	| '(' constExpr ')'
-	| constList
-	| constVar
-	| constArrayAccess
-	;
-
-arrayAccess: '[' expression ']' ;
+simpleArray: '[' orExpression? ']' ;
+arrayAccess: '[' orExpression ']' ;
 methodCall: identifier fArgs ;
-newObject: NEW identifier fArgs arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
-fCall: identifier fArgs arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
+newObject: NEW identifier fArgs arrayAccess* callTail* ;
+fCall: identifier fArgs arrayAccess* callTail* ;
 
-thisAcces: THIS ('.' (identifier | methodCall) arrayAccess*)* ;
-varAcces: identifier arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
+thisAcces: THIS callTail* ;
+varAcces: identifier arrayAccess* callTail* ;
+callTail: ('.' (identifier | methodCall) arrayAccess*) ;
 
 lh_expression: thisAcces | varAcces ;
 
@@ -134,10 +111,10 @@ preOP: '!' | '-' | '+' ;
 postOP: '++' | '--' ;
 
 constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
-complexType: type constArray* ;
+complexType: type simpleArray* ;
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier ;
 identifier: ID ;
-typemodifier: STATIC | FINAL ;
+typemodifier: FINAL ;
 
 doubleRule: DOUBLE_LIT ;
 intRule: INT_LIT ;

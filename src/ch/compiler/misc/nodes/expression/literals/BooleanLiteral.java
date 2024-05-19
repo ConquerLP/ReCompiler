@@ -1,25 +1,26 @@
 package ch.compiler.misc.nodes.expression.literals;
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
 
-public class BooleanLiteral extends ConstExpNode {
-	
-	private final Boolean value;
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
-	public BooleanLiteral(Boolean value) {
-		super(BOOLEAN);
-		this.value = value;
-	}
+public class BooleanLiteral extends ExpressionNode {
 
-	@Override
-	public ConstExpNode evaluate() {
-		return this;
-	}
+    private final Boolean value;
 
-	public Boolean getValue() {
-		return value;
-	}
+    public BooleanLiteral(Boolean value) {
+        super(BOOLEAN);
+        this.value = value;
+    }
 
-	public int evaluateType() {
-		return BOOLEAN;
-	}
+    @Override
+    public ExpressionNode evaluate() {
+        return this;
+    }
+
+    public Boolean getValue() {
+        return value;
+    }
+
+    public int evaluateType() {
+        return BOOLEAN;
+    }
 }

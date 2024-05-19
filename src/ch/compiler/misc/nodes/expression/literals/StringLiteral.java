@@ -1,25 +1,27 @@
 package ch.compiler.misc.nodes.expression.literals;
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
 
-public class StringLiteral extends ConstExpNode {
-	
-	private final String value;
 
-	public StringLiteral(String value) {
-		super(STRING);
-		this.value = value;
-	}
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
-	@Override
-	public ConstExpNode evaluate() {
-		return this;
-	}
+public class StringLiteral extends ExpressionNode {
 
-	public String getValue() {
-		return value;
-	}
+    private final String value;
 
-	public int evaluateType() {
-		return STRING;
-	}
+    public StringLiteral(String value) {
+        super(STRING);
+        this.value = value;
+    }
+
+    @Override
+    public ExpressionNode evaluate() {
+        return this;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public int evaluateType() {
+        return STRING;
+    }
 }

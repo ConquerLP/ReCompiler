@@ -5,7 +5,7 @@ import ch.compiler.misc.nodes.statements.Statement;
 public abstract class ExpressionNode extends Statement {
 
     public final static int INT = 0, DOUBLE = 1, CHAR = 2, STRING = 3, BOOLEAN = 4,
-            ARRAY = 5, POINTER = 6, CLASS = 7, VOID = 8, CALL = 9;
+            ARRAY = 5, NULL = 6, THIS = 7, CLASS = 8, VOID = 9, CALL = 10;
     protected final int type;
 
     public ExpressionNode(int type) {

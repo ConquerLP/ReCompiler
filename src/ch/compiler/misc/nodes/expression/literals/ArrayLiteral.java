@@ -1,20 +1,20 @@
 package ch.compiler.misc.nodes.expression.literals;
 
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayLiteral extends ConstExpNode {
+public class ArrayLiteral extends ExpressionNode {
 
-    private final List<ConstExpNode> values = new ArrayList<>();
+    private final List<ExpressionNode> values = new ArrayList<>();
     private int arrayType;
 
     public ArrayLiteral() {
         super(ARRAY);
     }
 
-    public void add(ConstExpNode value) {
+    public void add(ExpressionNode value) {
         if (values.isEmpty()) {
             arrayType = value.evaluateType();
         }
@@ -25,16 +25,12 @@ public class ArrayLiteral extends ConstExpNode {
         }
     }
 
-    public void add() {
-
-    }
-
     @Override
-    public ConstExpNode evaluate() {
+    public ExpressionNode evaluate() {
         return this;
     }
 
-    public List<ConstExpNode> getValue() {
+    public List<ExpressionNode> getValue() {
         return values;
     }
 

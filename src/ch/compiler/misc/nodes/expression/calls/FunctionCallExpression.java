@@ -24,7 +24,7 @@ public class FunctionCallExpression extends ExpressionNode {
         return 0;
     }
 
-    public void addArgument(List<ExpressionNode> arguments) {
+    public void addArguments(List<ExpressionNode> arguments) {
         arguments.addAll(arguments);
     }
 

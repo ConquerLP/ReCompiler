@@ -1,7 +1,7 @@
 package ch.compiler.misc.nodes.expression.literals;
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
-public class IntegerLiteral extends ConstExpNode {
+public class IntegerLiteral extends ExpressionNode {
 	
 	private final Integer value;
 
@@ -11,7 +11,7 @@ public class IntegerLiteral extends ConstExpNode {
 	}
 
 	@Override
-	public ConstExpNode evaluate() {
+	public ExpressionNode evaluate() {
 		return this;
 	}
 

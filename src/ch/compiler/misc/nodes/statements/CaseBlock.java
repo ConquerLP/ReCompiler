@@ -1,14 +1,14 @@
 package ch.compiler.misc.nodes.statements;
 
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
 public class CaseBlock extends Statement {
 
     private Block block;
-    private ConstExpNode constantExpression;
+    private ExpressionNode expressionNode;
 
-    public CaseBlock(ConstExpNode constantExpression, Block block) {
-        this.constantExpression = constantExpression;
+    public CaseBlock(ExpressionNode expressionNode, Block block) {
+        this.expressionNode = expressionNode;
         this.block = block;
     }
 

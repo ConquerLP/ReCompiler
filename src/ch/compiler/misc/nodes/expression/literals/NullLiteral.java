@@ -1,24 +1,20 @@
 package ch.compiler.misc.nodes.expression.literals;
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
+
+import ch.compiler.misc.nodes.expression.ExpressionNode;
 
 public class NullLiteral extends PointerLiteral {
 
-	private final int value = 0;
+    public NullLiteral() {
+        super(ExpressionNode.NULL);
+    }
 
-	public NullLiteral() {
-		super(NULL);
-	}
+    @Override
+    public ExpressionNode evaluate() {
+        return this;
+    }
 
-	@Override
-	public ConstExpNode evaluate() {
-		return this;
-	}
+    public int evaluateType() {
+        return NULL;
+    }
 
-	public int getValue() {
-		return value;
-	}
-
-	public int evaluateType() {
-		return NULL;
-	}
 }

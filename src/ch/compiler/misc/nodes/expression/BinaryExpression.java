@@ -1,8 +1,5 @@
 package ch.compiler.misc.nodes.expression;
 
-import ch.compiler.misc.nodes.constantExpression.ConstExpNode;
-import ch.compiler.misc.nodes.expression.ExpressionNode;
-
 public abstract class BinaryExpression extends ExpressionNode {
 
     protected ExpressionNode left;

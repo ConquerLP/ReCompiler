@@ -8,6 +8,6 @@ public class VisitorLabel extends ReFuggBaseVisitor<Label>{
 
     @Override
     public Label visitLabel(ReFuggParser.LabelContext ctx) {
-        return new Label(new VisitorBlock().visitBlock(ctx.block()), ctx.identifier().getText());
+        return new Label(new VisitorStatement().visitBlock(ctx.block()), ctx.identifier().getText());
     }
 }

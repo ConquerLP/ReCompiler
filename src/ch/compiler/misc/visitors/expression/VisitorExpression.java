@@ -1,12 +1,8 @@
 package ch.compiler.misc.visitors.expression;
 
 import ch.compiler.misc.nodes.expression.ExpressionNode;
-import ch.compiler.misc.nodes.expression.literals.ArrayLiteral;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
 
@@ -97,47 +93,17 @@ public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
 
     @Override
     public ExpressionNode visitPrimary(ReFuggParser.PrimaryContext ctx) {
-        if (ctx.orExpression() != null) {
-            return visitOrExpression(ctx.orExpression());
-        } else if (ctx.newObject() != null) {
-            return visitNewObject(ctx.newObject());
-        } else if (ctx.fCall() != null) {
-            return visitFCall(ctx.fCall());
-        } else if (ctx.varAcces() != null) {
-            return visitVarAcces(ctx.varAcces());
-        } else if (ctx.thisAcces() != null) {
-            return visitThisAcces(ctx.thisAcces());
-        } else if (ctx.list() != null) {
-            return new VisitorFArgs().visitList(ctx.list());
-        } else if (ctx.constant() != null) {
-
-        } else {
-            return null;
-        }
-
-        else{
-            return null;
-        }
+        return null;
     }
 
     @Override
     public ExpressionNode visitList(ReFuggParser.ListContext ctx) {
-        if (ctx.expressionMany() != null) {
-            ArrayLiteral arrayLiteral = new ArrayLiteral();
-            new VisitorFArgs().visitExpressionMany(ctx.expressionMany())
-                    .forEach(exp -> arrayLiteral.add(exp));
-        } else {
-            List<ExpressionNode> expressions = new ArrayList<>();
-            ctx.subList().forEach(subList -> expressions.add(visitSubList(subList)));
-            return expressions;
-        }
+        return null;
     }
 
     @Override
     public ExpressionNode visitSubList(ReFuggParser.SubListContext ctx) {
-        ArrayLiteral arrayLiteral = new ArrayLiteral();
-        new VisitorFArgs().visitExpressionMany(ctx.expressionMany())
-                .forEach(e -> arrayLiteral.add(e));
+        return null;
     }
 
 }
