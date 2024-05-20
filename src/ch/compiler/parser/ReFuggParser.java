@@ -36,7 +36,7 @@ public class ReFuggParser extends Parser {
 		RULE_whileStmt = 17, RULE_doWhileStmt = 18, RULE_forStmt = 19, RULE_jumpStmt = 20, 
 		RULE_label = 21, RULE_switchCase = 22, RULE_caseBlock = 23, RULE_check = 24, 
 		RULE_varDec = 25, RULE_globalVar = 26, RULE_simpleArray = 27, RULE_arrayAccess = 28, 
-		RULE_methodCall = 29, RULE_newObject = 30, RULE_fCall = 31, RULE_thisAcces = 32, 
+		RULE_simpleCall = 29, RULE_newObject = 30, RULE_fCall = 31, RULE_thisAcces = 32, 
 		RULE_varAcces = 33, RULE_callTail = 34, RULE_lh_expression = 35, RULE_expression = 36, 
 		RULE_orExpression = 37, RULE_andExpression = 38, RULE_equalityExpression = 39, 
 		RULE_relationalExpression = 40, RULE_additiveExpression = 41, RULE_multiplicativeExpression = 42, 
@@ -54,7 +54,7 @@ public class ReFuggParser extends Parser {
 			"complexClassInsides", "classInsides", "poly", "visibilty", "classConstructor", 
 			"method", "classField", "block", "stmt", "ifStmt", "whileStmt", "doWhileStmt", 
 			"forStmt", "jumpStmt", "label", "switchCase", "caseBlock", "check", "varDec", 
-			"globalVar", "simpleArray", "arrayAccess", "methodCall", "newObject", 
+			"globalVar", "simpleArray", "arrayAccess", "simpleCall", "newObject", 
 			"fCall", "thisAcces", "varAcces", "callTail", "lh_expression", "expression", 
 			"orExpression", "andExpression", "equalityExpression", "relationalExpression", 
 			"additiveExpression", "multiplicativeExpression", "exponentiationExpression", 
@@ -2163,35 +2163,35 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class MethodCallContext extends ParserRuleContext {
+	public static class SimpleCallContext extends ParserRuleContext {
 		public IdentifierContext identifier() {
 			return getRuleContext(IdentifierContext.class,0);
 		}
 		public FArgsContext fArgs() {
 			return getRuleContext(FArgsContext.class,0);
 		}
-		public MethodCallContext(ParserRuleContext parent, int invokingState) {
+		public SimpleCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_methodCall; }
+		@Override public int getRuleIndex() { return RULE_simpleCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMethodCall(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterSimpleCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMethodCall(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitSimpleCall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMethodCall(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitSimpleCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final MethodCallContext methodCall() throws RecognitionException {
-		MethodCallContext _localctx = new MethodCallContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_methodCall);
+	public final SimpleCallContext simpleCall() throws RecognitionException {
+		SimpleCallContext _localctx = new SimpleCallContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_simpleCall);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -2561,8 +2561,8 @@ public class ReFuggParser extends Parser {
 		public IdentifierContext identifier() {
 			return getRuleContext(IdentifierContext.class,0);
 		}
-		public MethodCallContext methodCall() {
-			return getRuleContext(MethodCallContext.class,0);
+		public SimpleCallContext simpleCall() {
+			return getRuleContext(SimpleCallContext.class,0);
 		}
 		public List<ArrayAccessContext> arrayAccess() {
 			return getRuleContexts(ArrayAccessContext.class);
@@ -2611,7 +2611,7 @@ public class ReFuggParser extends Parser {
 			case 2:
 				{
 				setState(429);
-				methodCall();
+				simpleCall();
 				}
 				break;
 			}

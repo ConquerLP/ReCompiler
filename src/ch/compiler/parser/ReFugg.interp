@@ -200,7 +200,7 @@ varDec
 globalVar
 simpleArray
 arrayAccess
-methodCall
+simpleCall
 newObject
 fCall
 thisAcces

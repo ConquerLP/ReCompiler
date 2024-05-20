@@ -58,13 +58,13 @@ globalVar: GLOBAL typemodifier? complexType identifier ('=' constant)? ';' ;
 
 simpleArray: '[' orExpression? ']' ;
 arrayAccess: '[' orExpression ']' ;
-methodCall: identifier fArgs ;
+simpleCall: identifier fArgs ;
 newObject: NEW identifier fArgs arrayAccess* callTail* ;
 fCall: identifier fArgs arrayAccess* callTail* ;
 
 thisAcces: THIS callTail* ;
 varAcces: identifier arrayAccess* callTail* ;
-callTail: ('.' (identifier | methodCall) arrayAccess*) ;
+callTail: ('.' (identifier | simpleCall) arrayAccess*) ;
 
 lh_expression: thisAcces | varAcces ;
 

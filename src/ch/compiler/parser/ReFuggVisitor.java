@@ -185,11 +185,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitArrayAccess(ReFuggParser.ArrayAccessContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ReFuggParser#methodCall}.
+	 * Visit a parse tree produced by {@link ReFuggParser#simpleCall}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMethodCall(ReFuggParser.MethodCallContext ctx);
+	T visitSimpleCall(ReFuggParser.SimpleCallContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#newObject}.
 	 * @param ctx the parse tree

@@ -364,13 +364,13 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMethodCall(ReFuggParser.MethodCallContext ctx) { }
+	@Override public void enterSimpleCall(ReFuggParser.SimpleCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMethodCall(ReFuggParser.MethodCallContext ctx) { }
+	@Override public void exitSimpleCall(ReFuggParser.SimpleCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -298,15 +298,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitArrayAccess(ReFuggParser.ArrayAccessContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ReFuggParser#methodCall}.
+	 * Enter a parse tree produced by {@link ReFuggParser#simpleCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterMethodCall(ReFuggParser.MethodCallContext ctx);
+	void enterSimpleCall(ReFuggParser.SimpleCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ReFuggParser#methodCall}.
+	 * Exit a parse tree produced by {@link ReFuggParser#simpleCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitMethodCall(ReFuggParser.MethodCallContext ctx);
+	void exitSimpleCall(ReFuggParser.SimpleCallContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#newObject}.
 	 * @param ctx the parse tree
