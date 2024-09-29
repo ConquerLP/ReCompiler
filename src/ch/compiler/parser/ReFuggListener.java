@@ -58,6 +58,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitFParam(ReFuggParser.FParamContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#arg}.
+	 * @param ctx the parse tree
+	 */
+	void enterArg(ReFuggParser.ArgContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#arg}.
+	 * @param ctx the parse tree
+	 */
+	void exitArg(ReFuggParser.ArgContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#argList}.
 	 * @param ctx the parse tree
 	 */
@@ -78,15 +88,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitClassDec(ReFuggParser.ClassDecContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ReFuggParser#classInsides}.
+	 * Enter a parse tree produced by {@link ReFuggParser#classInside}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassInsides(ReFuggParser.ClassInsidesContext ctx);
+	void enterClassInside(ReFuggParser.ClassInsideContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ReFuggParser#classInsides}.
+	 * Exit a parse tree produced by {@link ReFuggParser#classInside}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassInsides(ReFuggParser.ClassInsidesContext ctx);
+	void exitClassInside(ReFuggParser.ClassInsideContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#poly}.
 	 * @param ctx the parse tree
@@ -148,125 +158,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitBlock(ReFuggParser.BlockContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
+	 * Enter a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(ReFuggParser.IfStatementContext ctx);
+	void enterStmt(ReFuggParser.StmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
+	 * Exit a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(ReFuggParser.IfStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterWhileStatement(ReFuggParser.WhileStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitWhileStatement(ReFuggParser.WhileStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code doWhileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterDoWhileStatement(ReFuggParser.DoWhileStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code doWhileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitDoWhileStatement(ReFuggParser.DoWhileStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code forStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterForStatement(ReFuggParser.ForStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code forStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitForStatement(ReFuggParser.ForStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code switchStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterSwitchStatement(ReFuggParser.SwitchStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code switchStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitSwitchStatement(ReFuggParser.SwitchStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code labelStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterLabelStatement(ReFuggParser.LabelStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code labelStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitLabelStatement(ReFuggParser.LabelStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlockStatement(ReFuggParser.BlockStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlockStatement(ReFuggParser.BlockStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code varDecStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterVarDecStatement(ReFuggParser.VarDecStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code varDecStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitVarDecStatement(ReFuggParser.VarDecStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprStatement(ReFuggParser.ExprStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprStatement(ReFuggParser.ExprStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code jumpStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterJumpStatement(ReFuggParser.JumpStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code jumpStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitJumpStatement(ReFuggParser.JumpStatementContext ctx);
+	void exitStmt(ReFuggParser.StmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#ifStmt}.
 	 * @param ctx the parse tree
@@ -308,53 +208,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitForStmt(ReFuggParser.ForStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code breakStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
+	 * Enter a parse tree produced by {@link ReFuggParser#jumpStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterBreakStatement(ReFuggParser.BreakStatementContext ctx);
+	void enterJumpStmt(ReFuggParser.JumpStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code breakStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
+	 * Exit a parse tree produced by {@link ReFuggParser#jumpStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitBreakStatement(ReFuggParser.BreakStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code continueStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterContinueStatement(ReFuggParser.ContinueStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code continueStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitContinueStatement(ReFuggParser.ContinueStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code gotoStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterGotoStatement(ReFuggParser.GotoStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code gotoStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitGotoStatement(ReFuggParser.GotoStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code returnStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterReturnStatement(ReFuggParser.ReturnStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code returnStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitReturnStatement(ReFuggParser.ReturnStatementContext ctx);
+	void exitJumpStmt(ReFuggParser.JumpStmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#label}.
 	 * @param ctx the parse tree
@@ -376,29 +238,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitSwitchCase(ReFuggParser.SwitchCaseContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code caseStatement}
-	 * labeled alternative in {@link ReFuggParser#caseBlock}.
+	 * Enter a parse tree produced by {@link ReFuggParser#caseBlock}.
 	 * @param ctx the parse tree
 	 */
-	void enterCaseStatement(ReFuggParser.CaseStatementContext ctx);
+	void enterCaseBlock(ReFuggParser.CaseBlockContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code caseStatement}
-	 * labeled alternative in {@link ReFuggParser#caseBlock}.
+	 * Exit a parse tree produced by {@link ReFuggParser#caseBlock}.
 	 * @param ctx the parse tree
 	 */
-	void exitCaseStatement(ReFuggParser.CaseStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code defaultStatement}
-	 * labeled alternative in {@link ReFuggParser#caseBlock}.
-	 * @param ctx the parse tree
-	 */
-	void enterDefaultStatement(ReFuggParser.DefaultStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code defaultStatement}
-	 * labeled alternative in {@link ReFuggParser#caseBlock}.
-	 * @param ctx the parse tree
-	 */
-	void exitDefaultStatement(ReFuggParser.DefaultStatementContext ctx);
+	void exitCaseBlock(ReFuggParser.CaseBlockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#check}.
 	 * @param ctx the parse tree
@@ -440,29 +288,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitConstArray(ReFuggParser.ConstArrayContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code constListNoSub}
-	 * labeled alternative in {@link ReFuggParser#constList}.
+	 * Enter a parse tree produced by {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstListNoSub(ReFuggParser.ConstListNoSubContext ctx);
+	void enterConstList(ReFuggParser.ConstListContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code constListNoSub}
-	 * labeled alternative in {@link ReFuggParser#constList}.
+	 * Exit a parse tree produced by {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstListNoSub(ReFuggParser.ConstListNoSubContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code constListYesSub}
-	 * labeled alternative in {@link ReFuggParser#constList}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstListYesSub(ReFuggParser.ConstListYesSubContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code constListYesSub}
-	 * labeled alternative in {@link ReFuggParser#constList}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstListYesSub(ReFuggParser.ConstListYesSubContext ctx);
+	void exitConstList(ReFuggParser.ConstListContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#constSubList}.
 	 * @param ctx the parse tree
@@ -584,53 +418,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitConstUnary(ReFuggParser.ConstUnaryContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code constExprConst}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
+	 * Enter a parse tree produced by {@link ReFuggParser#constFactor}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstExprConst(ReFuggParser.ConstExprConstContext ctx);
+	void enterConstFactor(ReFuggParser.ConstFactorContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code constExprConst}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
+	 * Exit a parse tree produced by {@link ReFuggParser#constFactor}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstExprConst(ReFuggParser.ConstExprConstContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code constExprParenth}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstExprParenth(ReFuggParser.ConstExprParenthContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code constExprParenth}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstExprParenth(ReFuggParser.ConstExprParenthContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code constExprVar}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstExprVar(ReFuggParser.ConstExprVarContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code constExprVar}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstExprVar(ReFuggParser.ConstExprVarContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code constExprArrayAccess}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstExprArrayAccess(ReFuggParser.ConstExprArrayAccessContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code constExprArrayAccess}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstExprArrayAccess(ReFuggParser.ConstExprArrayAccessContext ctx);
+	void exitConstFactor(ReFuggParser.ConstFactorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#arrayAccess}.
 	 * @param ctx the parse tree

@@ -9,7 +9,7 @@ public class VisitorClassMember extends ReFuggBaseVisitor<ClassMember>{
 
     @Override
     public ClassMember visitClassField(ReFuggParser.ClassFieldContext ctx) {
-        return new ClassMember(new VisitorComplexType().visitComplexType(ctx.complexType()),
+        return new ClassMember(new VisitorType().visitType(ctx.type()),
                 ctx.identifier().getText(),
                 new VisitorTypeModifier().visitTypemodifier(ctx.typemodifier())
         );

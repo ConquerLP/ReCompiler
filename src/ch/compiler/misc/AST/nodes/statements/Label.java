@@ -2,7 +2,7 @@ package ch.compiler.misc.AST.nodes.statements;
 
 import ch.compiler.misc.AST.nodes.symbolTable.*;
 
-public class Label extends Statement implements SymbolEntry {
+public class Label extends Statement implements SymbolEntry, Resolvable {
 
     private String id;
     private Block block;
@@ -17,4 +17,8 @@ public class Label extends Statement implements SymbolEntry {
         return new EntryLabel(id);
     }
 
+    @Override
+    public void resolve(SymbolTable table) throws RuntimeException {
+
+    }
 }

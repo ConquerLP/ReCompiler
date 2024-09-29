@@ -13,7 +13,7 @@ public class VisitorClass extends ReFuggBaseVisitor<ClassDec> {
         if (poly != null) {
             classDec.addSuperClass(new VisitorPoly().visitPoly(poly));
         }
-        ctx.complexClassInsides().forEach(c -> classDec.add(new VisitorComplexClassInsides().visitComplexClassInsides(c)));
+        ctx.classInside().forEach(c -> classDec.add(new VisitorClassInside().visitClassInside(c)));
         return classDec;
     }
 }

@@ -8,57 +8,58 @@ main: MAIN block ;
 func: FUNC fHeader fParam block ;
 fHeader: returntype ('[' ']')* identifier ;
 fParam: '(' argList? ')' ;
-argList: type constArray* identifier (',' type constArray* identifier)* ;
+arg: type constArray* identifier ;
+argList: arg (',' arg)* ;
 
 //class
 classDec: CLASS identifier poly? 
-	'{' (visibilty classInsides+)* '}' ;
-classInsides: (classConstructor | classField | method) ;
+	'{' (visibilty classInside+)* '}' ;
+classInside: (classConstructor | classField | method) ;
 poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam block ;
 method: METH fHeader fParam block ;
-classField: FIELD type constArray* identifier ';' ;
+classField: FIELD typemodifier type constArray* identifier ';' ;
 
 //programflow & statements
 block: '{' stmt* '}' ;
-stmt: ifStmt				# ifStatement
-	| whileStmt				# whileStatement
-	| doWhileStmt ';'		# doWhileStatement
-	| forStmt				# forStatement
-	| switchCase			# switchStatement
-	| label					# labelStatement
-	| block					# blockStatement
-	| varDec ';'			# varDecStatement
-	| expression ';'		# exprStatement
-	| jumpStmt ';'			# jumpStatement
+stmt: ifStmt
+	| whileStmt
+	| doWhileStmt ';'
+	| forStmt
+	| switchCase
+	| label
+	| block
+	| varDec ';'
+	| expression ';'
+	| jumpStmt ';'
 	;
 ifStmt: IF check stmt (ELSE stmt)? ;
 whileStmt: WHILE check block ;
 doWhileStmt: DO block WHILE check ;
 forStmt: FOR '(' (varDec | orExpression)? ';' orExpression? ';' orExpression? ')' block ;
-jumpStmt: BREAK			# breakStatement
-	| CONTINUE			# continueStatement
-	| GOTO identifier	# gotoStatement
-	| RETURN expression? 		# returnStatement
+jumpStmt: BREAK
+	| CONTINUE
+	| GOTO identifier
+	| RETURN expression?
 	;
 label: LABEL identifier block ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
-caseBlock: CASE constExpr ':' block		# caseStatement
-	| DEFAULT ':' block					# defaultStatement
+caseBlock: CASE constExpr ':' block
+	| DEFAULT ':' block
 	;
 check: '(' orExpression ')' ;
 
 //declaration & assignment
-varDec: type constArray* identifier ('=' (orExpression | list))? ;
+varDec: typemodifier? type constArray* identifier ('=' (orExpression | list))? ;
 
 //static declarations
 globalVar: GLOBAL typemodifier? type constArray* identifier '=' (constExpr | constList) ';' ;
 
 constArray: '[' constExpr? ']' ;
 
-constList: '{' constExprMany '}' 				# constListNoSub
-	| '{' constSubList (',' constSubList)+ '}' 	# constListYesSub
+constList: '{' constExprMany '}'
+	| '{' constSubList (',' constSubList)+ '}'
 	;
 constSubList: '{' constExprMany '}' ;
 constExprMany: constExpr (',' constExpr)* ;
@@ -73,10 +74,10 @@ constLogic: constLogic addOP constTerm | constTerm ;
 constTerm: constTerm multOP constExpo | constExpo ;
 constExpo: constExpo expOP constUnary | constUnary ;
 constUnary: preOP constFactor | constFactor;
-constFactor:  constant 			# constExprConst
-	| '(' constExpr ')' 		# constExprParenth
-	| constVar					# constExprVar
-	| constArrayAccess			# constExprArrayAccess
+constFactor:  constant
+	| '(' constExpr ')'
+	| constVar
+	| constArrayAccess
 	;
 
 //expression
@@ -122,7 +123,7 @@ returntype: VOID
 constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
-typemodifier: STATIC ;
+typemodifier: FINAL ;
 
 doubleRule: DOUBLE_LIT ;
 intRule: INT_LIT ;
@@ -157,7 +158,7 @@ ISA: 'isa:' ;
 PRIVATE: 'private:' ;
 PUBLIC: 'public:' ;
 PROTECTED: 'protected:' ;
-STATIC: 'static' ;
+FINAL: 'final' ;
 
 IF: 'if' ;
 ELSE: 'else' ;

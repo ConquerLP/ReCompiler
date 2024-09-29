@@ -49,7 +49,6 @@ public class VisitorStatement extends ReFuggBaseVisitor<Statement> {
         } else {
             return new If(new VisitorExpression().visitCheck(ctx.check()),
                     visitStmt(ctx.stmt(0)));
-
         }
     }
 
@@ -86,7 +85,7 @@ public class VisitorStatement extends ReFuggBaseVisitor<Statement> {
         if("default".equals(ctx.getText())) {
             return new CaseBlock(visitBlock(ctx.block()));
         } else {
-            return new CaseBlock(new VisitorExpression().visitConstant(ctx.constant()),
+            return new CaseBlock(new VisitorExpression().visitConstExpr(ctx.constExpr()),
                     visitBlock(ctx.block()));
         }
     }
@@ -100,7 +99,7 @@ public class VisitorStatement extends ReFuggBaseVisitor<Statement> {
         } else if("goto".equals(ctx.getText())) {
             return new Jump(JumpType.GOTO, ctx.identifier().getText());
         } else {
-            return new Jump(JumpType.RETURN, new VisitorExpression().visitOrExpression(ctx.orExpression()));
+            return new Jump(JumpType.RETURN, new VisitorExpression().visitExpression(ctx.expression()));
         }
     }
 

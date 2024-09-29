@@ -8,7 +8,7 @@ public class VisitorArrayAccess extends ReFuggBaseVisitor<ArrayAccess> {
 
     @Override
     public ArrayAccess visitArrayAccess(ReFuggParser.ArrayAccessContext ctx) {
-        return new ArrayAccess(new VisitorExpression().visit(ctx.orExpression()));
+        return new ArrayAccess(new VisitorExpression().visit(ctx.expression()));
     }
 
 }

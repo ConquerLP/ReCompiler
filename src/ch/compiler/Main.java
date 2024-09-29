@@ -1,12 +1,13 @@
 package ch.compiler;
 
 import java.io.IOException;
+
+import ch.compiler.misc.AST.nodes.bodys.Program;
+import ch.compiler.misc.AST.visitors.bodys.VisitorProgram;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 
-import ch.compiler.misc.nodes.bodys.Program;
-import ch.compiler.misc.visitors.bodys.VisitorProgram;
 import ch.compiler.parser.*;
 
 public class Main {

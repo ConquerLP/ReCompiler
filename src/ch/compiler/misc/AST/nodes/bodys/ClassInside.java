@@ -18,6 +18,7 @@ public abstract class ClassInside {
     public ClassInside(Type type, String name) {
         this.type = type;
         this.name = name;
+        access = Access.PUBLIC;
     }
 
     public void setAccess(Access access) {

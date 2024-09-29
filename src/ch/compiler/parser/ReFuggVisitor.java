@@ -41,6 +41,12 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFParam(ReFuggParser.FParamContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#arg}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArg(ReFuggParser.ArgContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#argList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -53,11 +59,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitClassDec(ReFuggParser.ClassDecContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ReFuggParser#classInsides}.
+	 * Visit a parse tree produced by {@link ReFuggParser#classInside}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassInsides(ReFuggParser.ClassInsidesContext ctx);
+	T visitClassInside(ReFuggParser.ClassInsideContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#poly}.
 	 * @param ctx the parse tree
@@ -95,75 +101,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBlock(ReFuggParser.BlockContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
+	 * Visit a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIfStatement(ReFuggParser.IfStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitWhileStatement(ReFuggParser.WhileStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code doWhileStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDoWhileStatement(ReFuggParser.DoWhileStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code forStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitForStatement(ReFuggParser.ForStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code switchStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSwitchStatement(ReFuggParser.SwitchStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code labelStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLabelStatement(ReFuggParser.LabelStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBlockStatement(ReFuggParser.BlockStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code varDecStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVarDecStatement(ReFuggParser.VarDecStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprStatement(ReFuggParser.ExprStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code jumpStatement}
-	 * labeled alternative in {@link ReFuggParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitJumpStatement(ReFuggParser.JumpStatementContext ctx);
+	T visitStmt(ReFuggParser.StmtContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#ifStmt}.
 	 * @param ctx the parse tree
@@ -189,33 +131,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitForStmt(ReFuggParser.ForStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code breakStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
+	 * Visit a parse tree produced by {@link ReFuggParser#jumpStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBreakStatement(ReFuggParser.BreakStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code continueStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitContinueStatement(ReFuggParser.ContinueStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code gotoStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitGotoStatement(ReFuggParser.GotoStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code returnStatement}
-	 * labeled alternative in {@link ReFuggParser#jumpStmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitReturnStatement(ReFuggParser.ReturnStatementContext ctx);
+	T visitJumpStmt(ReFuggParser.JumpStmtContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#label}.
 	 * @param ctx the parse tree
@@ -229,19 +149,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitSwitchCase(ReFuggParser.SwitchCaseContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code caseStatement}
-	 * labeled alternative in {@link ReFuggParser#caseBlock}.
+	 * Visit a parse tree produced by {@link ReFuggParser#caseBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCaseStatement(ReFuggParser.CaseStatementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code defaultStatement}
-	 * labeled alternative in {@link ReFuggParser#caseBlock}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDefaultStatement(ReFuggParser.DefaultStatementContext ctx);
+	T visitCaseBlock(ReFuggParser.CaseBlockContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#check}.
 	 * @param ctx the parse tree
@@ -267,19 +179,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstArray(ReFuggParser.ConstArrayContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code constListNoSub}
-	 * labeled alternative in {@link ReFuggParser#constList}.
+	 * Visit a parse tree produced by {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstListNoSub(ReFuggParser.ConstListNoSubContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code constListYesSub}
-	 * labeled alternative in {@link ReFuggParser#constList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstListYesSub(ReFuggParser.ConstListYesSubContext ctx);
+	T visitConstList(ReFuggParser.ConstListContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#constSubList}.
 	 * @param ctx the parse tree
@@ -353,33 +257,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstUnary(ReFuggParser.ConstUnaryContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code constExprConst}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
+	 * Visit a parse tree produced by {@link ReFuggParser#constFactor}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstExprConst(ReFuggParser.ConstExprConstContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code constExprParenth}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstExprParenth(ReFuggParser.ConstExprParenthContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code constExprVar}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstExprVar(ReFuggParser.ConstExprVarContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code constExprArrayAccess}
-	 * labeled alternative in {@link ReFuggParser#constFactor}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstExprArrayAccess(ReFuggParser.ConstExprArrayAccessContext ctx);
+	T visitConstFactor(ReFuggParser.ConstFactorContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#arrayAccess}.
 	 * @param ctx the parse tree

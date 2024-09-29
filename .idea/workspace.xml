@@ -4,18 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment=".">
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="before messier mess">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReFugg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ReFugg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/grammar/ReFugg.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/grammar/ReFuggLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/antlr-2024-04-26-20.43.03.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/grammar/antlr-2024-04-26-20.43.03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/grammar/test01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/GlobalDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/GlobalDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/VarDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/VarDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassInside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassInside.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassInside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassInside.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorComplexClassInsides.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArgList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArgList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArrayAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArrayAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/constant/VisitorGlobalVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/constant/VisitorGlobalVarDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorComplexType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorReturnType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorReturnType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorTypeModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorTypeModifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorVarDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/statements/VisitorStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/statements/VisitorStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +211,8 @@
     <MESSAGE value="before mess" />
     <MESSAGE value="updated grammar" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="before messier mess" />
+    <option name="LAST_COMMIT_MESSAGE" value="before messier mess" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

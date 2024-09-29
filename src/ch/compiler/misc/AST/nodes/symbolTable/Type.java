@@ -72,8 +72,8 @@ public class Type {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((dataType == null) ? 0 : dataType.hashCode());
-        result = prime * result + ((typeModifier == null) ? 0 : typeModifier.hashCode());
-        result = prime * result + ((dims == null) ? 0 : dims.hashCode());
+        result += prime * result + ((typeModifier == null) ? 0 : typeModifier.hashCode());
+        result += prime * result + ((dims == null) ? 0 : dims.hashCode());
         return result;
     }
 
