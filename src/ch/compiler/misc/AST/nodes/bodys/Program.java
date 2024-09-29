@@ -2,13 +2,14 @@ package ch.compiler.misc.AST.nodes.bodys;
 
 import ch.compiler.misc.AST.nodes.declaration.GlobalDeclaration;
 import ch.compiler.misc.AST.nodes.statements.Label;
+import ch.compiler.misc.AST.nodes.symbolTable.Resolvable;
 import ch.compiler.misc.AST.nodes.symbolTable.SymbolTable;
 import ch.compiler.misc.AST.nodes.symbolTable.SymbolTableEntry;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Program {
+public class Program implements Resolvable {
 
     private MainFunction main;
     private SymbolTable globalSymbols = new SymbolTable();
@@ -29,10 +30,6 @@ public class Program {
         return main;
     }
 
-    public SymbolTable getTable() {
-        return globalSymbols;
-    }
-
     public void addFunction(Function f) {
         functions.add(f);
     }
@@ -49,4 +46,15 @@ public class Program {
         labels.add(l);
     }
 
+    public SymbolTable getGlobalSymbols() {
+        return globalSymbols;
+    }
+
+    @Override
+    public void resolve(SymbolTable table) throws RuntimeException {
+        functions.forEach(f -> f.resolve(globalSymbols));
+        classes.forEach(c -> c.resolve(globalSymbols));
+        globalVars.forEach(g -> g.resolve(globalSymbols));
+        labels.forEach(l -> l.resolve(globalSymbols));
+    }
 }

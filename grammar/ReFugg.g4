@@ -8,120 +8,157 @@ main: MAIN block ;
 func: FUNC fHeader fParam block ;
 fHeader: returntype ('[' ']')* identifier ;
 fParam: '(' argList? ')' ;
-argList: complexType identifier (',' complexType identifier)* ;
+argList: type constArray* identifier (',' type constArray* identifier)* ;
 
 //class
 classDec: CLASS identifier poly? 
-	'{' complexClassInsides* '}' ;
-complexClassInsides: visibilty classInsides+ ;
-classInsides: classConstructor | classField | method ;
+	'{' (visibilty classInsides+)* '}' ;
+classInsides: (classConstructor | classField | method) ;
 poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam block ;
 method: METH fHeader fParam block ;
-classField: FIELD typemodifier? complexType identifier ';' ;
+classField: FIELD type constArray* identifier ';' ;
 
 //programflow & statements
 block: '{' stmt* '}' ;
-stmt: ifStmt
-	| whileStmt
-	| doWhileStmt ';'
-	| forStmt
-	| switchCase
-	| label
-	| block
-	| varDec ';'
-	| expression ';'
-	| jumpStmt ';'
+stmt: ifStmt				# ifStatement
+	| whileStmt				# whileStatement
+	| doWhileStmt ';'		# doWhileStatement
+	| forStmt				# forStatement
+	| switchCase			# switchStatement
+	| label					# labelStatement
+	| block					# blockStatement
+	| varDec ';'			# varDecStatement
+	| assign ';'			# asssignStatement
+	| expr ';'				# exprStatement
+	| jumpStmt ';'			# jumpStatement
 	;
 ifStmt: IF check stmt (ELSE stmt)? ;
 whileStmt: WHILE check block ;
 doWhileStmt: DO block WHILE check ;
-forStmt: FOR '(' (varDec | orExpression)? ';' orExpression? ';' orExpression? ')' block ;
-jumpStmt: BREAK
-	| CONTINUE
-	| GOTO identifier
-	| RETURN orExpression?
+forStmt: FOR '(' (varDec | expr)? ';' expr? ';' expr? ')' block ;
+jumpStmt: BREAK			# breakStatement
+	| CONTINUE			# continueStatement
+	| GOTO identifier	# gotoStatement
+	| RETURN expr? 		# returnStatement
 	;
 label: LABEL identifier block ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
-caseBlock: CASE constant ':' block
-	| DEFAULT ':' block
+caseBlock: CASE constExpr ':' block		# caseStatement
+	| DEFAULT ':' block					# defaultStatement
 	;
-check: '(' orExpression ')' ;
+check: '(' expr ')' ;
 
 //declaration & assignment
-varDec: complexType identifier ('=' orExpression)? ;
+varDec: type constArray* identifier ('=' expr)? ;
+assign: identifier index assignOP expr
+	| thisAccess index assignOP expr
+	;
 
 //static declarations
-globalVar: GLOBAL typemodifier? complexType identifier ('=' constant)? ';' ;
+globalVar: GLOBAL typemodifier? type constArray* identifier '=' constExpr ';' ;
 
-simpleArray: '[' orExpression? ']' ;
-arrayAccess: '[' orExpression ']' ;
-simpleCall: identifier fArgs ;
-newObject: NEW identifier fArgs arrayAccess* callTail* ;
-fCall: identifier fArgs arrayAccess* callTail* ;
+constArray: '[' constExpr? ']' ;
 
-thisAcces: THIS callTail* ;
-varAcces: identifier arrayAccess* callTail* ;
-callTail: ('.' (identifier | simpleCall) arrayAccess*) ;
+constList: '{' constExprMany '}' 				# constListNoSub
+	| '{' constSubList (',' constSubList)+ '}' 	# constListYesSub
+	;
+constSubList: '{' constExprMany '}' ;
+constExprMany: constExpr (',' constExpr)* ;
+constVar: identifier ;
+constArrayAccess: identifier constArray+ ;
 
-lh_expression: thisAcces | varAcces ;
+constExpr: constExpr or constJoin | constJoin ;
+constJoin: constJoin and constEQ | constEQ ;
+constEQ: constEQ eqOP constRel | constRel ;
+constRel: constRel logicOp constLogic | constLogic ;
+constLogic: constLogic add constTerm | constTerm ;
+constTerm: constTerm mult constExpo | constExpo ;
+constExpo: constExpo expoOp constUnary | constUnary ;
+constUnary: notNeg constFactor | constFactor;
+constFactor:  constant 			# constExprConst
+	| '(' constExpr ')' 		# constExprParenth
+	| constList					# constExprList
+	| constVar					# constExprVar
+	| constArrayAccess			# constExprArrayAccess
+	;
 
-expression: lh_expression assignOP expression | orExpression;
-orExpression: orExpression orOP andExpression | andExpression;
-andExpression: andExpression andOP equalityExpression | equalityExpression;
-equalityExpression: equalityExpression eqOP relationalExpression | relationalExpression;
-relationalExpression: relationalExpression relOP additiveExpression | additiveExpression;
-additiveExpression: additiveExpression addOP multiplicativeExpression | multiplicativeExpression;
-multiplicativeExpression: multiplicativeExpression multOP exponentiationExpression | exponentiationExpression;
-exponentiationExpression: exponentiationExpression expOP unaryExpression | unaryExpression;
-unaryExpression: preOP unaryExpression | postExpression;
-postExpression: primary postOP | primary;
-primary: '(' orExpression ')'
-    | newObject
-    | fCall
-    | varAcces
-    | thisAcces
-    | list
-    | constant
-    ;
+//declarations
+expr: expr or join
+	| join
+	;
+join: join and eq
+	| eq
+	;
+eq: eq eqOP rel
+	| rel
+	;
+rel: rel logicOp logic
+	| logic
+	;
+logic: logic add term
+	| term
+	;
+term: term mult expo
+	| expo
+	;
+expo: expo expoOp unary
+	| unary
+	;
+unary: notNeg factor
+	| factor
+	;
+factor: '(' expr ')'			#exprParenth
+	| fCall						#exprfCall
+	| methCall 					#exprmethCall
+	| identifier postOP?		#expridentifier
+	| identifier index postOP?	#expridentifierIndex
+	| create					#exprCreate
+	| constant 					#exprConstant
+	| thisAccess postOP?		#exprThis
+	| list 						#exprList
+	;
 
-list: '{' expressionMany '}'
-    | '{' subList (',' subList)+ '}' ;
-subList: '{' expressionMany '}' ;
-expressionMany: orExpression (',' orExpression)*;
-fArgs: '(' expressionMany? ')' ;
+fCall: identifier fArgs ;
+methCall: identifier index methCallTail+	#MethCallidentifier
+	| thisAccess methCallTail+		#MethCallThis
+	;
+methCallTail: '.' fCall index ;
+
+create: NEW identifier fArgs index methCallTail* ;
+fArgs: '(' (expr (',' expr)*)? ')' ;
+index: ('[' expr ']')* ;
+thisAccess: THIS ('.' identifier index)* ;
+
+//list
+list: '{' exprMany '}' 					#exprListNoSub
+	| '{' subList (',' subList)+ '}' 	#exprListYesSub
+	;
+subList: '{' exprMany '}' ;
+exprMany: expr (',' expr)* ;
 
 //const & type
 returntype: VOID
-	| complexType
+	| type
 	;
 
 //Operators
-assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '%=' ;
-orOP: '||' | 'or' ;
-andOP: '&&' | 'and' ;
-eqOP: '==' | '!=' | 'is' | 'is not' ;
-relOP: '<' | '<=' | '>' | '>=' ;
-addOP: '+' | '-' ;
-multOP: '*' | '/' | '%' ;
-expOP: '^' ;
-preOP: '!' | '-' | '+' ;
+logicOp: '<' | '<=' | '>' | '>=' ;
+assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '^=' | '%=' ;
 postOP: '++' | '--' ;
 
-constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
-complexType: type simpleArray* ;
-type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier ;
+constant: doubleRule | intRule | stringRule | charRule | booleanRule | RefRule ;
+type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
-typemodifier: FINAL ;
+typemodifier: STATIC ;
 
 doubleRule: DOUBLE_LIT ;
 intRule: INT_LIT ;
 stringRule: STRING_LIT ;
 charRule: CHAR_LIT ;
 booleanRule: TRUE | FALSE ;
-refRule: THIS | NULL ;
+RefRule: THIS | NULL ;
 
 //Tokens
 MAIN: 'main:' ;
@@ -139,7 +176,6 @@ PRIVATE: 'private:' ;
 PUBLIC: 'public:' ;
 PROTECTED: 'protected:' ;
 STATIC: 'static' ;
-FINAL: 'final' ;
 
 IF: 'if' ;
 ELSE: 'else' ;
@@ -160,6 +196,14 @@ FALSE: 'false' ;
 THIS: 'this' ;
 NULL: 'null' ;
 NEW: 'new' ;
+
+or: 'or' | '||' ;
+and: 'and' | '&&' ; 
+notNeg: 'not' | '!' | '-' ;
+eqOP: '==' | 'is' | '!=' | 'is not' ;
+add: '+' | '-' ;
+mult: '*' | '/' | '%' ;
+expoOp: '^' ;
 
 //MISC
 INT_LIT: [0-9]+ ;

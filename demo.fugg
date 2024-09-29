@@ -1,5 +1,7 @@
-class: claus{}
-class: claus{}
+
+func: int[][] f0(){}
+
+global: int i[];
 
 main: {
 

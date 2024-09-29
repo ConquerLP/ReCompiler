@@ -38,6 +38,7 @@ public class VisitorProgram extends ReFuggBaseVisitor<Program> {
             prg.addEntry(l.toEntry());
         });
         prg.setMain(new VisitorMainFunction().visitMain(ctx.main()));
+        prg.resolve(prg.getGlobalSymbols());
         return prg;
     }
 

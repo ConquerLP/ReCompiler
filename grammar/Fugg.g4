@@ -5,10 +5,10 @@ main: MAIN block ;
 prog: func | classDec | globalVarDec ;
 func: FUNC fHeader fArgs block ;
 rType: VOID | type ;
-type: INT
-	| DOUBLE
-	| STRING
-	| CHAR
+type: INT 
+	| DOUBLE 
+	| STRING 
+	| CHAR 
 	| BOOLEAN
 	| ID
 	;
@@ -16,13 +16,13 @@ fHeader: rType ('[' ']')* ID ;
 visibilty: PUBLIC | PRIVATE ;
 fArgs: '(' argList? ')';
 argList: type arraySize* ID (',' type arraySize* ID)*;
-arraySize: '[' INT_NUM ']'
+arraySize: '[' INT_NUM ']' 
 	| '[' ']'
 	;
 classDec: CLASS ID (ISA ID (',' ID)*)? '{' classInsides* '}';
-classInsides:  classConst
-	| (visibilty classField)
-	| (visibilty method)
+classInsides:  classConst 
+	| (visibilty classField) 
+	| (visibilty method) 
 	;
 classConst: CONST ID fArgs block ;
 classField: FIELD type arraySize* ID ';' ;
@@ -38,8 +38,8 @@ stmt: ifStmt
 	| switchCase
 	| label
 	| block
-	| (varDec | expr | jumpStmt | assignSmt | doWhileStmt) ';'
-	;
+	| (varDec | expr | jumpStmt | assignSmt | doWhileStmt) ';' 
+	; 
 check: '(' expr ')' ;
 assignSmt: ID | thisAccess index* assignOP expr ;
 ifStmt: IF check block (ELSE (ifStmt | block))? ;
@@ -57,7 +57,7 @@ caseBlock: CASE constExpr ':' block
 	;
 
 
-list: '{' constExpressions '}'
+list: '{' constExpressions '}' 
 	| '{' subList (',' subList)+ '}'
 	;
 subList: '{' constExpressions '}' ;
@@ -65,16 +65,16 @@ constExpressions: constExpr (',' constExpr)* ;
 
 
 expr: expr OR join 						# orExpr
-	| join 								# loneJoin
+	| join 								# loneJoin	
 	| expr postOP 						# postExpr
-	;
-join: join AND equality					# andExpr
+	;						
+join: join AND equality					# andExpr	
 	| equality 							# loneEq
 	;
 equality: equality EQ rel 				# EQExpr
 	| rel                               # loneRel
 	;
-rel: rel logicOp logic					# logicExpr
+rel: rel logicOp logic					# logicExpr	
 	| logic                             # loneLogic
 	;
 logic: logic ADD term					# add_sub_modExpr
@@ -102,18 +102,18 @@ factor: '(' expr ')'					# parentExpr
 createObject: NEW ID aParams index* ;
 idNest: ID | thisAccess index* ;
 thisAccess: THIS ('.' ID)* ;
-index: '[' expr ']' ;
+index: '[' expr ']' ;	
 fCall:  ID aParams ;
 methCall: (idNest | createObject) ('.' ID aParams index*)+ ;
-aParams: '(' (expr (',' expr)*)? ')' ;
+aParams: '(' (expr (',' expr)*)? ')' ; 
 
-listExpr: '{' exprs '}'
+listExpr: '{' exprs '}' 
 	| '{' subListExpr (',' subListExpr)+ '}'
 	;
 subListExpr: '{' exprs '}' ;
 exprs: expr (',' expr)* ;
 
-constant: CHAR_LITERAL | STRING_LITERAL | TRUE | FALSE | NULL | DOUBLE_NUM | INT_NUM ;
+constant: CHAR_LITERAL | STRING_LITERAL | TRUE | FALSE | NULL | DOUBLE_NUM | INT_NUM ;	
 logicOp: '<' | '<=' | '>' | '>=' ;
 assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '^=' | '%=' ;
 postOP: '++' | '--' ;
@@ -126,8 +126,8 @@ constLogic: constLogic ADD constTerm | constTerm ;
 constTerm: constTerm MULT constExpo | constExpo ;
 constExpo: constExpo EXPO constUnary | constUnary ;
 constUnary: NOT_NEG constUnary | constFactor ;
-constFactor: '(' constExpr ')'
-	| constant
+constFactor: '(' constExpr ')' 
+	| constant 
 	| list ;
 
 
@@ -161,7 +161,7 @@ CASE: 'case' ;
 DEFAULT: 'default' ;
 
 OR: 'or' | '||' ;
-AND: 'and' | '&&' ;
+AND: 'and' | '&&' ; 
 NOT_NEG: 'not' | '!' | '-' ;
 EQ: '==' | 'is' | '!=' | 'is not' ;
 ADD: '+' | '-' ;
@@ -185,6 +185,6 @@ DOUBLE_NUM: INT_NUM '.' INT_NUM;
 CHAR_LITERAL: '\'' . '\'';
 STRING_LITERAL: '"' .*? '"';
 ID: [a-zA-Z_][a-zA-Z_0-9]* ;
-COMMENT: '//' ~[\r\n]* -> skip ;
+COMMENT: '//' ~[\r\n]* -> skip ; 
 BIG_COMMENT: '/*' .*? '*/' -> skip ;
 WS: [ \t\n\r\f]+ -> skip ;

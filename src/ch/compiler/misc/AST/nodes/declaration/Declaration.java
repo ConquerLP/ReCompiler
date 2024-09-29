@@ -5,7 +5,7 @@ import ch.compiler.misc.AST.nodes.statements.Statement;
 import ch.compiler.misc.AST.nodes.symbolTable.SymbolEntry;
 import ch.compiler.misc.AST.nodes.symbolTable.Type;
 
-public abstract class Declaration extends Statement implements SymbolEntry {
+public abstract class Declaration extends Statement {
 
     protected final Type type;
     protected final String name;

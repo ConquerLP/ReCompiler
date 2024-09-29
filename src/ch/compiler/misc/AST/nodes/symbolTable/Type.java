@@ -5,12 +5,11 @@ import java.util.List;
 
 public class Type {
 
-    private List<Integer> dims;
+    private List<Integer> dims = new ArrayList<>();
     private TypeModifier typeModifier;
     private DataType dataType;
 
     public Type(String type) {
-        dims = new ArrayList<>();
         setUpType(type);
     }
 
@@ -58,6 +57,24 @@ public class Type {
             default:
                 this.dataType = DataType.CLASS;
         }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(obj  == this) return true;
+        Type type = (Type) obj;
+        return this.dataType.equals(type.dataType) && this.typeModifier.equals(type.typeModifier) && this.dims.equals(type.dims);
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((dataType == null) ? 0 : dataType.hashCode());
+        result = prime * result + ((typeModifier == null) ? 0 : typeModifier.hashCode());
+        result = prime * result + ((dims == null) ? 0 : dims.hashCode());
+        return result;
     }
 
 }

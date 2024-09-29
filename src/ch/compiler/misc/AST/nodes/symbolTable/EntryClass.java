@@ -11,4 +11,17 @@ public class EntryClass extends SymbolTableEntry {
     public void add(SymbolTableEntry entry) {
         insides.add(entry);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(!(obj instanceof EntryClass)) return false;
+        if(this == obj) return true;
+        return name.equals(((EntryClass) obj).name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
 }

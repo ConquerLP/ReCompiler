@@ -1,6 +1,7 @@
 package ch.compiler.misc.AST.visitors.expression.type;
 
 import ch.compiler.misc.AST.nodes.expression.literals.IntegerLiteral;
+import ch.compiler.misc.AST.nodes.symbolTable.DataType;
 import ch.compiler.misc.AST.nodes.symbolTable.Type;
 import ch.compiler.misc.AST.visitors.expression.VisitorExpression;
 import ch.compiler.parser.ReFuggBaseVisitor;
@@ -24,5 +25,14 @@ public class VisitorComplexType extends ReFuggBaseVisitor<Type> {
                 .forEach(simpleArray ->
                         type.addDim(((IntegerLiteral) new VisitorExpression().visitSimpleArray(simpleArray)).getValue()));
         return type;
+    }
+
+    @Override
+    public Type visitReturntype(ReFuggParser.ReturntypeContext ctx) {
+        if(ctx.complexType() != null) {
+            return visitComplexType(ctx.complexType());
+        } else {
+            return new Type(DataType.VOID.toString());
+        }
     }
 }

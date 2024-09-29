@@ -4,127 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="new grammar, no constantExpressions">
-      <change afterPath="$PROJECT_DIR$/../Compiler/Compiler old_fugg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ArrayAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/CallTail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/calls/ConstructorCallExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/calls/FunctionCallExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/DataType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArrayAccess.java" afterDir="false" />
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="visitor entry">
+      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Resolvable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReFugg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ReFugg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo.fugg" beforeDir="false" afterPath="$PROJECT_DIR$/demo.fugg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/Fugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/Fugg.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/AccessModifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/ClassConstructor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/ClassDec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/ClassMember.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/ClassMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/Function.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/MainFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/bodys/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/ConstBinaryExp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/ConstExpNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/bool/ConstBooleanExpAnd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/bool/ConstBooleanExpOr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/ArrayLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/BooleanLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/CharacterLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/DoubleLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/IntegerLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/NullLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/literals/StringLiteral.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpDiv.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpExpo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpMod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpMul.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/math/ConstMathExpSub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpEQ.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpGE.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpGT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpLE.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpLT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/relative/ConstRelExpNE.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/unary/ConstNegExp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/unary/ConstNotExp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/constantExpression/unary/ConstUnaryExp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/declaration/Declaration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/declaration/GlobalDeclaration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/declaration/VarDeclaration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/ArraySize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Assign.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Constant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Create.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Expression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/FunctionCall.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/GlobalVarDec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/ID.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/ListExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Logic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Math.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/MethodCall.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Relative.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/Unary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/VarDec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/enums/AssignOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/enums/LogicOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/enums/MathOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/enums/RelOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/expression/enums/UnaryOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/Block.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/CaseBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/DoWhile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/For.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/If.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/Jump.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/JumpType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/Label.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/Statement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/Switch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/statements/While.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/Access.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryConstructor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryLabel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/EntryVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/SymbolTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/SymbolTableEntry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/BooleanValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/CharValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/DoubleValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/EmptyValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/IntValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/ListValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/StringValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/UnknownValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/Value.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/ValueTypes$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/ValueTypes$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/ValueTypes$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/ValueTypes$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/nodes/symbolTable/value/ValueTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/VisitorArgList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/VisitorHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorClassConstructor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorClassMember.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorClassMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorMainFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/bodys/VisitorProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/expression/VisitorExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/expression/constant/VisitorConstantExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/statements/VisitorBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/statements/VisitorLabel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/misc/visitors/statements/VisitorStatement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/test.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/test.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFugg.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFugg.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFugg.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/ReFuggVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/testFiles/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/testFiles/test01.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFugg.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFugg.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggBaseListener.class" afterDir="false" />
@@ -133,336 +33,71 @@
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$AddContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$AndContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ArgListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ArgListContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$AssignContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$AssignOPContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$AssignOPContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$AsssignStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$BlockContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$BlockStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$BreakStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CaseBlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CaseBlockContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CaseStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CharRuleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CharRuleContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CheckContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CheckContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ClassConstructorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ClassConstructorContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ClassDecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ClassDecContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ClassFieldContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ClassFieldContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstArrayContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstEQContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstExpoContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstExprConstContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstExprContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstExprListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstExprManyContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstExprParenthContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstFactorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstJoinContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstKnownArraysizeContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstListNoSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstListYesSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstLogicContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstRelContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstSubListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstTermContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstUnaryContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstUnknownArraysizeContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstantContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ConstantContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ContinueStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$CreateContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$DefaultStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$DoWhileStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$DoWhileStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$DoWhileStmtContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$DoubleRuleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$DoubleRuleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$EqContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$EqOPContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$EqOPContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExpoContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExpoOpContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprConstantContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprCreateContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprListNoSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprListYesSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprManyContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprParenthContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprThisContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprfCallContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExpridentifierContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExpridentifierIndexContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ExprmethCallContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FArgsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FArgsContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FCallContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FCallContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FactorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ForStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ForStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ForStmtContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FuncContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$FuncContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$GlobalNoInitContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$GlobalVarContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$GlobalVarContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$GlobalYesInitContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$GotoStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IdentifierContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IdentifierContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IfStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IfStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IfStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IndexContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IntRuleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$IntRuleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$JoinContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$JumpStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$JumpStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$JumpStmtContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$LabelContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$LabelContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$LabelStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ListContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$LogicContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$LogicOpContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MainContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MainContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MethCallContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MethCallTailContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MethCallThisContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MethCallidentifierContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MethodContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MethodContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$MultContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$NotNegContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$OrContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$PolyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$PolyContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$PostOPContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$PostOPContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$RelContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ReturnStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ReturntypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ReturntypeContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$StmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$StmtContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$StringRuleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$StringRuleContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$SubListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$SubListContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$SwitchCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$SwitchCaseContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$SwitchStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$TermContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$ThisAccessContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$TypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$TypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$UnaryContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$VarDecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$VarDecContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$VarDecStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$VisibiltyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$VisibiltyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$WhileStatementContext.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$WhileStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser$WhileStmtContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggBaseListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggBaseVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggLexer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$AddContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$AndContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ArgListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$AssignContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$AssignOPContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$AsssignStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$BlockContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$BlockStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$BreakStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$CaseBlockContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$CaseStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$CharRuleContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$CheckContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ClassConstructorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ClassDecContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ClassFieldContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstArrayContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstEQContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstExpoContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstExprConstContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstExprContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstExprListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstExprManyContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstExprParenthContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstFactorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstJoinContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstKnownArraysizeContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstListNoSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstListYesSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstLogicContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstRelContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstSubListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstTermContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstUnaryContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstUnknownArraysizeContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ConstantContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ContinueStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$CreateContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$DefaultStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$DoWhileStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$DoWhileStmtContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$DoubleRuleContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$EqContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$EqOPContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExpoContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExpoOpContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprConstantContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprCreateContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprListNoSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprListYesSubContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprManyContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprParenthContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprThisContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprfCallContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExpridentifierContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExpridentifierIndexContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ExprmethCallContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$FArgsContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$FCallContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$FHeaderContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$FParamContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$FactorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ForStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ForStmtContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$FuncContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$GlobalNoInitContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$GlobalVarContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$GlobalYesInitContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$GotoStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$IdentifierContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$IfStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$IfStmtContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$IndexContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$IntRuleContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$JoinContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$JumpStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$JumpStmtContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$LabelContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$LabelStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$LogicContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$LogicOpContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MainContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MethCallContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MethCallTailContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MethCallThisContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MethCallidentifierContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MethodContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$MultContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$NotNegContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$OrContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$PolyContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$PostOPContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ProgramContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$RelContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ReturnStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ReturntypeContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$StmtContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$StringRuleContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$SubListContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$SwitchCaseContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$SwitchStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$TermContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$ThisAccessContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$TypeContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$UnaryContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$VarDecContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$VarDecStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$VisibiltyContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$WhileStatementContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser$WhileStmtContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/grammar/ReFuggVisitor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/ClassConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/ClassDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassDec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/ClassInside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassInside.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/ClassMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/ClassMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/MainFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/MainFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/bodys/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/Declaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/Declaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/GlobalDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/GlobalDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/declaration/VarDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/VarDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/BinaryExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/ExpressionNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/ExpressionNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/AccessExp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/IdentifierAccessExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/VarAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/access/IndexAccessExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ThisAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/bool/BinaryExpressionAnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/bool/BinaryExpressionAnd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/bool/BinaryExpressionOr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/bool/BinaryExpressionOr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/calls/FunctionCallExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/calls/MethodCallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/calls/SimpleCallExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/ArrayLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/ListLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/BooleanLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/BooleanLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/CharacterLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/CharacterLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/DoubleLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/DoubleLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/IntegerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/IntegerLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/NullLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/NullLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/PointerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/PointerLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/StringLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/StringLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/literals/ThisLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/ThisLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/math/ExpressionAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/math/ExpressionDiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionDiv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/math/ExpressionExp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionExp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/math/ExpressionMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/math/ExpressionMul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionMul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/math/ExpressionSub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionSub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/relative/RelativeExpressionEQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionEQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/relative/RelativeExpressionGE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionGE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/relative/RelativeExpressionGT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionGT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/relative/RelativeExpressionLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionLE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/relative/RelativeExpressionLT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionLT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/relative/RelativeExpressionNE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionNE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/unary/NegateExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/NegateExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/unary/NotExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/NotExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/unary/PostDecExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/PostDecExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/unary/PostIncExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/PostIncExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/expression/unary/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/UnaryExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/CaseBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/CaseBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/DoWhile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/DoWhile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/For.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/For.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/If.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/If.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Jump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Jump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/JumpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/JumpType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Label.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Statement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Statement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/statements/While.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/While.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/Access.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Access.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/EntryVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryVariable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/SymbolTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/SymbolTableEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTableEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/nodes/symbolTable/TypeModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/TypeModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorMainFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/VisitorMainFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/VisitorProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/VisitorVisibilityModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/VisitorVisibilityModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassInside.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassInside.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorClassMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorClassMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorComplexClassInsides.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorComplexClassInsides.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/classes/VisitorPoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/classes/VisitorPoly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/function/VisitorFParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/function/VisitorFParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/bodys/function/VisitorFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/function/VisitorFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorArgList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArgList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/VisitorFArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorFArgs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/constant/VisitorGlobalVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/constant/VisitorGlobalVarDec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorComplexType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorComplexType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorReturnType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorReturnType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorTypeModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorTypeModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/expression/type/VisitorVarDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorVarDec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/statements/VisitorLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/visitors/statements/VisitorStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/statements/VisitorStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/Declaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/Declaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/If.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/If.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/While.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/While.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTableEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTableEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/VisitorProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/VisitorProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/function/VisitorFParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/bodys/function/VisitorFParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArgList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArgList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorComplexType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorComplexType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" afterDir="false" />
@@ -515,7 +150,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "noConstant",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Projekte/ReFugg/demo.fugg",
+    "last_opened_file_path": "E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Projekte/ReFugg/grammar/testFiles/test01.txt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -550,6 +185,21 @@
       <recent name="ch.compiler.misc.nodes.expression.unary" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ReFugg" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ReFugg" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -573,6 +223,7 @@
       <workItem from="1715863285964" duration="598000" />
       <workItem from="1715944636849" duration="1541000" />
       <workItem from="1715947320676" duration="4090000" />
+      <workItem from="1716552098745" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="update grammar">
       <option name="closed" value="true" />
@@ -593,7 +244,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="noConstant" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -610,7 +273,8 @@
     <MESSAGE value="refactor const Expressions" />
     <MESSAGE value="start refactor grammar, constant nodes" />
     <MESSAGE value="new grammar, no constantExpressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="new grammar, no constantExpressions" />
+    <MESSAGE value="visitor entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="visitor entry" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

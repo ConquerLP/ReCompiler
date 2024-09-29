@@ -3,7 +3,7 @@ package ch.compiler.misc.AST.nodes.bodys;
 import ch.compiler.misc.AST.nodes.statements.Block;
 import ch.compiler.misc.AST.nodes.symbolTable.*;
 
-public class Function implements SymbolEntry {
+public class Function implements SymbolEntry, Resolvable {
 
 	private String name;
 	private SymbolTable param;
@@ -15,7 +15,6 @@ public class Function implements SymbolEntry {
 		returnType = type;
 	}
 
-	@Override
 	public SymbolTableEntry toEntry() {
 		return new EntryFunction(name, returnType);
 	}
@@ -27,5 +26,12 @@ public class Function implements SymbolEntry {
 	public void setBlock(Block block) {
 		this.block = block;
 	}
-	
+
+	@Override
+	public void resolve(SymbolTable table) throws RuntimeException {
+		SymbolTable	local = new SymbolTable();
+		local.add(table);
+		local.add(param);
+		local.add(block.getSymbolTable());
+	}
 }

@@ -9,4 +9,17 @@ public class EntryField extends SymbolTableEntry {
 		this.a = a;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) return false;
+		if(!(obj instanceof EntryField)) return false;
+		if(this == obj) return true;
+		return name.equals(((EntryField) obj).name);
+	}
+
+	@Override
+	public int hashCode() {
+		return name.hashCode();
+	}
+
 }

@@ -5,7 +5,7 @@ import ch.compiler.misc.AST.nodes.symbolTable.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassDec implements SymbolEntry {
+public class ClassDec implements SymbolEntry, Resolvable {
 
     private SymbolTable symbols;
     private List<ClassMethod> methods;
@@ -14,7 +14,7 @@ public class ClassDec implements SymbolEntry {
     private String className;
 
     public ClassDec(String className) {
-		this.className = className;
+        this.className = className;
         symbols = new SymbolTable();
         methods = new ArrayList<>();
         constructors = new ArrayList<>();
@@ -26,14 +26,14 @@ public class ClassDec implements SymbolEntry {
         return new EntryClass(className, new Type(DataType.CLASS.toString()));
     }
 
-    public void add(List<ClassInside> classInside){
+    public void add(List<ClassInside> classInside) {
         classInside.forEach(this::add);
     }
 
-    public void add(ClassInside classInside){
-        if(classInside instanceof ClassMethod){
+    public void add(ClassInside classInside) {
+        if (classInside instanceof ClassMethod) {
             addMethod((ClassMethod) classInside);
-        } else if(classInside instanceof ClassConstructor){
+        } else if (classInside instanceof ClassConstructor) {
             addConstructor((ClassConstructor) classInside);
         }
     }
@@ -50,4 +50,8 @@ public class ClassDec implements SymbolEntry {
         superClasses.addAll(superClass);
     }
 
+    @Override
+    public void resolve(SymbolTable table) throws RuntimeException {
+
+    }
 }

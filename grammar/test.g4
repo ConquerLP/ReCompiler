@@ -4,15 +4,15 @@ rule: (expression ';')* ;
 
 arrayAccess: '[' expression ']' ;
 methodCall: identifier fArgs ;
-newObject: NEW identifier fArgs arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
-fCall: identifier fArgs arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
+newObject: NEW identifier fArgs arrayAccess* exprTail* ;
+fCall: identifier fArgs arrayAccess* exprTail* ;
 
-thisAcces: THIS ('.' (identifier | methodCall) arrayAccess*)* ;
-varAcces: identifier arrayAccess* ('.' (identifier | methodCall) arrayAccess*)* ;
-
+thisAcces: THIS exprTail* ;
+varAcces: identifier arrayAccess* exprTail* ;
+exprTail: ('.' (identifier | methodCall) arrayAccess*) ;
 lh_expression: thisAcces | varAcces ;
 
-expression: lh_expression assignOP expression | orExpression;
+expression: lh_expression assignOP (expression | list) | orExpression;
 orExpression: orExpression orOP andExpression | andExpression;
 andExpression: andExpression andOP equalityExpression | equalityExpression;
 equalityExpression: equalityExpression eqOP relationalExpression | relationalExpression;
@@ -27,7 +27,6 @@ primary: '(' orExpression ')'
     | fCall
     | varAcces
     | thisAcces
-    | list
     | constant
     ;
 
@@ -47,7 +46,7 @@ intRule: INT_LIT ;
 stringRule: STRING_LIT ;
 charRule: CHAR_LIT ;
 booleanRule: TRUE | FALSE ;
-refRule: THIS | NULL ;
+refRule: NULL ;
 
 assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '%=' ;
 orOP: '||' | 'or' ;
@@ -57,7 +56,7 @@ relOP: '<' | '<=' | '>' | '>=' ;
 addOP: '+' | '-' ;
 multOP: '*' | '/' | '%' ;
 expOP: '^' ;
-preOP: '!' | '-' | '+' ;
+preOP: '!' | '-' | '+' | NOT;
 postOP: '++' | '--' ;
 
 //Tokens
@@ -96,6 +95,7 @@ FALSE: 'false' ;
 THIS: 'this' ;
 NULL: 'null' ;
 NEW: 'new' ;
+NOT: 'not' ;
 
 //MISC
 INT_LIT: [0-9]+ ;

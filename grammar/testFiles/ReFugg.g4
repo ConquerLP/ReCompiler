@@ -12,8 +12,7 @@ argList: type constArray* identifier (',' type constArray* identifier)* ;
 
 //class
 classDec: CLASS identifier poly? 
-	'{' (visibilty classInsides+)* '}' ;
-classInsides: (classConstructor | classField | method) ;
+	'{' (classConstructor | (visibilty classField) | (visibilty method))* '}' ;
 poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam block ;
@@ -34,15 +33,15 @@ stmt: ifStmt				# ifStatement
 	| expr ';'				# exprStatement
 	| jumpStmt ';'			# jumpStatement
 	;
-ifStmt: IF check stmt (ELSE stmt)? ;
+ifStmt: IF check block (ELSE (ifStmt | block))? ;
 whileStmt: WHILE check block ;
 doWhileStmt: DO block WHILE check ;
 forStmt: FOR '(' (varDec | expr)? ';' expr? ';' expr? ')' block ;
 jumpStmt: BREAK			# breakStatement
 	| CONTINUE			# continueStatement
-	| GOTO identifier	# gotoStatement
+	| GOTO identifier			# gotoStatement
 	| RETURN expr? 		# returnStatement
-	;
+	;	
 label: LABEL identifier block ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
 caseBlock: CASE constExpr ':' block		# caseStatement
@@ -51,23 +50,25 @@ caseBlock: CASE constExpr ':' block		# caseStatement
 check: '(' expr ')' ;
 
 //declaration & assignment
-varDec: type constArray* identifier ('=' expr)? ;
-assign: identifier index assignOP expr
-	| thisAccess index assignOP expr
+varDec: VAR type identifier constArray* ('=' expr)? ;
+assign: identifier index assignOP expr 
+	| thisAccess index assignOP expr 
 	;
 
 //static declarations
-globalVar: GLOBAL typemodifier? type constArray* identifier '=' constExpr ';' ;
+globalVar: GLOBAL type identifier constArray* ';' 					# globalNoInit
+	| GLOBAL type identifier  constArray* '=' constExpr ';' 		# globalYesInit
+	;
 
-constArray: '[' constExpr? ']' ;
+constArray: '[' constExpr ']' 				# constKnownArraysize
+	| '[' ']' 								# constUnknownArraysize
+	;
 
 constList: '{' constExprMany '}' 				# constListNoSub
 	| '{' constSubList (',' constSubList)+ '}' 	# constListYesSub
 	;
 constSubList: '{' constExprMany '}' ;
 constExprMany: constExpr (',' constExpr)* ;
-constVar: identifier ;
-constArrayAccess: identifier constArray+ ;
 
 constExpr: constExpr or constJoin | constJoin ;
 constJoin: constJoin and constEQ | constEQ ;
@@ -80,62 +81,25 @@ constUnary: notNeg constFactor | constFactor;
 constFactor:  constant 			# constExprConst
 	| '(' constExpr ')' 		# constExprParenth
 	| constList					# constExprList
-	| constVar					# constExprVar
-	| constArrayAccess			# constExprArrayAccess
 	;
-
-arrayAccess: '[' identifier ']' ;
-methodCall: identifier fArgs ;
-
-rule: ('123left' lh_expression ';') ;
-
-lh_expression:
-    THIS
-    | identifier arrayAccess*
-    | (identifier | THIS) ('.' (methodCall | identifier) arrayAccess*)+
-    ;
-/*
-expression:
-    primary
-    | expression '[' expression ']'
-    | expression '.' identifier
-    | expression '.' methCall
-    | fCall
-
-    | expression postOP
-
-    | preOP expression
-
-    | NEW creator
-
-    | expression multOP expression
-    | expression addOP expression
-    | expression relOP expression
-    | expression eqOP expression
-    | expression andOP expression
-    | expression orOP expression
-
-    | lhs_expression assignOP expression
-    ;
-*/
 
 //declarations
-expr: expr or join
-	| join
+expr: expr or join 
+	| join 
 	;
-join: join and eq
-	| eq
+join: join and eq 
+	| eq 
 	;
-eq: eq eqOP rel
-	| rel
+eq: eq eqOP rel 
+	| rel 
 	;
-rel: rel logicOp logic
+rel: rel logicOp logic 
 	| logic
 	;
-logic: logic add term
+logic: logic add term 
 	| term
 	;
-term: term mult expo
+term: term mult expo 
 	| expo
 	;
 expo: expo expoOp unary
@@ -159,11 +123,11 @@ fCall: identifier fArgs ;
 methCall: identifier index methCallTail+	#MethCallidentifier
 	| thisAccess methCallTail+		#MethCallThis
 	;
-methCallTail: '.' fCall index ;
-
+methCallTail: '.' fCall index ;	
+	
 create: NEW identifier fArgs index methCallTail* ;
-fArgs: '(' (expr (',' expr)*)? ')' ;
-index: ('[' expr ']')* ;
+fArgs: '(' (expr (',' expr)*)? ')' ;	
+index: ('[' expr ']')* ;  	
 thisAccess: THIS ('.' identifier index)* ;
 
 //list
@@ -172,29 +136,26 @@ list: '{' exprMany '}' 					#exprListNoSub
 	;
 subList: '{' exprMany '}' ;
 exprMany: expr (',' expr)* ;
-
+	
 //const & type
-returntype: VOID
+returntype: VOID 
 	| type
 	;
-
+	
 //Operators
 logicOp: '<' | '<=' | '>' | '>=' ;
 assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '^=' | '%=' ;
-postOP: '++' | '--' ;
-
-constant: doubleRule | intRule | stringRule | charRule | booleanRule | RefRule ;
+postOP: '++' | '--' ;	
+	
+constant: doubleRule | intRule | stringRule | charRule | TRUE | FALSE | THIS | NULL ;	
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
-typemodifier: STATIC ;
 
 doubleRule: DOUBLE_LIT ;
 intRule: INT_LIT ;
 stringRule: STRING_LIT ;
 charRule: CHAR_LIT ;
-booleanRule: TRUE | FALSE ;
-RefRule: THIS | NULL ;
-
+	
 //Tokens
 MAIN: 'main:' ;
 FUNC: 'func:' ;
@@ -210,7 +171,6 @@ ISA: 'isa:' ;
 PRIVATE: 'private:' ;
 PUBLIC: 'public:' ;
 PROTECTED: 'protected:' ;
-STATIC: 'static' ;
 
 IF: 'if' ;
 ELSE: 'else' ;

@@ -2,7 +2,7 @@ package ch.compiler.misc.AST.nodes.statements;
 
 import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 
-public class If extends Statement{
+public class If extends Statement {
 	
 	private ExpressionNode expression;
 	private Statement trueBlock;
