@@ -12,7 +12,8 @@ import java.util.List;
 public class VisitorComplexClassInsides extends ReFuggBaseVisitor<List<ClassInside>> {
 
     @Override
-    public List<ClassInside> visitComplexClassInsides(ReFuggParser.ComplexClassInsidesContext ctx) {
+    public List<ClassInside> visitComplexClassInsides(ReFuggParser.ClassInsidesContext ctx) {
+        /*
         List<ClassInside> classInsides = new ArrayList<>();
         List<ReFuggParser.ClassInsidesContext> classInsidesContext = ctx.classInsides();
         Access access = new VisitorVisibilityModifier().visitVisibilty(ctx.visibilty());
@@ -22,5 +23,7 @@ public class VisitorComplexClassInsides extends ReFuggBaseVisitor<List<ClassInsi
             classInsides.add(c);
         });
         return classInsides;
+        */
+        return null;
     }
 }

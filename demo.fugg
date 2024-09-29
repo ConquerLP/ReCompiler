@@ -1,9 +1,3 @@
 
-func: int[][] f0(){}
-
-global: int i[];
-
 main: {
-
-
 }

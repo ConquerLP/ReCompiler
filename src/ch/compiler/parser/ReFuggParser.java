@@ -22,47 +22,52 @@ public class ReFuggParser extends Parser {
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
-		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, T__43=44, MAIN=45, FUNC=46, 
-		CLASS=47, VOID=48, FIELD=49, VAR=50, GLOBAL=51, METH=52, CONST=53, ISA=54, 
-		PRIVATE=55, PUBLIC=56, PROTECTED=57, IF=58, ELSE=59, WHILE=60, DO=61, 
-		FOR=62, CONTINUE=63, BREAK=64, GOTO=65, RETURN=66, LABEL=67, SWITCH=68, 
-		CASE=69, DEFAULT=70, TRUE=71, FALSE=72, THIS=73, NULL=74, NEW=75, INT_LIT=76, 
-		DOUBLE_LIT=77, CHAR_LIT=78, STRING_LIT=79, ID=80, COMMENT=81, BIG_COMMENT=82, 
-		WS=83;
+		T__38=39, T__39=40, MAIN=41, FUNC=42, CLASS=43, VOID=44, FIELD=45, VAR=46, 
+		GLOBAL=47, METH=48, CONST=49, ISA=50, PRIVATE=51, PUBLIC=52, PROTECTED=53, 
+		STATIC=54, IF=55, ELSE=56, WHILE=57, DO=58, FOR=59, CONTINUE=60, BREAK=61, 
+		GOTO=62, RETURN=63, LABEL=64, SWITCH=65, CASE=66, DEFAULT=67, TRUE=68, 
+		FALSE=69, THIS=70, NULL=71, NEW=72, NOT=73, INT_LIT=74, DOUBLE_LIT=75, 
+		CHAR_LIT=76, STRING_LIT=77, ID=78, COMMENT=79, BIG_COMMENT=80, WS=81;
 	public static final int
 		RULE_program = 0, RULE_main = 1, RULE_func = 2, RULE_fHeader = 3, RULE_fParam = 4, 
-		RULE_argList = 5, RULE_classDec = 6, RULE_poly = 7, RULE_visibilty = 8, 
-		RULE_classConstructor = 9, RULE_method = 10, RULE_classField = 11, RULE_block = 12, 
-		RULE_stmt = 13, RULE_ifStmt = 14, RULE_whileStmt = 15, RULE_doWhileStmt = 16, 
-		RULE_forStmt = 17, RULE_jumpStmt = 18, RULE_label = 19, RULE_switchCase = 20, 
-		RULE_caseBlock = 21, RULE_check = 22, RULE_varDec = 23, RULE_assign = 24, 
+		RULE_argList = 5, RULE_classDec = 6, RULE_classInsides = 7, RULE_poly = 8, 
+		RULE_visibilty = 9, RULE_classConstructor = 10, RULE_method = 11, RULE_classField = 12, 
+		RULE_block = 13, RULE_stmt = 14, RULE_ifStmt = 15, RULE_whileStmt = 16, 
+		RULE_doWhileStmt = 17, RULE_forStmt = 18, RULE_jumpStmt = 19, RULE_label = 20, 
+		RULE_switchCase = 21, RULE_caseBlock = 22, RULE_check = 23, RULE_varDec = 24, 
 		RULE_globalVar = 25, RULE_constArray = 26, RULE_constList = 27, RULE_constSubList = 28, 
-		RULE_constExprMany = 29, RULE_constExpr = 30, RULE_constJoin = 31, RULE_constEQ = 32, 
-		RULE_constRel = 33, RULE_constLogic = 34, RULE_constTerm = 35, RULE_constExpo = 36, 
-		RULE_constUnary = 37, RULE_constFactor = 38, RULE_expr = 39, RULE_join = 40, 
-		RULE_eq = 41, RULE_rel = 42, RULE_logic = 43, RULE_term = 44, RULE_expo = 45, 
-		RULE_unary = 46, RULE_factor = 47, RULE_fCall = 48, RULE_methCall = 49, 
-		RULE_methCallTail = 50, RULE_create = 51, RULE_fArgs = 52, RULE_index = 53, 
-		RULE_thisAccess = 54, RULE_list = 55, RULE_subList = 56, RULE_exprMany = 57, 
-		RULE_returntype = 58, RULE_logicOp = 59, RULE_assignOP = 60, RULE_postOP = 61, 
-		RULE_constant = 62, RULE_type = 63, RULE_identifier = 64, RULE_doubleRule = 65, 
-		RULE_intRule = 66, RULE_stringRule = 67, RULE_charRule = 68, RULE_or = 69, 
-		RULE_and = 70, RULE_notNeg = 71, RULE_eqOP = 72, RULE_add = 73, RULE_mult = 74, 
-		RULE_expoOp = 75;
+		RULE_constExprMany = 29, RULE_constVar = 30, RULE_constArrayAccess = 31, 
+		RULE_constExpr = 32, RULE_constJoin = 33, RULE_constEQ = 34, RULE_constRel = 35, 
+		RULE_constLogic = 36, RULE_constTerm = 37, RULE_constExpo = 38, RULE_constUnary = 39, 
+		RULE_constFactor = 40, RULE_arrayAccess = 41, RULE_methodCall = 42, RULE_newObject = 43, 
+		RULE_fCall = 44, RULE_thisAcces = 45, RULE_varAcces = 46, RULE_exprTail = 47, 
+		RULE_lh_expression = 48, RULE_expression = 49, RULE_orExpression = 50, 
+		RULE_andExpression = 51, RULE_equalityExpression = 52, RULE_relationalExpression = 53, 
+		RULE_additiveExpression = 54, RULE_multiplicativeExpression = 55, RULE_exponentiationExpression = 56, 
+		RULE_unaryExpression = 57, RULE_postExpression = 58, RULE_primary = 59, 
+		RULE_list = 60, RULE_subList = 61, RULE_expressionMany = 62, RULE_fArgs = 63, 
+		RULE_returntype = 64, RULE_constant = 65, RULE_type = 66, RULE_identifier = 67, 
+		RULE_typemodifier = 68, RULE_doubleRule = 69, RULE_intRule = 70, RULE_stringRule = 71, 
+		RULE_charRule = 72, RULE_booleanRule = 73, RULE_refRule = 74, RULE_assignOP = 75, 
+		RULE_orOP = 76, RULE_andOP = 77, RULE_eqOP = 78, RULE_relOP = 79, RULE_addOP = 80, 
+		RULE_multOP = 81, RULE_expOP = 82, RULE_preOP = 83, RULE_postOP = 84;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"program", "main", "func", "fHeader", "fParam", "argList", "classDec", 
-			"poly", "visibilty", "classConstructor", "method", "classField", "block", 
-			"stmt", "ifStmt", "whileStmt", "doWhileStmt", "forStmt", "jumpStmt", 
-			"label", "switchCase", "caseBlock", "check", "varDec", "assign", "globalVar", 
-			"constArray", "constList", "constSubList", "constExprMany", "constExpr", 
-			"constJoin", "constEQ", "constRel", "constLogic", "constTerm", "constExpo", 
-			"constUnary", "constFactor", "expr", "join", "eq", "rel", "logic", "term", 
-			"expo", "unary", "factor", "fCall", "methCall", "methCallTail", "create", 
-			"fArgs", "index", "thisAccess", "list", "subList", "exprMany", "returntype", 
-			"logicOp", "assignOP", "postOP", "constant", "type", "identifier", "doubleRule", 
-			"intRule", "stringRule", "charRule", "or", "and", "notNeg", "eqOP", "add", 
-			"mult", "expoOp"
+			"classInsides", "poly", "visibilty", "classConstructor", "method", "classField", 
+			"block", "stmt", "ifStmt", "whileStmt", "doWhileStmt", "forStmt", "jumpStmt", 
+			"label", "switchCase", "caseBlock", "check", "varDec", "globalVar", "constArray", 
+			"constList", "constSubList", "constExprMany", "constVar", "constArrayAccess", 
+			"constExpr", "constJoin", "constEQ", "constRel", "constLogic", "constTerm", 
+			"constExpo", "constUnary", "constFactor", "arrayAccess", "methodCall", 
+			"newObject", "fCall", "thisAcces", "varAcces", "exprTail", "lh_expression", 
+			"expression", "orExpression", "andExpression", "equalityExpression", 
+			"relationalExpression", "additiveExpression", "multiplicativeExpression", 
+			"exponentiationExpression", "unaryExpression", "postExpression", "primary", 
+			"list", "subList", "expressionMany", "fArgs", "returntype", "constant", 
+			"type", "identifier", "typemodifier", "doubleRule", "intRule", "stringRule", 
+			"charRule", "booleanRule", "refRule", "assignOP", "orOP", "andOP", "eqOP", 
+			"relOP", "addOP", "multOP", "expOP", "preOP", "postOP"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -70,15 +75,15 @@ public class ReFuggParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'['", "']'", "'('", "')'", "','", "'{'", "'}'", "';'", "':'", 
-			"'='", "'.'", "'<'", "'<='", "'>'", "'>='", "'+='", "'-='", "'*='", "'/='", 
-			"'^='", "'%='", "'++'", "'--'", "'double'", "'int'", "'string'", "'char'", 
-			"'boolean'", "'or'", "'||'", "'and'", "'&&'", "'not'", "'!'", "'-'", 
-			"'=='", "'is'", "'!='", "'is not'", "'+'", "'*'", "'/'", "'%'", "'^'", 
-			"'main:'", "'func:'", "'class:'", "'void'", "'field:'", "'var:'", "'global:'", 
-			"'method:'", "'constructor:'", "'isa:'", "'private:'", "'public:'", "'protected:'", 
-			"'if'", "'else'", "'while'", "'do'", "'for'", "'continue'", "'break'", 
-			"'goto'", "'return'", "'label:'", "'switch'", "'case'", "'default'", 
-			"'true'", "'false'", "'this'", "'null'", "'new'"
+			"'='", "'.'", "'double'", "'int'", "'string'", "'char'", "'boolean'", 
+			"'+='", "'-='", "'*='", "'/='", "'%='", "'||'", "'or'", "'&&'", "'and'", 
+			"'=='", "'!='", "'<'", "'<='", "'>'", "'>='", "'+'", "'-'", "'*'", "'/'", 
+			"'%'", "'^'", "'!'", "'++'", "'--'", "'main:'", "'func:'", "'class:'", 
+			"'void'", "'field:'", "'var:'", "'global:'", "'method:'", "'constructor:'", 
+			"'isa:'", "'private:'", "'public:'", "'protected:'", "'static'", "'if'", 
+			"'else'", "'while'", "'do'", "'for'", "'continue'", "'break'", "'goto'", 
+			"'return'", "'label:'", "'switch'", "'case'", "'default'", "'true'", 
+			"'false'", "'this'", "'null'", "'new'", "'not'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -87,12 +92,12 @@ public class ReFuggParser extends Parser {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, null, null, null, "MAIN", "FUNC", 
-			"CLASS", "VOID", "FIELD", "VAR", "GLOBAL", "METH", "CONST", "ISA", "PRIVATE", 
-			"PUBLIC", "PROTECTED", "IF", "ELSE", "WHILE", "DO", "FOR", "CONTINUE", 
-			"BREAK", "GOTO", "RETURN", "LABEL", "SWITCH", "CASE", "DEFAULT", "TRUE", 
-			"FALSE", "THIS", "NULL", "NEW", "INT_LIT", "DOUBLE_LIT", "CHAR_LIT", 
-			"STRING_LIT", "ID", "COMMENT", "BIG_COMMENT", "WS"
+			null, null, null, null, null, "MAIN", "FUNC", "CLASS", "VOID", "FIELD", 
+			"VAR", "GLOBAL", "METH", "CONST", "ISA", "PRIVATE", "PUBLIC", "PROTECTED", 
+			"STATIC", "IF", "ELSE", "WHILE", "DO", "FOR", "CONTINUE", "BREAK", "GOTO", 
+			"RETURN", "LABEL", "SWITCH", "CASE", "DEFAULT", "TRUE", "FALSE", "THIS", 
+			"NULL", "NEW", "NOT", "INT_LIT", "DOUBLE_LIT", "CHAR_LIT", "STRING_LIT", 
+			"ID", "COMMENT", "BIG_COMMENT", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -201,35 +206,35 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(158);
+			setState(176);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (((((_la - 46)) & ~0x3f) == 0 && ((1L << (_la - 46)) & ((1L << (FUNC - 46)) | (1L << (CLASS - 46)) | (1L << (GLOBAL - 46)) | (1L << (LABEL - 46)))) != 0)) {
+			while (((((_la - 42)) & ~0x3f) == 0 && ((1L << (_la - 42)) & ((1L << (FUNC - 42)) | (1L << (CLASS - 42)) | (1L << (GLOBAL - 42)) | (1L << (LABEL - 42)))) != 0)) {
 				{
-				setState(156);
+				setState(174);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
 				case FUNC:
 					{
-					setState(152);
+					setState(170);
 					func();
 					}
 					break;
 				case CLASS:
 					{
-					setState(153);
+					setState(171);
 					classDec();
 					}
 					break;
 				case GLOBAL:
 					{
-					setState(154);
+					setState(172);
 					globalVar();
 					}
 					break;
 				case LABEL:
 					{
-					setState(155);
+					setState(173);
 					label();
 					}
 					break;
@@ -237,13 +242,13 @@ public class ReFuggParser extends Parser {
 					throw new NoViableAltException(this);
 				}
 				}
-				setState(160);
+				setState(178);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(161);
+			setState(179);
 			main();
-			setState(162);
+			setState(180);
 			match(EOF);
 			}
 		}
@@ -288,9 +293,9 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(164);
+			setState(182);
 			match(MAIN);
-			setState(165);
+			setState(183);
 			block();
 			}
 		}
@@ -341,13 +346,13 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(167);
+			setState(185);
 			match(FUNC);
-			setState(168);
+			setState(186);
 			fHeader();
-			setState(169);
+			setState(187);
 			fParam();
-			setState(170);
+			setState(188);
 			block();
 			}
 		}
@@ -395,25 +400,25 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(172);
+			setState(190);
 			returntype();
-			setState(177);
+			setState(195);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__0) {
 				{
 				{
-				setState(173);
+				setState(191);
 				match(T__0);
-				setState(174);
+				setState(192);
 				match(T__1);
 				}
 				}
-				setState(179);
+				setState(197);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(180);
+			setState(198);
 			identifier();
 			}
 		}
@@ -458,19 +463,19 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(182);
+			setState(200);
 			match(T__2);
-			setState(184);
+			setState(202);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (((((_la - 24)) & ~0x3f) == 0 && ((1L << (_la - 24)) & ((1L << (T__23 - 24)) | (1L << (T__24 - 24)) | (1L << (T__25 - 24)) | (1L << (T__26 - 24)) | (1L << (T__27 - 24)) | (1L << (ID - 24)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0) || _la==ID) {
 				{
-				setState(183);
+				setState(201);
 				argList();
 				}
 			}
 
-			setState(186);
+			setState(204);
 			match(T__3);
 			}
 		}
@@ -530,53 +535,53 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(188);
+			setState(206);
 			type();
-			setState(192);
+			setState(210);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__0) {
 				{
 				{
-				setState(189);
+				setState(207);
 				constArray();
 				}
 				}
-				setState(194);
+				setState(212);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(195);
+			setState(213);
 			identifier();
-			setState(208);
+			setState(226);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__4) {
 				{
 				{
-				setState(196);
+				setState(214);
 				match(T__4);
-				setState(197);
+				setState(215);
 				type();
-				setState(201);
+				setState(219);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__0) {
 					{
 					{
-					setState(198);
+					setState(216);
 					constArray();
 					}
 					}
-					setState(203);
+					setState(221);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(204);
+				setState(222);
 				identifier();
 				}
 				}
-				setState(210);
+				setState(228);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -601,29 +606,17 @@ public class ReFuggParser extends Parser {
 		public PolyContext poly() {
 			return getRuleContext(PolyContext.class,0);
 		}
-		public List<ClassConstructorContext> classConstructor() {
-			return getRuleContexts(ClassConstructorContext.class);
-		}
-		public ClassConstructorContext classConstructor(int i) {
-			return getRuleContext(ClassConstructorContext.class,i);
-		}
 		public List<VisibiltyContext> visibilty() {
 			return getRuleContexts(VisibiltyContext.class);
 		}
 		public VisibiltyContext visibilty(int i) {
 			return getRuleContext(VisibiltyContext.class,i);
 		}
-		public List<ClassFieldContext> classField() {
-			return getRuleContexts(ClassFieldContext.class);
+		public List<ClassInsidesContext> classInsides() {
+			return getRuleContexts(ClassInsidesContext.class);
 		}
-		public ClassFieldContext classField(int i) {
-			return getRuleContext(ClassFieldContext.class,i);
-		}
-		public List<MethodContext> method() {
-			return getRuleContexts(MethodContext.class);
-		}
-		public MethodContext method(int i) {
-			return getRuleContext(MethodContext.class,i);
+		public ClassInsidesContext classInsides(int i) {
+			return getRuleContext(ClassInsidesContext.class,i);
 		}
 		public ClassDecContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -651,64 +644,124 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(211);
+			setState(229);
 			match(CLASS);
-			setState(212);
+			setState(230);
 			identifier();
-			setState(214);
+			setState(232);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==ISA) {
 				{
-				setState(213);
+				setState(231);
 				poly();
 				}
 			}
 
-			setState(216);
+			setState(234);
 			match(T__5);
-			setState(226);
+			setState(243);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << CONST) | (1L << PRIVATE) | (1L << PUBLIC) | (1L << PROTECTED))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << PRIVATE) | (1L << PUBLIC) | (1L << PROTECTED))) != 0)) {
 				{
-				setState(224);
+				{
+				setState(235);
+				visibilty();
+				setState(237); 
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
-				case 1:
-					{
-					setState(217);
-					classConstructor();
-					}
-					break;
-				case 2:
+				_la = _input.LA(1);
+				do {
 					{
 					{
-					setState(218);
-					visibilty();
-					setState(219);
-					classField();
+					setState(236);
+					classInsides();
 					}
 					}
-					break;
-				case 3:
-					{
-					{
-					setState(221);
-					visibilty();
-					setState(222);
-					method();
-					}
-					}
-					break;
+					setState(239); 
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << FIELD) | (1L << METH) | (1L << CONST))) != 0) );
 				}
 				}
-				setState(228);
+				setState(245);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(229);
+			setState(246);
 			match(T__6);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ClassInsidesContext extends ParserRuleContext {
+		public ClassConstructorContext classConstructor() {
+			return getRuleContext(ClassConstructorContext.class,0);
+		}
+		public ClassFieldContext classField() {
+			return getRuleContext(ClassFieldContext.class,0);
+		}
+		public MethodContext method() {
+			return getRuleContext(MethodContext.class,0);
+		}
+		public ClassInsidesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_classInsides; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterClassInsides(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitClassInsides(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitClassInsides(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ClassInsidesContext classInsides() throws RecognitionException {
+		ClassInsidesContext _localctx = new ClassInsidesContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_classInsides);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(251);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case CONST:
+				{
+				setState(248);
+				classConstructor();
+				}
+				break;
+			case FIELD:
+				{
+				setState(249);
+				classField();
+				}
+				break;
+			case METH:
+				{
+				setState(250);
+				method();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -751,28 +804,28 @@ public class ReFuggParser extends Parser {
 
 	public final PolyContext poly() throws RecognitionException {
 		PolyContext _localctx = new PolyContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_poly);
+		enterRule(_localctx, 16, RULE_poly);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(231);
+			setState(253);
 			match(ISA);
-			setState(232);
+			setState(254);
 			identifier();
-			setState(237);
+			setState(259);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__4) {
 				{
 				{
-				setState(233);
+				setState(255);
 				match(T__4);
-				setState(234);
+				setState(256);
 				identifier();
 				}
 				}
-				setState(239);
+				setState(261);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -814,12 +867,12 @@ public class ReFuggParser extends Parser {
 
 	public final VisibiltyContext visibilty() throws RecognitionException {
 		VisibiltyContext _localctx = new VisibiltyContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_visibilty);
+		enterRule(_localctx, 18, RULE_visibilty);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(240);
+			setState(262);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << PRIVATE) | (1L << PUBLIC) | (1L << PROTECTED))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -874,17 +927,17 @@ public class ReFuggParser extends Parser {
 
 	public final ClassConstructorContext classConstructor() throws RecognitionException {
 		ClassConstructorContext _localctx = new ClassConstructorContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_classConstructor);
+		enterRule(_localctx, 20, RULE_classConstructor);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(242);
+			setState(264);
 			match(CONST);
-			setState(243);
+			setState(265);
 			identifier();
-			setState(244);
+			setState(266);
 			fParam();
-			setState(245);
+			setState(267);
 			block();
 			}
 		}
@@ -931,17 +984,17 @@ public class ReFuggParser extends Parser {
 
 	public final MethodContext method() throws RecognitionException {
 		MethodContext _localctx = new MethodContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_method);
+		enterRule(_localctx, 22, RULE_method);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(247);
+			setState(269);
 			match(METH);
-			setState(248);
+			setState(270);
 			fHeader();
-			setState(249);
+			setState(271);
 			fParam();
-			setState(250);
+			setState(272);
 			block();
 			}
 		}
@@ -991,32 +1044,32 @@ public class ReFuggParser extends Parser {
 
 	public final ClassFieldContext classField() throws RecognitionException {
 		ClassFieldContext _localctx = new ClassFieldContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_classField);
+		enterRule(_localctx, 24, RULE_classField);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(252);
+			setState(274);
 			match(FIELD);
-			setState(253);
+			setState(275);
 			type();
-			setState(257);
+			setState(279);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__0) {
 				{
 				{
-				setState(254);
+				setState(276);
 				constArray();
 				}
 				}
-				setState(259);
+				setState(281);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(260);
+			setState(282);
 			identifier();
-			setState(261);
+			setState(283);
 			match(T__7);
 			}
 		}
@@ -1059,28 +1112,28 @@ public class ReFuggParser extends Parser {
 
 	public final BlockContext block() throws RecognitionException {
 		BlockContext _localctx = new BlockContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_block);
+		enterRule(_localctx, 26, RULE_block);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(263);
+			setState(285);
 			match(T__5);
-			setState(267);
+			setState(289);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__32) | (1L << T__33) | (1L << T__34) | (1L << VAR) | (1L << IF) | (1L << WHILE) | (1L << DO) | (1L << FOR) | (1L << CONTINUE))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (BREAK - 64)) | (1L << (GOTO - 64)) | (1L << (RETURN - 64)) | (1L << (LABEL - 64)) | (1L << (SWITCH - 64)) | (1L << (TRUE - 64)) | (1L << (FALSE - 64)) | (1L << (THIS - 64)) | (1L << (NULL - 64)) | (1L << (NEW - 64)) | (1L << (INT_LIT - 64)) | (1L << (DOUBLE_LIT - 64)) | (1L << (CHAR_LIT - 64)) | (1L << (STRING_LIT - 64)) | (1L << (ID - 64)))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__31) | (1L << T__32) | (1L << T__37) | (1L << IF) | (1L << WHILE) | (1L << DO) | (1L << FOR) | (1L << CONTINUE) | (1L << BREAK) | (1L << GOTO) | (1L << RETURN))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (LABEL - 64)) | (1L << (SWITCH - 64)) | (1L << (TRUE - 64)) | (1L << (FALSE - 64)) | (1L << (THIS - 64)) | (1L << (NULL - 64)) | (1L << (NEW - 64)) | (1L << (NOT - 64)) | (1L << (INT_LIT - 64)) | (1L << (DOUBLE_LIT - 64)) | (1L << (CHAR_LIT - 64)) | (1L << (STRING_LIT - 64)) | (1L << (ID - 64)))) != 0)) {
 				{
 				{
-				setState(264);
+				setState(286);
 				stmt();
 				}
 				}
-				setState(269);
+				setState(291);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(270);
+			setState(292);
 			match(T__6);
 			}
 		}
@@ -1145,8 +1198,8 @@ public class ReFuggParser extends Parser {
 		}
 	}
 	public static class ExprStatementContext extends StmtContext {
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
 		public ExprStatementContext(StmtContext ctx) { copyFrom(ctx); }
 		@Override
@@ -1198,25 +1251,6 @@ public class ReFuggParser extends Parser {
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitDoWhileStatement(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class AsssignStatementContext extends StmtContext {
-		public AssignContext assign() {
-			return getRuleContext(AssignContext.class,0);
-		}
-		public AsssignStatementContext(StmtContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAsssignStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAsssignStatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAsssignStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1318,16 +1352,16 @@ public class ReFuggParser extends Parser {
 
 	public final StmtContext stmt() throws RecognitionException {
 		StmtContext _localctx = new StmtContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_stmt);
+		enterRule(_localctx, 28, RULE_stmt);
 		try {
-			setState(293);
+			setState(312);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
 			case 1:
 				_localctx = new IfStatementContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(272);
+				setState(294);
 				ifStmt();
 				}
 				break;
@@ -1335,7 +1369,7 @@ public class ReFuggParser extends Parser {
 				_localctx = new WhileStatementContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(273);
+				setState(295);
 				whileStmt();
 				}
 				break;
@@ -1343,9 +1377,9 @@ public class ReFuggParser extends Parser {
 				_localctx = new DoWhileStatementContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(274);
+				setState(296);
 				doWhileStmt();
-				setState(275);
+				setState(297);
 				match(T__7);
 				}
 				break;
@@ -1353,7 +1387,7 @@ public class ReFuggParser extends Parser {
 				_localctx = new ForStatementContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(277);
+				setState(299);
 				forStmt();
 				}
 				break;
@@ -1361,7 +1395,7 @@ public class ReFuggParser extends Parser {
 				_localctx = new SwitchStatementContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(278);
+				setState(300);
 				switchCase();
 				}
 				break;
@@ -1369,7 +1403,7 @@ public class ReFuggParser extends Parser {
 				_localctx = new LabelStatementContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(279);
+				setState(301);
 				label();
 				}
 				break;
@@ -1377,7 +1411,7 @@ public class ReFuggParser extends Parser {
 				_localctx = new BlockStatementContext(_localctx);
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(280);
+				setState(302);
 				block();
 				}
 				break;
@@ -1385,39 +1419,29 @@ public class ReFuggParser extends Parser {
 				_localctx = new VarDecStatementContext(_localctx);
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(281);
+				setState(303);
 				varDec();
-				setState(282);
+				setState(304);
 				match(T__7);
 				}
 				break;
 			case 9:
-				_localctx = new AsssignStatementContext(_localctx);
+				_localctx = new ExprStatementContext(_localctx);
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(284);
-				assign();
-				setState(285);
+				setState(306);
+				expression();
+				setState(307);
 				match(T__7);
 				}
 				break;
 			case 10:
-				_localctx = new ExprStatementContext(_localctx);
+				_localctx = new JumpStatementContext(_localctx);
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(287);
-				expr(0);
-				setState(288);
-				match(T__7);
-				}
-				break;
-			case 11:
-				_localctx = new JumpStatementContext(_localctx);
-				enterOuterAlt(_localctx, 11);
-				{
-				setState(290);
+				setState(309);
 				jumpStmt();
-				setState(291);
+				setState(310);
 				match(T__7);
 				}
 				break;
@@ -1439,16 +1463,13 @@ public class ReFuggParser extends Parser {
 		public CheckContext check() {
 			return getRuleContext(CheckContext.class,0);
 		}
-		public List<BlockContext> block() {
-			return getRuleContexts(BlockContext.class);
+		public List<StmtContext> stmt() {
+			return getRuleContexts(StmtContext.class);
 		}
-		public BlockContext block(int i) {
-			return getRuleContext(BlockContext.class,i);
+		public StmtContext stmt(int i) {
+			return getRuleContext(StmtContext.class,i);
 		}
 		public TerminalNode ELSE() { return getToken(ReFuggParser.ELSE, 0); }
-		public IfStmtContext ifStmt() {
-			return getRuleContext(IfStmtContext.class,0);
-		}
 		public IfStmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1470,45 +1491,28 @@ public class ReFuggParser extends Parser {
 
 	public final IfStmtContext ifStmt() throws RecognitionException {
 		IfStmtContext _localctx = new IfStmtContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_ifStmt);
-		int _la;
+		enterRule(_localctx, 30, RULE_ifStmt);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(295);
+			setState(314);
 			match(IF);
-			setState(296);
+			setState(315);
 			check();
-			setState(297);
-			block();
-			setState(303);
+			setState(316);
+			stmt();
+			setState(319);
 			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if (_la==ELSE) {
+			switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
+			case 1:
 				{
-				setState(298);
+				setState(317);
 				match(ELSE);
-				setState(301);
-				_errHandler.sync(this);
-				switch (_input.LA(1)) {
-				case IF:
-					{
-					setState(299);
-					ifStmt();
-					}
-					break;
-				case T__5:
-					{
-					setState(300);
-					block();
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				setState(318);
+				stmt();
 				}
-				}
+				break;
 			}
-
 			}
 		}
 		catch (RecognitionException re) {
@@ -1551,15 +1555,15 @@ public class ReFuggParser extends Parser {
 
 	public final WhileStmtContext whileStmt() throws RecognitionException {
 		WhileStmtContext _localctx = new WhileStmtContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_whileStmt);
+		enterRule(_localctx, 32, RULE_whileStmt);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(305);
+			setState(321);
 			match(WHILE);
-			setState(306);
+			setState(322);
 			check();
-			setState(307);
+			setState(323);
 			block();
 			}
 		}
@@ -1604,17 +1608,17 @@ public class ReFuggParser extends Parser {
 
 	public final DoWhileStmtContext doWhileStmt() throws RecognitionException {
 		DoWhileStmtContext _localctx = new DoWhileStmtContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_doWhileStmt);
+		enterRule(_localctx, 34, RULE_doWhileStmt);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(309);
+			setState(325);
 			match(DO);
-			setState(310);
+			setState(326);
 			block();
-			setState(311);
+			setState(327);
 			match(WHILE);
-			setState(312);
+			setState(328);
 			check();
 			}
 		}
@@ -1637,11 +1641,11 @@ public class ReFuggParser extends Parser {
 		public VarDecContext varDec() {
 			return getRuleContext(VarDecContext.class,0);
 		}
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
+		public List<OrExpressionContext> orExpression() {
+			return getRuleContexts(OrExpressionContext.class);
 		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
+		public OrExpressionContext orExpression(int i) {
+			return getRuleContext(OrExpressionContext.class,i);
 		}
 		public ForStmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1664,76 +1668,58 @@ public class ReFuggParser extends Parser {
 
 	public final ForStmtContext forStmt() throws RecognitionException {
 		ForStmtContext _localctx = new ForStmtContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_forStmt);
+		enterRule(_localctx, 36, RULE_forStmt);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(314);
+			setState(330);
 			match(FOR);
-			setState(315);
+			setState(331);
 			match(T__2);
-			setState(318);
+			setState(334);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case VAR:
+			switch ( getInterpreter().adaptivePredict(_input,16,_ctx) ) {
+			case 1:
 				{
-				setState(316);
+				setState(332);
 				varDec();
 				}
 				break;
-			case T__2:
-			case T__5:
-			case T__32:
-			case T__33:
-			case T__34:
-			case TRUE:
-			case FALSE:
-			case THIS:
-			case NULL:
-			case NEW:
-			case INT_LIT:
-			case DOUBLE_LIT:
-			case CHAR_LIT:
-			case STRING_LIT:
-			case ID:
+			case 2:
 				{
-				setState(317);
-				expr(0);
+				setState(333);
+				orExpression(0);
 				}
 				break;
-			case T__7:
-				break;
-			default:
-				break;
 			}
-			setState(320);
+			setState(336);
 			match(T__7);
-			setState(322);
+			setState(338);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__32) | (1L << T__33) | (1L << T__34))) != 0) || ((((_la - 71)) & ~0x3f) == 0 && ((1L << (_la - 71)) & ((1L << (TRUE - 71)) | (1L << (FALSE - 71)) | (1L << (THIS - 71)) | (1L << (NULL - 71)) | (1L << (NEW - 71)) | (1L << (INT_LIT - 71)) | (1L << (DOUBLE_LIT - 71)) | (1L << (CHAR_LIT - 71)) | (1L << (STRING_LIT - 71)) | (1L << (ID - 71)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__31) | (1L << T__32) | (1L << T__37))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (TRUE - 68)) | (1L << (FALSE - 68)) | (1L << (THIS - 68)) | (1L << (NULL - 68)) | (1L << (NEW - 68)) | (1L << (NOT - 68)) | (1L << (INT_LIT - 68)) | (1L << (DOUBLE_LIT - 68)) | (1L << (CHAR_LIT - 68)) | (1L << (STRING_LIT - 68)) | (1L << (ID - 68)))) != 0)) {
 				{
-				setState(321);
-				expr(0);
+				setState(337);
+				orExpression(0);
 				}
 			}
 
-			setState(324);
+			setState(340);
 			match(T__7);
-			setState(326);
+			setState(342);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__32) | (1L << T__33) | (1L << T__34))) != 0) || ((((_la - 71)) & ~0x3f) == 0 && ((1L << (_la - 71)) & ((1L << (TRUE - 71)) | (1L << (FALSE - 71)) | (1L << (THIS - 71)) | (1L << (NULL - 71)) | (1L << (NEW - 71)) | (1L << (INT_LIT - 71)) | (1L << (DOUBLE_LIT - 71)) | (1L << (CHAR_LIT - 71)) | (1L << (STRING_LIT - 71)) | (1L << (ID - 71)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__31) | (1L << T__32) | (1L << T__37))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (TRUE - 68)) | (1L << (FALSE - 68)) | (1L << (THIS - 68)) | (1L << (NULL - 68)) | (1L << (NEW - 68)) | (1L << (NOT - 68)) | (1L << (INT_LIT - 68)) | (1L << (DOUBLE_LIT - 68)) | (1L << (CHAR_LIT - 68)) | (1L << (STRING_LIT - 68)) | (1L << (ID - 68)))) != 0)) {
 				{
-				setState(325);
-				expr(0);
+				setState(341);
+				orExpression(0);
 				}
 			}
 
-			setState(328);
+			setState(344);
 			match(T__3);
-			setState(329);
+			setState(345);
 			block();
 			}
 		}
@@ -1795,8 +1781,8 @@ public class ReFuggParser extends Parser {
 	}
 	public static class ReturnStatementContext extends JumpStmtContext {
 		public TerminalNode RETURN() { return getToken(ReFuggParser.RETURN, 0); }
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
 		public ReturnStatementContext(JumpStmtContext ctx) { copyFrom(ctx); }
 		@Override
@@ -1836,17 +1822,17 @@ public class ReFuggParser extends Parser {
 
 	public final JumpStmtContext jumpStmt() throws RecognitionException {
 		JumpStmtContext _localctx = new JumpStmtContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_jumpStmt);
+		enterRule(_localctx, 38, RULE_jumpStmt);
 		int _la;
 		try {
-			setState(339);
+			setState(355);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case BREAK:
 				_localctx = new BreakStatementContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(331);
+				setState(347);
 				match(BREAK);
 				}
 				break;
@@ -1854,7 +1840,7 @@ public class ReFuggParser extends Parser {
 				_localctx = new ContinueStatementContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(332);
+				setState(348);
 				match(CONTINUE);
 				}
 				break;
@@ -1862,9 +1848,9 @@ public class ReFuggParser extends Parser {
 				_localctx = new GotoStatementContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(333);
+				setState(349);
 				match(GOTO);
-				setState(334);
+				setState(350);
 				identifier();
 				}
 				break;
@@ -1872,15 +1858,15 @@ public class ReFuggParser extends Parser {
 				_localctx = new ReturnStatementContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(335);
+				setState(351);
 				match(RETURN);
-				setState(337);
+				setState(353);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__32) | (1L << T__33) | (1L << T__34))) != 0) || ((((_la - 71)) & ~0x3f) == 0 && ((1L << (_la - 71)) & ((1L << (TRUE - 71)) | (1L << (FALSE - 71)) | (1L << (THIS - 71)) | (1L << (NULL - 71)) | (1L << (NEW - 71)) | (1L << (INT_LIT - 71)) | (1L << (DOUBLE_LIT - 71)) | (1L << (CHAR_LIT - 71)) | (1L << (STRING_LIT - 71)) | (1L << (ID - 71)))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__31) | (1L << T__32) | (1L << T__37))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (TRUE - 68)) | (1L << (FALSE - 68)) | (1L << (THIS - 68)) | (1L << (NULL - 68)) | (1L << (NEW - 68)) | (1L << (NOT - 68)) | (1L << (INT_LIT - 68)) | (1L << (DOUBLE_LIT - 68)) | (1L << (CHAR_LIT - 68)) | (1L << (STRING_LIT - 68)) | (1L << (ID - 68)))) != 0)) {
 					{
-					setState(336);
-					expr(0);
+					setState(352);
+					expression();
 					}
 				}
 
@@ -1930,15 +1916,15 @@ public class ReFuggParser extends Parser {
 
 	public final LabelContext label() throws RecognitionException {
 		LabelContext _localctx = new LabelContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_label);
+		enterRule(_localctx, 40, RULE_label);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(341);
+			setState(357);
 			match(LABEL);
-			setState(342);
+			setState(358);
 			identifier();
-			setState(343);
+			setState(359);
 			block();
 			}
 		}
@@ -1985,32 +1971,32 @@ public class ReFuggParser extends Parser {
 
 	public final SwitchCaseContext switchCase() throws RecognitionException {
 		SwitchCaseContext _localctx = new SwitchCaseContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_switchCase);
+		enterRule(_localctx, 42, RULE_switchCase);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(345);
+			setState(361);
 			match(SWITCH);
-			setState(346);
+			setState(362);
 			check();
-			setState(347);
+			setState(363);
 			match(T__5);
-			setState(349); 
+			setState(365); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(348);
+				setState(364);
 				caseBlock();
 				}
 				}
-				setState(351); 
+				setState(367); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==CASE || _la==DEFAULT );
-			setState(353);
+			setState(369);
 			match(T__6);
 			}
 		}
@@ -2082,22 +2068,22 @@ public class ReFuggParser extends Parser {
 
 	public final CaseBlockContext caseBlock() throws RecognitionException {
 		CaseBlockContext _localctx = new CaseBlockContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_caseBlock);
+		enterRule(_localctx, 44, RULE_caseBlock);
 		try {
-			setState(363);
+			setState(379);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case CASE:
 				_localctx = new CaseStatementContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(355);
+				setState(371);
 				match(CASE);
-				setState(356);
+				setState(372);
 				constExpr(0);
-				setState(357);
+				setState(373);
 				match(T__8);
-				setState(358);
+				setState(374);
 				block();
 				}
 				break;
@@ -2105,11 +2091,11 @@ public class ReFuggParser extends Parser {
 				_localctx = new DefaultStatementContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(360);
+				setState(376);
 				match(DEFAULT);
-				setState(361);
+				setState(377);
 				match(T__8);
-				setState(362);
+				setState(378);
 				block();
 				}
 				break;
@@ -2129,8 +2115,8 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class CheckContext extends ParserRuleContext {
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
+		public OrExpressionContext orExpression() {
+			return getRuleContext(OrExpressionContext.class,0);
 		}
 		public CheckContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2153,15 +2139,15 @@ public class ReFuggParser extends Parser {
 
 	public final CheckContext check() throws RecognitionException {
 		CheckContext _localctx = new CheckContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_check);
+		enterRule(_localctx, 46, RULE_check);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(365);
+			setState(381);
 			match(T__2);
-			setState(366);
-			expr(0);
-			setState(367);
+			setState(382);
+			orExpression(0);
+			setState(383);
 			match(T__3);
 			}
 		}
@@ -2177,7 +2163,6 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class VarDecContext extends ParserRuleContext {
-		public TerminalNode VAR() { return getToken(ReFuggParser.VAR, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -2190,8 +2175,11 @@ public class ReFuggParser extends Parser {
 		public ConstArrayContext constArray(int i) {
 			return getRuleContext(ConstArrayContext.class,i);
 		}
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
+		public OrExpressionContext orExpression() {
+			return getRuleContext(OrExpressionContext.class,0);
+		}
+		public ListContext list() {
+			return getRuleContext(ListContext.class,0);
 		}
 		public VarDecContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2214,126 +2202,71 @@ public class ReFuggParser extends Parser {
 
 	public final VarDecContext varDec() throws RecognitionException {
 		VarDecContext _localctx = new VarDecContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_varDec);
+		enterRule(_localctx, 48, RULE_varDec);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(369);
-			match(VAR);
-			setState(370);
+			setState(385);
 			type();
-			setState(371);
-			identifier();
-			setState(375);
+			setState(389);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__0) {
 				{
 				{
-				setState(372);
+				setState(386);
 				constArray();
 				}
 				}
-				setState(377);
+				setState(391);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(380);
+			setState(392);
+			identifier();
+			setState(398);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__9) {
 				{
-				setState(378);
+				setState(393);
 				match(T__9);
-				setState(379);
-				expr(0);
+				setState(396);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case T__2:
+				case T__31:
+				case T__32:
+				case T__37:
+				case TRUE:
+				case FALSE:
+				case THIS:
+				case NULL:
+				case NEW:
+				case NOT:
+				case INT_LIT:
+				case DOUBLE_LIT:
+				case CHAR_LIT:
+				case STRING_LIT:
+				case ID:
+					{
+					setState(394);
+					orExpression(0);
+					}
+					break;
+				case T__5:
+					{
+					setState(395);
+					list();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
 				}
 			}
 
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class AssignContext extends ParserRuleContext {
-		public IdentifierContext identifier() {
-			return getRuleContext(IdentifierContext.class,0);
-		}
-		public IndexContext index() {
-			return getRuleContext(IndexContext.class,0);
-		}
-		public AssignOPContext assignOP() {
-			return getRuleContext(AssignOPContext.class,0);
-		}
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
-		public ThisAccessContext thisAccess() {
-			return getRuleContext(ThisAccessContext.class,0);
-		}
-		public AssignContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_assign; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAssign(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAssign(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAssign(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final AssignContext assign() throws RecognitionException {
-		AssignContext _localctx = new AssignContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_assign);
-		try {
-			setState(392);
-			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case ID:
-				enterOuterAlt(_localctx, 1);
-				{
-				setState(382);
-				identifier();
-				setState(383);
-				index();
-				setState(384);
-				assignOP();
-				setState(385);
-				expr(0);
-				}
-				break;
-			case THIS:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(387);
-				thisAccess();
-				setState(388);
-				index();
-				setState(389);
-				assignOP();
-				setState(390);
-				expr(0);
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2348,17 +2281,6 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class GlobalVarContext extends ParserRuleContext {
-		public GlobalVarContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_globalVar; }
-	 
-		public GlobalVarContext() { }
-		public void copyFrom(GlobalVarContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class GlobalYesInitContext extends GlobalVarContext {
 		public TerminalNode GLOBAL() { return getToken(ReFuggParser.GLOBAL, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
@@ -2369,34 +2291,11 @@ public class ReFuggParser extends Parser {
 		public ConstExprContext constExpr() {
 			return getRuleContext(ConstExprContext.class,0);
 		}
-		public List<ConstArrayContext> constArray() {
-			return getRuleContexts(ConstArrayContext.class);
+		public ConstListContext constList() {
+			return getRuleContext(ConstListContext.class,0);
 		}
-		public ConstArrayContext constArray(int i) {
-			return getRuleContext(ConstArrayContext.class,i);
-		}
-		public GlobalYesInitContext(GlobalVarContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterGlobalYesInit(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitGlobalYesInit(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitGlobalYesInit(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class GlobalNoInitContext extends GlobalVarContext {
-		public TerminalNode GLOBAL() { return getToken(ReFuggParser.GLOBAL, 0); }
-		public TypeContext type() {
-			return getRuleContext(TypeContext.class,0);
-		}
-		public IdentifierContext identifier() {
-			return getRuleContext(IdentifierContext.class,0);
+		public TypemodifierContext typemodifier() {
+			return getRuleContext(TypemodifierContext.class,0);
 		}
 		public List<ConstArrayContext> constArray() {
 			return getRuleContexts(ConstArrayContext.class);
@@ -2404,18 +2303,21 @@ public class ReFuggParser extends Parser {
 		public ConstArrayContext constArray(int i) {
 			return getRuleContext(ConstArrayContext.class,i);
 		}
-		public GlobalNoInitContext(GlobalVarContext ctx) { copyFrom(ctx); }
+		public GlobalVarContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_globalVar; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterGlobalNoInit(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterGlobalVar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitGlobalNoInit(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitGlobalVar(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitGlobalNoInit(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitGlobalVar(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2425,69 +2327,72 @@ public class ReFuggParser extends Parser {
 		enterRule(_localctx, 50, RULE_globalVar);
 		int _la;
 		try {
-			setState(418);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(400);
+			match(GLOBAL);
+			setState(402);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
-			case 1:
-				_localctx = new GlobalNoInitContext(_localctx);
-				enterOuterAlt(_localctx, 1);
+			_la = _input.LA(1);
+			if (_la==STATIC) {
 				{
-				setState(394);
-				match(GLOBAL);
-				setState(395);
-				type();
-				setState(396);
-				identifier();
-				setState(400);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				while (_la==T__0) {
-					{
-					{
-					setState(397);
-					constArray();
-					}
-					}
-					setState(402);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
+				setState(401);
+				typemodifier();
 				}
-				setState(403);
-				match(T__7);
-				}
-				break;
-			case 2:
-				_localctx = new GlobalYesInitContext(_localctx);
-				enterOuterAlt(_localctx, 2);
+			}
+
+			setState(404);
+			type();
+			setState(408);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==T__0) {
+				{
 				{
 				setState(405);
-				match(GLOBAL);
-				setState(406);
-				type();
-				setState(407);
-				identifier();
-				setState(411);
+				constArray();
+				}
+				}
+				setState(410);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==T__0) {
-					{
-					{
-					setState(408);
-					constArray();
-					}
-					}
-					setState(413);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				setState(414);
-				match(T__9);
-				setState(415);
+			}
+			setState(411);
+			identifier();
+			setState(412);
+			match(T__9);
+			setState(415);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case T__2:
+			case T__31:
+			case T__32:
+			case T__37:
+			case TRUE:
+			case FALSE:
+			case NULL:
+			case NOT:
+			case INT_LIT:
+			case DOUBLE_LIT:
+			case CHAR_LIT:
+			case STRING_LIT:
+			case ID:
+				{
+				setState(413);
 				constExpr(0);
-				setState(416);
-				match(T__7);
 				}
 				break;
+			case T__5:
+				{
+				setState(414);
+				constList();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(417);
+			match(T__7);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2502,48 +2407,24 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class ConstArrayContext extends ParserRuleContext {
+		public ConstExprContext constExpr() {
+			return getRuleContext(ConstExprContext.class,0);
+		}
 		public ConstArrayContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_constArray; }
-	 
-		public ConstArrayContext() { }
-		public void copyFrom(ConstArrayContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class ConstUnknownArraysizeContext extends ConstArrayContext {
-		public ConstUnknownArraysizeContext(ConstArrayContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstUnknownArraysize(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstArray(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstUnknownArraysize(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstArray(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstUnknownArraysize(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ConstKnownArraysizeContext extends ConstArrayContext {
-		public ConstExprContext constExpr() {
-			return getRuleContext(ConstExprContext.class,0);
-		}
-		public ConstKnownArraysizeContext(ConstArrayContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstKnownArraysize(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstKnownArraysize(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstKnownArraysize(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstArray(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2551,32 +2432,24 @@ public class ReFuggParser extends Parser {
 	public final ConstArrayContext constArray() throws RecognitionException {
 		ConstArrayContext _localctx = new ConstArrayContext(_ctx, getState());
 		enterRule(_localctx, 52, RULE_constArray);
+		int _la;
 		try {
-			setState(426);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(419);
+			match(T__0);
+			setState(421);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,29,_ctx) ) {
-			case 1:
-				_localctx = new ConstKnownArraysizeContext(_localctx);
-				enterOuterAlt(_localctx, 1);
+			_la = _input.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__31) | (1L << T__32) | (1L << T__37))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (TRUE - 68)) | (1L << (FALSE - 68)) | (1L << (NULL - 68)) | (1L << (NOT - 68)) | (1L << (INT_LIT - 68)) | (1L << (DOUBLE_LIT - 68)) | (1L << (CHAR_LIT - 68)) | (1L << (STRING_LIT - 68)) | (1L << (ID - 68)))) != 0)) {
 				{
 				setState(420);
-				match(T__0);
-				setState(421);
 				constExpr(0);
-				setState(422);
-				match(T__1);
 				}
-				break;
-			case 2:
-				_localctx = new ConstUnknownArraysizeContext(_localctx);
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(424);
-				match(T__0);
-				setState(425);
-				match(T__1);
-				}
-				break;
+			}
+
+			setState(423);
+			match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2648,18 +2521,18 @@ public class ReFuggParser extends Parser {
 		enterRule(_localctx, 54, RULE_constList);
 		int _la;
 		try {
-			setState(442);
+			setState(439);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,31,_ctx) ) {
 			case 1:
 				_localctx = new ConstListNoSubContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(428);
+				setState(425);
 				match(T__5);
-				setState(429);
+				setState(426);
 				constExprMany();
-				setState(430);
+				setState(427);
 				match(T__6);
 				}
 				break;
@@ -2667,27 +2540,27 @@ public class ReFuggParser extends Parser {
 				_localctx = new ConstListYesSubContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(432);
+				setState(429);
 				match(T__5);
-				setState(433);
+				setState(430);
 				constSubList();
-				setState(436); 
+				setState(433); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(434);
+					setState(431);
 					match(T__4);
-					setState(435);
+					setState(432);
 					constSubList();
 					}
 					}
-					setState(438); 
+					setState(435); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( _la==T__4 );
-				setState(440);
+				setState(437);
 				match(T__6);
 				}
 				break;
@@ -2733,11 +2606,11 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(444);
+			setState(441);
 			match(T__5);
-			setState(445);
+			setState(442);
 			constExprMany();
-			setState(446);
+			setState(443);
 			match(T__6);
 			}
 		}
@@ -2785,24 +2658,143 @@ public class ReFuggParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(448);
+			setState(445);
 			constExpr(0);
-			setState(453);
+			setState(450);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__4) {
 				{
 				{
-				setState(449);
+				setState(446);
 				match(T__4);
-				setState(450);
+				setState(447);
 				constExpr(0);
 				}
 				}
-				setState(455);
+				setState(452);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ConstVarContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public ConstVarContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_constVar; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstVar(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstVar(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstVar(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ConstVarContext constVar() throws RecognitionException {
+		ConstVarContext _localctx = new ConstVarContext(_ctx, getState());
+		enterRule(_localctx, 60, RULE_constVar);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(453);
+			identifier();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ConstArrayAccessContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public List<ConstExprContext> constExpr() {
+			return getRuleContexts(ConstExprContext.class);
+		}
+		public ConstExprContext constExpr(int i) {
+			return getRuleContext(ConstExprContext.class,i);
+		}
+		public ConstArrayAccessContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_constArrayAccess; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstArrayAccess(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstArrayAccess(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstArrayAccess(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ConstArrayAccessContext constArrayAccess() throws RecognitionException {
+		ConstArrayAccessContext _localctx = new ConstArrayAccessContext(_ctx, getState());
+		enterRule(_localctx, 62, RULE_constArrayAccess);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(455);
+			identifier();
+			setState(460); 
+			_errHandler.sync(this);
+			_alt = 1;
+			do {
+				switch (_alt) {
+				case 1:
+					{
+					{
+					setState(456);
+					match(T__0);
+					setState(457);
+					constExpr(0);
+					setState(458);
+					match(T__1);
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(462); 
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
 		catch (RecognitionException re) {
@@ -2823,8 +2815,8 @@ public class ReFuggParser extends Parser {
 		public ConstExprContext constExpr() {
 			return getRuleContext(ConstExprContext.class,0);
 		}
-		public OrContext or() {
-			return getRuleContext(OrContext.class,0);
+		public OrOPContext orOP() {
+			return getRuleContext(OrOPContext.class,0);
 		}
 		public ConstExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2854,20 +2846,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstExprContext _localctx = new ConstExprContext(_ctx, _parentState);
 		ConstExprContext _prevctx = _localctx;
-		int _startState = 60;
-		enterRecursionRule(_localctx, 60, RULE_constExpr, _p);
+		int _startState = 64;
+		enterRecursionRule(_localctx, 64, RULE_constExpr, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(457);
+			setState(465);
 			constJoin(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(465);
+			setState(473);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -2876,18 +2868,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstExprContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constExpr);
-					setState(459);
+					setState(467);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(460);
-					or();
-					setState(461);
+					setState(468);
+					orOP();
+					setState(469);
 					constJoin(0);
 					}
 					} 
 				}
-				setState(467);
+				setState(475);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
 			}
 			}
 		}
@@ -2909,8 +2901,8 @@ public class ReFuggParser extends Parser {
 		public ConstJoinContext constJoin() {
 			return getRuleContext(ConstJoinContext.class,0);
 		}
-		public AndContext and() {
-			return getRuleContext(AndContext.class,0);
+		public AndOPContext andOP() {
+			return getRuleContext(AndOPContext.class,0);
 		}
 		public ConstJoinContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2940,20 +2932,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstJoinContext _localctx = new ConstJoinContext(_ctx, _parentState);
 		ConstJoinContext _prevctx = _localctx;
-		int _startState = 62;
-		enterRecursionRule(_localctx, 62, RULE_constJoin, _p);
+		int _startState = 66;
+		enterRecursionRule(_localctx, 66, RULE_constJoin, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(469);
+			setState(477);
 			constEQ(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(477);
+			setState(485);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,35,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -2962,18 +2954,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstJoinContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constJoin);
-					setState(471);
+					setState(479);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(472);
-					and();
-					setState(473);
+					setState(480);
+					andOP();
+					setState(481);
 					constEQ(0);
 					}
 					} 
 				}
-				setState(479);
+				setState(487);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,35,_ctx);
 			}
 			}
 		}
@@ -3026,20 +3018,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstEQContext _localctx = new ConstEQContext(_ctx, _parentState);
 		ConstEQContext _prevctx = _localctx;
-		int _startState = 64;
-		enterRecursionRule(_localctx, 64, RULE_constEQ, _p);
+		int _startState = 68;
+		enterRecursionRule(_localctx, 68, RULE_constEQ, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(481);
+			setState(489);
 			constRel(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(489);
+			setState(497);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,35,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,36,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -3048,18 +3040,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstEQContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constEQ);
-					setState(483);
+					setState(491);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(484);
+					setState(492);
 					eqOP();
-					setState(485);
+					setState(493);
 					constRel(0);
 					}
 					} 
 				}
-				setState(491);
+				setState(499);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,35,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,36,_ctx);
 			}
 			}
 		}
@@ -3081,8 +3073,8 @@ public class ReFuggParser extends Parser {
 		public ConstRelContext constRel() {
 			return getRuleContext(ConstRelContext.class,0);
 		}
-		public LogicOpContext logicOp() {
-			return getRuleContext(LogicOpContext.class,0);
+		public RelOPContext relOP() {
+			return getRuleContext(RelOPContext.class,0);
 		}
 		public ConstRelContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3112,20 +3104,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstRelContext _localctx = new ConstRelContext(_ctx, _parentState);
 		ConstRelContext _prevctx = _localctx;
-		int _startState = 66;
-		enterRecursionRule(_localctx, 66, RULE_constRel, _p);
+		int _startState = 70;
+		enterRecursionRule(_localctx, 70, RULE_constRel, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(493);
+			setState(501);
 			constLogic(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(501);
+			setState(509);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,36,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,37,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -3134,18 +3126,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstRelContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constRel);
-					setState(495);
+					setState(503);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(496);
-					logicOp();
-					setState(497);
+					setState(504);
+					relOP();
+					setState(505);
 					constLogic(0);
 					}
 					} 
 				}
-				setState(503);
+				setState(511);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,36,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,37,_ctx);
 			}
 			}
 		}
@@ -3167,8 +3159,8 @@ public class ReFuggParser extends Parser {
 		public ConstLogicContext constLogic() {
 			return getRuleContext(ConstLogicContext.class,0);
 		}
-		public AddContext add() {
-			return getRuleContext(AddContext.class,0);
+		public AddOPContext addOP() {
+			return getRuleContext(AddOPContext.class,0);
 		}
 		public ConstLogicContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3198,20 +3190,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstLogicContext _localctx = new ConstLogicContext(_ctx, _parentState);
 		ConstLogicContext _prevctx = _localctx;
-		int _startState = 68;
-		enterRecursionRule(_localctx, 68, RULE_constLogic, _p);
+		int _startState = 72;
+		enterRecursionRule(_localctx, 72, RULE_constLogic, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(505);
+			setState(513);
 			constTerm(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(513);
+			setState(521);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,37,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,38,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -3220,18 +3212,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstLogicContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constLogic);
-					setState(507);
+					setState(515);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(508);
-					add();
-					setState(509);
+					setState(516);
+					addOP();
+					setState(517);
 					constTerm(0);
 					}
 					} 
 				}
-				setState(515);
+				setState(523);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,37,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,38,_ctx);
 			}
 			}
 		}
@@ -3253,8 +3245,8 @@ public class ReFuggParser extends Parser {
 		public ConstTermContext constTerm() {
 			return getRuleContext(ConstTermContext.class,0);
 		}
-		public MultContext mult() {
-			return getRuleContext(MultContext.class,0);
+		public MultOPContext multOP() {
+			return getRuleContext(MultOPContext.class,0);
 		}
 		public ConstTermContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3284,20 +3276,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstTermContext _localctx = new ConstTermContext(_ctx, _parentState);
 		ConstTermContext _prevctx = _localctx;
-		int _startState = 70;
-		enterRecursionRule(_localctx, 70, RULE_constTerm, _p);
+		int _startState = 74;
+		enterRecursionRule(_localctx, 74, RULE_constTerm, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(517);
+			setState(525);
 			constExpo(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(525);
+			setState(533);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,38,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,39,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -3306,18 +3298,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstTermContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constTerm);
-					setState(519);
+					setState(527);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(520);
-					mult();
-					setState(521);
+					setState(528);
+					multOP();
+					setState(529);
 					constExpo(0);
 					}
 					} 
 				}
-				setState(527);
+				setState(535);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,38,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,39,_ctx);
 			}
 			}
 		}
@@ -3339,8 +3331,8 @@ public class ReFuggParser extends Parser {
 		public ConstExpoContext constExpo() {
 			return getRuleContext(ConstExpoContext.class,0);
 		}
-		public ExpoOpContext expoOp() {
-			return getRuleContext(ExpoOpContext.class,0);
+		public ExpOPContext expOP() {
+			return getRuleContext(ExpOPContext.class,0);
 		}
 		public ConstExpoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -3370,20 +3362,20 @@ public class ReFuggParser extends Parser {
 		int _parentState = getState();
 		ConstExpoContext _localctx = new ConstExpoContext(_ctx, _parentState);
 		ConstExpoContext _prevctx = _localctx;
-		int _startState = 72;
-		enterRecursionRule(_localctx, 72, RULE_constExpo, _p);
+		int _startState = 76;
+		enterRecursionRule(_localctx, 76, RULE_constExpo, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(529);
+			setState(537);
 			constUnary();
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(537);
+			setState(545);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,39,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -3392,18 +3384,18 @@ public class ReFuggParser extends Parser {
 					{
 					_localctx = new ConstExpoContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_constExpo);
-					setState(531);
+					setState(539);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(532);
-					expoOp();
-					setState(533);
+					setState(540);
+					expOP();
+					setState(541);
 					constUnary();
 					}
 					} 
 				}
-				setState(539);
+				setState(547);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,39,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
 			}
 			}
 		}
@@ -3419,8 +3411,8 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class ConstUnaryContext extends ParserRuleContext {
-		public NotNegContext notNeg() {
-			return getRuleContext(NotNegContext.class,0);
+		public PreOPContext preOP() {
+			return getRuleContext(PreOPContext.class,0);
 		}
 		public ConstFactorContext constFactor() {
 			return getRuleContext(ConstFactorContext.class,0);
@@ -3446,35 +3438,35 @@ public class ReFuggParser extends Parser {
 
 	public final ConstUnaryContext constUnary() throws RecognitionException {
 		ConstUnaryContext _localctx = new ConstUnaryContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_constUnary);
+		enterRule(_localctx, 78, RULE_constUnary);
 		try {
-			setState(544);
+			setState(552);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
+			case T__31:
 			case T__32:
-			case T__33:
-			case T__34:
+			case T__37:
+			case NOT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(540);
-				notNeg();
-				setState(541);
+				setState(548);
+				preOP();
+				setState(549);
 				constFactor();
 				}
 				break;
 			case T__2:
-			case T__5:
 			case TRUE:
 			case FALSE:
-			case THIS:
 			case NULL:
 			case INT_LIT:
 			case DOUBLE_LIT:
 			case CHAR_LIT:
 			case STRING_LIT:
+			case ID:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(543);
+				setState(551);
 				constFactor();
 				}
 				break;
@@ -3504,6 +3496,25 @@ public class ReFuggParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
+	public static class ConstExprArrayAccessContext extends ConstFactorContext {
+		public ConstArrayAccessContext constArrayAccess() {
+			return getRuleContext(ConstArrayAccessContext.class,0);
+		}
+		public ConstExprArrayAccessContext(ConstFactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstExprArrayAccess(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstExprArrayAccess(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstExprArrayAccess(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 	public static class ConstExprConstContext extends ConstFactorContext {
 		public ConstantContext constant() {
 			return getRuleContext(ConstantContext.class,0);
@@ -3523,22 +3534,22 @@ public class ReFuggParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
-	public static class ConstExprListContext extends ConstFactorContext {
-		public ConstListContext constList() {
-			return getRuleContext(ConstListContext.class,0);
+	public static class ConstExprVarContext extends ConstFactorContext {
+		public ConstVarContext constVar() {
+			return getRuleContext(ConstVarContext.class,0);
 		}
-		public ConstExprListContext(ConstFactorContext ctx) { copyFrom(ctx); }
+		public ConstExprVarContext(ConstFactorContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstExprList(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterConstExprVar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstExprList(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitConstExprVar(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstExprList(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitConstExprVar(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -3564,48 +3575,47 @@ public class ReFuggParser extends Parser {
 
 	public final ConstFactorContext constFactor() throws RecognitionException {
 		ConstFactorContext _localctx = new ConstFactorContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_constFactor);
+		enterRule(_localctx, 80, RULE_constFactor);
 		try {
-			setState(552);
+			setState(561);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case TRUE:
-			case FALSE:
-			case THIS:
-			case NULL:
-			case INT_LIT:
-			case DOUBLE_LIT:
-			case CHAR_LIT:
-			case STRING_LIT:
+			switch ( getInterpreter().adaptivePredict(_input,42,_ctx) ) {
+			case 1:
 				_localctx = new ConstExprConstContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(546);
+				setState(554);
 				constant();
 				}
 				break;
-			case T__2:
+			case 2:
 				_localctx = new ConstExprParenthContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(547);
+				setState(555);
 				match(T__2);
-				setState(548);
+				setState(556);
 				constExpr(0);
-				setState(549);
+				setState(557);
 				match(T__3);
 				}
 				break;
-			case T__5:
-				_localctx = new ConstExprListContext(_localctx);
+			case 3:
+				_localctx = new ConstExprVarContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(551);
-				constList();
+				setState(559);
+				constVar();
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
+			case 4:
+				_localctx = new ConstExprArrayAccessContext(_localctx);
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(560);
+				constArrayAccess();
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -3619,79 +3629,41 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class ExprContext extends ParserRuleContext {
-		public JoinContext join() {
-			return getRuleContext(JoinContext.class,0);
+	public static class ArrayAccessContext extends ParserRuleContext {
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
-		public OrContext or() {
-			return getRuleContext(OrContext.class,0);
-		}
-		public ExprContext(ParserRuleContext parent, int invokingState) {
+		public ArrayAccessContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_expr; }
+		@Override public int getRuleIndex() { return RULE_arrayAccess; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpr(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterArrayAccess(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpr(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitArrayAccess(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpr(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitArrayAccess(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final ExprContext expr() throws RecognitionException {
-		return expr(0);
-	}
-
-	private ExprContext expr(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		ExprContext _localctx = new ExprContext(_ctx, _parentState);
-		ExprContext _prevctx = _localctx;
-		int _startState = 78;
-		enterRecursionRule(_localctx, 78, RULE_expr, _p);
+	public final ArrayAccessContext arrayAccess() throws RecognitionException {
+		ArrayAccessContext _localctx = new ArrayAccessContext(_ctx, getState());
+		enterRule(_localctx, 82, RULE_arrayAccess);
 		try {
-			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			{
-			setState(555);
-			join(0);
-			}
-			_ctx.stop = _input.LT(-1);
 			setState(563);
-			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,42,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					{
-					_localctx = new ExprContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_expr);
-					setState(557);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(558);
-					or();
-					setState(559);
-					join(0);
-					}
-					} 
-				}
-				setState(565);
-				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,42,_ctx);
-			}
+			match(T__0);
+			setState(564);
+			expression();
+			setState(565);
+			match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3700,914 +3672,144 @@ public class ReFuggParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			unrollRecursionContexts(_parentctx);
+			exitRule();
 		}
 		return _localctx;
 	}
 
-	public static class JoinContext extends ParserRuleContext {
-		public EqContext eq() {
-			return getRuleContext(EqContext.class,0);
+	public static class MethodCallContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
 		}
-		public JoinContext join() {
-			return getRuleContext(JoinContext.class,0);
+		public FArgsContext fArgs() {
+			return getRuleContext(FArgsContext.class,0);
 		}
-		public AndContext and() {
-			return getRuleContext(AndContext.class,0);
-		}
-		public JoinContext(ParserRuleContext parent, int invokingState) {
+		public MethodCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_join; }
+		@Override public int getRuleIndex() { return RULE_methodCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterJoin(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMethodCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitJoin(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMethodCall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitJoin(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMethodCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final JoinContext join() throws RecognitionException {
-		return join(0);
+	public final MethodCallContext methodCall() throws RecognitionException {
+		MethodCallContext _localctx = new MethodCallContext(_ctx, getState());
+		enterRule(_localctx, 84, RULE_methodCall);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(567);
+			identifier();
+			setState(568);
+			fArgs();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
 	}
 
-	private JoinContext join(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		JoinContext _localctx = new JoinContext(_ctx, _parentState);
-		JoinContext _prevctx = _localctx;
-		int _startState = 80;
-		enterRecursionRule(_localctx, 80, RULE_join, _p);
+	public static class NewObjectContext extends ParserRuleContext {
+		public TerminalNode NEW() { return getToken(ReFuggParser.NEW, 0); }
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public FArgsContext fArgs() {
+			return getRuleContext(FArgsContext.class,0);
+		}
+		public List<ArrayAccessContext> arrayAccess() {
+			return getRuleContexts(ArrayAccessContext.class);
+		}
+		public ArrayAccessContext arrayAccess(int i) {
+			return getRuleContext(ArrayAccessContext.class,i);
+		}
+		public List<ExprTailContext> exprTail() {
+			return getRuleContexts(ExprTailContext.class);
+		}
+		public ExprTailContext exprTail(int i) {
+			return getRuleContext(ExprTailContext.class,i);
+		}
+		public NewObjectContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_newObject; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterNewObject(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitNewObject(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitNewObject(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final NewObjectContext newObject() throws RecognitionException {
+		NewObjectContext _localctx = new NewObjectContext(_ctx, getState());
+		enterRule(_localctx, 86, RULE_newObject);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			{
-			setState(567);
-			eq(0);
-			}
-			_ctx.stop = _input.LT(-1);
-			setState(575);
+			setState(570);
+			match(NEW);
+			setState(571);
+			identifier();
+			setState(572);
+			fArgs();
+			setState(576);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,43,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
 					{
 					{
-					_localctx = new JoinContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_join);
-					setState(569);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(570);
-					and();
-					setState(571);
-					eq(0);
+					setState(573);
+					arrayAccess();
 					}
 					} 
 				}
-				setState(577);
+				setState(578);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,43,_ctx);
 			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			unrollRecursionContexts(_parentctx);
-		}
-		return _localctx;
-	}
-
-	public static class EqContext extends ParserRuleContext {
-		public RelContext rel() {
-			return getRuleContext(RelContext.class,0);
-		}
-		public EqContext eq() {
-			return getRuleContext(EqContext.class,0);
-		}
-		public EqOPContext eqOP() {
-			return getRuleContext(EqOPContext.class,0);
-		}
-		public EqContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_eq; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterEq(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitEq(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitEq(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final EqContext eq() throws RecognitionException {
-		return eq(0);
-	}
-
-	private EqContext eq(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		EqContext _localctx = new EqContext(_ctx, _parentState);
-		EqContext _prevctx = _localctx;
-		int _startState = 82;
-		enterRecursionRule(_localctx, 82, RULE_eq, _p);
-		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			{
-			setState(579);
-			rel(0);
-			}
-			_ctx.stop = _input.LT(-1);
-			setState(587);
+			setState(582);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,44,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
 					{
 					{
-					_localctx = new EqContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_eq);
-					setState(581);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(582);
-					eqOP();
-					setState(583);
-					rel(0);
+					setState(579);
+					exprTail();
 					}
 					} 
 				}
-				setState(589);
+				setState(584);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,44,_ctx);
 			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			unrollRecursionContexts(_parentctx);
-		}
-		return _localctx;
-	}
-
-	public static class RelContext extends ParserRuleContext {
-		public LogicContext logic() {
-			return getRuleContext(LogicContext.class,0);
-		}
-		public RelContext rel() {
-			return getRuleContext(RelContext.class,0);
-		}
-		public LogicOpContext logicOp() {
-			return getRuleContext(LogicOpContext.class,0);
-		}
-		public RelContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_rel; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterRel(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitRel(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitRel(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final RelContext rel() throws RecognitionException {
-		return rel(0);
-	}
-
-	private RelContext rel(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		RelContext _localctx = new RelContext(_ctx, _parentState);
-		RelContext _prevctx = _localctx;
-		int _startState = 84;
-		enterRecursionRule(_localctx, 84, RULE_rel, _p);
-		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			{
-			setState(591);
-			logic(0);
-			}
-			_ctx.stop = _input.LT(-1);
-			setState(599);
-			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,45,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					{
-					_localctx = new RelContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_rel);
-					setState(593);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(594);
-					logicOp();
-					setState(595);
-					logic(0);
-					}
-					} 
-				}
-				setState(601);
-				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,45,_ctx);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			unrollRecursionContexts(_parentctx);
-		}
-		return _localctx;
-	}
-
-	public static class LogicContext extends ParserRuleContext {
-		public TermContext term() {
-			return getRuleContext(TermContext.class,0);
-		}
-		public LogicContext logic() {
-			return getRuleContext(LogicContext.class,0);
-		}
-		public AddContext add() {
-			return getRuleContext(AddContext.class,0);
-		}
-		public LogicContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_logic; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterLogic(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitLogic(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitLogic(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final LogicContext logic() throws RecognitionException {
-		return logic(0);
-	}
-
-	private LogicContext logic(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		LogicContext _localctx = new LogicContext(_ctx, _parentState);
-		LogicContext _prevctx = _localctx;
-		int _startState = 86;
-		enterRecursionRule(_localctx, 86, RULE_logic, _p);
-		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			{
-			setState(603);
-			term(0);
-			}
-			_ctx.stop = _input.LT(-1);
-			setState(611);
-			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,46,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					{
-					_localctx = new LogicContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_logic);
-					setState(605);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(606);
-					add();
-					setState(607);
-					term(0);
-					}
-					} 
-				}
-				setState(613);
-				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,46,_ctx);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			unrollRecursionContexts(_parentctx);
-		}
-		return _localctx;
-	}
-
-	public static class TermContext extends ParserRuleContext {
-		public ExpoContext expo() {
-			return getRuleContext(ExpoContext.class,0);
-		}
-		public TermContext term() {
-			return getRuleContext(TermContext.class,0);
-		}
-		public MultContext mult() {
-			return getRuleContext(MultContext.class,0);
-		}
-		public TermContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_term; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterTerm(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitTerm(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitTerm(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final TermContext term() throws RecognitionException {
-		return term(0);
-	}
-
-	private TermContext term(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		TermContext _localctx = new TermContext(_ctx, _parentState);
-		TermContext _prevctx = _localctx;
-		int _startState = 88;
-		enterRecursionRule(_localctx, 88, RULE_term, _p);
-		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			{
-			setState(615);
-			expo(0);
-			}
-			_ctx.stop = _input.LT(-1);
-			setState(623);
-			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,47,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					{
-					_localctx = new TermContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_term);
-					setState(617);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(618);
-					mult();
-					setState(619);
-					expo(0);
-					}
-					} 
-				}
-				setState(625);
-				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,47,_ctx);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			unrollRecursionContexts(_parentctx);
-		}
-		return _localctx;
-	}
-
-	public static class ExpoContext extends ParserRuleContext {
-		public UnaryContext unary() {
-			return getRuleContext(UnaryContext.class,0);
-		}
-		public ExpoContext expo() {
-			return getRuleContext(ExpoContext.class,0);
-		}
-		public ExpoOpContext expoOp() {
-			return getRuleContext(ExpoOpContext.class,0);
-		}
-		public ExpoContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_expo; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpo(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpo(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpo(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final ExpoContext expo() throws RecognitionException {
-		return expo(0);
-	}
-
-	private ExpoContext expo(int _p) throws RecognitionException {
-		ParserRuleContext _parentctx = _ctx;
-		int _parentState = getState();
-		ExpoContext _localctx = new ExpoContext(_ctx, _parentState);
-		ExpoContext _prevctx = _localctx;
-		int _startState = 90;
-		enterRecursionRule(_localctx, 90, RULE_expo, _p);
-		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			{
-			setState(627);
-			unary();
-			}
-			_ctx.stop = _input.LT(-1);
-			setState(635);
-			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,48,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( _parseListeners!=null ) triggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					{
-					_localctx = new ExpoContext(_parentctx, _parentState);
-					pushNewRecursionContext(_localctx, _startState, RULE_expo);
-					setState(629);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(630);
-					expoOp();
-					setState(631);
-					unary();
-					}
-					} 
-				}
-				setState(637);
-				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,48,_ctx);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			unrollRecursionContexts(_parentctx);
-		}
-		return _localctx;
-	}
-
-	public static class UnaryContext extends ParserRuleContext {
-		public NotNegContext notNeg() {
-			return getRuleContext(NotNegContext.class,0);
-		}
-		public FactorContext factor() {
-			return getRuleContext(FactorContext.class,0);
-		}
-		public UnaryContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_unary; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterUnary(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitUnary(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitUnary(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final UnaryContext unary() throws RecognitionException {
-		UnaryContext _localctx = new UnaryContext(_ctx, getState());
-		enterRule(_localctx, 92, RULE_unary);
-		try {
-			setState(642);
-			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case T__32:
-			case T__33:
-			case T__34:
-				enterOuterAlt(_localctx, 1);
-				{
-				setState(638);
-				notNeg();
-				setState(639);
-				factor();
-				}
-				break;
-			case T__2:
-			case T__5:
-			case TRUE:
-			case FALSE:
-			case THIS:
-			case NULL:
-			case NEW:
-			case INT_LIT:
-			case DOUBLE_LIT:
-			case CHAR_LIT:
-			case STRING_LIT:
-			case ID:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(641);
-				factor();
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class FactorContext extends ParserRuleContext {
-		public FactorContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_factor; }
-	 
-		public FactorContext() { }
-		public void copyFrom(FactorContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class ExprfCallContext extends FactorContext {
-		public FCallContext fCall() {
-			return getRuleContext(FCallContext.class,0);
-		}
-		public ExprfCallContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprfCall(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprfCall(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprfCall(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprCreateContext extends FactorContext {
-		public CreateContext create() {
-			return getRuleContext(CreateContext.class,0);
-		}
-		public ExprCreateContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprCreate(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprCreate(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprCreate(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprParenthContext extends FactorContext {
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
-		public ExprParenthContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprParenth(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprParenth(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprParenth(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprListContext extends FactorContext {
-		public ListContext list() {
-			return getRuleContext(ListContext.class,0);
-		}
-		public ExprListContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprList(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprList(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprList(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprmethCallContext extends FactorContext {
-		public MethCallContext methCall() {
-			return getRuleContext(MethCallContext.class,0);
-		}
-		public ExprmethCallContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprmethCall(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprmethCall(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprmethCall(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExpridentifierContext extends FactorContext {
-		public IdentifierContext identifier() {
-			return getRuleContext(IdentifierContext.class,0);
-		}
-		public PostOPContext postOP() {
-			return getRuleContext(PostOPContext.class,0);
-		}
-		public ExpridentifierContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpridentifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpridentifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpridentifier(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExpridentifierIndexContext extends FactorContext {
-		public IdentifierContext identifier() {
-			return getRuleContext(IdentifierContext.class,0);
-		}
-		public IndexContext index() {
-			return getRuleContext(IndexContext.class,0);
-		}
-		public PostOPContext postOP() {
-			return getRuleContext(PostOPContext.class,0);
-		}
-		public ExpridentifierIndexContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpridentifierIndex(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpridentifierIndex(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpridentifierIndex(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprThisContext extends FactorContext {
-		public ThisAccessContext thisAccess() {
-			return getRuleContext(ThisAccessContext.class,0);
-		}
-		public PostOPContext postOP() {
-			return getRuleContext(PostOPContext.class,0);
-		}
-		public ExprThisContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprThis(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprThis(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprThis(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprConstantContext extends FactorContext {
-		public ConstantContext constant() {
-			return getRuleContext(ConstantContext.class,0);
-		}
-		public ExprConstantContext(FactorContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprConstant(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprConstant(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprConstant(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final FactorContext factor() throws RecognitionException {
-		FactorContext _localctx = new FactorContext(_ctx, getState());
-		enterRule(_localctx, 94, RULE_factor);
-		try {
-			setState(666);
-			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,53,_ctx) ) {
-			case 1:
-				_localctx = new ExprParenthContext(_localctx);
-				enterOuterAlt(_localctx, 1);
-				{
-				setState(644);
-				match(T__2);
-				setState(645);
-				expr(0);
-				setState(646);
-				match(T__3);
-				}
-				break;
-			case 2:
-				_localctx = new ExprfCallContext(_localctx);
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(648);
-				fCall();
-				}
-				break;
-			case 3:
-				_localctx = new ExprmethCallContext(_localctx);
-				enterOuterAlt(_localctx, 3);
-				{
-				setState(649);
-				methCall();
-				}
-				break;
-			case 4:
-				_localctx = new ExpridentifierContext(_localctx);
-				enterOuterAlt(_localctx, 4);
-				{
-				setState(650);
-				identifier();
-				setState(652);
-				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,50,_ctx) ) {
-				case 1:
-					{
-					setState(651);
-					postOP();
-					}
-					break;
-				}
-				}
-				break;
-			case 5:
-				_localctx = new ExpridentifierIndexContext(_localctx);
-				enterOuterAlt(_localctx, 5);
-				{
-				setState(654);
-				identifier();
-				setState(655);
-				index();
-				setState(657);
-				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,51,_ctx) ) {
-				case 1:
-					{
-					setState(656);
-					postOP();
-					}
-					break;
-				}
-				}
-				break;
-			case 6:
-				_localctx = new ExprCreateContext(_localctx);
-				enterOuterAlt(_localctx, 6);
-				{
-				setState(659);
-				create();
-				}
-				break;
-			case 7:
-				_localctx = new ExprConstantContext(_localctx);
-				enterOuterAlt(_localctx, 7);
-				{
-				setState(660);
-				constant();
-				}
-				break;
-			case 8:
-				_localctx = new ExprThisContext(_localctx);
-				enterOuterAlt(_localctx, 8);
-				{
-				setState(661);
-				thisAccess();
-				setState(663);
-				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,52,_ctx) ) {
-				case 1:
-					{
-					setState(662);
-					postOP();
-					}
-					break;
-				}
-				}
-				break;
-			case 9:
-				_localctx = new ExprListContext(_localctx);
-				enterOuterAlt(_localctx, 9);
-				{
-				setState(665);
-				list();
-				}
-				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -4627,6 +3829,18 @@ public class ReFuggParser extends Parser {
 		}
 		public FArgsContext fArgs() {
 			return getRuleContext(FArgsContext.class,0);
+		}
+		public List<ArrayAccessContext> arrayAccess() {
+			return getRuleContexts(ArrayAccessContext.class);
+		}
+		public ArrayAccessContext arrayAccess(int i) {
+			return getRuleContext(ArrayAccessContext.class,i);
+		}
+		public List<ExprTailContext> exprTail() {
+			return getRuleContexts(ExprTailContext.class);
+		}
+		public ExprTailContext exprTail(int i) {
+			return getRuleContext(ExprTailContext.class,i);
 		}
 		public FCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -4649,14 +3863,47 @@ public class ReFuggParser extends Parser {
 
 	public final FCallContext fCall() throws RecognitionException {
 		FCallContext _localctx = new FCallContext(_ctx, getState());
-		enterRule(_localctx, 96, RULE_fCall);
+		enterRule(_localctx, 88, RULE_fCall);
 		try {
+			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(668);
+			setState(585);
 			identifier();
-			setState(669);
+			setState(586);
 			fArgs();
+			setState(590);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,45,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(587);
+					arrayAccess();
+					}
+					} 
+				}
+				setState(592);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,45,_ctx);
+			}
+			setState(596);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,46,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(593);
+					exprTail();
+					}
+					} 
+				}
+				setState(598);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,46,_ctx);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -4670,135 +3917,293 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class MethCallContext extends ParserRuleContext {
-		public MethCallContext(ParserRuleContext parent, int invokingState) {
+	public static class ThisAccesContext extends ParserRuleContext {
+		public TerminalNode THIS() { return getToken(ReFuggParser.THIS, 0); }
+		public List<ExprTailContext> exprTail() {
+			return getRuleContexts(ExprTailContext.class);
+		}
+		public ExprTailContext exprTail(int i) {
+			return getRuleContext(ExprTailContext.class,i);
+		}
+		public ThisAccesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_methCall; }
-	 
-		public MethCallContext() { }
-		public void copyFrom(MethCallContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class MethCallThisContext extends MethCallContext {
-		public ThisAccessContext thisAccess() {
-			return getRuleContext(ThisAccessContext.class,0);
-		}
-		public List<MethCallTailContext> methCallTail() {
-			return getRuleContexts(MethCallTailContext.class);
-		}
-		public MethCallTailContext methCallTail(int i) {
-			return getRuleContext(MethCallTailContext.class,i);
-		}
-		public MethCallThisContext(MethCallContext ctx) { copyFrom(ctx); }
+		@Override public int getRuleIndex() { return RULE_thisAcces; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMethCallThis(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterThisAcces(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMethCallThis(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitThisAcces(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMethCallThis(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class MethCallidentifierContext extends MethCallContext {
-		public IdentifierContext identifier() {
-			return getRuleContext(IdentifierContext.class,0);
-		}
-		public IndexContext index() {
-			return getRuleContext(IndexContext.class,0);
-		}
-		public List<MethCallTailContext> methCallTail() {
-			return getRuleContexts(MethCallTailContext.class);
-		}
-		public MethCallTailContext methCallTail(int i) {
-			return getRuleContext(MethCallTailContext.class,i);
-		}
-		public MethCallidentifierContext(MethCallContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMethCallidentifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMethCallidentifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMethCallidentifier(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitThisAcces(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final MethCallContext methCall() throws RecognitionException {
-		MethCallContext _localctx = new MethCallContext(_ctx, getState());
-		enterRule(_localctx, 98, RULE_methCall);
+	public final ThisAccesContext thisAcces() throws RecognitionException {
+		ThisAccesContext _localctx = new ThisAccesContext(_ctx, getState());
+		enterRule(_localctx, 90, RULE_thisAcces);
 		try {
 			int _alt;
-			setState(684);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(599);
+			match(THIS);
+			setState(603);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case ID:
-				_localctx = new MethCallidentifierContext(_localctx);
-				enterOuterAlt(_localctx, 1);
-				{
-				setState(671);
-				identifier();
-				setState(672);
-				index();
-				setState(674); 
-				_errHandler.sync(this);
-				_alt = 1;
-				do {
-					switch (_alt) {
-					case 1:
-						{
-						{
-						setState(673);
-						methCallTail();
-						}
-						}
-						break;
-					default:
-						throw new NoViableAltException(this);
+			_alt = getInterpreter().adaptivePredict(_input,47,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(600);
+					exprTail();
 					}
-					setState(676); 
-					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,54,_ctx);
-				} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
+					} 
+				}
+				setState(605);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,47,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class VarAccesContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public List<ArrayAccessContext> arrayAccess() {
+			return getRuleContexts(ArrayAccessContext.class);
+		}
+		public ArrayAccessContext arrayAccess(int i) {
+			return getRuleContext(ArrayAccessContext.class,i);
+		}
+		public List<ExprTailContext> exprTail() {
+			return getRuleContexts(ExprTailContext.class);
+		}
+		public ExprTailContext exprTail(int i) {
+			return getRuleContext(ExprTailContext.class,i);
+		}
+		public VarAccesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_varAcces; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterVarAcces(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitVarAcces(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitVarAcces(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final VarAccesContext varAcces() throws RecognitionException {
+		VarAccesContext _localctx = new VarAccesContext(_ctx, getState());
+		enterRule(_localctx, 92, RULE_varAcces);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(606);
+			identifier();
+			setState(610);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,48,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(607);
+					arrayAccess();
+					}
+					} 
+				}
+				setState(612);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,48,_ctx);
+			}
+			setState(616);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,49,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(613);
+					exprTail();
+					}
+					} 
+				}
+				setState(618);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,49,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ExprTailContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public MethodCallContext methodCall() {
+			return getRuleContext(MethodCallContext.class,0);
+		}
+		public List<ArrayAccessContext> arrayAccess() {
+			return getRuleContexts(ArrayAccessContext.class);
+		}
+		public ArrayAccessContext arrayAccess(int i) {
+			return getRuleContext(ArrayAccessContext.class,i);
+		}
+		public ExprTailContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_exprTail; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprTail(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprTail(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprTail(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ExprTailContext exprTail() throws RecognitionException {
+		ExprTailContext _localctx = new ExprTailContext(_ctx, getState());
+		enterRule(_localctx, 94, RULE_exprTail);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			{
+			setState(619);
+			match(T__10);
+			setState(622);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,50,_ctx) ) {
+			case 1:
+				{
+				setState(620);
+				identifier();
 				}
 				break;
+			case 2:
+				{
+				setState(621);
+				methodCall();
+				}
+				break;
+			}
+			setState(627);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,51,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(624);
+					arrayAccess();
+					}
+					} 
+				}
+				setState(629);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,51,_ctx);
+			}
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class Lh_expressionContext extends ParserRuleContext {
+		public ThisAccesContext thisAcces() {
+			return getRuleContext(ThisAccesContext.class,0);
+		}
+		public VarAccesContext varAcces() {
+			return getRuleContext(VarAccesContext.class,0);
+		}
+		public Lh_expressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lh_expression; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterLh_expression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitLh_expression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitLh_expression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final Lh_expressionContext lh_expression() throws RecognitionException {
+		Lh_expressionContext _localctx = new Lh_expressionContext(_ctx, getState());
+		enterRule(_localctx, 96, RULE_lh_expression);
+		try {
+			setState(632);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
 			case THIS:
-				_localctx = new MethCallThisContext(_localctx);
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(630);
+				thisAcces();
+				}
+				break;
+			case ID:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(678);
-				thisAccess();
-				setState(680); 
-				_errHandler.sync(this);
-				_alt = 1;
-				do {
-					switch (_alt) {
-					case 1:
-						{
-						{
-						setState(679);
-						methCallTail();
-						}
-						}
-						break;
-					default:
-						throw new NoViableAltException(this);
-					}
-					setState(682); 
-					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,55,_ctx);
-				} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
+				setState(631);
+				varAcces();
 				}
 				break;
 			default:
@@ -4816,44 +4221,96 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class MethCallTailContext extends ParserRuleContext {
-		public FCallContext fCall() {
-			return getRuleContext(FCallContext.class,0);
+	public static class ExpressionContext extends ParserRuleContext {
+		public Lh_expressionContext lh_expression() {
+			return getRuleContext(Lh_expressionContext.class,0);
 		}
-		public IndexContext index() {
-			return getRuleContext(IndexContext.class,0);
+		public AssignOPContext assignOP() {
+			return getRuleContext(AssignOPContext.class,0);
 		}
-		public MethCallTailContext(ParserRuleContext parent, int invokingState) {
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
+		}
+		public ListContext list() {
+			return getRuleContext(ListContext.class,0);
+		}
+		public OrExpressionContext orExpression() {
+			return getRuleContext(OrExpressionContext.class,0);
+		}
+		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_methCallTail; }
+		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMethCallTail(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMethCallTail(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMethCallTail(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final MethCallTailContext methCallTail() throws RecognitionException {
-		MethCallTailContext _localctx = new MethCallTailContext(_ctx, getState());
-		enterRule(_localctx, 100, RULE_methCallTail);
+	public final ExpressionContext expression() throws RecognitionException {
+		ExpressionContext _localctx = new ExpressionContext(_ctx, getState());
+		enterRule(_localctx, 98, RULE_expression);
 		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(686);
-			match(T__10);
-			setState(687);
-			fCall();
-			setState(688);
-			index();
+			setState(641);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,54,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(634);
+				lh_expression();
+				setState(635);
+				assignOP();
+				setState(638);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case T__2:
+				case T__31:
+				case T__32:
+				case T__37:
+				case TRUE:
+				case FALSE:
+				case THIS:
+				case NULL:
+				case NEW:
+				case NOT:
+				case INT_LIT:
+				case DOUBLE_LIT:
+				case CHAR_LIT:
+				case STRING_LIT:
+				case ID:
+					{
+					setState(636);
+					expression();
+					}
+					break;
+				case T__5:
+					{
+					setState(637);
+					list();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(640);
+				orExpression(0);
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -4867,70 +4324,248 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class CreateContext extends ParserRuleContext {
-		public TerminalNode NEW() { return getToken(ReFuggParser.NEW, 0); }
-		public IdentifierContext identifier() {
-			return getRuleContext(IdentifierContext.class,0);
+	public static class OrExpressionContext extends ParserRuleContext {
+		public AndExpressionContext andExpression() {
+			return getRuleContext(AndExpressionContext.class,0);
 		}
-		public FArgsContext fArgs() {
-			return getRuleContext(FArgsContext.class,0);
+		public OrExpressionContext orExpression() {
+			return getRuleContext(OrExpressionContext.class,0);
 		}
-		public IndexContext index() {
-			return getRuleContext(IndexContext.class,0);
+		public OrOPContext orOP() {
+			return getRuleContext(OrOPContext.class,0);
 		}
-		public List<MethCallTailContext> methCallTail() {
-			return getRuleContexts(MethCallTailContext.class);
-		}
-		public MethCallTailContext methCallTail(int i) {
-			return getRuleContext(MethCallTailContext.class,i);
-		}
-		public CreateContext(ParserRuleContext parent, int invokingState) {
+		public OrExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_create; }
+		@Override public int getRuleIndex() { return RULE_orExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterCreate(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitCreate(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitOrExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitCreate(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitOrExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CreateContext create() throws RecognitionException {
-		CreateContext _localctx = new CreateContext(_ctx, getState());
-		enterRule(_localctx, 102, RULE_create);
+	public final OrExpressionContext orExpression() throws RecognitionException {
+		return orExpression(0);
+	}
+
+	private OrExpressionContext orExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		OrExpressionContext _localctx = new OrExpressionContext(_ctx, _parentState);
+		OrExpressionContext _prevctx = _localctx;
+		int _startState = 100;
+		enterRecursionRule(_localctx, 100, RULE_orExpression, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(690);
-			match(NEW);
-			setState(691);
-			identifier();
-			setState(692);
-			fArgs();
-			setState(693);
-			index();
-			setState(697);
+			{
+			setState(644);
+			andExpression(0);
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(652);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,55,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new OrExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_orExpression);
+					setState(646);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(647);
+					orOP();
+					setState(648);
+					andExpression(0);
+					}
+					} 
+				}
+				setState(654);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,55,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			unrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public static class AndExpressionContext extends ParserRuleContext {
+		public EqualityExpressionContext equalityExpression() {
+			return getRuleContext(EqualityExpressionContext.class,0);
+		}
+		public AndExpressionContext andExpression() {
+			return getRuleContext(AndExpressionContext.class,0);
+		}
+		public AndOPContext andOP() {
+			return getRuleContext(AndOPContext.class,0);
+		}
+		public AndExpressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_andExpression; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAndExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAndExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAndExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final AndExpressionContext andExpression() throws RecognitionException {
+		return andExpression(0);
+	}
+
+	private AndExpressionContext andExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		AndExpressionContext _localctx = new AndExpressionContext(_ctx, _parentState);
+		AndExpressionContext _prevctx = _localctx;
+		int _startState = 102;
+		enterRecursionRule(_localctx, 102, RULE_andExpression, _p);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			{
+			setState(656);
+			equalityExpression(0);
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(664);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,56,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new AndExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_andExpression);
+					setState(658);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(659);
+					andOP();
+					setState(660);
+					equalityExpression(0);
+					}
+					} 
+				}
+				setState(666);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,56,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			unrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public static class EqualityExpressionContext extends ParserRuleContext {
+		public RelationalExpressionContext relationalExpression() {
+			return getRuleContext(RelationalExpressionContext.class,0);
+		}
+		public EqualityExpressionContext equalityExpression() {
+			return getRuleContext(EqualityExpressionContext.class,0);
+		}
+		public EqOPContext eqOP() {
+			return getRuleContext(EqOPContext.class,0);
+		}
+		public EqualityExpressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_equalityExpression; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterEqualityExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitEqualityExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitEqualityExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final EqualityExpressionContext equalityExpression() throws RecognitionException {
+		return equalityExpression(0);
+	}
+
+	private EqualityExpressionContext equalityExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		EqualityExpressionContext _localctx = new EqualityExpressionContext(_ctx, _parentState);
+		EqualityExpressionContext _prevctx = _localctx;
+		int _startState = 104;
+		enterRecursionRule(_localctx, 104, RULE_equalityExpression, _p);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			{
+			setState(668);
+			relationalExpression(0);
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(676);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,57,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
 					{
 					{
-					setState(694);
-					methCallTail();
+					_localctx = new EqualityExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_equalityExpression);
+					setState(670);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(671);
+					eqOP();
+					setState(672);
+					relationalExpression(0);
 					}
 					} 
 				}
-				setState(699);
+				setState(678);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,57,_ctx);
 			}
@@ -4942,74 +4577,84 @@ public class ReFuggParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			exitRule();
+			unrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
 
-	public static class FArgsContext extends ParserRuleContext {
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
+	public static class RelationalExpressionContext extends ParserRuleContext {
+		public AdditiveExpressionContext additiveExpression() {
+			return getRuleContext(AdditiveExpressionContext.class,0);
 		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
+		public RelationalExpressionContext relationalExpression() {
+			return getRuleContext(RelationalExpressionContext.class,0);
 		}
-		public FArgsContext(ParserRuleContext parent, int invokingState) {
+		public RelOPContext relOP() {
+			return getRuleContext(RelOPContext.class,0);
+		}
+		public RelationalExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_fArgs; }
+		@Override public int getRuleIndex() { return RULE_relationalExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterFArgs(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterRelationalExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitFArgs(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitRelationalExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitFArgs(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitRelationalExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final FArgsContext fArgs() throws RecognitionException {
-		FArgsContext _localctx = new FArgsContext(_ctx, getState());
-		enterRule(_localctx, 104, RULE_fArgs);
-		int _la;
+	public final RelationalExpressionContext relationalExpression() throws RecognitionException {
+		return relationalExpression(0);
+	}
+
+	private RelationalExpressionContext relationalExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		RelationalExpressionContext _localctx = new RelationalExpressionContext(_ctx, _parentState);
+		RelationalExpressionContext _prevctx = _localctx;
+		int _startState = 106;
+		enterRecursionRule(_localctx, 106, RULE_relationalExpression, _p);
 		try {
+			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(700);
-			match(T__2);
-			setState(709);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__32) | (1L << T__33) | (1L << T__34))) != 0) || ((((_la - 71)) & ~0x3f) == 0 && ((1L << (_la - 71)) & ((1L << (TRUE - 71)) | (1L << (FALSE - 71)) | (1L << (THIS - 71)) | (1L << (NULL - 71)) | (1L << (NEW - 71)) | (1L << (INT_LIT - 71)) | (1L << (DOUBLE_LIT - 71)) | (1L << (CHAR_LIT - 71)) | (1L << (STRING_LIT - 71)) | (1L << (ID - 71)))) != 0)) {
-				{
-				setState(701);
-				expr(0);
-				setState(706);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				while (_la==T__4) {
-					{
-					{
-					setState(702);
-					match(T__4);
-					setState(703);
-					expr(0);
-					}
-					}
-					setState(708);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				}
+			{
+			setState(680);
+			additiveExpression(0);
 			}
-
-			setState(711);
-			match(T__3);
+			_ctx.stop = _input.LT(-1);
+			setState(688);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,58,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new RelationalExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_relationalExpression);
+					setState(682);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(683);
+					relOP();
+					setState(684);
+					additiveExpression(0);
+					}
+					} 
+				}
+				setState(690);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,58,_ctx);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -5018,61 +4663,167 @@ public class ReFuggParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			exitRule();
+			unrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
 
-	public static class IndexContext extends ParserRuleContext {
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
+	public static class AdditiveExpressionContext extends ParserRuleContext {
+		public MultiplicativeExpressionContext multiplicativeExpression() {
+			return getRuleContext(MultiplicativeExpressionContext.class,0);
 		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
+		public AdditiveExpressionContext additiveExpression() {
+			return getRuleContext(AdditiveExpressionContext.class,0);
 		}
-		public IndexContext(ParserRuleContext parent, int invokingState) {
+		public AddOPContext addOP() {
+			return getRuleContext(AddOPContext.class,0);
+		}
+		public AdditiveExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_index; }
+		@Override public int getRuleIndex() { return RULE_additiveExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterIndex(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAdditiveExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitIndex(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAdditiveExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitIndex(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAdditiveExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final IndexContext index() throws RecognitionException {
-		IndexContext _localctx = new IndexContext(_ctx, getState());
-		enterRule(_localctx, 106, RULE_index);
+	public final AdditiveExpressionContext additiveExpression() throws RecognitionException {
+		return additiveExpression(0);
+	}
+
+	private AdditiveExpressionContext additiveExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		AdditiveExpressionContext _localctx = new AdditiveExpressionContext(_ctx, _parentState);
+		AdditiveExpressionContext _prevctx = _localctx;
+		int _startState = 108;
+		enterRecursionRule(_localctx, 108, RULE_additiveExpression, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(719);
+			{
+			setState(692);
+			multiplicativeExpression(0);
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(700);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,59,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new AdditiveExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_additiveExpression);
+					setState(694);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(695);
+					addOP();
+					setState(696);
+					multiplicativeExpression(0);
+					}
+					} 
+				}
+				setState(702);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,59,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			unrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public static class MultiplicativeExpressionContext extends ParserRuleContext {
+		public ExponentiationExpressionContext exponentiationExpression() {
+			return getRuleContext(ExponentiationExpressionContext.class,0);
+		}
+		public MultiplicativeExpressionContext multiplicativeExpression() {
+			return getRuleContext(MultiplicativeExpressionContext.class,0);
+		}
+		public MultOPContext multOP() {
+			return getRuleContext(MultOPContext.class,0);
+		}
+		public MultiplicativeExpressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_multiplicativeExpression; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMultiplicativeExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMultiplicativeExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMultiplicativeExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final MultiplicativeExpressionContext multiplicativeExpression() throws RecognitionException {
+		return multiplicativeExpression(0);
+	}
+
+	private MultiplicativeExpressionContext multiplicativeExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		MultiplicativeExpressionContext _localctx = new MultiplicativeExpressionContext(_ctx, _parentState);
+		MultiplicativeExpressionContext _prevctx = _localctx;
+		int _startState = 110;
+		enterRecursionRule(_localctx, 110, RULE_multiplicativeExpression, _p);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			{
+			setState(704);
+			exponentiationExpression(0);
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(712);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,60,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
 					{
 					{
-					setState(713);
-					match(T__0);
-					setState(714);
-					expr(0);
-					setState(715);
-					match(T__1);
+					_localctx = new MultiplicativeExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_multiplicativeExpression);
+					setState(706);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(707);
+					multOP();
+					setState(708);
+					exponentiationExpression(0);
 					}
 					} 
 				}
-				setState(721);
+				setState(714);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,60,_ctx);
 			}
@@ -5084,73 +4835,330 @@ public class ReFuggParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
+			unrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public static class ExponentiationExpressionContext extends ParserRuleContext {
+		public UnaryExpressionContext unaryExpression() {
+			return getRuleContext(UnaryExpressionContext.class,0);
+		}
+		public ExponentiationExpressionContext exponentiationExpression() {
+			return getRuleContext(ExponentiationExpressionContext.class,0);
+		}
+		public ExpOPContext expOP() {
+			return getRuleContext(ExpOPContext.class,0);
+		}
+		public ExponentiationExpressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_exponentiationExpression; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExponentiationExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExponentiationExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExponentiationExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ExponentiationExpressionContext exponentiationExpression() throws RecognitionException {
+		return exponentiationExpression(0);
+	}
+
+	private ExponentiationExpressionContext exponentiationExpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		ExponentiationExpressionContext _localctx = new ExponentiationExpressionContext(_ctx, _parentState);
+		ExponentiationExpressionContext _prevctx = _localctx;
+		int _startState = 112;
+		enterRecursionRule(_localctx, 112, RULE_exponentiationExpression, _p);
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			{
+			setState(716);
+			unaryExpression();
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(724);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,61,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new ExponentiationExpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_exponentiationExpression);
+					setState(718);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(719);
+					expOP();
+					setState(720);
+					unaryExpression();
+					}
+					} 
+				}
+				setState(726);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,61,_ctx);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			unrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public static class UnaryExpressionContext extends ParserRuleContext {
+		public PreOPContext preOP() {
+			return getRuleContext(PreOPContext.class,0);
+		}
+		public UnaryExpressionContext unaryExpression() {
+			return getRuleContext(UnaryExpressionContext.class,0);
+		}
+		public PostExpressionContext postExpression() {
+			return getRuleContext(PostExpressionContext.class,0);
+		}
+		public UnaryExpressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_unaryExpression; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterUnaryExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitUnaryExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitUnaryExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final UnaryExpressionContext unaryExpression() throws RecognitionException {
+		UnaryExpressionContext _localctx = new UnaryExpressionContext(_ctx, getState());
+		enterRule(_localctx, 114, RULE_unaryExpression);
+		try {
+			setState(731);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case T__31:
+			case T__32:
+			case T__37:
+			case NOT:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(727);
+				preOP();
+				setState(728);
+				unaryExpression();
+				}
+				break;
+			case T__2:
+			case TRUE:
+			case FALSE:
+			case THIS:
+			case NULL:
+			case NEW:
+			case INT_LIT:
+			case DOUBLE_LIT:
+			case CHAR_LIT:
+			case STRING_LIT:
+			case ID:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(730);
+				postExpression();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
 			exitRule();
 		}
 		return _localctx;
 	}
 
-	public static class ThisAccessContext extends ParserRuleContext {
-		public TerminalNode THIS() { return getToken(ReFuggParser.THIS, 0); }
-		public List<IdentifierContext> identifier() {
-			return getRuleContexts(IdentifierContext.class);
+	public static class PostExpressionContext extends ParserRuleContext {
+		public PrimaryContext primary() {
+			return getRuleContext(PrimaryContext.class,0);
 		}
-		public IdentifierContext identifier(int i) {
-			return getRuleContext(IdentifierContext.class,i);
+		public PostOPContext postOP() {
+			return getRuleContext(PostOPContext.class,0);
 		}
-		public List<IndexContext> index() {
-			return getRuleContexts(IndexContext.class);
-		}
-		public IndexContext index(int i) {
-			return getRuleContext(IndexContext.class,i);
-		}
-		public ThisAccessContext(ParserRuleContext parent, int invokingState) {
+		public PostExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_thisAccess; }
+		@Override public int getRuleIndex() { return RULE_postExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterThisAccess(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterPostExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitThisAccess(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitPostExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitThisAccess(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitPostExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final ThisAccessContext thisAccess() throws RecognitionException {
-		ThisAccessContext _localctx = new ThisAccessContext(_ctx, getState());
-		enterRule(_localctx, 108, RULE_thisAccess);
+	public final PostExpressionContext postExpression() throws RecognitionException {
+		PostExpressionContext _localctx = new PostExpressionContext(_ctx, getState());
+		enterRule(_localctx, 116, RULE_postExpression);
 		try {
-			int _alt;
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(722);
-			match(THIS);
-			setState(729);
+			setState(737);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,61,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					{
-					{
-					setState(723);
-					match(T__10);
-					setState(724);
-					identifier();
-					setState(725);
-					index();
-					}
-					} 
+			switch ( getInterpreter().adaptivePredict(_input,63,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(733);
+				primary();
+				setState(734);
+				postOP();
 				}
-				setState(731);
-				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,61,_ctx);
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(736);
+				primary();
+				}
+				break;
 			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class PrimaryContext extends ParserRuleContext {
+		public OrExpressionContext orExpression() {
+			return getRuleContext(OrExpressionContext.class,0);
+		}
+		public NewObjectContext newObject() {
+			return getRuleContext(NewObjectContext.class,0);
+		}
+		public FCallContext fCall() {
+			return getRuleContext(FCallContext.class,0);
+		}
+		public VarAccesContext varAcces() {
+			return getRuleContext(VarAccesContext.class,0);
+		}
+		public ThisAccesContext thisAcces() {
+			return getRuleContext(ThisAccesContext.class,0);
+		}
+		public ConstantContext constant() {
+			return getRuleContext(ConstantContext.class,0);
+		}
+		public PrimaryContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_primary; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterPrimary(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitPrimary(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitPrimary(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final PrimaryContext primary() throws RecognitionException {
+		PrimaryContext _localctx = new PrimaryContext(_ctx, getState());
+		enterRule(_localctx, 118, RULE_primary);
+		try {
+			setState(748);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,64,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(739);
+				match(T__2);
+				setState(740);
+				orExpression(0);
+				setState(741);
+				match(T__3);
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(743);
+				newObject();
+				}
+				break;
+			case 3:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(744);
+				fCall();
+				}
+				break;
+			case 4:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(745);
+				varAcces();
+				}
+				break;
+			case 5:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(746);
+				thisAcces();
+				}
+				break;
+			case 6:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(747);
+				constant();
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -5165,103 +5173,77 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class ListContext extends ParserRuleContext {
-		public ListContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
+		public ExpressionManyContext expressionMany() {
+			return getRuleContext(ExpressionManyContext.class,0);
 		}
-		@Override public int getRuleIndex() { return RULE_list; }
-	 
-		public ListContext() { }
-		public void copyFrom(ListContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class ExprListYesSubContext extends ListContext {
 		public List<SubListContext> subList() {
 			return getRuleContexts(SubListContext.class);
 		}
 		public SubListContext subList(int i) {
 			return getRuleContext(SubListContext.class,i);
 		}
-		public ExprListYesSubContext(ListContext ctx) { copyFrom(ctx); }
+		public ListContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprListYesSub(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprListYesSub(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprListYesSub(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExprListNoSubContext extends ListContext {
-		public ExprManyContext exprMany() {
-			return getRuleContext(ExprManyContext.class,0);
-		}
-		public ExprListNoSubContext(ListContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprListNoSub(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprListNoSub(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprListNoSub(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
 	public final ListContext list() throws RecognitionException {
 		ListContext _localctx = new ListContext(_ctx, getState());
-		enterRule(_localctx, 110, RULE_list);
+		enterRule(_localctx, 120, RULE_list);
 		int _la;
 		try {
-			setState(746);
+			setState(764);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,63,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,66,_ctx) ) {
 			case 1:
-				_localctx = new ExprListNoSubContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(732);
+				setState(750);
 				match(T__5);
-				setState(733);
-				exprMany();
-				setState(734);
+				setState(751);
+				expressionMany();
+				setState(752);
 				match(T__6);
 				}
 				break;
 			case 2:
-				_localctx = new ExprListYesSubContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(736);
+				setState(754);
 				match(T__5);
-				setState(737);
+				setState(755);
 				subList();
-				setState(740); 
+				setState(758); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(738);
+					setState(756);
 					match(T__4);
-					setState(739);
+					setState(757);
 					subList();
 					}
 					}
-					setState(742); 
+					setState(760); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( _la==T__4 );
-				setState(744);
+				setState(762);
 				match(T__6);
 				}
 				break;
@@ -5279,8 +5261,8 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static class SubListContext extends ParserRuleContext {
-		public ExprManyContext exprMany() {
-			return getRuleContext(ExprManyContext.class,0);
+		public ExpressionManyContext expressionMany() {
+			return getRuleContext(ExpressionManyContext.class,0);
 		}
 		public SubListContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -5303,15 +5285,15 @@ public class ReFuggParser extends Parser {
 
 	public final SubListContext subList() throws RecognitionException {
 		SubListContext _localctx = new SubListContext(_ctx, getState());
-		enterRule(_localctx, 112, RULE_subList);
+		enterRule(_localctx, 122, RULE_subList);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(748);
+			setState(766);
 			match(T__5);
-			setState(749);
-			exprMany();
-			setState(750);
+			setState(767);
+			expressionMany();
+			setState(768);
 			match(T__6);
 			}
 		}
@@ -5326,57 +5308,114 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class ExprManyContext extends ParserRuleContext {
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
+	public static class ExpressionManyContext extends ParserRuleContext {
+		public List<OrExpressionContext> orExpression() {
+			return getRuleContexts(OrExpressionContext.class);
 		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
+		public OrExpressionContext orExpression(int i) {
+			return getRuleContext(OrExpressionContext.class,i);
 		}
-		public ExprManyContext(ParserRuleContext parent, int invokingState) {
+		public ExpressionManyContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_exprMany; }
+		@Override public int getRuleIndex() { return RULE_expressionMany; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExprMany(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpressionMany(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExprMany(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpressionMany(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExprMany(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpressionMany(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final ExprManyContext exprMany() throws RecognitionException {
-		ExprManyContext _localctx = new ExprManyContext(_ctx, getState());
-		enterRule(_localctx, 114, RULE_exprMany);
+	public final ExpressionManyContext expressionMany() throws RecognitionException {
+		ExpressionManyContext _localctx = new ExpressionManyContext(_ctx, getState());
+		enterRule(_localctx, 124, RULE_expressionMany);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(752);
-			expr(0);
-			setState(757);
+			setState(770);
+			orExpression(0);
+			setState(775);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__4) {
 				{
 				{
-				setState(753);
+				setState(771);
 				match(T__4);
-				setState(754);
-				expr(0);
+				setState(772);
+				orExpression(0);
 				}
 				}
-				setState(759);
+				setState(777);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class FArgsContext extends ParserRuleContext {
+		public ExpressionManyContext expressionMany() {
+			return getRuleContext(ExpressionManyContext.class,0);
+		}
+		public FArgsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fArgs; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterFArgs(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitFArgs(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitFArgs(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final FArgsContext fArgs() throws RecognitionException {
+		FArgsContext _localctx = new FArgsContext(_ctx, getState());
+		enterRule(_localctx, 126, RULE_fArgs);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(778);
+			match(T__2);
+			setState(780);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__31) | (1L << T__32) | (1L << T__37))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (TRUE - 68)) | (1L << (FALSE - 68)) | (1L << (THIS - 68)) | (1L << (NULL - 68)) | (1L << (NEW - 68)) | (1L << (NOT - 68)) | (1L << (INT_LIT - 68)) | (1L << (DOUBLE_LIT - 68)) | (1L << (CHAR_LIT - 68)) | (1L << (STRING_LIT - 68)) | (1L << (ID - 68)))) != 0)) {
+				{
+				setState(779);
+				expressionMany();
+				}
+			}
+
+			setState(782);
+			match(T__3);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5416,182 +5455,32 @@ public class ReFuggParser extends Parser {
 
 	public final ReturntypeContext returntype() throws RecognitionException {
 		ReturntypeContext _localctx = new ReturntypeContext(_ctx, getState());
-		enterRule(_localctx, 116, RULE_returntype);
+		enterRule(_localctx, 128, RULE_returntype);
 		try {
-			setState(762);
+			setState(786);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case VOID:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(760);
+				setState(784);
 				match(VOID);
 				}
 				break;
-			case T__23:
-			case T__24:
-			case T__25:
-			case T__26:
-			case T__27:
+			case T__11:
+			case T__12:
+			case T__13:
+			case T__14:
+			case T__15:
 			case ID:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(761);
+				setState(785);
 				type();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class LogicOpContext extends ParserRuleContext {
-		public LogicOpContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_logicOp; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterLogicOp(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitLogicOp(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitLogicOp(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final LogicOpContext logicOp() throws RecognitionException {
-		LogicOpContext _localctx = new LogicOpContext(_ctx, getState());
-		enterRule(_localctx, 118, RULE_logicOp);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(764);
-			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << T__14))) != 0)) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class AssignOPContext extends ParserRuleContext {
-		public AssignOPContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_assignOP; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAssignOP(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAssignOP(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAssignOP(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final AssignOPContext assignOP() throws RecognitionException {
-		AssignOPContext _localctx = new AssignOPContext(_ctx, getState());
-		enterRule(_localctx, 120, RULE_assignOP);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(766);
-			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__9) | (1L << T__15) | (1L << T__16) | (1L << T__17) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class PostOPContext extends ParserRuleContext {
-		public PostOPContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_postOP; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterPostOP(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitPostOP(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitPostOP(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final PostOPContext postOP() throws RecognitionException {
-		PostOPContext _localctx = new PostOPContext(_ctx, getState());
-		enterRule(_localctx, 122, RULE_postOP);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(768);
-			_la = _input.LA(1);
-			if ( !(_la==T__21 || _la==T__22) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
-			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -5618,10 +5507,12 @@ public class ReFuggParser extends Parser {
 		public CharRuleContext charRule() {
 			return getRuleContext(CharRuleContext.class,0);
 		}
-		public TerminalNode TRUE() { return getToken(ReFuggParser.TRUE, 0); }
-		public TerminalNode FALSE() { return getToken(ReFuggParser.FALSE, 0); }
-		public TerminalNode THIS() { return getToken(ReFuggParser.THIS, 0); }
-		public TerminalNode NULL() { return getToken(ReFuggParser.NULL, 0); }
+		public BooleanRuleContext booleanRule() {
+			return getRuleContext(BooleanRuleContext.class,0);
+		}
+		public RefRuleContext refRule() {
+			return getRuleContext(RefRuleContext.class,0);
+		}
 		public ConstantContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -5643,65 +5534,52 @@ public class ReFuggParser extends Parser {
 
 	public final ConstantContext constant() throws RecognitionException {
 		ConstantContext _localctx = new ConstantContext(_ctx, getState());
-		enterRule(_localctx, 124, RULE_constant);
+		enterRule(_localctx, 130, RULE_constant);
 		try {
-			setState(778);
+			setState(794);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case DOUBLE_LIT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(770);
+				setState(788);
 				doubleRule();
 				}
 				break;
 			case INT_LIT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(771);
+				setState(789);
 				intRule();
 				}
 				break;
 			case STRING_LIT:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(772);
+				setState(790);
 				stringRule();
 				}
 				break;
 			case CHAR_LIT:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(773);
+				setState(791);
 				charRule();
 				}
 				break;
 			case TRUE:
+			case FALSE:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(774);
-				match(TRUE);
-				}
-				break;
-			case FALSE:
-				enterOuterAlt(_localctx, 6);
-				{
-				setState(775);
-				match(FALSE);
-				}
-				break;
-			case THIS:
-				enterOuterAlt(_localctx, 7);
-				{
-				setState(776);
-				match(THIS);
+				setState(792);
+				booleanRule();
 				}
 				break;
 			case NULL:
-				enterOuterAlt(_localctx, 8);
+				enterOuterAlt(_localctx, 6);
 				{
-				setState(777);
-				match(NULL);
+				setState(793);
+				refRule();
 				}
 				break;
 			default:
@@ -5744,50 +5622,50 @@ public class ReFuggParser extends Parser {
 
 	public final TypeContext type() throws RecognitionException {
 		TypeContext _localctx = new TypeContext(_ctx, getState());
-		enterRule(_localctx, 126, RULE_type);
+		enterRule(_localctx, 132, RULE_type);
 		try {
-			setState(786);
+			setState(802);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__23:
+			case T__11:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(780);
-				match(T__23);
+				setState(796);
+				match(T__11);
 				}
 				break;
-			case T__24:
+			case T__12:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(781);
-				match(T__24);
+				setState(797);
+				match(T__12);
 				}
 				break;
-			case T__25:
+			case T__13:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(782);
-				match(T__25);
+				setState(798);
+				match(T__13);
 				}
 				break;
-			case T__26:
+			case T__14:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(783);
-				match(T__26);
+				setState(799);
+				match(T__14);
 				}
 				break;
-			case T__27:
+			case T__15:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(784);
-				match(T__27);
+				setState(800);
+				match(T__15);
 				}
 				break;
 			case ID:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(785);
+				setState(801);
 				identifier();
 				}
 				break;
@@ -5829,12 +5707,54 @@ public class ReFuggParser extends Parser {
 
 	public final IdentifierContext identifier() throws RecognitionException {
 		IdentifierContext _localctx = new IdentifierContext(_ctx, getState());
-		enterRule(_localctx, 128, RULE_identifier);
+		enterRule(_localctx, 134, RULE_identifier);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(788);
+			setState(804);
 			match(ID);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class TypemodifierContext extends ParserRuleContext {
+		public TerminalNode STATIC() { return getToken(ReFuggParser.STATIC, 0); }
+		public TypemodifierContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_typemodifier; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterTypemodifier(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitTypemodifier(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitTypemodifier(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final TypemodifierContext typemodifier() throws RecognitionException {
+		TypemodifierContext _localctx = new TypemodifierContext(_ctx, getState());
+		enterRule(_localctx, 136, RULE_typemodifier);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(806);
+			match(STATIC);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5871,11 +5791,11 @@ public class ReFuggParser extends Parser {
 
 	public final DoubleRuleContext doubleRule() throws RecognitionException {
 		DoubleRuleContext _localctx = new DoubleRuleContext(_ctx, getState());
-		enterRule(_localctx, 130, RULE_doubleRule);
+		enterRule(_localctx, 138, RULE_doubleRule);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(790);
+			setState(808);
 			match(DOUBLE_LIT);
 			}
 		}
@@ -5913,11 +5833,11 @@ public class ReFuggParser extends Parser {
 
 	public final IntRuleContext intRule() throws RecognitionException {
 		IntRuleContext _localctx = new IntRuleContext(_ctx, getState());
-		enterRule(_localctx, 132, RULE_intRule);
+		enterRule(_localctx, 140, RULE_intRule);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(792);
+			setState(810);
 			match(INT_LIT);
 			}
 		}
@@ -5955,11 +5875,11 @@ public class ReFuggParser extends Parser {
 
 	public final StringRuleContext stringRule() throws RecognitionException {
 		StringRuleContext _localctx = new StringRuleContext(_ctx, getState());
-		enterRule(_localctx, 134, RULE_stringRule);
+		enterRule(_localctx, 142, RULE_stringRule);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(794);
+			setState(812);
 			match(STRING_LIT);
 			}
 		}
@@ -5997,11 +5917,11 @@ public class ReFuggParser extends Parser {
 
 	public final CharRuleContext charRule() throws RecognitionException {
 		CharRuleContext _localctx = new CharRuleContext(_ctx, getState());
-		enterRule(_localctx, 136, RULE_charRule);
+		enterRule(_localctx, 144, RULE_charRule);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(796);
+			setState(814);
 			match(CHAR_LIT);
 			}
 		}
@@ -6016,36 +5936,38 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class OrContext extends ParserRuleContext {
-		public OrContext(ParserRuleContext parent, int invokingState) {
+	public static class BooleanRuleContext extends ParserRuleContext {
+		public TerminalNode TRUE() { return getToken(ReFuggParser.TRUE, 0); }
+		public TerminalNode FALSE() { return getToken(ReFuggParser.FALSE, 0); }
+		public BooleanRuleContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_or; }
+		@Override public int getRuleIndex() { return RULE_booleanRule; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterOr(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterBooleanRule(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitOr(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitBooleanRule(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitOr(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitBooleanRule(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final OrContext or() throws RecognitionException {
-		OrContext _localctx = new OrContext(_ctx, getState());
-		enterRule(_localctx, 138, RULE_or);
+	public final BooleanRuleContext booleanRule() throws RecognitionException {
+		BooleanRuleContext _localctx = new BooleanRuleContext(_ctx, getState());
+		enterRule(_localctx, 146, RULE_booleanRule);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(798);
+			setState(816);
 			_la = _input.LA(1);
-			if ( !(_la==T__28 || _la==T__29) ) {
+			if ( !(_la==TRUE || _la==FALSE) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -6066,36 +5988,78 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class AndContext extends ParserRuleContext {
-		public AndContext(ParserRuleContext parent, int invokingState) {
+	public static class RefRuleContext extends ParserRuleContext {
+		public TerminalNode NULL() { return getToken(ReFuggParser.NULL, 0); }
+		public RefRuleContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_and; }
+		@Override public int getRuleIndex() { return RULE_refRule; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAnd(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterRefRule(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAnd(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitRefRule(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAnd(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitRefRule(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final AndContext and() throws RecognitionException {
-		AndContext _localctx = new AndContext(_ctx, getState());
-		enterRule(_localctx, 140, RULE_and);
+	public final RefRuleContext refRule() throws RecognitionException {
+		RefRuleContext _localctx = new RefRuleContext(_ctx, getState());
+		enterRule(_localctx, 148, RULE_refRule);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(818);
+			match(NULL);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AssignOPContext extends ParserRuleContext {
+		public AssignOPContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_assignOP; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAssignOP(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAssignOP(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAssignOP(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final AssignOPContext assignOP() throws RecognitionException {
+		AssignOPContext _localctx = new AssignOPContext(_ctx, getState());
+		enterRule(_localctx, 150, RULE_assignOP);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(800);
+			setState(820);
 			_la = _input.LA(1);
-			if ( !(_la==T__30 || _la==T__31) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__9) | (1L << T__16) | (1L << T__17) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -6116,36 +6080,86 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class NotNegContext extends ParserRuleContext {
-		public NotNegContext(ParserRuleContext parent, int invokingState) {
+	public static class OrOPContext extends ParserRuleContext {
+		public OrOPContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_notNeg; }
+		@Override public int getRuleIndex() { return RULE_orOP; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterNotNeg(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterOrOP(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitNotNeg(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitOrOP(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitNotNeg(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitOrOP(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final NotNegContext notNeg() throws RecognitionException {
-		NotNegContext _localctx = new NotNegContext(_ctx, getState());
-		enterRule(_localctx, 142, RULE_notNeg);
+	public final OrOPContext orOP() throws RecognitionException {
+		OrOPContext _localctx = new OrOPContext(_ctx, getState());
+		enterRule(_localctx, 152, RULE_orOP);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(802);
+			setState(822);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__32) | (1L << T__33) | (1L << T__34))) != 0)) ) {
+			if ( !(_la==T__21 || _la==T__22) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AndOPContext extends ParserRuleContext {
+		public AndOPContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_andOP; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAndOP(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAndOP(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAndOP(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final AndOPContext andOP() throws RecognitionException {
+		AndOPContext _localctx = new AndOPContext(_ctx, getState());
+		enterRule(_localctx, 154, RULE_andOP);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(824);
+			_la = _input.LA(1);
+			if ( !(_la==T__23 || _la==T__24) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -6188,14 +6202,14 @@ public class ReFuggParser extends Parser {
 
 	public final EqOPContext eqOP() throws RecognitionException {
 		EqOPContext _localctx = new EqOPContext(_ctx, getState());
-		enterRule(_localctx, 144, RULE_eqOP);
+		enterRule(_localctx, 156, RULE_eqOP);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(804);
+			setState(826);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__35) | (1L << T__36) | (1L << T__37) | (1L << T__38))) != 0)) ) {
+			if ( !(_la==T__25 || _la==T__26) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -6216,36 +6230,36 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class AddContext extends ParserRuleContext {
-		public AddContext(ParserRuleContext parent, int invokingState) {
+	public static class RelOPContext extends ParserRuleContext {
+		public RelOPContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_add; }
+		@Override public int getRuleIndex() { return RULE_relOP; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAdd(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterRelOP(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAdd(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitRelOP(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAdd(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitRelOP(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final AddContext add() throws RecognitionException {
-		AddContext _localctx = new AddContext(_ctx, getState());
-		enterRule(_localctx, 146, RULE_add);
+	public final RelOPContext relOP() throws RecognitionException {
+		RelOPContext _localctx = new RelOPContext(_ctx, getState());
+		enterRule(_localctx, 158, RULE_relOP);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(806);
+			setState(828);
 			_la = _input.LA(1);
-			if ( !(_la==T__34 || _la==T__39) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__27) | (1L << T__28) | (1L << T__29) | (1L << T__30))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -6266,36 +6280,36 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class MultContext extends ParserRuleContext {
-		public MultContext(ParserRuleContext parent, int invokingState) {
+	public static class AddOPContext extends ParserRuleContext {
+		public AddOPContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_mult; }
+		@Override public int getRuleIndex() { return RULE_addOP; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMult(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterAddOP(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMult(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitAddOP(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMult(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitAddOP(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final MultContext mult() throws RecognitionException {
-		MultContext _localctx = new MultContext(_ctx, getState());
-		enterRule(_localctx, 148, RULE_mult);
+	public final AddOPContext addOP() throws RecognitionException {
+		AddOPContext _localctx = new AddOPContext(_ctx, getState());
+		enterRule(_localctx, 160, RULE_addOP);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(808);
+			setState(830);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__40) | (1L << T__41) | (1L << T__42))) != 0)) ) {
+			if ( !(_la==T__31 || _la==T__32) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -6316,34 +6330,185 @@ public class ReFuggParser extends Parser {
 		return _localctx;
 	}
 
-	public static class ExpoOpContext extends ParserRuleContext {
-		public ExpoOpContext(ParserRuleContext parent, int invokingState) {
+	public static class MultOPContext extends ParserRuleContext {
+		public MultOPContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_expoOp; }
+		@Override public int getRuleIndex() { return RULE_multOP; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpoOp(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterMultOP(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpoOp(this);
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitMultOP(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpoOp(this);
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitMultOP(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final ExpoOpContext expoOp() throws RecognitionException {
-		ExpoOpContext _localctx = new ExpoOpContext(_ctx, getState());
-		enterRule(_localctx, 150, RULE_expoOp);
+	public final MultOPContext multOP() throws RecognitionException {
+		MultOPContext _localctx = new MultOPContext(_ctx, getState());
+		enterRule(_localctx, 162, RULE_multOP);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(810);
-			match(T__43);
+			setState(832);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__33) | (1L << T__34) | (1L << T__35))) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ExpOPContext extends ParserRuleContext {
+		public ExpOPContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_expOP; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterExpOP(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitExpOP(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitExpOP(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ExpOPContext expOP() throws RecognitionException {
+		ExpOPContext _localctx = new ExpOPContext(_ctx, getState());
+		enterRule(_localctx, 164, RULE_expOP);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(834);
+			match(T__36);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class PreOPContext extends ParserRuleContext {
+		public TerminalNode NOT() { return getToken(ReFuggParser.NOT, 0); }
+		public PreOPContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_preOP; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterPreOP(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitPreOP(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitPreOP(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final PreOPContext preOP() throws RecognitionException {
+		PreOPContext _localctx = new PreOPContext(_ctx, getState());
+		enterRule(_localctx, 166, RULE_preOP);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(836);
+			_la = _input.LA(1);
+			if ( !(((((_la - 32)) & ~0x3f) == 0 && ((1L << (_la - 32)) & ((1L << (T__31 - 32)) | (1L << (T__32 - 32)) | (1L << (T__37 - 32)) | (1L << (NOT - 32)))) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class PostOPContext extends ParserRuleContext {
+		public PostOPContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_postOP; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).enterPostOP(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFuggListener ) ((ReFuggListener)listener).exitPostOP(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFuggVisitor ) return ((ReFuggVisitor<? extends T>)visitor).visitPostOP(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final PostOPContext postOP() throws RecognitionException {
+		PostOPContext _localctx = new PostOPContext(_ctx, getState());
+		enterRule(_localctx, 168, RULE_postOP);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(838);
+			_la = _input.LA(1);
+			if ( !(_la==T__38 || _la==T__39) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -6359,34 +6524,34 @@ public class ReFuggParser extends Parser {
 
 	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 30:
-			return constExpr_sempred((ConstExprContext)_localctx, predIndex);
-		case 31:
-			return constJoin_sempred((ConstJoinContext)_localctx, predIndex);
 		case 32:
-			return constEQ_sempred((ConstEQContext)_localctx, predIndex);
+			return constExpr_sempred((ConstExprContext)_localctx, predIndex);
 		case 33:
-			return constRel_sempred((ConstRelContext)_localctx, predIndex);
+			return constJoin_sempred((ConstJoinContext)_localctx, predIndex);
 		case 34:
-			return constLogic_sempred((ConstLogicContext)_localctx, predIndex);
+			return constEQ_sempred((ConstEQContext)_localctx, predIndex);
 		case 35:
-			return constTerm_sempred((ConstTermContext)_localctx, predIndex);
+			return constRel_sempred((ConstRelContext)_localctx, predIndex);
 		case 36:
+			return constLogic_sempred((ConstLogicContext)_localctx, predIndex);
+		case 37:
+			return constTerm_sempred((ConstTermContext)_localctx, predIndex);
+		case 38:
 			return constExpo_sempred((ConstExpoContext)_localctx, predIndex);
-		case 39:
-			return expr_sempred((ExprContext)_localctx, predIndex);
-		case 40:
-			return join_sempred((JoinContext)_localctx, predIndex);
-		case 41:
-			return eq_sempred((EqContext)_localctx, predIndex);
-		case 42:
-			return rel_sempred((RelContext)_localctx, predIndex);
-		case 43:
-			return logic_sempred((LogicContext)_localctx, predIndex);
-		case 44:
-			return term_sempred((TermContext)_localctx, predIndex);
-		case 45:
-			return expo_sempred((ExpoContext)_localctx, predIndex);
+		case 50:
+			return orExpression_sempred((OrExpressionContext)_localctx, predIndex);
+		case 51:
+			return andExpression_sempred((AndExpressionContext)_localctx, predIndex);
+		case 52:
+			return equalityExpression_sempred((EqualityExpressionContext)_localctx, predIndex);
+		case 53:
+			return relationalExpression_sempred((RelationalExpressionContext)_localctx, predIndex);
+		case 54:
+			return additiveExpression_sempred((AdditiveExpressionContext)_localctx, predIndex);
+		case 55:
+			return multiplicativeExpression_sempred((MultiplicativeExpressionContext)_localctx, predIndex);
+		case 56:
+			return exponentiationExpression_sempred((ExponentiationExpressionContext)_localctx, predIndex);
 		}
 		return true;
 	}
@@ -6439,49 +6604,49 @@ public class ReFuggParser extends Parser {
 		}
 		return true;
 	}
-	private boolean expr_sempred(ExprContext _localctx, int predIndex) {
+	private boolean orExpression_sempred(OrExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 7:
 			return precpred(_ctx, 2);
 		}
 		return true;
 	}
-	private boolean join_sempred(JoinContext _localctx, int predIndex) {
+	private boolean andExpression_sempred(AndExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 8:
 			return precpred(_ctx, 2);
 		}
 		return true;
 	}
-	private boolean eq_sempred(EqContext _localctx, int predIndex) {
+	private boolean equalityExpression_sempred(EqualityExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 9:
 			return precpred(_ctx, 2);
 		}
 		return true;
 	}
-	private boolean rel_sempred(RelContext _localctx, int predIndex) {
+	private boolean relationalExpression_sempred(RelationalExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 10:
 			return precpred(_ctx, 2);
 		}
 		return true;
 	}
-	private boolean logic_sempred(LogicContext _localctx, int predIndex) {
+	private boolean additiveExpression_sempred(AdditiveExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 11:
 			return precpred(_ctx, 2);
 		}
 		return true;
 	}
-	private boolean term_sempred(TermContext _localctx, int predIndex) {
+	private boolean multiplicativeExpression_sempred(MultiplicativeExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 12:
 			return precpred(_ctx, 2);
 		}
 		return true;
 	}
-	private boolean expo_sempred(ExpoContext _localctx, int predIndex) {
+	private boolean exponentiationExpression_sempred(ExponentiationExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 13:
 			return precpred(_ctx, 2);
@@ -6490,7 +6655,7 @@ public class ReFuggParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3U\u032f\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3S\u034b\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -6499,294 +6664,303 @@ public class ReFuggParser extends Parser {
 		",\t,\4-\t-\4.\t.\4/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t"+
 		"\64\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t;\4<\t<\4=\t="+
 		"\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\tD\4E\tE\4F\tF\4G\tG\4H\tH\4I"+
-		"\tI\4J\tJ\4K\tK\4L\tL\4M\tM\3\2\3\2\3\2\3\2\7\2\u009f\n\2\f\2\16\2\u00a2"+
-		"\13\2\3\2\3\2\3\2\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\7\5\u00b2"+
-		"\n\5\f\5\16\5\u00b5\13\5\3\5\3\5\3\6\3\6\5\6\u00bb\n\6\3\6\3\6\3\7\3\7"+
-		"\7\7\u00c1\n\7\f\7\16\7\u00c4\13\7\3\7\3\7\3\7\3\7\7\7\u00ca\n\7\f\7\16"+
-		"\7\u00cd\13\7\3\7\3\7\7\7\u00d1\n\7\f\7\16\7\u00d4\13\7\3\b\3\b\3\b\5"+
-		"\b\u00d9\n\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\7\b\u00e3\n\b\f\b\16\b\u00e6"+
-		"\13\b\3\b\3\b\3\t\3\t\3\t\3\t\7\t\u00ee\n\t\f\t\16\t\u00f1\13\t\3\n\3"+
-		"\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\7\r\u0102"+
-		"\n\r\f\r\16\r\u0105\13\r\3\r\3\r\3\r\3\16\3\16\7\16\u010c\n\16\f\16\16"+
-		"\16\u010f\13\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17"+
-		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\5\17\u0128"+
-		"\n\17\3\20\3\20\3\20\3\20\3\20\3\20\5\20\u0130\n\20\5\20\u0132\n\20\3"+
-		"\21\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\22\3\23\3\23\3\23\3\23\5\23\u0141"+
-		"\n\23\3\23\3\23\5\23\u0145\n\23\3\23\3\23\5\23\u0149\n\23\3\23\3\23\3"+
-		"\23\3\24\3\24\3\24\3\24\3\24\3\24\5\24\u0154\n\24\5\24\u0156\n\24\3\25"+
-		"\3\25\3\25\3\25\3\26\3\26\3\26\3\26\6\26\u0160\n\26\r\26\16\26\u0161\3"+
-		"\26\3\26\3\27\3\27\3\27\3\27\3\27\3\27\3\27\3\27\5\27\u016e\n\27\3\30"+
-		"\3\30\3\30\3\30\3\31\3\31\3\31\3\31\7\31\u0178\n\31\f\31\16\31\u017b\13"+
-		"\31\3\31\3\31\5\31\u017f\n\31\3\32\3\32\3\32\3\32\3\32\3\32\3\32\3\32"+
-		"\3\32\3\32\5\32\u018b\n\32\3\33\3\33\3\33\3\33\7\33\u0191\n\33\f\33\16"+
-		"\33\u0194\13\33\3\33\3\33\3\33\3\33\3\33\3\33\7\33\u019c\n\33\f\33\16"+
-		"\33\u019f\13\33\3\33\3\33\3\33\3\33\5\33\u01a5\n\33\3\34\3\34\3\34\3\34"+
-		"\3\34\3\34\5\34\u01ad\n\34\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\35\6\35"+
-		"\u01b7\n\35\r\35\16\35\u01b8\3\35\3\35\5\35\u01bd\n\35\3\36\3\36\3\36"+
-		"\3\36\3\37\3\37\3\37\7\37\u01c6\n\37\f\37\16\37\u01c9\13\37\3 \3 \3 \3"+
-		" \3 \3 \3 \7 \u01d2\n \f \16 \u01d5\13 \3!\3!\3!\3!\3!\3!\3!\7!\u01de"+
-		"\n!\f!\16!\u01e1\13!\3\"\3\"\3\"\3\"\3\"\3\"\3\"\7\"\u01ea\n\"\f\"\16"+
-		"\"\u01ed\13\"\3#\3#\3#\3#\3#\3#\3#\7#\u01f6\n#\f#\16#\u01f9\13#\3$\3$"+
-		"\3$\3$\3$\3$\3$\7$\u0202\n$\f$\16$\u0205\13$\3%\3%\3%\3%\3%\3%\3%\7%\u020e"+
-		"\n%\f%\16%\u0211\13%\3&\3&\3&\3&\3&\3&\3&\7&\u021a\n&\f&\16&\u021d\13"+
-		"&\3\'\3\'\3\'\3\'\5\'\u0223\n\'\3(\3(\3(\3(\3(\3(\5(\u022b\n(\3)\3)\3"+
-		")\3)\3)\3)\3)\7)\u0234\n)\f)\16)\u0237\13)\3*\3*\3*\3*\3*\3*\3*\7*\u0240"+
-		"\n*\f*\16*\u0243\13*\3+\3+\3+\3+\3+\3+\3+\7+\u024c\n+\f+\16+\u024f\13"+
-		"+\3,\3,\3,\3,\3,\3,\3,\7,\u0258\n,\f,\16,\u025b\13,\3-\3-\3-\3-\3-\3-"+
-		"\3-\7-\u0264\n-\f-\16-\u0267\13-\3.\3.\3.\3.\3.\3.\3.\7.\u0270\n.\f.\16"+
-		".\u0273\13.\3/\3/\3/\3/\3/\3/\3/\7/\u027c\n/\f/\16/\u027f\13/\3\60\3\60"+
-		"\3\60\3\60\5\60\u0285\n\60\3\61\3\61\3\61\3\61\3\61\3\61\3\61\3\61\5\61"+
-		"\u028f\n\61\3\61\3\61\3\61\5\61\u0294\n\61\3\61\3\61\3\61\3\61\5\61\u029a"+
-		"\n\61\3\61\5\61\u029d\n\61\3\62\3\62\3\62\3\63\3\63\3\63\6\63\u02a5\n"+
-		"\63\r\63\16\63\u02a6\3\63\3\63\6\63\u02ab\n\63\r\63\16\63\u02ac\5\63\u02af"+
-		"\n\63\3\64\3\64\3\64\3\64\3\65\3\65\3\65\3\65\3\65\7\65\u02ba\n\65\f\65"+
-		"\16\65\u02bd\13\65\3\66\3\66\3\66\3\66\7\66\u02c3\n\66\f\66\16\66\u02c6"+
-		"\13\66\5\66\u02c8\n\66\3\66\3\66\3\67\3\67\3\67\3\67\7\67\u02d0\n\67\f"+
-		"\67\16\67\u02d3\13\67\38\38\38\38\38\78\u02da\n8\f8\168\u02dd\138\39\3"+
-		"9\39\39\39\39\39\39\69\u02e7\n9\r9\169\u02e8\39\39\59\u02ed\n9\3:\3:\3"+
-		":\3:\3;\3;\3;\7;\u02f6\n;\f;\16;\u02f9\13;\3<\3<\5<\u02fd\n<\3=\3=\3>"+
-		"\3>\3?\3?\3@\3@\3@\3@\3@\3@\3@\3@\5@\u030d\n@\3A\3A\3A\3A\3A\3A\5A\u0315"+
-		"\nA\3B\3B\3C\3C\3D\3D\3E\3E\3F\3F\3G\3G\3H\3H\3I\3I\3J\3J\3K\3K\3L\3L"+
-		"\3M\3M\3M\2\20>@BDFHJPRTVXZ\\N\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36"+
-		" \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082"+
-		"\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\2\f"+
-		"\3\29;\3\2\16\21\4\2\f\f\22\27\3\2\30\31\3\2\37 \3\2!\"\3\2#%\3\2&)\4"+
-		"\2%%**\3\2+-\2\u0347\2\u00a0\3\2\2\2\4\u00a6\3\2\2\2\6\u00a9\3\2\2\2\b"+
-		"\u00ae\3\2\2\2\n\u00b8\3\2\2\2\f\u00be\3\2\2\2\16\u00d5\3\2\2\2\20\u00e9"+
-		"\3\2\2\2\22\u00f2\3\2\2\2\24\u00f4\3\2\2\2\26\u00f9\3\2\2\2\30\u00fe\3"+
-		"\2\2\2\32\u0109\3\2\2\2\34\u0127\3\2\2\2\36\u0129\3\2\2\2 \u0133\3\2\2"+
-		"\2\"\u0137\3\2\2\2$\u013c\3\2\2\2&\u0155\3\2\2\2(\u0157\3\2\2\2*\u015b"+
-		"\3\2\2\2,\u016d\3\2\2\2.\u016f\3\2\2\2\60\u0173\3\2\2\2\62\u018a\3\2\2"+
-		"\2\64\u01a4\3\2\2\2\66\u01ac\3\2\2\28\u01bc\3\2\2\2:\u01be\3\2\2\2<\u01c2"+
-		"\3\2\2\2>\u01ca\3\2\2\2@\u01d6\3\2\2\2B\u01e2\3\2\2\2D\u01ee\3\2\2\2F"+
-		"\u01fa\3\2\2\2H\u0206\3\2\2\2J\u0212\3\2\2\2L\u0222\3\2\2\2N\u022a\3\2"+
-		"\2\2P\u022c\3\2\2\2R\u0238\3\2\2\2T\u0244\3\2\2\2V\u0250\3\2\2\2X\u025c"+
-		"\3\2\2\2Z\u0268\3\2\2\2\\\u0274\3\2\2\2^\u0284\3\2\2\2`\u029c\3\2\2\2"+
-		"b\u029e\3\2\2\2d\u02ae\3\2\2\2f\u02b0\3\2\2\2h\u02b4\3\2\2\2j\u02be\3"+
-		"\2\2\2l\u02d1\3\2\2\2n\u02d4\3\2\2\2p\u02ec\3\2\2\2r\u02ee\3\2\2\2t\u02f2"+
-		"\3\2\2\2v\u02fc\3\2\2\2x\u02fe\3\2\2\2z\u0300\3\2\2\2|\u0302\3\2\2\2~"+
-		"\u030c\3\2\2\2\u0080\u0314\3\2\2\2\u0082\u0316\3\2\2\2\u0084\u0318\3\2"+
-		"\2\2\u0086\u031a\3\2\2\2\u0088\u031c\3\2\2\2\u008a\u031e\3\2\2\2\u008c"+
-		"\u0320\3\2\2\2\u008e\u0322\3\2\2\2\u0090\u0324\3\2\2\2\u0092\u0326\3\2"+
-		"\2\2\u0094\u0328\3\2\2\2\u0096\u032a\3\2\2\2\u0098\u032c\3\2\2\2\u009a"+
-		"\u009f\5\6\4\2\u009b\u009f\5\16\b\2\u009c\u009f\5\64\33\2\u009d\u009f"+
-		"\5(\25\2\u009e\u009a\3\2\2\2\u009e\u009b\3\2\2\2\u009e\u009c\3\2\2\2\u009e"+
-		"\u009d\3\2\2\2\u009f\u00a2\3\2\2\2\u00a0\u009e\3\2\2\2\u00a0\u00a1\3\2"+
-		"\2\2\u00a1\u00a3\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a3\u00a4\5\4\3\2\u00a4"+
-		"\u00a5\7\2\2\3\u00a5\3\3\2\2\2\u00a6\u00a7\7/\2\2\u00a7\u00a8\5\32\16"+
-		"\2\u00a8\5\3\2\2\2\u00a9\u00aa\7\60\2\2\u00aa\u00ab\5\b\5\2\u00ab\u00ac"+
-		"\5\n\6\2\u00ac\u00ad\5\32\16\2\u00ad\7\3\2\2\2\u00ae\u00b3\5v<\2\u00af"+
-		"\u00b0\7\3\2\2\u00b0\u00b2\7\4\2\2\u00b1\u00af\3\2\2\2\u00b2\u00b5\3\2"+
-		"\2\2\u00b3\u00b1\3\2\2\2\u00b3\u00b4\3\2\2\2\u00b4\u00b6\3\2\2\2\u00b5"+
-		"\u00b3\3\2\2\2\u00b6\u00b7\5\u0082B\2\u00b7\t\3\2\2\2\u00b8\u00ba\7\5"+
-		"\2\2\u00b9\u00bb\5\f\7\2\u00ba\u00b9\3\2\2\2\u00ba\u00bb\3\2\2\2\u00bb"+
-		"\u00bc\3\2\2\2\u00bc\u00bd\7\6\2\2\u00bd\13\3\2\2\2\u00be\u00c2\5\u0080"+
-		"A\2\u00bf\u00c1\5\66\34\2\u00c0\u00bf\3\2\2\2\u00c1\u00c4\3\2\2\2\u00c2"+
-		"\u00c0\3\2\2\2\u00c2\u00c3\3\2\2\2\u00c3\u00c5\3\2\2\2\u00c4\u00c2\3\2"+
-		"\2\2\u00c5\u00d2\5\u0082B\2\u00c6\u00c7\7\7\2\2\u00c7\u00cb\5\u0080A\2"+
-		"\u00c8\u00ca\5\66\34\2\u00c9\u00c8\3\2\2\2\u00ca\u00cd\3\2\2\2\u00cb\u00c9"+
-		"\3\2\2\2\u00cb\u00cc\3\2\2\2\u00cc\u00ce\3\2\2\2\u00cd\u00cb\3\2\2\2\u00ce"+
-		"\u00cf\5\u0082B\2\u00cf\u00d1\3\2\2\2\u00d0\u00c6\3\2\2\2\u00d1\u00d4"+
-		"\3\2\2\2\u00d2\u00d0\3\2\2\2\u00d2\u00d3\3\2\2\2\u00d3\r\3\2\2\2\u00d4"+
-		"\u00d2\3\2\2\2\u00d5\u00d6\7\61\2\2\u00d6\u00d8\5\u0082B\2\u00d7\u00d9"+
-		"\5\20\t\2\u00d8\u00d7\3\2\2\2\u00d8\u00d9\3\2\2\2\u00d9\u00da\3\2\2\2"+
-		"\u00da\u00e4\7\b\2\2\u00db\u00e3\5\24\13\2\u00dc\u00dd\5\22\n\2\u00dd"+
-		"\u00de\5\30\r\2\u00de\u00e3\3\2\2\2\u00df\u00e0\5\22\n\2\u00e0\u00e1\5"+
-		"\26\f\2\u00e1\u00e3\3\2\2\2\u00e2\u00db\3\2\2\2\u00e2\u00dc\3\2\2\2\u00e2"+
-		"\u00df\3\2\2\2\u00e3\u00e6\3\2\2\2\u00e4\u00e2\3\2\2\2\u00e4\u00e5\3\2"+
-		"\2\2\u00e5\u00e7\3\2\2\2\u00e6\u00e4\3\2\2\2\u00e7\u00e8\7\t\2\2\u00e8"+
-		"\17\3\2\2\2\u00e9\u00ea\78\2\2\u00ea\u00ef\5\u0082B\2\u00eb\u00ec\7\7"+
-		"\2\2\u00ec\u00ee\5\u0082B\2\u00ed\u00eb\3\2\2\2\u00ee\u00f1\3\2\2\2\u00ef"+
-		"\u00ed\3\2\2\2\u00ef\u00f0\3\2\2\2\u00f0\21\3\2\2\2\u00f1\u00ef\3\2\2"+
-		"\2\u00f2\u00f3\t\2\2\2\u00f3\23\3\2\2\2\u00f4\u00f5\7\67\2\2\u00f5\u00f6"+
-		"\5\u0082B\2\u00f6\u00f7\5\n\6\2\u00f7\u00f8\5\32\16\2\u00f8\25\3\2\2\2"+
-		"\u00f9\u00fa\7\66\2\2\u00fa\u00fb\5\b\5\2\u00fb\u00fc\5\n\6\2\u00fc\u00fd"+
-		"\5\32\16\2\u00fd\27\3\2\2\2\u00fe\u00ff\7\63\2\2\u00ff\u0103\5\u0080A"+
-		"\2\u0100\u0102\5\66\34\2\u0101\u0100\3\2\2\2\u0102\u0105\3\2\2\2\u0103"+
-		"\u0101\3\2\2\2\u0103\u0104\3\2\2\2\u0104\u0106\3\2\2\2\u0105\u0103\3\2"+
-		"\2\2\u0106\u0107\5\u0082B\2\u0107\u0108\7\n\2\2\u0108\31\3\2\2\2\u0109"+
-		"\u010d\7\b\2\2\u010a\u010c\5\34\17\2\u010b\u010a\3\2\2\2\u010c\u010f\3"+
-		"\2\2\2\u010d\u010b\3\2\2\2\u010d\u010e\3\2\2\2\u010e\u0110\3\2\2\2\u010f"+
-		"\u010d\3\2\2\2\u0110\u0111\7\t\2\2\u0111\33\3\2\2\2\u0112\u0128\5\36\20"+
-		"\2\u0113\u0128\5 \21\2\u0114\u0115\5\"\22\2\u0115\u0116\7\n\2\2\u0116"+
-		"\u0128\3\2\2\2\u0117\u0128\5$\23\2\u0118\u0128\5*\26\2\u0119\u0128\5("+
-		"\25\2\u011a\u0128\5\32\16\2\u011b\u011c\5\60\31\2\u011c\u011d\7\n\2\2"+
-		"\u011d\u0128\3\2\2\2\u011e\u011f\5\62\32\2\u011f\u0120\7\n\2\2\u0120\u0128"+
-		"\3\2\2\2\u0121\u0122\5P)\2\u0122\u0123\7\n\2\2\u0123\u0128\3\2\2\2\u0124"+
-		"\u0125\5&\24\2\u0125\u0126\7\n\2\2\u0126\u0128\3\2\2\2\u0127\u0112\3\2"+
-		"\2\2\u0127\u0113\3\2\2\2\u0127\u0114\3\2\2\2\u0127\u0117\3\2\2\2\u0127"+
-		"\u0118\3\2\2\2\u0127\u0119\3\2\2\2\u0127\u011a\3\2\2\2\u0127\u011b\3\2"+
-		"\2\2\u0127\u011e\3\2\2\2\u0127\u0121\3\2\2\2\u0127\u0124\3\2\2\2\u0128"+
-		"\35\3\2\2\2\u0129\u012a\7<\2\2\u012a\u012b\5.\30\2\u012b\u0131\5\32\16"+
-		"\2\u012c\u012f\7=\2\2\u012d\u0130\5\36\20\2\u012e\u0130\5\32\16\2\u012f"+
-		"\u012d\3\2\2\2\u012f\u012e\3\2\2\2\u0130\u0132\3\2\2\2\u0131\u012c\3\2"+
-		"\2\2\u0131\u0132\3\2\2\2\u0132\37\3\2\2\2\u0133\u0134\7>\2\2\u0134\u0135"+
-		"\5.\30\2\u0135\u0136\5\32\16\2\u0136!\3\2\2\2\u0137\u0138\7?\2\2\u0138"+
-		"\u0139\5\32\16\2\u0139\u013a\7>\2\2\u013a\u013b\5.\30\2\u013b#\3\2\2\2"+
-		"\u013c\u013d\7@\2\2\u013d\u0140\7\5\2\2\u013e\u0141\5\60\31\2\u013f\u0141"+
-		"\5P)\2\u0140\u013e\3\2\2\2\u0140\u013f\3\2\2\2\u0140\u0141\3\2\2\2\u0141"+
-		"\u0142\3\2\2\2\u0142\u0144\7\n\2\2\u0143\u0145\5P)\2\u0144\u0143\3\2\2"+
-		"\2\u0144\u0145\3\2\2\2\u0145\u0146\3\2\2\2\u0146\u0148\7\n\2\2\u0147\u0149"+
-		"\5P)\2\u0148\u0147\3\2\2\2\u0148\u0149\3\2\2\2\u0149\u014a\3\2\2\2\u014a"+
-		"\u014b\7\6\2\2\u014b\u014c\5\32\16\2\u014c%\3\2\2\2\u014d\u0156\7B\2\2"+
-		"\u014e\u0156\7A\2\2\u014f\u0150\7C\2\2\u0150\u0156\5\u0082B\2\u0151\u0153"+
-		"\7D\2\2\u0152\u0154\5P)\2\u0153\u0152\3\2\2\2\u0153\u0154\3\2\2\2\u0154"+
-		"\u0156\3\2\2\2\u0155\u014d\3\2\2\2\u0155\u014e\3\2\2\2\u0155\u014f\3\2"+
-		"\2\2\u0155\u0151\3\2\2\2\u0156\'\3\2\2\2\u0157\u0158\7E\2\2\u0158\u0159"+
-		"\5\u0082B\2\u0159\u015a\5\32\16\2\u015a)\3\2\2\2\u015b\u015c\7F\2\2\u015c"+
-		"\u015d\5.\30\2\u015d\u015f\7\b\2\2\u015e\u0160\5,\27\2\u015f\u015e\3\2"+
-		"\2\2\u0160\u0161\3\2\2\2\u0161\u015f\3\2\2\2\u0161\u0162\3\2\2\2\u0162"+
-		"\u0163\3\2\2\2\u0163\u0164\7\t\2\2\u0164+\3\2\2\2\u0165\u0166\7G\2\2\u0166"+
-		"\u0167\5> \2\u0167\u0168\7\13\2\2\u0168\u0169\5\32\16\2\u0169\u016e\3"+
-		"\2\2\2\u016a\u016b\7H\2\2\u016b\u016c\7\13\2\2\u016c\u016e\5\32\16\2\u016d"+
-		"\u0165\3\2\2\2\u016d\u016a\3\2\2\2\u016e-\3\2\2\2\u016f\u0170\7\5\2\2"+
-		"\u0170\u0171\5P)\2\u0171\u0172\7\6\2\2\u0172/\3\2\2\2\u0173\u0174\7\64"+
-		"\2\2\u0174\u0175\5\u0080A\2\u0175\u0179\5\u0082B\2\u0176\u0178\5\66\34"+
-		"\2\u0177\u0176\3\2\2\2\u0178\u017b\3\2\2\2\u0179\u0177\3\2\2\2\u0179\u017a"+
-		"\3\2\2\2\u017a\u017e\3\2\2\2\u017b\u0179\3\2\2\2\u017c\u017d\7\f\2\2\u017d"+
-		"\u017f\5P)\2\u017e\u017c\3\2\2\2\u017e\u017f\3\2\2\2\u017f\61\3\2\2\2"+
-		"\u0180\u0181\5\u0082B\2\u0181\u0182\5l\67\2\u0182\u0183\5z>\2\u0183\u0184"+
-		"\5P)\2\u0184\u018b\3\2\2\2\u0185\u0186\5n8\2\u0186\u0187\5l\67\2\u0187"+
-		"\u0188\5z>\2\u0188\u0189\5P)\2\u0189\u018b\3\2\2\2\u018a\u0180\3\2\2\2"+
-		"\u018a\u0185\3\2\2\2\u018b\63\3\2\2\2\u018c\u018d\7\65\2\2\u018d\u018e"+
-		"\5\u0080A\2\u018e\u0192\5\u0082B\2\u018f\u0191\5\66\34\2\u0190\u018f\3"+
-		"\2\2\2\u0191\u0194\3\2\2\2\u0192\u0190\3\2\2\2\u0192\u0193\3\2\2\2\u0193"+
-		"\u0195\3\2\2\2\u0194\u0192\3\2\2\2\u0195\u0196\7\n\2\2\u0196\u01a5\3\2"+
-		"\2\2\u0197\u0198\7\65\2\2\u0198\u0199\5\u0080A\2\u0199\u019d\5\u0082B"+
-		"\2\u019a\u019c\5\66\34\2\u019b\u019a\3\2\2\2\u019c\u019f\3\2\2\2\u019d"+
-		"\u019b\3\2\2\2\u019d\u019e\3\2\2\2\u019e\u01a0\3\2\2\2\u019f\u019d\3\2"+
-		"\2\2\u01a0\u01a1\7\f\2\2\u01a1\u01a2\5> \2\u01a2\u01a3\7\n\2\2\u01a3\u01a5"+
-		"\3\2\2\2\u01a4\u018c\3\2\2\2\u01a4\u0197\3\2\2\2\u01a5\65\3\2\2\2\u01a6"+
-		"\u01a7\7\3\2\2\u01a7\u01a8\5> \2\u01a8\u01a9\7\4\2\2\u01a9\u01ad\3\2\2"+
-		"\2\u01aa\u01ab\7\3\2\2\u01ab\u01ad\7\4\2\2\u01ac\u01a6\3\2\2\2\u01ac\u01aa"+
-		"\3\2\2\2\u01ad\67\3\2\2\2\u01ae\u01af\7\b\2\2\u01af\u01b0\5<\37\2\u01b0"+
-		"\u01b1\7\t\2\2\u01b1\u01bd\3\2\2\2\u01b2\u01b3\7\b\2\2\u01b3\u01b6\5:"+
-		"\36\2\u01b4\u01b5\7\7\2\2\u01b5\u01b7\5:\36\2\u01b6\u01b4\3\2\2\2\u01b7"+
-		"\u01b8\3\2\2\2\u01b8\u01b6\3\2\2\2\u01b8\u01b9\3\2\2\2\u01b9\u01ba\3\2"+
-		"\2\2\u01ba\u01bb\7\t\2\2\u01bb\u01bd\3\2\2\2\u01bc\u01ae\3\2\2\2\u01bc"+
-		"\u01b2\3\2\2\2\u01bd9\3\2\2\2\u01be\u01bf\7\b\2\2\u01bf\u01c0\5<\37\2"+
-		"\u01c0\u01c1\7\t\2\2\u01c1;\3\2\2\2\u01c2\u01c7\5> \2\u01c3\u01c4\7\7"+
-		"\2\2\u01c4\u01c6\5> \2\u01c5\u01c3\3\2\2\2\u01c6\u01c9\3\2\2\2\u01c7\u01c5"+
-		"\3\2\2\2\u01c7\u01c8\3\2\2\2\u01c8=\3\2\2\2\u01c9\u01c7\3\2\2\2\u01ca"+
-		"\u01cb\b \1\2\u01cb\u01cc\5@!\2\u01cc\u01d3\3\2\2\2\u01cd\u01ce\f\4\2"+
-		"\2\u01ce\u01cf\5\u008cG\2\u01cf\u01d0\5@!\2\u01d0\u01d2\3\2\2\2\u01d1"+
-		"\u01cd\3\2\2\2\u01d2\u01d5\3\2\2\2\u01d3\u01d1\3\2\2\2\u01d3\u01d4\3\2"+
-		"\2\2\u01d4?\3\2\2\2\u01d5\u01d3\3\2\2\2\u01d6\u01d7\b!\1\2\u01d7\u01d8"+
-		"\5B\"\2\u01d8\u01df\3\2\2\2\u01d9\u01da\f\4\2\2\u01da\u01db\5\u008eH\2"+
-		"\u01db\u01dc\5B\"\2\u01dc\u01de\3\2\2\2\u01dd\u01d9\3\2\2\2\u01de\u01e1"+
-		"\3\2\2\2\u01df\u01dd\3\2\2\2\u01df\u01e0\3\2\2\2\u01e0A\3\2\2\2\u01e1"+
-		"\u01df\3\2\2\2\u01e2\u01e3\b\"\1\2\u01e3\u01e4\5D#\2\u01e4\u01eb\3\2\2"+
-		"\2\u01e5\u01e6\f\4\2\2\u01e6\u01e7\5\u0092J\2\u01e7\u01e8\5D#\2\u01e8"+
-		"\u01ea\3\2\2\2\u01e9\u01e5\3\2\2\2\u01ea\u01ed\3\2\2\2\u01eb\u01e9\3\2"+
-		"\2\2\u01eb\u01ec\3\2\2\2\u01ecC\3\2\2\2\u01ed\u01eb\3\2\2\2\u01ee\u01ef"+
-		"\b#\1\2\u01ef\u01f0\5F$\2\u01f0\u01f7\3\2\2\2\u01f1\u01f2\f\4\2\2\u01f2"+
-		"\u01f3\5x=\2\u01f3\u01f4\5F$\2\u01f4\u01f6\3\2\2\2\u01f5\u01f1\3\2\2\2"+
-		"\u01f6\u01f9\3\2\2\2\u01f7\u01f5\3\2\2\2\u01f7\u01f8\3\2\2\2\u01f8E\3"+
-		"\2\2\2\u01f9\u01f7\3\2\2\2\u01fa\u01fb\b$\1\2\u01fb\u01fc\5H%\2\u01fc"+
-		"\u0203\3\2\2\2\u01fd\u01fe\f\4\2\2\u01fe\u01ff\5\u0094K\2\u01ff\u0200"+
-		"\5H%\2\u0200\u0202\3\2\2\2\u0201\u01fd\3\2\2\2\u0202\u0205\3\2\2\2\u0203"+
-		"\u0201\3\2\2\2\u0203\u0204\3\2\2\2\u0204G\3\2\2\2\u0205\u0203\3\2\2\2"+
-		"\u0206\u0207\b%\1\2\u0207\u0208\5J&\2\u0208\u020f\3\2\2\2\u0209\u020a"+
-		"\f\4\2\2\u020a\u020b\5\u0096L\2\u020b\u020c\5J&\2\u020c\u020e\3\2\2\2"+
-		"\u020d\u0209\3\2\2\2\u020e\u0211\3\2\2\2\u020f\u020d\3\2\2\2\u020f\u0210"+
-		"\3\2\2\2\u0210I\3\2\2\2\u0211\u020f\3\2\2\2\u0212\u0213\b&\1\2\u0213\u0214"+
-		"\5L\'\2\u0214\u021b\3\2\2\2\u0215\u0216\f\4\2\2\u0216\u0217\5\u0098M\2"+
-		"\u0217\u0218\5L\'\2\u0218\u021a\3\2\2\2\u0219\u0215\3\2\2\2\u021a\u021d"+
-		"\3\2\2\2\u021b\u0219\3\2\2\2\u021b\u021c\3\2\2\2\u021cK\3\2\2\2\u021d"+
-		"\u021b\3\2\2\2\u021e\u021f\5\u0090I\2\u021f\u0220\5N(\2\u0220\u0223\3"+
-		"\2\2\2\u0221\u0223\5N(\2\u0222\u021e\3\2\2\2\u0222\u0221\3\2\2\2\u0223"+
-		"M\3\2\2\2\u0224\u022b\5~@\2\u0225\u0226\7\5\2\2\u0226\u0227\5> \2\u0227"+
-		"\u0228\7\6\2\2\u0228\u022b\3\2\2\2\u0229\u022b\58\35\2\u022a\u0224\3\2"+
-		"\2\2\u022a\u0225\3\2\2\2\u022a\u0229\3\2\2\2\u022bO\3\2\2\2\u022c\u022d"+
-		"\b)\1\2\u022d\u022e\5R*\2\u022e\u0235\3\2\2\2\u022f\u0230\f\4\2\2\u0230"+
-		"\u0231\5\u008cG\2\u0231\u0232\5R*\2\u0232\u0234\3\2\2\2\u0233\u022f\3"+
-		"\2\2\2\u0234\u0237\3\2\2\2\u0235\u0233\3\2\2\2\u0235\u0236\3\2\2\2\u0236"+
-		"Q\3\2\2\2\u0237\u0235\3\2\2\2\u0238\u0239\b*\1\2\u0239\u023a\5T+\2\u023a"+
-		"\u0241\3\2\2\2\u023b\u023c\f\4\2\2\u023c\u023d\5\u008eH\2\u023d\u023e"+
-		"\5T+\2\u023e\u0240\3\2\2\2\u023f\u023b\3\2\2\2\u0240\u0243\3\2\2\2\u0241"+
-		"\u023f\3\2\2\2\u0241\u0242\3\2\2\2\u0242S\3\2\2\2\u0243\u0241\3\2\2\2"+
-		"\u0244\u0245\b+\1\2\u0245\u0246\5V,\2\u0246\u024d\3\2\2\2\u0247\u0248"+
-		"\f\4\2\2\u0248\u0249\5\u0092J\2\u0249\u024a\5V,\2\u024a\u024c\3\2\2\2"+
-		"\u024b\u0247\3\2\2\2\u024c\u024f\3\2\2\2\u024d\u024b\3\2\2\2\u024d\u024e"+
-		"\3\2\2\2\u024eU\3\2\2\2\u024f\u024d\3\2\2\2\u0250\u0251\b,\1\2\u0251\u0252"+
-		"\5X-\2\u0252\u0259\3\2\2\2\u0253\u0254\f\4\2\2\u0254\u0255\5x=\2\u0255"+
-		"\u0256\5X-\2\u0256\u0258\3\2\2\2\u0257\u0253\3\2\2\2\u0258\u025b\3\2\2"+
-		"\2\u0259\u0257\3\2\2\2\u0259\u025a\3\2\2\2\u025aW\3\2\2\2\u025b\u0259"+
-		"\3\2\2\2\u025c\u025d\b-\1\2\u025d\u025e\5Z.\2\u025e\u0265\3\2\2\2\u025f"+
-		"\u0260\f\4\2\2\u0260\u0261\5\u0094K\2\u0261\u0262\5Z.\2\u0262\u0264\3"+
-		"\2\2\2\u0263\u025f\3\2\2\2\u0264\u0267\3\2\2\2\u0265\u0263\3\2\2\2\u0265"+
-		"\u0266\3\2\2\2\u0266Y\3\2\2\2\u0267\u0265\3\2\2\2\u0268\u0269\b.\1\2\u0269"+
-		"\u026a\5\\/\2\u026a\u0271\3\2\2\2\u026b\u026c\f\4\2\2\u026c\u026d\5\u0096"+
-		"L\2\u026d\u026e\5\\/\2\u026e\u0270\3\2\2\2\u026f\u026b\3\2\2\2\u0270\u0273"+
-		"\3\2\2\2\u0271\u026f\3\2\2\2\u0271\u0272\3\2\2\2\u0272[\3\2\2\2\u0273"+
-		"\u0271\3\2\2\2\u0274\u0275\b/\1\2\u0275\u0276\5^\60\2\u0276\u027d\3\2"+
-		"\2\2\u0277\u0278\f\4\2\2\u0278\u0279\5\u0098M\2\u0279\u027a\5^\60\2\u027a"+
-		"\u027c\3\2\2\2\u027b\u0277\3\2\2\2\u027c\u027f\3\2\2\2\u027d\u027b\3\2"+
-		"\2\2\u027d\u027e\3\2\2\2\u027e]\3\2\2\2\u027f\u027d\3\2\2\2\u0280\u0281"+
-		"\5\u0090I\2\u0281\u0282\5`\61\2\u0282\u0285\3\2\2\2\u0283\u0285\5`\61"+
-		"\2\u0284\u0280\3\2\2\2\u0284\u0283\3\2\2\2\u0285_\3\2\2\2\u0286\u0287"+
-		"\7\5\2\2\u0287\u0288\5P)\2\u0288\u0289\7\6\2\2\u0289\u029d\3\2\2\2\u028a"+
-		"\u029d\5b\62\2\u028b\u029d\5d\63\2\u028c\u028e\5\u0082B\2\u028d\u028f"+
-		"\5|?\2\u028e\u028d\3\2\2\2\u028e\u028f\3\2\2\2\u028f\u029d\3\2\2\2\u0290"+
-		"\u0291\5\u0082B\2\u0291\u0293\5l\67\2\u0292\u0294\5|?\2\u0293\u0292\3"+
-		"\2\2\2\u0293\u0294\3\2\2\2\u0294\u029d\3\2\2\2\u0295\u029d\5h\65\2\u0296"+
-		"\u029d\5~@\2\u0297\u0299\5n8\2\u0298\u029a\5|?\2\u0299\u0298\3\2\2\2\u0299"+
-		"\u029a\3\2\2\2\u029a\u029d\3\2\2\2\u029b\u029d\5p9\2\u029c\u0286\3\2\2"+
-		"\2\u029c\u028a\3\2\2\2\u029c\u028b\3\2\2\2\u029c\u028c\3\2\2\2\u029c\u0290"+
-		"\3\2\2\2\u029c\u0295\3\2\2\2\u029c\u0296\3\2\2\2\u029c\u0297\3\2\2\2\u029c"+
-		"\u029b\3\2\2\2\u029da\3\2\2\2\u029e\u029f\5\u0082B\2\u029f\u02a0\5j\66"+
-		"\2\u02a0c\3\2\2\2\u02a1\u02a2\5\u0082B\2\u02a2\u02a4\5l\67\2\u02a3\u02a5"+
-		"\5f\64\2\u02a4\u02a3\3\2\2\2\u02a5\u02a6\3\2\2\2\u02a6\u02a4\3\2\2\2\u02a6"+
-		"\u02a7\3\2\2\2\u02a7\u02af\3\2\2\2\u02a8\u02aa\5n8\2\u02a9\u02ab\5f\64"+
-		"\2\u02aa\u02a9\3\2\2\2\u02ab\u02ac\3\2\2\2\u02ac\u02aa\3\2\2\2\u02ac\u02ad"+
-		"\3\2\2\2\u02ad\u02af\3\2\2\2\u02ae\u02a1\3\2\2\2\u02ae\u02a8\3\2\2\2\u02af"+
-		"e\3\2\2\2\u02b0\u02b1\7\r\2\2\u02b1\u02b2\5b\62\2\u02b2\u02b3\5l\67\2"+
-		"\u02b3g\3\2\2\2\u02b4\u02b5\7M\2\2\u02b5\u02b6\5\u0082B\2\u02b6\u02b7"+
-		"\5j\66\2\u02b7\u02bb\5l\67\2\u02b8\u02ba\5f\64\2\u02b9\u02b8\3\2\2\2\u02ba"+
-		"\u02bd\3\2\2\2\u02bb\u02b9\3\2\2\2\u02bb\u02bc\3\2\2\2\u02bci\3\2\2\2"+
-		"\u02bd\u02bb\3\2\2\2\u02be\u02c7\7\5\2\2\u02bf\u02c4\5P)\2\u02c0\u02c1"+
-		"\7\7\2\2\u02c1\u02c3\5P)\2\u02c2\u02c0\3\2\2\2\u02c3\u02c6\3\2\2\2\u02c4"+
-		"\u02c2\3\2\2\2\u02c4\u02c5\3\2\2\2\u02c5\u02c8\3\2\2\2\u02c6\u02c4\3\2"+
-		"\2\2\u02c7\u02bf\3\2\2\2\u02c7\u02c8\3\2\2\2\u02c8\u02c9\3\2\2\2\u02c9"+
-		"\u02ca\7\6\2\2\u02cak\3\2\2\2\u02cb\u02cc\7\3\2\2\u02cc\u02cd\5P)\2\u02cd"+
-		"\u02ce\7\4\2\2\u02ce\u02d0\3\2\2\2\u02cf\u02cb\3\2\2\2\u02d0\u02d3\3\2"+
-		"\2\2\u02d1\u02cf\3\2\2\2\u02d1\u02d2\3\2\2\2\u02d2m\3\2\2\2\u02d3\u02d1"+
-		"\3\2\2\2\u02d4\u02db\7K\2\2\u02d5\u02d6\7\r\2\2\u02d6\u02d7\5\u0082B\2"+
-		"\u02d7\u02d8\5l\67\2\u02d8\u02da\3\2\2\2\u02d9\u02d5\3\2\2\2\u02da\u02dd"+
-		"\3\2\2\2\u02db\u02d9\3\2\2\2\u02db\u02dc\3\2\2\2\u02dco\3\2\2\2\u02dd"+
-		"\u02db\3\2\2\2\u02de\u02df\7\b\2\2\u02df\u02e0\5t;\2\u02e0\u02e1\7\t\2"+
-		"\2\u02e1\u02ed\3\2\2\2\u02e2\u02e3\7\b\2\2\u02e3\u02e6\5r:\2\u02e4\u02e5"+
-		"\7\7\2\2\u02e5\u02e7\5r:\2\u02e6\u02e4\3\2\2\2\u02e7\u02e8\3\2\2\2\u02e8"+
-		"\u02e6\3\2\2\2\u02e8\u02e9\3\2\2\2\u02e9\u02ea\3\2\2\2\u02ea\u02eb\7\t"+
-		"\2\2\u02eb\u02ed\3\2\2\2\u02ec\u02de\3\2\2\2\u02ec\u02e2\3\2\2\2\u02ed"+
-		"q\3\2\2\2\u02ee\u02ef\7\b\2\2\u02ef\u02f0\5t;\2\u02f0\u02f1\7\t\2\2\u02f1"+
-		"s\3\2\2\2\u02f2\u02f7\5P)\2\u02f3\u02f4\7\7\2\2\u02f4\u02f6\5P)\2\u02f5"+
-		"\u02f3\3\2\2\2\u02f6\u02f9\3\2\2\2\u02f7\u02f5\3\2\2\2\u02f7\u02f8\3\2"+
-		"\2\2\u02f8u\3\2\2\2\u02f9\u02f7\3\2\2\2\u02fa\u02fd\7\62\2\2\u02fb\u02fd"+
-		"\5\u0080A\2\u02fc\u02fa\3\2\2\2\u02fc\u02fb\3\2\2\2\u02fdw\3\2\2\2\u02fe"+
-		"\u02ff\t\3\2\2\u02ffy\3\2\2\2\u0300\u0301\t\4\2\2\u0301{\3\2\2\2\u0302"+
-		"\u0303\t\5\2\2\u0303}\3\2\2\2\u0304\u030d\5\u0084C\2\u0305\u030d\5\u0086"+
-		"D\2\u0306\u030d\5\u0088E\2\u0307\u030d\5\u008aF\2\u0308\u030d\7I\2\2\u0309"+
-		"\u030d\7J\2\2\u030a\u030d\7K\2\2\u030b\u030d\7L\2\2\u030c\u0304\3\2\2"+
-		"\2\u030c\u0305\3\2\2\2\u030c\u0306\3\2\2\2\u030c\u0307\3\2\2\2\u030c\u0308"+
-		"\3\2\2\2\u030c\u0309\3\2\2\2\u030c\u030a\3\2\2\2\u030c\u030b\3\2\2\2\u030d"+
-		"\177\3\2\2\2\u030e\u0315\7\32\2\2\u030f\u0315\7\33\2\2\u0310\u0315\7\34"+
-		"\2\2\u0311\u0315\7\35\2\2\u0312\u0315\7\36\2\2\u0313\u0315\5\u0082B\2"+
-		"\u0314\u030e\3\2\2\2\u0314\u030f\3\2\2\2\u0314\u0310\3\2\2\2\u0314\u0311"+
-		"\3\2\2\2\u0314\u0312\3\2\2\2\u0314\u0313\3\2\2\2\u0315\u0081\3\2\2\2\u0316"+
-		"\u0317\7R\2\2\u0317\u0083\3\2\2\2\u0318\u0319\7O\2\2\u0319\u0085\3\2\2"+
-		"\2\u031a\u031b\7N\2\2\u031b\u0087\3\2\2\2\u031c\u031d\7Q\2\2\u031d\u0089"+
-		"\3\2\2\2\u031e\u031f\7P\2\2\u031f\u008b\3\2\2\2\u0320\u0321\t\6\2\2\u0321"+
-		"\u008d\3\2\2\2\u0322\u0323\t\7\2\2\u0323\u008f\3\2\2\2\u0324\u0325\t\b"+
-		"\2\2\u0325\u0091\3\2\2\2\u0326\u0327\t\t\2\2\u0327\u0093\3\2\2\2\u0328"+
-		"\u0329\t\n\2\2\u0329\u0095\3\2\2\2\u032a\u032b\t\13\2\2\u032b\u0097\3"+
-		"\2\2\2\u032c\u032d\7.\2\2\u032d\u0099\3\2\2\2F\u009e\u00a0\u00b3\u00ba"+
-		"\u00c2\u00cb\u00d2\u00d8\u00e2\u00e4\u00ef\u0103\u010d\u0127\u012f\u0131"+
-		"\u0140\u0144\u0148\u0153\u0155\u0161\u016d\u0179\u017e\u018a\u0192\u019d"+
-		"\u01a4\u01ac\u01b8\u01bc\u01c7\u01d3\u01df\u01eb\u01f7\u0203\u020f\u021b"+
-		"\u0222\u022a\u0235\u0241\u024d\u0259\u0265\u0271\u027d\u0284\u028e\u0293"+
-		"\u0299\u029c\u02a6\u02ac\u02ae\u02bb\u02c4\u02c7\u02d1\u02db\u02e8\u02ec"+
-		"\u02f7\u02fc\u030c\u0314";
+		"\tI\4J\tJ\4K\tK\4L\tL\4M\tM\4N\tN\4O\tO\4P\tP\4Q\tQ\4R\tR\4S\tS\4T\tT"+
+		"\4U\tU\4V\tV\3\2\3\2\3\2\3\2\7\2\u00b1\n\2\f\2\16\2\u00b4\13\2\3\2\3\2"+
+		"\3\2\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\7\5\u00c4\n\5\f\5\16"+
+		"\5\u00c7\13\5\3\5\3\5\3\6\3\6\5\6\u00cd\n\6\3\6\3\6\3\7\3\7\7\7\u00d3"+
+		"\n\7\f\7\16\7\u00d6\13\7\3\7\3\7\3\7\3\7\7\7\u00dc\n\7\f\7\16\7\u00df"+
+		"\13\7\3\7\3\7\7\7\u00e3\n\7\f\7\16\7\u00e6\13\7\3\b\3\b\3\b\5\b\u00eb"+
+		"\n\b\3\b\3\b\3\b\6\b\u00f0\n\b\r\b\16\b\u00f1\7\b\u00f4\n\b\f\b\16\b\u00f7"+
+		"\13\b\3\b\3\b\3\t\3\t\3\t\5\t\u00fe\n\t\3\n\3\n\3\n\3\n\7\n\u0104\n\n"+
+		"\f\n\16\n\u0107\13\n\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\r\3\r"+
+		"\3\16\3\16\3\16\7\16\u0118\n\16\f\16\16\16\u011b\13\16\3\16\3\16\3\16"+
+		"\3\17\3\17\7\17\u0122\n\17\f\17\16\17\u0125\13\17\3\17\3\17\3\20\3\20"+
+		"\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20"+
+		"\3\20\3\20\5\20\u013b\n\20\3\21\3\21\3\21\3\21\3\21\5\21\u0142\n\21\3"+
+		"\22\3\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\24\3\24\3\24\3\24\5\24\u0151"+
+		"\n\24\3\24\3\24\5\24\u0155\n\24\3\24\3\24\5\24\u0159\n\24\3\24\3\24\3"+
+		"\24\3\25\3\25\3\25\3\25\3\25\3\25\5\25\u0164\n\25\5\25\u0166\n\25\3\26"+
+		"\3\26\3\26\3\26\3\27\3\27\3\27\3\27\6\27\u0170\n\27\r\27\16\27\u0171\3"+
+		"\27\3\27\3\30\3\30\3\30\3\30\3\30\3\30\3\30\3\30\5\30\u017e\n\30\3\31"+
+		"\3\31\3\31\3\31\3\32\3\32\7\32\u0186\n\32\f\32\16\32\u0189\13\32\3\32"+
+		"\3\32\3\32\3\32\5\32\u018f\n\32\5\32\u0191\n\32\3\33\3\33\5\33\u0195\n"+
+		"\33\3\33\3\33\7\33\u0199\n\33\f\33\16\33\u019c\13\33\3\33\3\33\3\33\3"+
+		"\33\5\33\u01a2\n\33\3\33\3\33\3\34\3\34\5\34\u01a8\n\34\3\34\3\34\3\35"+
+		"\3\35\3\35\3\35\3\35\3\35\3\35\3\35\6\35\u01b4\n\35\r\35\16\35\u01b5\3"+
+		"\35\3\35\5\35\u01ba\n\35\3\36\3\36\3\36\3\36\3\37\3\37\3\37\7\37\u01c3"+
+		"\n\37\f\37\16\37\u01c6\13\37\3 \3 \3!\3!\3!\3!\3!\6!\u01cf\n!\r!\16!\u01d0"+
+		"\3\"\3\"\3\"\3\"\3\"\3\"\3\"\7\"\u01da\n\"\f\"\16\"\u01dd\13\"\3#\3#\3"+
+		"#\3#\3#\3#\3#\7#\u01e6\n#\f#\16#\u01e9\13#\3$\3$\3$\3$\3$\3$\3$\7$\u01f2"+
+		"\n$\f$\16$\u01f5\13$\3%\3%\3%\3%\3%\3%\3%\7%\u01fe\n%\f%\16%\u0201\13"+
+		"%\3&\3&\3&\3&\3&\3&\3&\7&\u020a\n&\f&\16&\u020d\13&\3\'\3\'\3\'\3\'\3"+
+		"\'\3\'\3\'\7\'\u0216\n\'\f\'\16\'\u0219\13\'\3(\3(\3(\3(\3(\3(\3(\7(\u0222"+
+		"\n(\f(\16(\u0225\13(\3)\3)\3)\3)\5)\u022b\n)\3*\3*\3*\3*\3*\3*\3*\5*\u0234"+
+		"\n*\3+\3+\3+\3+\3,\3,\3,\3-\3-\3-\3-\7-\u0241\n-\f-\16-\u0244\13-\3-\7"+
+		"-\u0247\n-\f-\16-\u024a\13-\3.\3.\3.\7.\u024f\n.\f.\16.\u0252\13.\3.\7"+
+		".\u0255\n.\f.\16.\u0258\13.\3/\3/\7/\u025c\n/\f/\16/\u025f\13/\3\60\3"+
+		"\60\7\60\u0263\n\60\f\60\16\60\u0266\13\60\3\60\7\60\u0269\n\60\f\60\16"+
+		"\60\u026c\13\60\3\61\3\61\3\61\5\61\u0271\n\61\3\61\7\61\u0274\n\61\f"+
+		"\61\16\61\u0277\13\61\3\62\3\62\5\62\u027b\n\62\3\63\3\63\3\63\3\63\5"+
+		"\63\u0281\n\63\3\63\5\63\u0284\n\63\3\64\3\64\3\64\3\64\3\64\3\64\3\64"+
+		"\7\64\u028d\n\64\f\64\16\64\u0290\13\64\3\65\3\65\3\65\3\65\3\65\3\65"+
+		"\3\65\7\65\u0299\n\65\f\65\16\65\u029c\13\65\3\66\3\66\3\66\3\66\3\66"+
+		"\3\66\3\66\7\66\u02a5\n\66\f\66\16\66\u02a8\13\66\3\67\3\67\3\67\3\67"+
+		"\3\67\3\67\3\67\7\67\u02b1\n\67\f\67\16\67\u02b4\13\67\38\38\38\38\38"+
+		"\38\38\78\u02bd\n8\f8\168\u02c0\138\39\39\39\39\39\39\39\79\u02c9\n9\f"+
+		"9\169\u02cc\139\3:\3:\3:\3:\3:\3:\3:\7:\u02d5\n:\f:\16:\u02d8\13:\3;\3"+
+		";\3;\3;\5;\u02de\n;\3<\3<\3<\3<\5<\u02e4\n<\3=\3=\3=\3=\3=\3=\3=\3=\3"+
+		"=\5=\u02ef\n=\3>\3>\3>\3>\3>\3>\3>\3>\6>\u02f9\n>\r>\16>\u02fa\3>\3>\5"+
+		">\u02ff\n>\3?\3?\3?\3?\3@\3@\3@\7@\u0308\n@\f@\16@\u030b\13@\3A\3A\5A"+
+		"\u030f\nA\3A\3A\3B\3B\5B\u0315\nB\3C\3C\3C\3C\3C\3C\5C\u031d\nC\3D\3D"+
+		"\3D\3D\3D\3D\5D\u0325\nD\3E\3E\3F\3F\3G\3G\3H\3H\3I\3I\3J\3J\3K\3K\3L"+
+		"\3L\3M\3M\3N\3N\3O\3O\3P\3P\3Q\3Q\3R\3R\3S\3S\3T\3T\3U\3U\3V\3V\3V\2\20"+
+		"BDFHJLNfhjlnprW\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62"+
+		"\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084\u0086\u0088"+
+		"\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\u009a\u009c\u009e\u00a0"+
+		"\u00a2\u00a4\u00a6\u00a8\u00aa\2\r\3\2\65\67\3\2FG\4\2\f\f\23\27\3\2\30"+
+		"\31\3\2\32\33\3\2\34\35\3\2\36!\3\2\"#\3\2$&\5\2\"#((KK\3\2)*\2\u0359"+
+		"\2\u00b2\3\2\2\2\4\u00b8\3\2\2\2\6\u00bb\3\2\2\2\b\u00c0\3\2\2\2\n\u00ca"+
+		"\3\2\2\2\f\u00d0\3\2\2\2\16\u00e7\3\2\2\2\20\u00fd\3\2\2\2\22\u00ff\3"+
+		"\2\2\2\24\u0108\3\2\2\2\26\u010a\3\2\2\2\30\u010f\3\2\2\2\32\u0114\3\2"+
+		"\2\2\34\u011f\3\2\2\2\36\u013a\3\2\2\2 \u013c\3\2\2\2\"\u0143\3\2\2\2"+
+		"$\u0147\3\2\2\2&\u014c\3\2\2\2(\u0165\3\2\2\2*\u0167\3\2\2\2,\u016b\3"+
+		"\2\2\2.\u017d\3\2\2\2\60\u017f\3\2\2\2\62\u0183\3\2\2\2\64\u0192\3\2\2"+
+		"\2\66\u01a5\3\2\2\28\u01b9\3\2\2\2:\u01bb\3\2\2\2<\u01bf\3\2\2\2>\u01c7"+
+		"\3\2\2\2@\u01c9\3\2\2\2B\u01d2\3\2\2\2D\u01de\3\2\2\2F\u01ea\3\2\2\2H"+
+		"\u01f6\3\2\2\2J\u0202\3\2\2\2L\u020e\3\2\2\2N\u021a\3\2\2\2P\u022a\3\2"+
+		"\2\2R\u0233\3\2\2\2T\u0235\3\2\2\2V\u0239\3\2\2\2X\u023c\3\2\2\2Z\u024b"+
+		"\3\2\2\2\\\u0259\3\2\2\2^\u0260\3\2\2\2`\u026d\3\2\2\2b\u027a\3\2\2\2"+
+		"d\u0283\3\2\2\2f\u0285\3\2\2\2h\u0291\3\2\2\2j\u029d\3\2\2\2l\u02a9\3"+
+		"\2\2\2n\u02b5\3\2\2\2p\u02c1\3\2\2\2r\u02cd\3\2\2\2t\u02dd\3\2\2\2v\u02e3"+
+		"\3\2\2\2x\u02ee\3\2\2\2z\u02fe\3\2\2\2|\u0300\3\2\2\2~\u0304\3\2\2\2\u0080"+
+		"\u030c\3\2\2\2\u0082\u0314\3\2\2\2\u0084\u031c\3\2\2\2\u0086\u0324\3\2"+
+		"\2\2\u0088\u0326\3\2\2\2\u008a\u0328\3\2\2\2\u008c\u032a\3\2\2\2\u008e"+
+		"\u032c\3\2\2\2\u0090\u032e\3\2\2\2\u0092\u0330\3\2\2\2\u0094\u0332\3\2"+
+		"\2\2\u0096\u0334\3\2\2\2\u0098\u0336\3\2\2\2\u009a\u0338\3\2\2\2\u009c"+
+		"\u033a\3\2\2\2\u009e\u033c\3\2\2\2\u00a0\u033e\3\2\2\2\u00a2\u0340\3\2"+
+		"\2\2\u00a4\u0342\3\2\2\2\u00a6\u0344\3\2\2\2\u00a8\u0346\3\2\2\2\u00aa"+
+		"\u0348\3\2\2\2\u00ac\u00b1\5\6\4\2\u00ad\u00b1\5\16\b\2\u00ae\u00b1\5"+
+		"\64\33\2\u00af\u00b1\5*\26\2\u00b0\u00ac\3\2\2\2\u00b0\u00ad\3\2\2\2\u00b0"+
+		"\u00ae\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1\u00b4\3\2\2\2\u00b2\u00b0\3\2"+
+		"\2\2\u00b2\u00b3\3\2\2\2\u00b3\u00b5\3\2\2\2\u00b4\u00b2\3\2\2\2\u00b5"+
+		"\u00b6\5\4\3\2\u00b6\u00b7\7\2\2\3\u00b7\3\3\2\2\2\u00b8\u00b9\7+\2\2"+
+		"\u00b9\u00ba\5\34\17\2\u00ba\5\3\2\2\2\u00bb\u00bc\7,\2\2\u00bc\u00bd"+
+		"\5\b\5\2\u00bd\u00be\5\n\6\2\u00be\u00bf\5\34\17\2\u00bf\7\3\2\2\2\u00c0"+
+		"\u00c5\5\u0082B\2\u00c1\u00c2\7\3\2\2\u00c2\u00c4\7\4\2\2\u00c3\u00c1"+
+		"\3\2\2\2\u00c4\u00c7\3\2\2\2\u00c5\u00c3\3\2\2\2\u00c5\u00c6\3\2\2\2\u00c6"+
+		"\u00c8\3\2\2\2\u00c7\u00c5\3\2\2\2\u00c8\u00c9\5\u0088E\2\u00c9\t\3\2"+
+		"\2\2\u00ca\u00cc\7\5\2\2\u00cb\u00cd\5\f\7\2\u00cc\u00cb\3\2\2\2\u00cc"+
+		"\u00cd\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce\u00cf\7\6\2\2\u00cf\13\3\2\2"+
+		"\2\u00d0\u00d4\5\u0086D\2\u00d1\u00d3\5\66\34\2\u00d2\u00d1\3\2\2\2\u00d3"+
+		"\u00d6\3\2\2\2\u00d4\u00d2\3\2\2\2\u00d4\u00d5\3\2\2\2\u00d5\u00d7\3\2"+
+		"\2\2\u00d6\u00d4\3\2\2\2\u00d7\u00e4\5\u0088E\2\u00d8\u00d9\7\7\2\2\u00d9"+
+		"\u00dd\5\u0086D\2\u00da\u00dc\5\66\34\2\u00db\u00da\3\2\2\2\u00dc\u00df"+
+		"\3\2\2\2\u00dd\u00db\3\2\2\2\u00dd\u00de\3\2\2\2\u00de\u00e0\3\2\2\2\u00df"+
+		"\u00dd\3\2\2\2\u00e0\u00e1\5\u0088E\2\u00e1\u00e3\3\2\2\2\u00e2\u00d8"+
+		"\3\2\2\2\u00e3\u00e6\3\2\2\2\u00e4\u00e2\3\2\2\2\u00e4\u00e5\3\2\2\2\u00e5"+
+		"\r\3\2\2\2\u00e6\u00e4\3\2\2\2\u00e7\u00e8\7-\2\2\u00e8\u00ea\5\u0088"+
+		"E\2\u00e9\u00eb\5\22\n\2\u00ea\u00e9\3\2\2\2\u00ea\u00eb\3\2\2\2\u00eb"+
+		"\u00ec\3\2\2\2\u00ec\u00f5\7\b\2\2\u00ed\u00ef\5\24\13\2\u00ee\u00f0\5"+
+		"\20\t\2\u00ef\u00ee\3\2\2\2\u00f0\u00f1\3\2\2\2\u00f1\u00ef\3\2\2\2\u00f1"+
+		"\u00f2\3\2\2\2\u00f2\u00f4\3\2\2\2\u00f3\u00ed\3\2\2\2\u00f4\u00f7\3\2"+
+		"\2\2\u00f5\u00f3\3\2\2\2\u00f5\u00f6\3\2\2\2\u00f6\u00f8\3\2\2\2\u00f7"+
+		"\u00f5\3\2\2\2\u00f8\u00f9\7\t\2\2\u00f9\17\3\2\2\2\u00fa\u00fe\5\26\f"+
+		"\2\u00fb\u00fe\5\32\16\2\u00fc\u00fe\5\30\r\2\u00fd\u00fa\3\2\2\2\u00fd"+
+		"\u00fb\3\2\2\2\u00fd\u00fc\3\2\2\2\u00fe\21\3\2\2\2\u00ff\u0100\7\64\2"+
+		"\2\u0100\u0105\5\u0088E\2\u0101\u0102\7\7\2\2\u0102\u0104\5\u0088E\2\u0103"+
+		"\u0101\3\2\2\2\u0104\u0107\3\2\2\2\u0105\u0103\3\2\2\2\u0105\u0106\3\2"+
+		"\2\2\u0106\23\3\2\2\2\u0107\u0105\3\2\2\2\u0108\u0109\t\2\2\2\u0109\25"+
+		"\3\2\2\2\u010a\u010b\7\63\2\2\u010b\u010c\5\u0088E\2\u010c\u010d\5\n\6"+
+		"\2\u010d\u010e\5\34\17\2\u010e\27\3\2\2\2\u010f\u0110\7\62\2\2\u0110\u0111"+
+		"\5\b\5\2\u0111\u0112\5\n\6\2\u0112\u0113\5\34\17\2\u0113\31\3\2\2\2\u0114"+
+		"\u0115\7/\2\2\u0115\u0119\5\u0086D\2\u0116\u0118\5\66\34\2\u0117\u0116"+
+		"\3\2\2\2\u0118\u011b\3\2\2\2\u0119\u0117\3\2\2\2\u0119\u011a\3\2\2\2\u011a"+
+		"\u011c\3\2\2\2\u011b\u0119\3\2\2\2\u011c\u011d\5\u0088E\2\u011d\u011e"+
+		"\7\n\2\2\u011e\33\3\2\2\2\u011f\u0123\7\b\2\2\u0120\u0122\5\36\20\2\u0121"+
+		"\u0120\3\2\2\2\u0122\u0125\3\2\2\2\u0123\u0121\3\2\2\2\u0123\u0124\3\2"+
+		"\2\2\u0124\u0126\3\2\2\2\u0125\u0123\3\2\2\2\u0126\u0127\7\t\2\2\u0127"+
+		"\35\3\2\2\2\u0128\u013b\5 \21\2\u0129\u013b\5\"\22\2\u012a\u012b\5$\23"+
+		"\2\u012b\u012c\7\n\2\2\u012c\u013b\3\2\2\2\u012d\u013b\5&\24\2\u012e\u013b"+
+		"\5,\27\2\u012f\u013b\5*\26\2\u0130\u013b\5\34\17\2\u0131\u0132\5\62\32"+
+		"\2\u0132\u0133\7\n\2\2\u0133\u013b\3\2\2\2\u0134\u0135\5d\63\2\u0135\u0136"+
+		"\7\n\2\2\u0136\u013b\3\2\2\2\u0137\u0138\5(\25\2\u0138\u0139\7\n\2\2\u0139"+
+		"\u013b\3\2\2\2\u013a\u0128\3\2\2\2\u013a\u0129\3\2\2\2\u013a\u012a\3\2"+
+		"\2\2\u013a\u012d\3\2\2\2\u013a\u012e\3\2\2\2\u013a\u012f\3\2\2\2\u013a"+
+		"\u0130\3\2\2\2\u013a\u0131\3\2\2\2\u013a\u0134\3\2\2\2\u013a\u0137\3\2"+
+		"\2\2\u013b\37\3\2\2\2\u013c\u013d\79\2\2\u013d\u013e\5\60\31\2\u013e\u0141"+
+		"\5\36\20\2\u013f\u0140\7:\2\2\u0140\u0142\5\36\20\2\u0141\u013f\3\2\2"+
+		"\2\u0141\u0142\3\2\2\2\u0142!\3\2\2\2\u0143\u0144\7;\2\2\u0144\u0145\5"+
+		"\60\31\2\u0145\u0146\5\34\17\2\u0146#\3\2\2\2\u0147\u0148\7<\2\2\u0148"+
+		"\u0149\5\34\17\2\u0149\u014a\7;\2\2\u014a\u014b\5\60\31\2\u014b%\3\2\2"+
+		"\2\u014c\u014d\7=\2\2\u014d\u0150\7\5\2\2\u014e\u0151\5\62\32\2\u014f"+
+		"\u0151\5f\64\2\u0150\u014e\3\2\2\2\u0150\u014f\3\2\2\2\u0150\u0151\3\2"+
+		"\2\2\u0151\u0152\3\2\2\2\u0152\u0154\7\n\2\2\u0153\u0155\5f\64\2\u0154"+
+		"\u0153\3\2\2\2\u0154\u0155\3\2\2\2\u0155\u0156\3\2\2\2\u0156\u0158\7\n"+
+		"\2\2\u0157\u0159\5f\64\2\u0158\u0157\3\2\2\2\u0158\u0159\3\2\2\2\u0159"+
+		"\u015a\3\2\2\2\u015a\u015b\7\6\2\2\u015b\u015c\5\34\17\2\u015c\'\3\2\2"+
+		"\2\u015d\u0166\7?\2\2\u015e\u0166\7>\2\2\u015f\u0160\7@\2\2\u0160\u0166"+
+		"\5\u0088E\2\u0161\u0163\7A\2\2\u0162\u0164\5d\63\2\u0163\u0162\3\2\2\2"+
+		"\u0163\u0164\3\2\2\2\u0164\u0166\3\2\2\2\u0165\u015d\3\2\2\2\u0165\u015e"+
+		"\3\2\2\2\u0165\u015f\3\2\2\2\u0165\u0161\3\2\2\2\u0166)\3\2\2\2\u0167"+
+		"\u0168\7B\2\2\u0168\u0169\5\u0088E\2\u0169\u016a\5\34\17\2\u016a+\3\2"+
+		"\2\2\u016b\u016c\7C\2\2\u016c\u016d\5\60\31\2\u016d\u016f\7\b\2\2\u016e"+
+		"\u0170\5.\30\2\u016f\u016e\3\2\2\2\u0170\u0171\3\2\2\2\u0171\u016f\3\2"+
+		"\2\2\u0171\u0172\3\2\2\2\u0172\u0173\3\2\2\2\u0173\u0174\7\t\2\2\u0174"+
+		"-\3\2\2\2\u0175\u0176\7D\2\2\u0176\u0177\5B\"\2\u0177\u0178\7\13\2\2\u0178"+
+		"\u0179\5\34\17\2\u0179\u017e\3\2\2\2\u017a\u017b\7E\2\2\u017b\u017c\7"+
+		"\13\2\2\u017c\u017e\5\34\17\2\u017d\u0175\3\2\2\2\u017d\u017a\3\2\2\2"+
+		"\u017e/\3\2\2\2\u017f\u0180\7\5\2\2\u0180\u0181\5f\64\2\u0181\u0182\7"+
+		"\6\2\2\u0182\61\3\2\2\2\u0183\u0187\5\u0086D\2\u0184\u0186\5\66\34\2\u0185"+
+		"\u0184\3\2\2\2\u0186\u0189\3\2\2\2\u0187\u0185\3\2\2\2\u0187\u0188\3\2"+
+		"\2\2\u0188\u018a\3\2\2\2\u0189\u0187\3\2\2\2\u018a\u0190\5\u0088E\2\u018b"+
+		"\u018e\7\f\2\2\u018c\u018f\5f\64\2\u018d\u018f\5z>\2\u018e\u018c\3\2\2"+
+		"\2\u018e\u018d\3\2\2\2\u018f\u0191\3\2\2\2\u0190\u018b\3\2\2\2\u0190\u0191"+
+		"\3\2\2\2\u0191\63\3\2\2\2\u0192\u0194\7\61\2\2\u0193\u0195\5\u008aF\2"+
+		"\u0194\u0193\3\2\2\2\u0194\u0195\3\2\2\2\u0195\u0196\3\2\2\2\u0196\u019a"+
+		"\5\u0086D\2\u0197\u0199\5\66\34\2\u0198\u0197\3\2\2\2\u0199\u019c\3\2"+
+		"\2\2\u019a\u0198\3\2\2\2\u019a\u019b\3\2\2\2\u019b\u019d\3\2\2\2\u019c"+
+		"\u019a\3\2\2\2\u019d\u019e\5\u0088E\2\u019e\u01a1\7\f\2\2\u019f\u01a2"+
+		"\5B\"\2\u01a0\u01a2\58\35\2\u01a1\u019f\3\2\2\2\u01a1\u01a0\3\2\2\2\u01a2"+
+		"\u01a3\3\2\2\2\u01a3\u01a4\7\n\2\2\u01a4\65\3\2\2\2\u01a5\u01a7\7\3\2"+
+		"\2\u01a6\u01a8\5B\"\2\u01a7\u01a6\3\2\2\2\u01a7\u01a8\3\2\2\2\u01a8\u01a9"+
+		"\3\2\2\2\u01a9\u01aa\7\4\2\2\u01aa\67\3\2\2\2\u01ab\u01ac\7\b\2\2\u01ac"+
+		"\u01ad\5<\37\2\u01ad\u01ae\7\t\2\2\u01ae\u01ba\3\2\2\2\u01af\u01b0\7\b"+
+		"\2\2\u01b0\u01b3\5:\36\2\u01b1\u01b2\7\7\2\2\u01b2\u01b4\5:\36\2\u01b3"+
+		"\u01b1\3\2\2\2\u01b4\u01b5\3\2\2\2\u01b5\u01b3\3\2\2\2\u01b5\u01b6\3\2"+
+		"\2\2\u01b6\u01b7\3\2\2\2\u01b7\u01b8\7\t\2\2\u01b8\u01ba\3\2\2\2\u01b9"+
+		"\u01ab\3\2\2\2\u01b9\u01af\3\2\2\2\u01ba9\3\2\2\2\u01bb\u01bc\7\b\2\2"+
+		"\u01bc\u01bd\5<\37\2\u01bd\u01be\7\t\2\2\u01be;\3\2\2\2\u01bf\u01c4\5"+
+		"B\"\2\u01c0\u01c1\7\7\2\2\u01c1\u01c3\5B\"\2\u01c2\u01c0\3\2\2\2\u01c3"+
+		"\u01c6\3\2\2\2\u01c4\u01c2\3\2\2\2\u01c4\u01c5\3\2\2\2\u01c5=\3\2\2\2"+
+		"\u01c6\u01c4\3\2\2\2\u01c7\u01c8\5\u0088E\2\u01c8?\3\2\2\2\u01c9\u01ce"+
+		"\5\u0088E\2\u01ca\u01cb\7\3\2\2\u01cb\u01cc\5B\"\2\u01cc\u01cd\7\4\2\2"+
+		"\u01cd\u01cf\3\2\2\2\u01ce\u01ca\3\2\2\2\u01cf\u01d0\3\2\2\2\u01d0\u01ce"+
+		"\3\2\2\2\u01d0\u01d1\3\2\2\2\u01d1A\3\2\2\2\u01d2\u01d3\b\"\1\2\u01d3"+
+		"\u01d4\5D#\2\u01d4\u01db\3\2\2\2\u01d5\u01d6\f\4\2\2\u01d6\u01d7\5\u009a"+
+		"N\2\u01d7\u01d8\5D#\2\u01d8\u01da\3\2\2\2\u01d9\u01d5\3\2\2\2\u01da\u01dd"+
+		"\3\2\2\2\u01db\u01d9\3\2\2\2\u01db\u01dc\3\2\2\2\u01dcC\3\2\2\2\u01dd"+
+		"\u01db\3\2\2\2\u01de\u01df\b#\1\2\u01df\u01e0\5F$\2\u01e0\u01e7\3\2\2"+
+		"\2\u01e1\u01e2\f\4\2\2\u01e2\u01e3\5\u009cO\2\u01e3\u01e4\5F$\2\u01e4"+
+		"\u01e6\3\2\2\2\u01e5\u01e1\3\2\2\2\u01e6\u01e9\3\2\2\2\u01e7\u01e5\3\2"+
+		"\2\2\u01e7\u01e8\3\2\2\2\u01e8E\3\2\2\2\u01e9\u01e7\3\2\2\2\u01ea\u01eb"+
+		"\b$\1\2\u01eb\u01ec\5H%\2\u01ec\u01f3\3\2\2\2\u01ed\u01ee\f\4\2\2\u01ee"+
+		"\u01ef\5\u009eP\2\u01ef\u01f0\5H%\2\u01f0\u01f2\3\2\2\2\u01f1\u01ed\3"+
+		"\2\2\2\u01f2\u01f5\3\2\2\2\u01f3\u01f1\3\2\2\2\u01f3\u01f4\3\2\2\2\u01f4"+
+		"G\3\2\2\2\u01f5\u01f3\3\2\2\2\u01f6\u01f7\b%\1\2\u01f7\u01f8\5J&\2\u01f8"+
+		"\u01ff\3\2\2\2\u01f9\u01fa\f\4\2\2\u01fa\u01fb\5\u00a0Q\2\u01fb\u01fc"+
+		"\5J&\2\u01fc\u01fe\3\2\2\2\u01fd\u01f9\3\2\2\2\u01fe\u0201\3\2\2\2\u01ff"+
+		"\u01fd\3\2\2\2\u01ff\u0200\3\2\2\2\u0200I\3\2\2\2\u0201\u01ff\3\2\2\2"+
+		"\u0202\u0203\b&\1\2\u0203\u0204\5L\'\2\u0204\u020b\3\2\2\2\u0205\u0206"+
+		"\f\4\2\2\u0206\u0207\5\u00a2R\2\u0207\u0208\5L\'\2\u0208\u020a\3\2\2\2"+
+		"\u0209\u0205\3\2\2\2\u020a\u020d\3\2\2\2\u020b\u0209\3\2\2\2\u020b\u020c"+
+		"\3\2\2\2\u020cK\3\2\2\2\u020d\u020b\3\2\2\2\u020e\u020f\b\'\1\2\u020f"+
+		"\u0210\5N(\2\u0210\u0217\3\2\2\2\u0211\u0212\f\4\2\2\u0212\u0213\5\u00a4"+
+		"S\2\u0213\u0214\5N(\2\u0214\u0216\3\2\2\2\u0215\u0211\3\2\2\2\u0216\u0219"+
+		"\3\2\2\2\u0217\u0215\3\2\2\2\u0217\u0218\3\2\2\2\u0218M\3\2\2\2\u0219"+
+		"\u0217\3\2\2\2\u021a\u021b\b(\1\2\u021b\u021c\5P)\2\u021c\u0223\3\2\2"+
+		"\2\u021d\u021e\f\4\2\2\u021e\u021f\5\u00a6T\2\u021f\u0220\5P)\2\u0220"+
+		"\u0222\3\2\2\2\u0221\u021d\3\2\2\2\u0222\u0225\3\2\2\2\u0223\u0221\3\2"+
+		"\2\2\u0223\u0224\3\2\2\2\u0224O\3\2\2\2\u0225\u0223\3\2\2\2\u0226\u0227"+
+		"\5\u00a8U\2\u0227\u0228\5R*\2\u0228\u022b\3\2\2\2\u0229\u022b\5R*\2\u022a"+
+		"\u0226\3\2\2\2\u022a\u0229\3\2\2\2\u022bQ\3\2\2\2\u022c\u0234\5\u0084"+
+		"C\2\u022d\u022e\7\5\2\2\u022e\u022f\5B\"\2\u022f\u0230\7\6\2\2\u0230\u0234"+
+		"\3\2\2\2\u0231\u0234\5> \2\u0232\u0234\5@!\2\u0233\u022c\3\2\2\2\u0233"+
+		"\u022d\3\2\2\2\u0233\u0231\3\2\2\2\u0233\u0232\3\2\2\2\u0234S\3\2\2\2"+
+		"\u0235\u0236\7\3\2\2\u0236\u0237\5d\63\2\u0237\u0238\7\4\2\2\u0238U\3"+
+		"\2\2\2\u0239\u023a\5\u0088E\2\u023a\u023b\5\u0080A\2\u023bW\3\2\2\2\u023c"+
+		"\u023d\7J\2\2\u023d\u023e\5\u0088E\2\u023e\u0242\5\u0080A\2\u023f\u0241"+
+		"\5T+\2\u0240\u023f\3\2\2\2\u0241\u0244\3\2\2\2\u0242\u0240\3\2\2\2\u0242"+
+		"\u0243\3\2\2\2\u0243\u0248\3\2\2\2\u0244\u0242\3\2\2\2\u0245\u0247\5`"+
+		"\61\2\u0246\u0245\3\2\2\2\u0247\u024a\3\2\2\2\u0248\u0246\3\2\2\2\u0248"+
+		"\u0249\3\2\2\2\u0249Y\3\2\2\2\u024a\u0248\3\2\2\2\u024b\u024c\5\u0088"+
+		"E\2\u024c\u0250\5\u0080A\2\u024d\u024f\5T+\2\u024e\u024d\3\2\2\2\u024f"+
+		"\u0252\3\2\2\2\u0250\u024e\3\2\2\2\u0250\u0251\3\2\2\2\u0251\u0256\3\2"+
+		"\2\2\u0252\u0250\3\2\2\2\u0253\u0255\5`\61\2\u0254\u0253\3\2\2\2\u0255"+
+		"\u0258\3\2\2\2\u0256\u0254\3\2\2\2\u0256\u0257\3\2\2\2\u0257[\3\2\2\2"+
+		"\u0258\u0256\3\2\2\2\u0259\u025d\7H\2\2\u025a\u025c\5`\61\2\u025b\u025a"+
+		"\3\2\2\2\u025c\u025f\3\2\2\2\u025d\u025b\3\2\2\2\u025d\u025e\3\2\2\2\u025e"+
+		"]\3\2\2\2\u025f\u025d\3\2\2\2\u0260\u0264\5\u0088E\2\u0261\u0263\5T+\2"+
+		"\u0262\u0261\3\2\2\2\u0263\u0266\3\2\2\2\u0264\u0262\3\2\2\2\u0264\u0265"+
+		"\3\2\2\2\u0265\u026a\3\2\2\2\u0266\u0264\3\2\2\2\u0267\u0269\5`\61\2\u0268"+
+		"\u0267\3\2\2\2\u0269\u026c\3\2\2\2\u026a\u0268\3\2\2\2\u026a\u026b\3\2"+
+		"\2\2\u026b_\3\2\2\2\u026c\u026a\3\2\2\2\u026d\u0270\7\r\2\2\u026e\u0271"+
+		"\5\u0088E\2\u026f\u0271\5V,\2\u0270\u026e\3\2\2\2\u0270\u026f\3\2\2\2"+
+		"\u0271\u0275\3\2\2\2\u0272\u0274\5T+\2\u0273\u0272\3\2\2\2\u0274\u0277"+
+		"\3\2\2\2\u0275\u0273\3\2\2\2\u0275\u0276\3\2\2\2\u0276a\3\2\2\2\u0277"+
+		"\u0275\3\2\2\2\u0278\u027b\5\\/\2\u0279\u027b\5^\60\2\u027a\u0278\3\2"+
+		"\2\2\u027a\u0279\3\2\2\2\u027bc\3\2\2\2\u027c\u027d\5b\62\2\u027d\u0280"+
+		"\5\u0098M\2\u027e\u0281\5d\63\2\u027f\u0281\5z>\2\u0280\u027e\3\2\2\2"+
+		"\u0280\u027f\3\2\2\2\u0281\u0284\3\2\2\2\u0282\u0284\5f\64\2\u0283\u027c"+
+		"\3\2\2\2\u0283\u0282\3\2\2\2\u0284e\3\2\2\2\u0285\u0286\b\64\1\2\u0286"+
+		"\u0287\5h\65\2\u0287\u028e\3\2\2\2\u0288\u0289\f\4\2\2\u0289\u028a\5\u009a"+
+		"N\2\u028a\u028b\5h\65\2\u028b\u028d\3\2\2\2\u028c\u0288\3\2\2\2\u028d"+
+		"\u0290\3\2\2\2\u028e\u028c\3\2\2\2\u028e\u028f\3\2\2\2\u028fg\3\2\2\2"+
+		"\u0290\u028e\3\2\2\2\u0291\u0292\b\65\1\2\u0292\u0293\5j\66\2\u0293\u029a"+
+		"\3\2\2\2\u0294\u0295\f\4\2\2\u0295\u0296\5\u009cO\2\u0296\u0297\5j\66"+
+		"\2\u0297\u0299\3\2\2\2\u0298\u0294\3\2\2\2\u0299\u029c\3\2\2\2\u029a\u0298"+
+		"\3\2\2\2\u029a\u029b\3\2\2\2\u029bi\3\2\2\2\u029c\u029a\3\2\2\2\u029d"+
+		"\u029e\b\66\1\2\u029e\u029f\5l\67\2\u029f\u02a6\3\2\2\2\u02a0\u02a1\f"+
+		"\4\2\2\u02a1\u02a2\5\u009eP\2\u02a2\u02a3\5l\67\2\u02a3\u02a5\3\2\2\2"+
+		"\u02a4\u02a0\3\2\2\2\u02a5\u02a8\3\2\2\2\u02a6\u02a4\3\2\2\2\u02a6\u02a7"+
+		"\3\2\2\2\u02a7k\3\2\2\2\u02a8\u02a6\3\2\2\2\u02a9\u02aa\b\67\1\2\u02aa"+
+		"\u02ab\5n8\2\u02ab\u02b2\3\2\2\2\u02ac\u02ad\f\4\2\2\u02ad\u02ae\5\u00a0"+
+		"Q\2\u02ae\u02af\5n8\2\u02af\u02b1\3\2\2\2\u02b0\u02ac\3\2\2\2\u02b1\u02b4"+
+		"\3\2\2\2\u02b2\u02b0\3\2\2\2\u02b2\u02b3\3\2\2\2\u02b3m\3\2\2\2\u02b4"+
+		"\u02b2\3\2\2\2\u02b5\u02b6\b8\1\2\u02b6\u02b7\5p9\2\u02b7\u02be\3\2\2"+
+		"\2\u02b8\u02b9\f\4\2\2\u02b9\u02ba\5\u00a2R\2\u02ba\u02bb\5p9\2\u02bb"+
+		"\u02bd\3\2\2\2\u02bc\u02b8\3\2\2\2\u02bd\u02c0\3\2\2\2\u02be\u02bc\3\2"+
+		"\2\2\u02be\u02bf\3\2\2\2\u02bfo\3\2\2\2\u02c0\u02be\3\2\2\2\u02c1\u02c2"+
+		"\b9\1\2\u02c2\u02c3\5r:\2\u02c3\u02ca\3\2\2\2\u02c4\u02c5\f\4\2\2\u02c5"+
+		"\u02c6\5\u00a4S\2\u02c6\u02c7\5r:\2\u02c7\u02c9\3\2\2\2\u02c8\u02c4\3"+
+		"\2\2\2\u02c9\u02cc\3\2\2\2\u02ca\u02c8\3\2\2\2\u02ca\u02cb\3\2\2\2\u02cb"+
+		"q\3\2\2\2\u02cc\u02ca\3\2\2\2\u02cd\u02ce\b:\1\2\u02ce\u02cf\5t;\2\u02cf"+
+		"\u02d6\3\2\2\2\u02d0\u02d1\f\4\2\2\u02d1\u02d2\5\u00a6T\2\u02d2\u02d3"+
+		"\5t;\2\u02d3\u02d5\3\2\2\2\u02d4\u02d0\3\2\2\2\u02d5\u02d8\3\2\2\2\u02d6"+
+		"\u02d4\3\2\2\2\u02d6\u02d7\3\2\2\2\u02d7s\3\2\2\2\u02d8\u02d6\3\2\2\2"+
+		"\u02d9\u02da\5\u00a8U\2\u02da\u02db\5t;\2\u02db\u02de\3\2\2\2\u02dc\u02de"+
+		"\5v<\2\u02dd\u02d9\3\2\2\2\u02dd\u02dc\3\2\2\2\u02deu\3\2\2\2\u02df\u02e0"+
+		"\5x=\2\u02e0\u02e1\5\u00aaV\2\u02e1\u02e4\3\2\2\2\u02e2\u02e4\5x=\2\u02e3"+
+		"\u02df\3\2\2\2\u02e3\u02e2\3\2\2\2\u02e4w\3\2\2\2\u02e5\u02e6\7\5\2\2"+
+		"\u02e6\u02e7\5f\64\2\u02e7\u02e8\7\6\2\2\u02e8\u02ef\3\2\2\2\u02e9\u02ef"+
+		"\5X-\2\u02ea\u02ef\5Z.\2\u02eb\u02ef\5^\60\2\u02ec\u02ef\5\\/\2\u02ed"+
+		"\u02ef\5\u0084C\2\u02ee\u02e5\3\2\2\2\u02ee\u02e9\3\2\2\2\u02ee\u02ea"+
+		"\3\2\2\2\u02ee\u02eb\3\2\2\2\u02ee\u02ec\3\2\2\2\u02ee\u02ed\3\2\2\2\u02ef"+
+		"y\3\2\2\2\u02f0\u02f1\7\b\2\2\u02f1\u02f2\5~@\2\u02f2\u02f3\7\t\2\2\u02f3"+
+		"\u02ff\3\2\2\2\u02f4\u02f5\7\b\2\2\u02f5\u02f8\5|?\2\u02f6\u02f7\7\7\2"+
+		"\2\u02f7\u02f9\5|?\2\u02f8\u02f6\3\2\2\2\u02f9\u02fa\3\2\2\2\u02fa\u02f8"+
+		"\3\2\2\2\u02fa\u02fb\3\2\2\2\u02fb\u02fc\3\2\2\2\u02fc\u02fd\7\t\2\2\u02fd"+
+		"\u02ff\3\2\2\2\u02fe\u02f0\3\2\2\2\u02fe\u02f4\3\2\2\2\u02ff{\3\2\2\2"+
+		"\u0300\u0301\7\b\2\2\u0301\u0302\5~@\2\u0302\u0303\7\t\2\2\u0303}\3\2"+
+		"\2\2\u0304\u0309\5f\64\2\u0305\u0306\7\7\2\2\u0306\u0308\5f\64\2\u0307"+
+		"\u0305\3\2\2\2\u0308\u030b\3\2\2\2\u0309\u0307\3\2\2\2\u0309\u030a\3\2"+
+		"\2\2\u030a\177\3\2\2\2\u030b\u0309\3\2\2\2\u030c\u030e\7\5\2\2\u030d\u030f"+
+		"\5~@\2\u030e\u030d\3\2\2\2\u030e\u030f\3\2\2\2\u030f\u0310\3\2\2\2\u0310"+
+		"\u0311\7\6\2\2\u0311\u0081\3\2\2\2\u0312\u0315\7.\2\2\u0313\u0315\5\u0086"+
+		"D\2\u0314\u0312\3\2\2\2\u0314\u0313\3\2\2\2\u0315\u0083\3\2\2\2\u0316"+
+		"\u031d\5\u008cG\2\u0317\u031d\5\u008eH\2\u0318\u031d\5\u0090I\2\u0319"+
+		"\u031d\5\u0092J\2\u031a\u031d\5\u0094K\2\u031b\u031d\5\u0096L\2\u031c"+
+		"\u0316\3\2\2\2\u031c\u0317\3\2\2\2\u031c\u0318\3\2\2\2\u031c\u0319\3\2"+
+		"\2\2\u031c\u031a\3\2\2\2\u031c\u031b\3\2\2\2\u031d\u0085\3\2\2\2\u031e"+
+		"\u0325\7\16\2\2\u031f\u0325\7\17\2\2\u0320\u0325\7\20\2\2\u0321\u0325"+
+		"\7\21\2\2\u0322\u0325\7\22\2\2\u0323\u0325\5\u0088E\2\u0324\u031e\3\2"+
+		"\2\2\u0324\u031f\3\2\2\2\u0324\u0320\3\2\2\2\u0324\u0321\3\2\2\2\u0324"+
+		"\u0322\3\2\2\2\u0324\u0323\3\2\2\2\u0325\u0087\3\2\2\2\u0326\u0327\7P"+
+		"\2\2\u0327\u0089\3\2\2\2\u0328\u0329\78\2\2\u0329\u008b\3\2\2\2\u032a"+
+		"\u032b\7M\2\2\u032b\u008d\3\2\2\2\u032c\u032d\7L\2\2\u032d\u008f\3\2\2"+
+		"\2\u032e\u032f\7O\2\2\u032f\u0091\3\2\2\2\u0330\u0331\7N\2\2\u0331\u0093"+
+		"\3\2\2\2\u0332\u0333\t\3\2\2\u0333\u0095\3\2\2\2\u0334\u0335\7I\2\2\u0335"+
+		"\u0097\3\2\2\2\u0336\u0337\t\4\2\2\u0337\u0099\3\2\2\2\u0338\u0339\t\5"+
+		"\2\2\u0339\u009b\3\2\2\2\u033a\u033b\t\6\2\2\u033b\u009d\3\2\2\2\u033c"+
+		"\u033d\t\7\2\2\u033d\u009f\3\2\2\2\u033e\u033f\t\b\2\2\u033f\u00a1\3\2"+
+		"\2\2\u0340\u0341\t\t\2\2\u0341\u00a3\3\2\2\2\u0342\u0343\t\n\2\2\u0343"+
+		"\u00a5\3\2\2\2\u0344\u0345\7\'\2\2\u0345\u00a7\3\2\2\2\u0346\u0347\t\13"+
+		"\2\2\u0347\u00a9\3\2\2\2\u0348\u0349\t\f\2\2\u0349\u00ab\3\2\2\2J\u00b0"+
+		"\u00b2\u00c5\u00cc\u00d4\u00dd\u00e4\u00ea\u00f1\u00f5\u00fd\u0105\u0119"+
+		"\u0123\u013a\u0141\u0150\u0154\u0158\u0163\u0165\u0171\u017d\u0187\u018e"+
+		"\u0190\u0194\u019a\u01a1\u01a7\u01b5\u01b9\u01c4\u01d0\u01db\u01e7\u01f3"+
+		"\u01ff\u020b\u0217\u0223\u022a\u0233\u0242\u0248\u0250\u0256\u025d\u0264"+
+		"\u026a\u0270\u0275\u027a\u0280\u0283\u028e\u029a\u02a6\u02b2\u02be\u02ca"+
+		"\u02d6\u02dd\u02e3\u02ee\u02fa\u02fe\u0309\u030e\u0314\u031c\u0324";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
