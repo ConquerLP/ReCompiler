@@ -1,8 +1,6 @@
 package ch.compiler.misc.AST.nodes.statements;
 
-import ch.compiler.misc.AST.nodes.symbolTable.EntryLabel;
-import ch.compiler.misc.AST.nodes.symbolTable.SymbolEntry;
-import ch.compiler.misc.AST.nodes.symbolTable.SymbolTableEntry;
+import ch.compiler.misc.AST.nodes.symbolTable.*;
 
 public class Label extends Statement implements SymbolEntry {
 

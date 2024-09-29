@@ -1,11 +1,9 @@
 package ch.compiler.misc.AST.nodes.declaration;
 
 import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
-import ch.compiler.misc.AST.nodes.symbolTable.EntryVariable;
-import ch.compiler.misc.AST.nodes.symbolTable.SymbolTableEntry;
-import ch.compiler.misc.AST.nodes.symbolTable.Type;
+import ch.compiler.misc.AST.nodes.symbolTable.*;
 
-public class GlobalDeclaration extends Declaration {
+public class GlobalDeclaration extends Declaration implements SymbolEntry, Resolvable {
 
     public GlobalDeclaration(Type type, String identifier, ExpressionNode exp) {
         super(type, identifier, exp);
@@ -14,5 +12,10 @@ public class GlobalDeclaration extends Declaration {
     @Override
     public SymbolTableEntry toEntry() {
         return new EntryVariable(name, type);
+    }
+
+    @Override
+    public void resolve(SymbolTable table) throws RuntimeException {
+
     }
 }

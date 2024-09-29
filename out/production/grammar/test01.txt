@@ -1,13 +1,2 @@
 
-global: int i[] = {};
-
-
-
-/*
-func: int f0(int[] a, int[2+1] b){}
-func: int[] f1(){}
-*/
-main: {
-
-
-}
+123;

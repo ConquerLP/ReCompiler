@@ -139,7 +139,7 @@ relOP: '<' | '<=' | '>' | '>=' ;
 addOP: '+' | '-' ;
 multOP: '*' | '/' | '%' ;
 expOP: '^' ;
-preOP: '!' | '-' | '+' | NOT;
+preOP: '!' | '-' | '+' | 'not';
 postOP: '++' | '--' ;
 
 //Tokens
@@ -178,7 +178,6 @@ FALSE: 'false' ;
 THIS: 'this' ;
 NULL: 'null' ;
 NEW: 'new' ;
-NOT: 'not' ;
 
 //MISC
 INT_LIT: [0-9]+ ;
