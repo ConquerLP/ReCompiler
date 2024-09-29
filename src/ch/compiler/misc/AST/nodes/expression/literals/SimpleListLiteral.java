@@ -5,12 +5,12 @@ import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListLiteral extends ExpressionNode {
+public class SimpleListLiteral extends ExpressionNode {
 
     private final List<ExpressionNode> values = new ArrayList<>();
     private int arrayType;
 
-    public ListLiteral() {
+    public SimpleListLiteral() {
         super(ARRAY);
     }
 
@@ -30,7 +30,7 @@ public class ListLiteral extends ExpressionNode {
         return this;
     }
 
-    public List<ExpressionNode> getValue() {
+    public List<ExpressionNode> getValues() {
         return values;
     }
 

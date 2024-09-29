@@ -82,7 +82,7 @@ constFactor:  constant
 
 //expression
 arrayAccess: '[' expression ']' ;
-methodCall: identifier fArgs ;
+methodCall: identifier '.' fArgs arrayAccess* exprTail* ;
 newObject: NEW identifier fArgs arrayAccess* exprTail* ;
 fCall: identifier fArgs arrayAccess* exprTail* ;
 
@@ -132,15 +132,15 @@ charRule: CHAR_LIT ;
 booleanRule: TRUE | FALSE ;
 refRule: NULL ;
 
-assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '%=' ;
+assignOP: '=' | '+=' | '-=' | '*=' | '/=' | '%=' | '^=' | '**=' ;
 orOP: '||' | 'or' ;
 andOP: '&&' | 'and' ;
 eqOP: '==' | '!=' ;
 relOP: '<' | '<=' | '>' | '>=' ;
 addOP: '+' | '-' ;
 multOP: '*' | '/' | '%' ;
-expOP: '^' ;
-preOP: '!' | '-' | '+' | 'not';
+expOP: '^' | '**' ;
+preOP: '!' | 'not' | '-' | '+' ;
 postOP: '++' | '--' ;
 
 //Tokens

@@ -4,7 +4,6 @@ import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 
 public class NotExpression extends UnaryExpression {
 
-
     public NotExpression(int type, ExpressionNode exp) {
         super(type, exp);
     }
