@@ -4,13 +4,15 @@ import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 
 import java.util.List;
 
-public class ArrayAccess extends AccessNode{
+public class ExpressionTail extends ExpressionNode {
 
-    private VarAccessNode varAccess;
+    private List<ExpressionNode> expressions;
+    private ExpressionNode first;
 
-    public ArrayAccess(VarAccessNode varAccess, List<ExpressionNode> expressions) {
-        super(ARRAY, expressions);
-        this.varAccess = varAccess;
+    public ExpressionTail(ExpressionNode first, List<ExpressionNode> expressions) {
+        super(0);
+        this.first = first;
+        this.expressions = expressions;
     }
 
     @Override

@@ -2,12 +2,14 @@ package ch.compiler.misc.AST.nodes.expression.access;
 
 import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 
-public class VarAccess extends ExpressionNode {
+import java.util.List;
+
+public class VarAccessNode extends AccessNode {
 
     private String name;
 
-    public VarAccess(int type, String name) {
-        super(type);
+    public VarAccessNode(int type, String name, List<ExpressionNode> expressions) {
+        super(type, expressions);
         this.name = name;
     }
 

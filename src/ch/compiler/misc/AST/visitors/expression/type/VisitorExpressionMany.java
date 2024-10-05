@@ -1,9 +1,8 @@
 package ch.compiler.misc.AST.visitors.expression.type;
 
+import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 import ch.compiler.misc.AST.visitors.expression.VisitorExpression;
 import ch.compiler.parser.ReFuggBaseVisitor;
-
-import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 import ch.compiler.parser.ReFuggParser;
 
 import java.util.ArrayList;

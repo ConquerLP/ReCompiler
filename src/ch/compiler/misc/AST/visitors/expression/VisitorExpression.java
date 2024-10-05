@@ -40,7 +40,7 @@ public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
 
     @Override
     public ExpressionNode visitConstVar(ReFuggParser.ConstVarContext ctx) {
-        return new VarAccess(0, ctx.getText());
+        return new VarAccessNode(0, ctx.getText());
     }
 
     @Override
@@ -203,24 +203,39 @@ public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
 
     @Override
     public ExpressionNode visitThisAcces(ReFuggParser.ThisAccesContext ctx) {
-
+        if(ctx.exprTail() != null){
+            ctx.exprTail().forEach(expr -> )
+        }
 
 
         return super.visitThisAcces(ctx);
     }
 
     @Override
-    public ExpressionNode visitVarAcces(ReFuggParser.VarAccesContext ctx) {
-        return new VarAccess(0, ctx.getText());
-    }
-
-    public VarAccess visitVarAccess(ReFuggParser.IdentifierContext id) {
-        return new VarAccess(0, id.getText());
+    public ExpressionNode visitExprTail(ReFuggParser.ExprTailContext ctx) {
+        ExpressionNode first;
+        if (ctx.identifier() != null) {
+            first = new VarAccessNode(0, ctx.identifier().getText());
+        } else if (ctx.methodCall() != null) {
+            first = new VisitorExpression().visitMethodCall(ctx.methodCall());
+        } else {
+            throw new RuntimeException("Invalid expression tail.");
+        }
+        List<ExpressionNode> nodes = new ArrayList<>();
+        nodes.add(first);
+        if (ctx.arrayAccess() != null) {
+            ctx.arrayAccess().forEach(arrayAccess -> nodes.add(new VisitorExpression().visitArrayAccess(arrayAccess)));
+        }
+        return new ExpressionTail(first, nodes);
     }
 
     @Override
-    public ExpressionNode visitExprTail(ReFuggParser.ExprTailContext ctx) {
-        return super.visitExprTail(ctx);
+    public ExpressionNode visitVarAcces(ReFuggParser.VarAccesContext ctx) {
+        return new VarAccessNode(0, ctx.getText());
+    }
+
+    public VarAccessNode visitVarAccess(ReFuggParser.IdentifierContext id) {
+        return new VarAccessNode(0, id.getText());
     }
 
     @Override

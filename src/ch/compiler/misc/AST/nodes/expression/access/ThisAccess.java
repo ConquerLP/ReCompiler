@@ -3,10 +3,12 @@ package ch.compiler.misc.AST.nodes.expression.access;
 import ch.compiler.misc.AST.nodes.expression.ExpressionNode;
 import ch.compiler.misc.AST.nodes.symbolTable.SymbolTableEntry;
 
-public class ThisAccess extends ExpressionNode {
+import java.util.List;
 
-    public ThisAccess() {
-        super(ExpressionNode.THIS);
+public class ThisAccess extends AccessNode {
+
+    public ThisAccess(List  <ExpressionNode> expressions) {
+        super(ExpressionNode.THIS, expressions);
     }
 
     @Override
