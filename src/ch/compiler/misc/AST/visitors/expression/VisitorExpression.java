@@ -46,9 +46,7 @@ public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
     @Override
     public ExpressionNode visitConstArrayAccess(ReFuggParser.ConstArrayAccessContext ctx) {
         List<ExpressionNode> nodes = new ArrayList<>();
-        ctx.constExpr().forEach(constExpr -> {
-            nodes.add(visitConstExpr(constExpr));
-        });
+        ctx.constExpr().forEach(constExpr -> nodes.add(visitConstExpr(constExpr)));
         return new ArrayAccess(visitVarAccess(ctx.identifier()), nodes);
     }
 
@@ -205,6 +203,9 @@ public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
 
     @Override
     public ExpressionNode visitThisAcces(ReFuggParser.ThisAccesContext ctx) {
+
+
+
         return super.visitThisAcces(ctx);
     }
 

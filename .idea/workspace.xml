@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="rewritten grammar rules and the visitors except the expressions">
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/MultipleListLiteral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionAssign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorExpressionMany.java" afterDir="false" />
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="VisitorExpression almost done, except access">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ArrayAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ArrayAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/ListLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/SimpleListLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/NotExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/NotExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.tokens" afterDir="false" />
@@ -61,26 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "noConstant",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Projekte/ReFugg/grammar/ReFugg.g4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;noConstant&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Semester3/Algorithmen und Datenstrukturen/Woche_2/Uebung/ads_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ZHAW INF\OneDrive - ZHAW\Unterlagen\Projekte\ReFugg\grammar" />
@@ -103,21 +97,6 @@
       <recent name="ch.compiler.misc.nodes.constantExpression.unary" />
       <recent name="ch.compiler.misc.visitors.bodys" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="ReFugg" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="ReFugg" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -143,6 +122,10 @@
       <workItem from="1715944636849" duration="1541000" />
       <workItem from="1715947320676" duration="4090000" />
       <workItem from="1716552098745" duration="11000" />
+      <workItem from="1727679423411" duration="1335000" />
+      <workItem from="1727689418874" duration="917000" />
+      <workItem from="1727709624850" duration="2000" />
+      <workItem from="1727777591579" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="update grammar">
       <option name="closed" value="true" />
@@ -198,7 +181,8 @@
     <MESSAGE value="." />
     <MESSAGE value="before messier mess" />
     <MESSAGE value="rewritten grammar rules and the visitors except the expressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="rewritten grammar rules and the visitors except the expressions" />
+    <MESSAGE value="VisitorExpression almost done, except access" />
+    <option name="LAST_COMMIT_MESSAGE" value="VisitorExpression almost done, except access" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

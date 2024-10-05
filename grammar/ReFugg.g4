@@ -19,25 +19,25 @@ poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam block ;
 method: METH fHeader fParam block ;
-classField: FIELD typemodifier type constArray* identifier ';' ;
+classField: FIELD typemodifier type constArray* identifier SEMI ;
 
 //programflow & statements
 block: '{' stmt* '}' ;
 stmt: ifStmt
 	| whileStmt
-	| doWhileStmt ';'
+	| doWhileStmt SEMI
 	| forStmt
 	| switchCase
 	| label
 	| block
-	| varDec ';'
-	| expression ';'
-	| jumpStmt ';'
+	| varDec SEMI
+	| expression SEMI
+	| jumpStmt SEMI
 	;
 ifStmt: IF check stmt (ELSE stmt)? ;
 whileStmt: WHILE check block ;
 doWhileStmt: DO block WHILE check ;
-forStmt: FOR '(' (varDec | orExpression)? ';' orExpression? ';' orExpression? ')' block ;
+forStmt: FOR '(' (varDec | orExpression)? SEMI orExpression? SEMI orExpression? ')' block ;
 jumpStmt: BREAK
 	| CONTINUE
 	| GOTO identifier
@@ -54,7 +54,7 @@ check: '(' orExpression ')' ;
 varDec: typemodifier? type constArray* identifier ('=' (orExpression | list))? ;
 
 //static declarations
-globalVar: GLOBAL typemodifier? type constArray* identifier '=' (constExpr | constList) ';' ;
+globalVar: GLOBAL typemodifier? type constArray* identifier '=' (constExpr | constList) SEMI ;
 
 constArray: '[' constExpr? ']' ;
 
@@ -116,9 +116,7 @@ expressionMany: orExpression (',' orExpression)*;
 fArgs: '(' expressionMany? ')' ;
 
 //const & type
-returntype: VOID
-	| type
-	;
+returntype: VOID | type ;
 
 constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
@@ -185,6 +183,7 @@ INT_LIT: [0-9]+ ;
 DOUBLE_LIT: INT_LIT '.' INT_LIT;
 CHAR_LIT: '\'' . '\'';
 STRING_LIT: '"' .*? '"';
+SEMI: ';' ;
 
 ID: [a-zA-Z_][a-zA-Z_0-9]* ;
 COMMENT: '//' ~[\r\n]* -> skip ;
