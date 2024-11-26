@@ -203,12 +203,11 @@ public class VisitorExpression extends ReFuggBaseVisitor<ExpressionNode> {
 
     @Override
     public ExpressionNode visitThisAcces(ReFuggParser.ThisAccesContext ctx) {
+        List<ExpressionNode> nodes = new ArrayList<>();
         if(ctx.exprTail() != null){
-            ctx.exprTail().forEach(expr -> )
+            ctx.exprTail().forEach(expr -> nodes.add(visitExprTail(expr)));
         }
-
-
-        return super.visitThisAcces(ctx);
+        return new AccessNode(0, nodes);
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class VarAccessNode extends AccessNode {
 
-    private String name;
+    private final String name;
 
     public VarAccessNode(int type, String name, List<ExpressionNode> expressions) {
         super(type, expressions);

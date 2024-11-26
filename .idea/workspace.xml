@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ExpressionTail.java" afterDir="false" />
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorArrayAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/CallTail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/VarAccessNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/VarAccessNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/VisitorExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorExpressionMany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/misc/AST/visitors/expression/type/VisitorExpressionMany.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +177,8 @@
     <MESSAGE value="rewritten grammar rules and the visitors except the expressions" />
     <MESSAGE value="VisitorExpression almost done, except access" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value=".." />
+    <option name="LAST_COMMIT_MESSAGE" value=".." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
