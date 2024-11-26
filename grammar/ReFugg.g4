@@ -82,13 +82,13 @@ constFactor:  constant
 
 //expression
 arrayAccess: '[' expression ']' ;
-methodCall: identifier '.' fArgs arrayAccess* exprTail* ;
+methodCall: '.' identifier fArgs arrayAccess* exprTail* ;
 newObject: NEW identifier fArgs arrayAccess* exprTail* ;
 fCall: identifier fArgs arrayAccess* exprTail* ;
 
 thisAcces: THIS exprTail* ;
 varAcces: identifier arrayAccess* exprTail* ;
-exprTail: ('.' (identifier | methodCall) arrayAccess*) ;
+exprTail: (('.' identifier) | methodCall) arrayAccess* ;
 lh_expression: thisAcces | varAcces ;
 
 expression: lh_expression assignOP (expression | list) | orExpression;

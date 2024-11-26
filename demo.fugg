@@ -1,3 +1,26 @@
 
 main: {
+    A.a();
+    a[0];
+    a[0][1];
+    a[f(x)];
+    A.a;
+    y = A;
+    y = A.a;
+    y *= A.a();
+    y *= A.a(f(x));
+    this.a;
+    this.a();
+    this.a[0];
+    this.a()[0];
+    this = {1};
+    A.a() = {1};
+    int[1] a;
+    int[2] b = {1};
+    int[3] c = 1;
+    f(x);
+    f(g(x));
+    Class a = new A();
+    f(new A());
+    f(new A().a()[g()].b[f(x)]);
 }
