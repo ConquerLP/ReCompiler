@@ -2,51 +2,52 @@ grammar ReFugg;
 
 //bodys
 program: (func | classDec | globalVar | label)* main EOF ;
-main: MAIN block ;
+main: MAIN functionBlock ;
 
 //function
-func: FUNC fHeader fParam block ;
+func: FUNC fHeader fParam functionBlock ;
 fHeader: returntype ('[' ']')* identifier ;
 fParam: '(' argList? ')' ;
 arg: type constArray* identifier ;
 argList: arg (',' arg)* ;
 
 //class
-classDec: CLASS identifier poly? 
+classDec: CLASS identifier poly?
 	'{' (visibilty classInside+)* '}' ;
 classInside: (classConstructor | classField | method) ;
 poly: ISA identifier (',' identifier)* ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
-classConstructor: CONST identifier fParam block ;
-method: METH fHeader fParam block ;
-classField: FIELD typemodifier type constArray* identifier SEMI ;
+classConstructor: CONST identifier fParam functionBlock ;
+method: METH fHeader fParam functionBlock ;
+classField: FIELD typemodifier type constArray* identifier ('=' (constExpr | constList))? SEMI ;
 
 //programflow & statements
-block: '{' stmt* '}' ;
+functionBlock: '{' (stmt | (functionJumpStmt SEMI))* '}' ;
+loopBlock: '{' (stmt | (loopJumpStmt SEMI))*  '}' ;
 stmt: ifStmt
 	| whileStmt
 	| doWhileStmt SEMI
 	| forStmt
 	| switchCase
 	| label
-	| block
+	| functionBlock
 	| varDec SEMI
 	| expression SEMI
-	| jumpStmt SEMI
 	;
-ifStmt: IF check stmt (ELSE stmt)? ;
-whileStmt: WHILE check block ;
-doWhileStmt: DO block WHILE check ;
-forStmt: FOR '(' (varDec | orExpression)? SEMI orExpression? SEMI orExpression? ')' block ;
-jumpStmt: BREAK
+ifStmt: IF check functionBlock (ELSE functionBlock)? ;
+whileStmt: WHILE check loopBlock ;
+doWhileStmt: DO loopBlock WHILE check ;
+forStmt: FOR '(' (varDec | orExpression)? SEMI orExpression? SEMI orExpression? ')' loopBlock ;
+functionJumpStmt: GOTO identifier | RETURN expression? ;
+loopJumpStmt: BREAK
 	| CONTINUE
 	| GOTO identifier
 	| RETURN expression?
 	;
-label: LABEL identifier block ;
+label: LABEL identifier functionBlock? ;
 switchCase: SWITCH check '{' caseBlock+ '}' ;
-caseBlock: CASE constExpr ':' block
-	| DEFAULT ':' block
+caseBlock: CASE constExpr ':' functionBlock
+	| DEFAULT ':' functionBlock
 	;
 check: '(' orExpression ')' ;
 
@@ -121,7 +122,7 @@ returntype: VOID | type ;
 constant: doubleRule | intRule | stringRule | charRule | booleanRule | refRule ;
 type: 'double' | 'int' | 'string' | 'char' | 'boolean' | identifier	;
 identifier: ID ;
-typemodifier: FINAL ;
+typemodifier: FINAL | STATIC ;
 
 doubleRule: DOUBLE_LIT ;
 intRule: INT_LIT ;
@@ -157,6 +158,7 @@ PRIVATE: 'private:' ;
 PUBLIC: 'public:' ;
 PROTECTED: 'protected:' ;
 FINAL: 'final' ;
+STATIC: 'static' ;
 
 IF: 'if' ;
 ELSE: 'else' ;
@@ -187,5 +189,5 @@ SEMI: ';' ;
 
 ID: [a-zA-Z_][a-zA-Z_0-9]* ;
 COMMENT: '//' ~[\r\n]* -> skip ;
-BIG_COMMENT: '/*' .*? '*/' -> skip ;
+BIG_COMMENT: '/' .? '*/' -> skip ;
 WS: [ \t\n\r\f]+ -> skip ;

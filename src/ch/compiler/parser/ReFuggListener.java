@@ -148,15 +148,25 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitClassField(ReFuggParser.ClassFieldContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ReFuggParser#block}.
+	 * Enter a parse tree produced by {@link ReFuggParser#functionBlock}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlock(ReFuggParser.BlockContext ctx);
+	void enterFunctionBlock(ReFuggParser.FunctionBlockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ReFuggParser#block}.
+	 * Exit a parse tree produced by {@link ReFuggParser#functionBlock}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlock(ReFuggParser.BlockContext ctx);
+	void exitFunctionBlock(ReFuggParser.FunctionBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#loopBlock}.
+	 * @param ctx the parse tree
+	 */
+	void enterLoopBlock(ReFuggParser.LoopBlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#loopBlock}.
+	 * @param ctx the parse tree
+	 */
+	void exitLoopBlock(ReFuggParser.LoopBlockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
@@ -208,15 +218,25 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitForStmt(ReFuggParser.ForStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ReFuggParser#jumpStmt}.
+	 * Enter a parse tree produced by {@link ReFuggParser#functionJumpStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterJumpStmt(ReFuggParser.JumpStmtContext ctx);
+	void enterFunctionJumpStmt(ReFuggParser.FunctionJumpStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ReFuggParser#jumpStmt}.
+	 * Exit a parse tree produced by {@link ReFuggParser#functionJumpStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitJumpStmt(ReFuggParser.JumpStmtContext ctx);
+	void exitFunctionJumpStmt(ReFuggParser.FunctionJumpStmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#loopJumpStmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterLoopJumpStmt(ReFuggParser.LoopJumpStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#loopJumpStmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitLoopJumpStmt(ReFuggParser.LoopJumpStmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#label}.
 	 * @param ctx the parse tree

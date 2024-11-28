@@ -184,13 +184,25 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(ReFuggParser.BlockContext ctx) { }
+	@Override public void enterFunctionBlock(ReFuggParser.FunctionBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(ReFuggParser.BlockContext ctx) { }
+	@Override public void exitFunctionBlock(ReFuggParser.FunctionBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLoopBlock(ReFuggParser.LoopBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLoopBlock(ReFuggParser.LoopBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -256,13 +268,25 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterJumpStmt(ReFuggParser.JumpStmtContext ctx) { }
+	@Override public void enterFunctionJumpStmt(ReFuggParser.FunctionJumpStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitJumpStmt(ReFuggParser.JumpStmtContext ctx) { }
+	@Override public void exitFunctionJumpStmt(ReFuggParser.FunctionJumpStmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLoopJumpStmt(ReFuggParser.LoopJumpStmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLoopJumpStmt(ReFuggParser.LoopJumpStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

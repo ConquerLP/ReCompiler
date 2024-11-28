@@ -4,87 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment=".....">
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="start uml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.fugg" beforeDir="false" afterPath="$PROJECT_DIR$/demo.fugg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassConstructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassDec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassInside.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassMember.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/ClassMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Function.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/MainFunction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/bodys/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/Declaration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/GlobalDeclaration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/declaration/VarDeclaration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/BinaryExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/ExpressionNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/AccessNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ArrayAccess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ExpressionTail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/ThisAccess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/access/VarAccessNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/bool/BinaryExpressionAnd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/bool/BinaryExpressionOr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/calls/ConstructorCallExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/calls/FunctionCallExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/calls/SimpleCallExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/BooleanLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/CharacterLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/DoubleLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/IntegerLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/MultipleListLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/NullLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/PointerLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/SimpleListLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/StringLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/literals/ThisLiteral.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionAdd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionAssign.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionDiv.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionExp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionMod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionMul.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/math/ExpressionSub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionEQ.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionGE.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionGT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionLE.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionLT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/relative/RelativeExpressionNE.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/NegateExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/NotExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/PostDecExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/PostIncExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/expression/unary/UnaryExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Block.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/CaseBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/DoWhile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/For.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/If.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Jump.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/JumpType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Label.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Statement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/Switch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/statements/While.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Access.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/DataType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryConstructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryField.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryFunction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryLabel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/EntryVariable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Resolvable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/SymbolTableEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/misc/AST/nodes/symbolTable/TypeModifier.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,26 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "noConstant",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Projekte/ReFugg/demo.fugg",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;noConstant&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ZHAW INF/OneDrive - ZHAW/Unterlagen/Projekte/ReFugg/demo.fugg&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ZHAW INF\OneDrive - ZHAW\Unterlagen\Projekte\ReFugg\grammar" />
@@ -255,7 +177,8 @@
     <MESSAGE value="." />
     <MESSAGE value=".." />
     <MESSAGE value="....." />
-    <option name="LAST_COMMIT_MESSAGE" value="....." />
+    <MESSAGE value="start uml" />
+    <option name="LAST_COMMIT_MESSAGE" value="start uml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

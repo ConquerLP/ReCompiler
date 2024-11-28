@@ -95,11 +95,17 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitClassField(ReFuggParser.ClassFieldContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ReFuggParser#block}.
+	 * Visit a parse tree produced by {@link ReFuggParser#functionBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBlock(ReFuggParser.BlockContext ctx);
+	T visitFunctionBlock(ReFuggParser.FunctionBlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#loopBlock}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLoopBlock(ReFuggParser.LoopBlockContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
@@ -131,11 +137,17 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitForStmt(ReFuggParser.ForStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ReFuggParser#jumpStmt}.
+	 * Visit a parse tree produced by {@link ReFuggParser#functionJumpStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitJumpStmt(ReFuggParser.JumpStmtContext ctx);
+	T visitFunctionJumpStmt(ReFuggParser.FunctionJumpStmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#loopJumpStmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLoopJumpStmt(ReFuggParser.LoopJumpStmtContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#label}.
 	 * @param ctx the parse tree
