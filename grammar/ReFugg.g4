@@ -15,7 +15,7 @@ argList: arg (',' arg)* ;
 classDec: CLASS identifier poly?
 	'{' (visibilty classInside+)* '}' ;
 classInside: (classConstructor | classField | method) ;
-poly: ISA identifier (',' identifier)* ;
+poly: ISA identifier ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam functionBlock ;
 method: METH fHeader fParam functionBlock ;
@@ -142,7 +142,7 @@ expOP: '^' | '**' ;
 preOP: '!' | 'not' | '-' | '+' ;
 postOP: '++' | '--' ;
 
-//Tokens
+//Tökens
 MAIN: 'main:' ;
 FUNC: 'func:' ;
 CLASS: 'class:' ;
