@@ -59,6 +59,12 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitClassDec(ReFuggParser.ClassDecContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#classInsideGroup}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClassInsideGroup(ReFuggParser.ClassInsideGroupContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#classInside}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

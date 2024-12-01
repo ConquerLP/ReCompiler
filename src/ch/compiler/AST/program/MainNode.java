@@ -1,15 +1,17 @@
 package ch.compiler.AST.program;
 
-import ch.compiler.AST.misc.symboltable.tables.Symboltable;
 import ch.compiler.AST.statement.block.FunctionBlock;
 
 public class MainNode {
 
-    private FunctionBlock mainBlock;
-    private Symboltable programSymbols;
+    private final FunctionBlock mainBlock;
 
-    public MainNode(Symboltable programSymbols) {
-        this.programSymbols = programSymbols;
+    public MainNode(FunctionBlock mainBlock) {
+        this.mainBlock = mainBlock;
+    }
+
+    public FunctionBlock getMainBlock() {
+        return mainBlock;
     }
 
 }

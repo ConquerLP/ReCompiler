@@ -73,6 +73,13 @@ public class ReFuggBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitClassInsideGroup(ReFuggParser.ClassInsideGroupContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitClassInside(ReFuggParser.ClassInsideContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

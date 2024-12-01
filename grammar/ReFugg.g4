@@ -13,8 +13,9 @@ argList: arg (',' arg)* ;
 
 //class
 classDec: CLASS identifier poly?
-	'{' (visibilty classInside+)* '}' ;
-classInside: (classConstructor | classField | method) ;
+	'{' classInsideGroup* '}' ;
+classInsideGroup: visibilty classInside+ ;
+classInside: classConstructor | classField | method ;
 poly: ISA identifier ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam functionBlock ;

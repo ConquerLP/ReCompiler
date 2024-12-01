@@ -88,6 +88,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitClassDec(ReFuggParser.ClassDecContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#classInsideGroup}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassInsideGroup(ReFuggParser.ClassInsideGroupContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#classInsideGroup}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassInsideGroup(ReFuggParser.ClassInsideGroupContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#classInside}.
 	 * @param ctx the parse tree
 	 */

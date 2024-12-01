@@ -112,6 +112,18 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterClassInsideGroup(ReFuggParser.ClassInsideGroupContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitClassInsideGroup(ReFuggParser.ClassInsideGroupContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterClassInside(ReFuggParser.ClassInsideContext ctx) { }
 	/**
 	 * {@inheritDoc}
