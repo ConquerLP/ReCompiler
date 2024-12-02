@@ -10,4 +10,9 @@ public class VConstExpr extends ReFuggBaseVisitor<c_ExprNode> {
     public c_ExprNode visitConstArray(ReFuggParser.ConstArrayContext ctx) {
         return super.visitConstArray(ctx);
     }
+
+    @Override
+    public c_ExprNode visitConstInit(ReFuggParser.ConstInitContext ctx) {
+        return super.visitConstInit(ctx);
+    }
 }

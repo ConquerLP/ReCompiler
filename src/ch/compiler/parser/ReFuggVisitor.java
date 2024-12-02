@@ -41,11 +41,11 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFParam(ReFuggParser.FParamContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ReFuggParser#arg}.
+	 * Visit a parse tree produced by {@link ReFuggParser#varDescription}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArg(ReFuggParser.ArgContext ctx);
+	T visitVarDescription(ReFuggParser.VarDescriptionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#argList}.
 	 * @param ctx the parse tree
@@ -107,11 +107,23 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFunctionBlock(ReFuggParser.FunctionBlockContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#functionBlockStmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunctionBlockStmt(ReFuggParser.FunctionBlockStmtContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#loopBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitLoopBlock(ReFuggParser.LoopBlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#loopBlockStmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLoopBlockStmt(ReFuggParser.LoopBlockStmtContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
@@ -196,6 +208,12 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitConstArray(ReFuggParser.ConstArrayContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#constInit}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitConstInit(ReFuggParser.ConstInitContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
@@ -544,4 +562,10 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitPostOP(ReFuggParser.PostOPContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#arrayGroup}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArrayGroup(ReFuggParser.ArrayGroupContext ctx);
 }

@@ -76,13 +76,13 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArg(ReFuggParser.ArgContext ctx) { }
+	@Override public void enterVarDescription(ReFuggParser.VarDescriptionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArg(ReFuggParser.ArgContext ctx) { }
+	@Override public void exitVarDescription(ReFuggParser.VarDescriptionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -208,6 +208,18 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterFunctionBlockStmt(ReFuggParser.FunctionBlockStmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionBlockStmt(ReFuggParser.FunctionBlockStmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLoopBlock(ReFuggParser.LoopBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -215,6 +227,18 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLoopBlock(ReFuggParser.LoopBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLoopBlockStmt(ReFuggParser.LoopBlockStmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLoopBlockStmt(ReFuggParser.LoopBlockStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -383,6 +407,18 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstArray(ReFuggParser.ConstArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConstInit(ReFuggParser.ConstInitContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConstInit(ReFuggParser.ConstInitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1079,6 +1115,18 @@ public class ReFuggBaseListener implements ReFuggListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPostOP(ReFuggParser.PostOPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayGroup(ReFuggParser.ArrayGroupContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayGroup(ReFuggParser.ArrayGroupContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

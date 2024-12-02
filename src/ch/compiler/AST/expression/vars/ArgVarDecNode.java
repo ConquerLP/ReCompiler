@@ -1,6 +1,6 @@
 package ch.compiler.AST.expression.vars;
 
-import ch.compiler.AST.misc.Type;
+import ch.compiler.AST.misc.type.Type;
 
 public class ArgVarDecNode extends VarDecNode {
 

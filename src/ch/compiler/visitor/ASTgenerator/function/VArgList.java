@@ -7,13 +7,14 @@ import ch.compiler.parser.ReFuggParser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VArgs extends ReFuggBaseVisitor<List<ArgVarDecNode>> {
+public class VArgList extends ReFuggBaseVisitor<List<ArgVarDecNode>> {
 
     @Override
     public List<ArgVarDecNode> visitArgList(ReFuggParser.ArgListContext ctx) {
         List<ArgVarDecNode> args = new ArrayList<>();
-        VArg argVisitor = new VArg();
-        ctx.arg().forEach(arg -> args.add(argVisitor.visitArg(arg)));
+        ctx.varDescription().forEach(arg -> {
+            args.add(new ArgVarDecNode(VVarDesc.getVarName(arg), new VVarDesc().visitVarDescription(arg)));
+        });
         return args;
     }
 }

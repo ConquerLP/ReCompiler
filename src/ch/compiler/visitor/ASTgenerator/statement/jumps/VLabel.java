@@ -1,6 +1,6 @@
 package ch.compiler.visitor.ASTgenerator.statement.jumps;
 
-import ch.compiler.AST.statement.jumps.LabelNode;
+import ch.compiler.AST.statement.jumps.goTo.LabelNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 

@@ -1,4 +1,4 @@
-package ch.compiler.AST.statement.jumps;
+package ch.compiler.AST.statement.jumps.goTo;
 
 import ch.compiler.AST.statement.StatementNode;
 

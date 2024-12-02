@@ -13,11 +13,6 @@ public class VVar extends ReFuggBaseVisitor<VarDecNode> {
     }
 
     @Override
-    public VarDecNode visitArg(ReFuggParser.ArgContext ctx) {
-        return super.visitArg(ctx);
-    }
-
-    @Override
     public VarDecNode visitClassField(ReFuggParser.ClassFieldContext ctx) {
         return super.visitClassField(ctx);
     }
@@ -32,8 +27,4 @@ public class VVar extends ReFuggBaseVisitor<VarDecNode> {
         return super.visitVarDec(ctx);
     }
 
-    @Override
-    public GlobalVarDecNode visitGlobalVar(ReFuggParser.GlobalVarContext ctx) {
-        return super.visitGlobalVar(ctx);
-    }
 }

@@ -58,15 +58,15 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitFParam(ReFuggParser.FParamContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ReFuggParser#arg}.
+	 * Enter a parse tree produced by {@link ReFuggParser#varDescription}.
 	 * @param ctx the parse tree
 	 */
-	void enterArg(ReFuggParser.ArgContext ctx);
+	void enterVarDescription(ReFuggParser.VarDescriptionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ReFuggParser#arg}.
+	 * Exit a parse tree produced by {@link ReFuggParser#varDescription}.
 	 * @param ctx the parse tree
 	 */
-	void exitArg(ReFuggParser.ArgContext ctx);
+	void exitVarDescription(ReFuggParser.VarDescriptionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#argList}.
 	 * @param ctx the parse tree
@@ -168,6 +168,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitFunctionBlock(ReFuggParser.FunctionBlockContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#functionBlockStmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionBlockStmt(ReFuggParser.FunctionBlockStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#functionBlockStmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionBlockStmt(ReFuggParser.FunctionBlockStmtContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#loopBlock}.
 	 * @param ctx the parse tree
 	 */
@@ -177,6 +187,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLoopBlock(ReFuggParser.LoopBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#loopBlockStmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterLoopBlockStmt(ReFuggParser.LoopBlockStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#loopBlockStmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitLoopBlockStmt(ReFuggParser.LoopBlockStmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#stmt}.
 	 * @param ctx the parse tree
@@ -317,6 +337,16 @@ public interface ReFuggListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitConstArray(ReFuggParser.ConstArrayContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#constInit}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstInit(ReFuggParser.ConstInitContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#constInit}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstInit(ReFuggParser.ConstInitContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#constList}.
 	 * @param ctx the parse tree
@@ -897,4 +927,14 @@ public interface ReFuggListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPostOP(ReFuggParser.PostOPContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#arrayGroup}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayGroup(ReFuggParser.ArrayGroupContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#arrayGroup}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayGroup(ReFuggParser.ArrayGroupContext ctx);
 }

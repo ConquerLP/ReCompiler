@@ -2,8 +2,8 @@ package ch.compiler;
 
 import java.io.IOException;
 
-import ch.compiler.misc.AST.nodes.bodys.Program;
-import ch.compiler.misc.AST.visitors.bodys.VisitorProgram;
+import ch.compiler.AST.program.ProgramNode;
+import ch.compiler.visitor.ASTgenerator.program.VProgram;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -15,7 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 		String filename = "demo.fugg";
 		ReFuggParser parser = getParser(filename);
-		Program p = new VisitorProgram().visitProgram(parser.program());
+		ProgramNode p = new VProgram().visitProgram(parser.program());
 		System.out.println("Done!");
 	}
 	

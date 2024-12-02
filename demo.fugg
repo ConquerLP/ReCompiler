@@ -1,5 +1,6 @@
 
 main: {
+/*
     A.a();
     a[0];
     a[0][1];
@@ -23,4 +24,9 @@ main: {
     Class a = new A();
     f(new A());
     f(new A().a()[g()].b[f(x)]);
+*/
+
+for(;;){}
+
+
 }

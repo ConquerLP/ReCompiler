@@ -6,10 +6,10 @@ main: MAIN functionBlock ;
 
 //function
 func: FUNC fHeader fParam functionBlock ;
-fHeader: returntype ('[' ']')* identifier ;
+fHeader: returntype arrayGroup* identifier ;
 fParam: '(' argList? ')' ;
-arg: type constArray* identifier ;
-argList: arg (',' arg)* ;
+varDescription: type constArray* identifier ;
+argList: varDescription (',' varDescription)* ;
 
 //class
 classDec: CLASS identifier poly?
@@ -20,11 +20,13 @@ poly: ISA identifier ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam functionBlock ;
 method: METH fHeader fParam functionBlock ;
-classField: FIELD typemodifier type constArray* identifier ('=' (constExpr | constList))? SEMI ;
+classField: FIELD typemodifier varDescription constInit? SEMI ;
 
 //programflow & statements
-functionBlock: '{' (stmt | (functionJumpStmt SEMI))* '}' ;
-loopBlock: '{' (stmt | (loopJumpStmt SEMI))*  '}' ;
+functionBlock: '{' functionBlockStmt* '}' ;
+functionBlockStmt: stmt | (functionJumpStmt SEMI) ;
+loopBlock: '{' loopBlockStmt*  '}' ;
+loopBlockStmt: stmt | (loopJumpStmt SEMI) ;
 stmt: ifStmt
 	| whileStmt
 	| doWhileStmt SEMI
@@ -53,12 +55,13 @@ caseBlock: CASE constExpr ':' functionBlock
 check: '(' orExpression ')' ;
 
 //declaration & assignment
-varDec: typemodifier? type constArray* identifier ('=' (orExpression | list))? ;
+varDec: typemodifier? varDescription ('=' (orExpression | list))? ;
 
 //static declarations
-globalVar: GLOBAL typemodifier? type constArray* identifier '=' (constExpr | constList) SEMI ;
+globalVar: GLOBAL typemodifier? varDescription constInit SEMI ;
 
 constArray: '[' constExpr? ']' ;
+constInit: '=' constExpr | constList ;
 
 constList: '{' constExprMany '}'
 	| '{' constSubList (',' constSubList)+ '}'
@@ -142,7 +145,7 @@ multOP: '*' | '/' | '%' ;
 expOP: '^' | '**' ;
 preOP: '!' | 'not' | '-' | '+' ;
 postOP: '++' | '--' ;
-
+arrayGroup: ('[' ']') ;
 //Tökens
 MAIN: 'main:' ;
 FUNC: 'func:' ;

@@ -8,10 +8,11 @@ public class VClassDec extends ReFuggBaseVisitor<ClassNode> {
 
     @Override
     public ClassNode visitClassDec(ReFuggParser.ClassDecContext ctx) {
-        ClassNode classNode = new ClassNode(ctx.identifier().getText(),
+        String className = ctx.identifier().getText();
+        ClassNode classNode = new ClassNode(className,
                 new VPoly().visitPoly(ctx.poly()));
         ctx.classInsideGroup().forEach(group -> {
-            VClassInsideGroup inside = new VClassInsideGroup(group);
+            VClassInsideGroup inside = new VClassInsideGroup(group, className);
             classNode.addConstructor(inside.getConstructors());
             classNode.addMethod(inside.getMethods());
             classNode.addMemberVar(inside.getMember());
