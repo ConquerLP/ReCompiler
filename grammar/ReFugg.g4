@@ -40,7 +40,10 @@ stmt: ifStmt
 ifStmt: IF check functionBlock (ELSE functionBlock)? ;
 whileStmt: WHILE check loopBlock ;
 doWhileStmt: DO loopBlock WHILE check ;
-forStmt: FOR '(' (varDec | orExpression)? SEMI orExpression? SEMI orExpression? ')' loopBlock ;
+forStmt: FOR '(' forStart SEMI forCheck SEMI forAction ')' loopBlock ;
+forStart: (varDec | orExpression)? ;
+forCheck: orExpression? ;
+forAction: orExpression? ;
 functionJumpStmt: GOTO identifier | RETURN expression? ;
 loopJumpStmt: BREAK
 	| CONTINUE

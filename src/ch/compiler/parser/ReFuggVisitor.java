@@ -155,6 +155,24 @@ public interface ReFuggVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitForStmt(ReFuggParser.ForStmtContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#forStart}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForStart(ReFuggParser.ForStartContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#forCheck}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForCheck(ReFuggParser.ForCheckContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ReFuggParser#forAction}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForAction(ReFuggParser.ForActionContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ReFuggParser#functionJumpStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

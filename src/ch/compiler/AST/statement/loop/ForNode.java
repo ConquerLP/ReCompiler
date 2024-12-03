@@ -8,23 +8,14 @@ import ch.compiler.AST.statement.block.LoopBlock;
 public class ForNode extends StatementNode {
 
     private final boolean hasVarDec;
-    private VarDecNode varDec;
-    private OrExprNode first;
+    private final StatementNode first;
     private final OrExprNode second;
     private final OrExprNode third;
     private final LoopBlock block;
 
-    public ForNode(OrExprNode first, OrExprNode second, OrExprNode third, LoopBlock block) {
-        this.hasVarDec = false;
+    public ForNode(StatementNode first, OrExprNode second, OrExprNode third, LoopBlock block) {
+        hasVarDec = first instanceof VarDecNode;
         this.first = first;
-        this.second = second;
-        this.third = third;
-        this.block = block;
-    }
-
-    public ForNode(VarDecNode varDec, OrExprNode second, OrExprNode third, LoopBlock block) {
-        this.hasVarDec = true;
-        this.varDec = varDec;
         this.second = second;
         this.third = third;
         this.block = block;

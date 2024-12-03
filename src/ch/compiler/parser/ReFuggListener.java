@@ -248,6 +248,36 @@ public interface ReFuggListener extends ParseTreeListener {
 	 */
 	void exitForStmt(ReFuggParser.ForStmtContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#forStart}.
+	 * @param ctx the parse tree
+	 */
+	void enterForStart(ReFuggParser.ForStartContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#forStart}.
+	 * @param ctx the parse tree
+	 */
+	void exitForStart(ReFuggParser.ForStartContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#forCheck}.
+	 * @param ctx the parse tree
+	 */
+	void enterForCheck(ReFuggParser.ForCheckContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#forCheck}.
+	 * @param ctx the parse tree
+	 */
+	void exitForCheck(ReFuggParser.ForCheckContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ReFuggParser#forAction}.
+	 * @param ctx the parse tree
+	 */
+	void enterForAction(ReFuggParser.ForActionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ReFuggParser#forAction}.
+	 * @param ctx the parse tree
+	 */
+	void exitForAction(ReFuggParser.ForActionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ReFuggParser#functionJumpStmt}.
 	 * @param ctx the parse tree
 	 */
