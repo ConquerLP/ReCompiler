@@ -193,5 +193,5 @@ SEMI: ';' ;
 
 ID: [a-zA-Z_][a-zA-Z_0-9]* ;
 COMMENT: '//' ~[\r\n]* -> skip ;
-BIG_COMMENT: '/' .? '*/' -> skip ;
+BIG_COMMENT: '/*' .*? '*/' -> skip ;
 WS: [ \t\n\r\f]+ -> skip ;
