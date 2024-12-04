@@ -6,7 +6,7 @@ import ch.compiler.AST.statement.jumps.loop.LoopJump;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FunctionBlock {
+public class FunctionBlock extends StatementNode {
 
     private final List<StatementNode> statements = new ArrayList<>();
 

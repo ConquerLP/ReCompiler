@@ -1,7 +1,6 @@
 package ch.compiler.AST.expression.vars;
 
 import ch.compiler.AST.expression.constant.c_ExprNode;
-import ch.compiler.AST.expression.constant.list.c_ListExprNode;
 import ch.compiler.AST.misc.TypeModifier;
 import ch.compiler.AST.misc.Visibility;
 import ch.compiler.AST.misc.type.Type;

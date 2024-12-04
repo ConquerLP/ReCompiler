@@ -8,6 +8,10 @@ public class VTypeModifier extends ReFuggBaseVisitor<TypeModifier> {
 
     @Override
     public TypeModifier visitTypemodifier(ReFuggParser.TypemodifierContext ctx) {
-        return new TypeModifier(ctx.getText());
+        if(ctx != null) {
+            return new TypeModifier(ctx.getText());
+        } else {
+            return null;
+        }
     }
 }

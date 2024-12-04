@@ -20,7 +20,6 @@ public abstract class VarDecNode extends StatementNode {
 
     public void addArray(c_ExprNode expr) {
         array.add(expr);
-        //type.toArray();
     }
 
 }

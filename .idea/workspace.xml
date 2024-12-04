@@ -6,19 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="grammar comment fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.fugg" beforeDir="false" afterPath="$PROJECT_DIR$/demo.fugg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/ForNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/ForNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ReFugg/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/GlobalVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/GlobalVarDecNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/LocalVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/LocalVarDecNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/MemberVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/MemberVarDecNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/VarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/VarDecNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/block/FunctionBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/block/FunctionBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/goTo/LabelNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/goTo/LabelNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/CaseNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/CaseNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/SwitchNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/SwitchNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstExpr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/vars/VVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/vars/VVar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/program/VProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/program/VProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/block/VFunctionBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/block/VFunctionBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VFor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/switchNode/VCaseBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/switchNode/VCaseBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/switchNode/VSwitchCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/switchNode/VSwitchCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/typeModifier/VTypeModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/typeModifier/VTypeModifier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,20 +223,5 @@
     <MESSAGE value="." />
     <MESSAGE value="grammar comment fix" />
     <option name="LAST_COMMIT_MESSAGE" value="grammar comment fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VFor.java</url>
-          <line>14</line>
-          <properties class="ch.compiler.visitor.ASTgenerator.statement.loop.VFor" method="visitForStmt">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

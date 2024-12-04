@@ -15,7 +15,7 @@ public class VProgram extends ReFuggBaseVisitor<ProgramNode> {
         ProgramNode program = new ProgramNode();
         ctx.func().forEach(func -> program.addFunction(new VSubDec().visitFunc(func)));
         ctx.classDec().forEach(classDec -> program.addClass(new VClassDec().visitClassDec(classDec)));
-        //ctx.globalVar().forEach(globalVar -> program.addGlobalVar(new VVar().visitGlobalVar(globalVar)));
+        ctx.globalVar().forEach(globalVar -> program.addGlobalVar(new VVar().visitGlobalVar(globalVar)));
         ctx.label().forEach(label -> program.addLabel(new VLabel().visitLabel(label)));
         program.addMain(new VMain().visitMain(ctx.main()));
         return program;
