@@ -22,4 +22,10 @@ public abstract class VarDecNode extends StatementNode {
         array.add(expr);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name).append(" Type: ").append(type);
+        return sb.toString();
+    }
 }

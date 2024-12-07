@@ -35,4 +35,17 @@ public class ClassNode extends ASTNode {
         member.addAll(memberVar);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Class: ").append(name).append(" SuperClass: ").append(parent).append("\n");
+        sb.append("Members (").append(member.size()).append("):\n");
+        member.forEach(memberVarDecNode -> sb.append("\t").append(memberVarDecNode.toString()).append("\n"));
+        sb.append("Constructors (").append(constructors.size()).append("):\n");
+        constructors.forEach(constructorNode -> sb.append("\t").append(constructorNode.toString()).append("\n"));
+        sb.append("Methods (").append(methods.size()).append("):\n");
+        methods.forEach(methodNode -> sb.append("\t").append(methodNode.toString()).append("\n"));
+        return sb.toString();
+    }
+
 }

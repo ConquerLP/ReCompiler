@@ -24,4 +24,11 @@ public class MemberVarDecNode extends VarDecNode {
         this.initExpr = exp;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString()).append("Visibility: ").append(visibility).append("TypeModifier: ").append(typeModifier);
+        return sb.toString();
+    }
+
 }

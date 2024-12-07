@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="done ast gen">
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/AST/ASTNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/ASTNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/classes/ClassNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/classes/ClassNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/c_ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/c_ExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/function/SubDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/function/SubDecNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/program/MainNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/program/MainNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/program/ProgramNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/program/ProgramNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/StatementNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/StatementNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/MemberVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/MemberVarDecNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/VarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/VarDecNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
