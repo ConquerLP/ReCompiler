@@ -1,15 +1,15 @@
 package ch.compiler.AST.program;
 
+import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.classes.ClassNode;
 import ch.compiler.AST.expression.vars.GlobalVarDecNode;
 import ch.compiler.AST.function.FunctionNode;
 import ch.compiler.AST.statement.jumps.goTo.LabelNode;
-import ch.compiler.Main;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProgramNode {
+public class ProgramNode extends ASTNode {
 
     private final List<ClassNode> classes = new ArrayList<>();
     private final List<FunctionNode> functions = new ArrayList<>();

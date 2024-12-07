@@ -1,8 +1,9 @@
 package ch.compiler.AST.statement;
 
+import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.expression.nonConstant.ExprNode;
 
-public class CheckNode {
+public class CheckNode extends ASTNode {
 
     private final ExprNode condition;
 

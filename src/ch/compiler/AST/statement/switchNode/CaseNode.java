@@ -1,9 +1,10 @@
 package ch.compiler.AST.statement.switchNode;
 
+import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.expression.constant.c_ExprNode;
 import ch.compiler.AST.statement.block.FunctionBlock;
 
-public class CaseNode {
+public class CaseNode extends ASTNode {
 
     private c_ExprNode comparison;
     private boolean isDefault;

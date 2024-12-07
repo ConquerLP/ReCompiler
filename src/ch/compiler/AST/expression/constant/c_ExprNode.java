@@ -1,4 +1,6 @@
 package ch.compiler.AST.expression.constant;
 
-public abstract class c_ExprNode {
+import ch.compiler.AST.ASTNode;
+
+public abstract class c_ExprNode extends ASTNode {
 }

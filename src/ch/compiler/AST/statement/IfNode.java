@@ -1,6 +1,5 @@
 package ch.compiler.AST.statement;
 
-import ch.compiler.AST.expression.nonConstant.binary.op.OrExprNode;
 import ch.compiler.AST.statement.block.FunctionBlock;
 
 public class IfNode extends StatementNode {

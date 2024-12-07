@@ -1,12 +1,13 @@
 package ch.compiler.AST.function;
 
+import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.expression.vars.ArgVarDecNode;
 import ch.compiler.AST.misc.type.Type;
 import ch.compiler.AST.statement.block.FunctionBlock;
 
 import java.util.List;
 
-public abstract class SubDecNode {
+public abstract class SubDecNode extends ASTNode {
 
     protected final String name;
     protected final FunctionBlock block;

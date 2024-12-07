@@ -1,4 +1,6 @@
 package ch.compiler.AST.statement;
 
-public abstract class StatementNode {
+import ch.compiler.AST.ASTNode;
+
+public abstract class StatementNode extends ASTNode {
 }

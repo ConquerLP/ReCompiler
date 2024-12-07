@@ -1,5 +1,6 @@
 package ch.compiler.AST.classes;
 
+import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.expression.vars.MemberVarDecNode;
 import ch.compiler.AST.function.ConstructorNode;
 import ch.compiler.AST.function.MethodNode;
@@ -7,7 +8,7 @@ import ch.compiler.AST.function.MethodNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassNode {
+public class ClassNode extends ASTNode {
 
     private final String name;
     private final String parent;

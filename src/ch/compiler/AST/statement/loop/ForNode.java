@@ -1,7 +1,6 @@
 package ch.compiler.AST.statement.loop;
 
 import ch.compiler.AST.expression.nonConstant.ExprNode;
-import ch.compiler.AST.expression.nonConstant.binary.op.OrExprNode;
 import ch.compiler.AST.expression.vars.VarDecNode;
 import ch.compiler.AST.statement.StatementNode;
 import ch.compiler.AST.statement.block.LoopBlock;

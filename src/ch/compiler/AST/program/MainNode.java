@@ -1,8 +1,9 @@
 package ch.compiler.AST.program;
 
+import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.statement.block.FunctionBlock;
 
-public class MainNode {
+public class MainNode extends ASTNode {
 
     private final FunctionBlock mainBlock;
 
