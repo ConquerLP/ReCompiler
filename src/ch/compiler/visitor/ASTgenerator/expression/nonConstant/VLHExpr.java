@@ -16,4 +16,5 @@ public class VLHExpr extends ReFuggBaseVisitor<ExprNode> {
             throw new RuntimeException("Unknown left hand expression: " + ctx.getText());
         }
     }
+
 }

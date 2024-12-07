@@ -1,7 +1,6 @@
 package ch.compiler.visitor.ASTgenerator.statement.block;
 
 import ch.compiler.AST.statement.block.FunctionBlock;
-import ch.compiler.AST.statement.block.LoopBlock;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 

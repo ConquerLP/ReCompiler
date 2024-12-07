@@ -1,7 +1,6 @@
 package ch.compiler.visitor.ASTgenerator.expression.nonConstant;
 
 import ch.compiler.AST.expression.nonConstant.ExprNode;
-import ch.compiler.AST.expression.nonConstant.binary.BinaryExprNode;
 import ch.compiler.AST.expression.nonConstant.binary.eq.*;
 import ch.compiler.AST.expression.nonConstant.binary.op.*;
 import ch.compiler.AST.expression.nonConstant.binary.rel.GEExprNode;
@@ -104,4 +103,5 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
         }
         throw new RuntimeException("Unknown exponential operator: " + ctx.expOP().getText());
     }
+
 }

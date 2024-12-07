@@ -5,65 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="ilm">
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VPrimary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/c_ConstArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstMany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/c_BinaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/c_BinaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/EQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/c_EQExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/NQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/c_NQExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/c_EqExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/c_EqExprNodeAbs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/GEExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_GEExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/GTExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_GTExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/LEExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_LEExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/LTExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_LTExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/c_ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/c_ExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/ExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/AccessExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/AccessExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/BinaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/BinaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignDivExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignDivExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignEQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignEQExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignExpoExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignExpoExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignMinusExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignMinusExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignModExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignModExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignMultExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignMultExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignPlusExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/assign/AssignPlusExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/eq/EQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/eq/EQExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/eq/EqualityExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/eq/EqualityExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/eq/NQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/eq/NQExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/AddExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/AddExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/AndExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/AndExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/DivExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/DivExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/ExpoExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/ExpoExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/ModExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/ModExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/MultExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/MultExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/OrExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/OrExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/SubExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/op/SubExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/GEExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/GEExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/GTExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/GTExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/LEExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/LEExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/LTExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/LTExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/RelExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/rel/RelExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/BooleanExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/BooleanExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/CharExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/CharExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/ConstantExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/ConstantExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/DoubleExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/DoubleExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/IntExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/IntExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/ReferenceExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/ReferenceExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/StringExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/literals/StringExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/UnaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/UnaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/post/DecExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/post/DecExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/post/IncExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/post/IncExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/post/PostExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/post/PostExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/pre/NegExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/pre/NegExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/pre/NotExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/unary/pre/NotExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/ReFugg.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/ReFugg.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/access/c_ArrayExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/access/c_ArrayExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/access/c_VarExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/access/c_VarExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignDivExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignEQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignEQExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignExpoExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignMinusExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignModExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignMultExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/assign/c_AssignPlusExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/c_EQExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/eq/c_EQExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_AddExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_AddExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_AndExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_AndExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_DivExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_DivExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_ExpoExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_ExpoExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_ModExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_ModExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_MultExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_MultExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_OpExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_OpExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_OrExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_OrExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_SubExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/op/c_SubExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_GEExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_GEExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_GTExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_GTExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_LEExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_LEExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_LTExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_LTExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_RelExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/binary/rel/c_RelExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/list/c_ListExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/list/c_ListExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/list/c_MultipleListExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/list/c_SimpleListExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_BooleanExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_BooleanExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_CharExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_CharExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_DoubleExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_DoubleExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_IntExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_IntExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_ReferenceExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_ReferenceExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_StringExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/literals/c_StringExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/c_UnaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/c_UnaryExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/pre/c_NegExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/pre/c_NegExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/pre/c_NotExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/pre/c_NotExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/pre/c_PreExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/constant/unary/pre/c_PreExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/MemberExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/MemberExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/ThisExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/ThisExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/VarExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/access/VarExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/list/ListExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/list/ListExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/list/MultipleListExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/list/SimpleListExprNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/MethodExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/MethodExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/NewObjExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/NewObjExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/SubCallExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/SubCallExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/fCallExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/subCall/fCallExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/CheckNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/CheckNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstBinary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstEq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstExpr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstOp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstRel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstUnary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstUnary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VBinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VExpr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VLHExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VLHExpr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VLiterals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VLiterals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VExprTail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VManyExpr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VSubCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VSubCall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VUnary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VUnary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VStatement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +149,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ch.compiler.AST.expression.nonConstant.list" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ZHAW INF\OneDrive - ZHAW\Unterlagen\Projekte\ReFugg\grammar" />
     </key>
@@ -155,11 +167,11 @@
       <recent name="ch.compiler.misc.visitors.bodys.classes" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch.compiler.visitor.ASTgenerator.expression.constant" />
+      <recent name="ch.compiler.AST.expression.constant" />
       <recent name="ch.compiler.visitor.ASTgenerator.expression.nonConstant" />
       <recent name="ch.compiler.AST.expression.constant.binary.eq" />
       <recent name="ch.compiler.AST.statement.jumps" />
-      <recent name="ch.compiler.visitor.ASTgenerator.statement.block" />
-      <recent name="ch.compiler.AST.expression.vars" />
     </key>
   </component>
   <component name="SharedIndexes">

@@ -1,12 +1,12 @@
 package ch.compiler.AST.statement;
 
-import ch.compiler.AST.expression.nonConstant.binary.op.OrExprNode;
+import ch.compiler.AST.expression.nonConstant.ExprNode;
 
 public class CheckNode {
 
-    private final OrExprNode condition;
+    private final ExprNode condition;
 
-    public CheckNode(OrExprNode condition) {
+    public CheckNode(ExprNode condition) {
         this.condition = condition;
     }
 

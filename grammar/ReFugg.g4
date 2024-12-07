@@ -81,7 +81,7 @@ constRel: constRel relOP constLogic | constLogic ;
 constLogic: constLogic addOP constTerm | constTerm ;
 constTerm: constTerm multOP constExpo | constExpo ;
 constExpo: constExpo expOP constUnary | constUnary ;
-constUnary: preOP constFactor | constFactor;
+constUnary: preOP constFactor | constFactor ;
 constFactor:  constant
 	| '(' constExpr ')'
 	| constVar
@@ -99,16 +99,16 @@ varAcces: identifier arrayAccess* exprTail* ;
 exprTail: (('.' identifier) | methodCall) arrayAccess* ;
 lh_expression: thisAcces | varAcces ;
 
-expression: lh_expression assignOP (expression | list) | orExpression;
-orExpression: orExpression orOP andExpression | andExpression;
-andExpression: andExpression andOP equalityExpression | equalityExpression;
-equalityExpression: equalityExpression eqOP relationalExpression | relationalExpression;
-relationalExpression: relationalExpression relOP additiveExpression | additiveExpression;
-additiveExpression: additiveExpression addOP multiplicativeExpression | multiplicativeExpression;
-multiplicativeExpression: multiplicativeExpression multOP exponentiationExpression | exponentiationExpression;
-exponentiationExpression: exponentiationExpression expOP unaryExpression | unaryExpression;
-unaryExpression: preOP unaryExpression | postExpression;
-postExpression: primary postOP | primary;
+expression: lh_expression assignOP (expression | list) | orExpression ;
+orExpression: orExpression orOP andExpression | andExpression ;
+andExpression: andExpression andOP equalityExpression | equalityExpression ;
+equalityExpression: equalityExpression eqOP relationalExpression | relationalExpression ;
+relationalExpression: relationalExpression relOP additiveExpression | additiveExpression ;
+additiveExpression: additiveExpression addOP multiplicativeExpression | multiplicativeExpression ;
+multiplicativeExpression: multiplicativeExpression multOP exponentiationExpression | exponentiationExpression ;
+exponentiationExpression: exponentiationExpression expOP unaryExpression | unaryExpression ;
+unaryExpression: preOP unaryExpression | postExpression ;
+postExpression: primary postOP | primary ;
 primary: '(' orExpression ')'
     | newObject
     | fCall
@@ -120,7 +120,7 @@ primary: '(' orExpression ')'
 list: '{' expressionMany '}'
     | '{' subList (',' subList)+ '}' ;
 subList: '{' expressionMany '}' ;
-expressionMany: orExpression (',' orExpression)*;
+expressionMany: orExpression (',' orExpression)* ;
 fArgs: '(' expressionMany? ')' ;
 
 //const & type
@@ -189,9 +189,9 @@ NEW: 'new' ;
 
 //MISC
 INT_LIT: [0-9]+ ;
-DOUBLE_LIT: INT_LIT '.' INT_LIT;
-CHAR_LIT: '\'' . '\'';
-STRING_LIT: '"' .*? '"';
+DOUBLE_LIT: INT_LIT '.' INT_LIT ;
+CHAR_LIT: '\'' . '\'' ;
+STRING_LIT: '"' .*? '"' ;
 SEMI: ';' ;
 
 ID: [a-zA-Z_][a-zA-Z_0-9]* ;

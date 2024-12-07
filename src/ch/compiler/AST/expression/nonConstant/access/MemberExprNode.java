@@ -2,7 +2,10 @@ package ch.compiler.AST.expression.nonConstant.access;
 
 public class MemberExprNode extends AccessExprNode {
 
-    public boolean evaluate() {
-        return false;
+    private final String member;
+
+    public MemberExprNode(String member) {
+        this.member = member;
     }
+
 }

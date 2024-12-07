@@ -22,4 +22,5 @@ public class VPrimary extends ReFuggBaseVisitor<ExprNode> {
             return new VLiterals().visitConstant(ctx.constant());
         } else throw new RuntimeException("Unknown primary expression: " + ctx.getText());
     }
+
 }
