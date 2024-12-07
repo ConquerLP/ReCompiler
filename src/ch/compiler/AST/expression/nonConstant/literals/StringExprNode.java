@@ -3,7 +3,10 @@ package ch.compiler.AST.expression.nonConstant.literals;
 
 public class StringExprNode extends ConstantExprNode {
 
-    public boolean evaluate() {
-        return false;
+    private final String value;
+
+    public StringExprNode(String value) {
+        this.value = value;
     }
+
 }

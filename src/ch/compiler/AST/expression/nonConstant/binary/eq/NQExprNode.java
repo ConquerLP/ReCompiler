@@ -1,7 +1,10 @@
 package ch.compiler.AST.expression.nonConstant.binary.eq;
 
+import ch.compiler.AST.expression.nonConstant.ExprNode;
+
 public class NQExprNode extends EqualityExprNode {
-    public boolean evaluate() {
-        return false;
+    public NQExprNode(ExprNode left, ExprNode right) {
+        super(left, right);
     }
+
 }

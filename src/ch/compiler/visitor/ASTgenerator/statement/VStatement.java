@@ -1,9 +1,11 @@
 package ch.compiler.visitor.ASTgenerator.statement;
 
+import ch.compiler.AST.expression.nonConstant.ExprNode;
 import ch.compiler.AST.expression.nonConstant.binary.op.OrExprNode;
 import ch.compiler.AST.statement.StatementNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
+import ch.compiler.visitor.ASTgenerator.expression.nonConstant.VBinary;
 import ch.compiler.visitor.ASTgenerator.expression.nonConstant.VExpr;
 import ch.compiler.visitor.ASTgenerator.expression.vars.VVar;
 import ch.compiler.visitor.ASTgenerator.statement.block.VFunctionBlock;
@@ -44,16 +46,16 @@ public class VStatement extends ReFuggBaseVisitor<StatementNode> {
     }
 
     @Override
-    public OrExprNode visitForCheck(ReFuggParser.ForCheckContext ctx) {
+    public ExprNode visitForCheck(ReFuggParser.ForCheckContext ctx) {
         if (ctx.orExpression() != null) {
-            return new VExpr().visitOrExpression(ctx.orExpression());
+            return new VBinary().visitOrExpression(ctx.orExpression());
         } else return null;
     }
 
     @Override
-    public OrExprNode visitForAction(ReFuggParser.ForActionContext ctx) {
+    public ExprNode visitForAction(ReFuggParser.ForActionContext ctx) {
         if (ctx.orExpression() != null) {
-            return new VExpr().visitOrExpression(ctx.orExpression());
+            return new VBinary().visitOrExpression(ctx.orExpression());
         } else return null;
     }
 }
