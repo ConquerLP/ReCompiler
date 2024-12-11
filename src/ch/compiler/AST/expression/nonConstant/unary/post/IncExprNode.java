@@ -7,4 +7,9 @@ public class IncExprNode extends PostExprNode {
     public IncExprNode(ExprNode expr) {
         super(expr);
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

@@ -15,4 +15,8 @@ public class ReturnNode extends StatementNode {
         this.expr = expr;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

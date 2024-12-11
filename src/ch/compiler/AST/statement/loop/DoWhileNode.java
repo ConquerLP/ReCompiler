@@ -14,4 +14,8 @@ public class DoWhileNode extends StatementNode {
         this.block = block;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

@@ -18,4 +18,8 @@ public class c_ArrayExprNode extends c_AccessExprNode {
         array.add(expr);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

@@ -8,4 +8,8 @@ public class DecExprNode extends PostExprNode {
         super(expr);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

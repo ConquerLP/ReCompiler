@@ -20,4 +20,8 @@ public class IfNode extends StatementNode {
         this.elseBlock = null;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

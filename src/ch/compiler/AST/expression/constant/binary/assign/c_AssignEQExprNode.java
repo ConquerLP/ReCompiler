@@ -8,4 +8,8 @@ public class c_AssignEQExprNode extends c_AssignExprNode {
         super(left, right);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

@@ -1,3 +1,14 @@
+class: Point {
+    public:
+        //method: int getX() {}
+        method: void[] getX() {}
+        method: string getX() {}
+        method: string[] getX() {}
+        method: Point getX() {}
+        method: Point[] getX() {}
+
+}
+
 
 main: {
 /*
@@ -25,8 +36,5 @@ main: {
     f(new A());
     f(new A().a()[g()].b[f(x)]);
 */
-
-for(;i<0;i++){}
-
 
 }

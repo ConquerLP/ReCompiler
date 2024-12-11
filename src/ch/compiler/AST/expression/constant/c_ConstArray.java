@@ -14,4 +14,8 @@ public class c_ConstArray extends c_ExprNode {
         this.expr = expr;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

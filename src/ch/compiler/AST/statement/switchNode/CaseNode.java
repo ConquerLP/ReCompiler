@@ -21,5 +21,9 @@ public class CaseNode extends ASTNode {
         isDefault = true;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 
 }

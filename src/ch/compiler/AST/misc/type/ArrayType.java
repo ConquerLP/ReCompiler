@@ -25,4 +25,9 @@ public class ArrayType extends Type {
         expressions.put(counter++, expr);
     }
 
+    @Override
+    public String toString() {
+        return name + " (Dimension(s)): " + dim;
+    }
+
 }

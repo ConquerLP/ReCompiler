@@ -8,4 +8,8 @@ public class GEExprNode extends RelExprNode {
         super(left, right);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

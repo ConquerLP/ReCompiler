@@ -19,4 +19,8 @@ public class SwitchNode extends StatementNode {
         cases.add(caseNode);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

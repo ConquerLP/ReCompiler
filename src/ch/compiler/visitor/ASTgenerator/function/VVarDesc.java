@@ -32,9 +32,8 @@ public class VVarDesc extends ReFuggBaseVisitor<Type> {
     @Override
     public Type visitFHeader(ReFuggParser.FHeaderContext ctx) {
         Type type;
-        String typeName;
-        if (!"void".equals(ctx.getText())) {
-            typeName = getTypeName(getTypeContext(ctx.returntype()));
+        String typeName = getTypeName(ctx.returntype());
+        if (!"void".equals(typeName)) {
             if (ctx.arrayGroup().isEmpty()) {
                 type = new SimpleType(typeName);
             } else {
@@ -43,6 +42,11 @@ public class VVarDesc extends ReFuggBaseVisitor<Type> {
                         array -> ((ArrayType) type).addDim());
             }
         } else {
+            if(ctx.arrayGroup() != null) {
+                if(!ctx.arrayGroup().isEmpty()) {
+                    throw new RuntimeException("Void type cannot be an array");
+                }
+            }
             type = new VoidType();
         }
         return type;
@@ -56,16 +60,16 @@ public class VVarDesc extends ReFuggBaseVisitor<Type> {
         return ctx.identifier().getText();
     }
 
-    private String getTypeName(ReFuggParser.TypeContext ctx) {
-        if (ctx.identifier() != null) {
-            return ctx.identifier().getText();
+    private String getTypeName(ReFuggParser.ReturntypeContext ctx) {
+        if (ctx.type() != null) {
+            if (ctx.type().identifier() != null) {
+                return ctx.type().identifier().getText();
+            } else {
+                return ctx.type().getText();
+            }
         } else {
             return ctx.getText();
         }
-    }
-
-    private ReFuggParser.TypeContext getTypeContext(ReFuggParser.ReturntypeContext ctx) {
-        return ctx.type();
     }
 
 }

@@ -9,4 +9,8 @@ public class NegExprNode extends PostExprNode {
         super(expr);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

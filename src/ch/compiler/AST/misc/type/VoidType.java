@@ -6,4 +6,8 @@ public class VoidType extends Type {
         super("void");
     }
 
+    @Override
+    public String toString() {
+        return "void";
+    }
 }

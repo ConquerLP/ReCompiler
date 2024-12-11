@@ -7,5 +7,9 @@ public class c_ExpoExprNode extends c_OpExprNode {
     public c_ExpoExprNode(c_ExprNode left, c_ExprNode right) {
         super(left, right);
     }
+    @Override
+    public String toString() {
+        return "";
+    }
 
 }

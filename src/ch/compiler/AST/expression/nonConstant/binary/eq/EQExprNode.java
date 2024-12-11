@@ -6,4 +6,9 @@ public class EQExprNode extends EqualityExprNode {
     public EQExprNode(ExprNode left, ExprNode right) {
         super(left, right);
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

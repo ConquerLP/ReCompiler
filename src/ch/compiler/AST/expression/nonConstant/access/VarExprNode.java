@@ -8,4 +8,8 @@ public class VarExprNode extends AccessExprNode {
         this.varName = varName;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

@@ -9,4 +9,8 @@ public class MultExprNode extends BinaryExprNode {
         super(left, right);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

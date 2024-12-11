@@ -8,4 +8,8 @@ public class AssignDivExprNode extends AssignExprNode {
         super(left, right);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

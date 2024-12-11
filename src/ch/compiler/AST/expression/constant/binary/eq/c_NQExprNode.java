@@ -7,4 +7,8 @@ public class c_NQExprNode extends c_EqExprNodeAbs {
     public c_NQExprNode(c_ExprNode left, c_ExprNode right) {
         super(left, right);
     }
+    @Override
+    public String toString() {
+        return "";
+    }
 }

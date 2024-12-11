@@ -6,4 +6,8 @@ public class c_SubExprNode extends c_OpExprNode {
     public c_SubExprNode(c_ExprNode left, c_ExprNode right) {
         super(left, right);
     }
+    @Override
+    public String toString() {
+        return "";
+    }
 }

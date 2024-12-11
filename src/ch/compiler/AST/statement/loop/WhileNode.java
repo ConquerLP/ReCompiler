@@ -14,4 +14,8 @@ public class WhileNode extends StatementNode {
         this.block = block;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

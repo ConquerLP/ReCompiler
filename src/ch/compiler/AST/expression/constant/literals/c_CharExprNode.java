@@ -8,4 +8,8 @@ public class c_CharExprNode extends c_ConstantExprNode {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

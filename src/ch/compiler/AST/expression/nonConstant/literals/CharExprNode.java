@@ -9,4 +9,8 @@ public class CharExprNode extends ConstantExprNode {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

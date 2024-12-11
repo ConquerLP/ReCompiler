@@ -38,13 +38,17 @@ public class ClassNode extends ASTNode {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Class: ").append(name).append(" SuperClass: ").append(parent).append("\n");
-        sb.append("Members (").append(member.size()).append("):\n");
+        if(hasParent) {
+            sb.append("Class: ").append(name).append(" extends ").append(parent).append("\n");
+        } else {
+            sb.append("Class: ").append(name).append("\n");
+        }
+        sb.append("\tMembers (").append(member.size()).append("):\n");
         member.forEach(memberVarDecNode -> sb.append("\t").append(memberVarDecNode.toString()).append("\n"));
-        sb.append("Constructors (").append(constructors.size()).append("):\n");
+        sb.append("\tConstructors (").append(constructors.size()).append("):\n");
         constructors.forEach(constructorNode -> sb.append("\t").append(constructorNode.toString()).append("\n"));
-        sb.append("Methods (").append(methods.size()).append("):\n");
-        methods.forEach(methodNode -> sb.append("\t").append(methodNode.toString()).append("\n"));
+        sb.append("\tMethods (").append(methods.size()).append("):\n");
+        methods.forEach(methodNode -> sb.append("\t\t").append(methodNode.toString()).append("\n"));
         return sb.toString();
     }
 

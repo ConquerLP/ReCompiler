@@ -15,4 +15,8 @@ public class MainNode extends ASTNode {
         return mainBlock;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

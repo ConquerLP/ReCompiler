@@ -13,4 +13,8 @@ public class LabelNode extends StatementNode {
         this.block = block;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

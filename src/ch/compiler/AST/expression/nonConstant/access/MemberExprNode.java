@@ -8,4 +8,8 @@ public class MemberExprNode extends AccessExprNode {
         this.member = member;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

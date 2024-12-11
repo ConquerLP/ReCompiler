@@ -14,4 +14,8 @@ public class LoopBlock extends ASTNode {
         statements.add(statement);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

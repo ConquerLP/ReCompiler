@@ -11,4 +11,8 @@ public class CheckNode extends ASTNode {
         this.condition = condition;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

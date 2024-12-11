@@ -12,4 +12,6 @@ public abstract class Type {
         this.name = "";
     }
 
+    @Override
+    public abstract String toString();
 }

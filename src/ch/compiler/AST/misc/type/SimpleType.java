@@ -9,4 +9,9 @@ public class SimpleType extends Type {
     public SimpleType() {
         super();
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

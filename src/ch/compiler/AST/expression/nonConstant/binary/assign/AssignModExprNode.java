@@ -6,4 +6,9 @@ public class AssignModExprNode extends AssignExprNode {
     public AssignModExprNode(ExprNode left, ExprNode right) {
         super(left, right);
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

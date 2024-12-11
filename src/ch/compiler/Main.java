@@ -16,7 +16,8 @@ public class Main {
 		String filename = "demo.fugg";
 		ReFuggParser parser = getParser(filename);
 		ProgramNode p = new VProgram().visitProgram(parser.program());
-		System.out.println("Done!");
+		System.out.println(p);
+		System.out.println("Done compiling!");
 	}
 	
 	private static ReFuggParser getParser(String filename) {
@@ -32,5 +33,4 @@ public class Main {
 		return parser;
 	}
 	
-
 }

@@ -17,4 +17,8 @@ public class ListExprNode extends ExprNode {
         this.expressions.addAll(expressions);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

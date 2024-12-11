@@ -9,9 +9,12 @@ public class VIf extends ReFuggBaseVisitor<IfNode> {
 
     @Override
     public IfNode visitIfStmt(ReFuggParser.IfStmtContext ctx) {
-        return new IfNode(new VCheck().visitCheck(ctx.check()),
-                new VFunctionBlock().visitFunctionBlock(ctx.functionBlock(0)),
-                ctx.functionBlock().size() > 1 ? new VFunctionBlock().visitFunctionBlock(ctx.functionBlock(1)) : null);
+        if (ctx.ELSE() == null)
+            return new IfNode(new VCheck().visitCheck(ctx.check()), new VFunctionBlock().visitFunctionBlock(ctx.functionBlock(0)));
+        else
+            return new IfNode(new VCheck().visitCheck(ctx.check()),
+                    new VFunctionBlock().visitFunctionBlock(ctx.functionBlock(0)),
+                    new VFunctionBlock().visitFunctionBlock(ctx.functionBlock(1)));
     }
 
 }

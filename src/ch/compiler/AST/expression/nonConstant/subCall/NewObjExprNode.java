@@ -6,4 +6,8 @@ public class NewObjExprNode extends SubCallExprNode {
         super(name);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

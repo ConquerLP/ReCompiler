@@ -5,4 +5,9 @@ public class MethodExprNode extends SubCallExprNode {
     public MethodExprNode(String name) {
         super(name);
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

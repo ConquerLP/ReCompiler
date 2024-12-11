@@ -2,7 +2,9 @@ package ch.compiler.AST.expression.nonConstant;
 
 public class LHExprNode extends ExprNode {
 
-    public boolean evaluate() {
-        return false;
+    @Override
+    public String toString() {
+        return "";
     }
+
 }

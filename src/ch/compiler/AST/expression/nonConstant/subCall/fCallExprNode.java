@@ -5,4 +5,9 @@ public class fCallExprNode extends SubCallExprNode {
     public fCallExprNode(String name) {
         super(name);
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

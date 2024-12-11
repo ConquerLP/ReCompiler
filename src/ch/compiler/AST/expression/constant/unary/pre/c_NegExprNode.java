@@ -7,4 +7,8 @@ public class c_NegExprNode extends c_PreExprNode {
     public c_NegExprNode(c_ExprNode expr) {
         super(expr);
     }
+    @Override
+    public String toString() {
+        return "";
+    }
 }

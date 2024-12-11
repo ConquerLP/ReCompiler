@@ -17,4 +17,8 @@ public class c_ListExprNode extends c_ExprNode {
         expressions.add(expression);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

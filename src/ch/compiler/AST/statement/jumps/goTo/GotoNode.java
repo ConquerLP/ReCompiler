@@ -10,4 +10,9 @@ public class GotoNode extends StatementNode {
         this.target = target;
     }
 
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

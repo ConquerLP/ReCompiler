@@ -7,4 +7,9 @@ public class LTExprNode extends RelExprNode {
     public LTExprNode(ExprNode left, ExprNode right) {
         super(left, right);
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

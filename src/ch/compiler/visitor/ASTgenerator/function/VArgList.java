@@ -12,9 +12,11 @@ public class VArgList extends ReFuggBaseVisitor<List<ArgVarDecNode>> {
     @Override
     public List<ArgVarDecNode> visitArgList(ReFuggParser.ArgListContext ctx) {
         List<ArgVarDecNode> args = new ArrayList<>();
-        ctx.varDescription().forEach(arg -> {
-            args.add(new ArgVarDecNode(VVarDesc.getVarName(arg), new VVarDesc().visitVarDescription(arg)));
-        });
+        if(ctx != null) {
+            ctx.varDescription().forEach(arg -> {
+                args.add(new ArgVarDecNode(VVarDesc.getVarName(arg), new VVarDesc().visitVarDescription(arg)));
+            });
+        }
         return args;
     }
 }

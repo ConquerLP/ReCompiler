@@ -7,13 +7,13 @@ public class Visibility {
 
     public Visibility(String visibility) {
         switch (visibility) {
-            case "public":
+            case "public:":
                 this.visibility = PUBLIC;
                 break;
-            case "protected":
+            case "protected:":
                 this.visibility = PROTECTED;
                 break;
-            case "private":
+            case "private:":
                 this.visibility = PRIVATE;
                 break;
             default:

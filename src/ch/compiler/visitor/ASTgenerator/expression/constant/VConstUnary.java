@@ -14,7 +14,7 @@ public class VConstUnary extends ReFuggBaseVisitor<c_ExprNode> {
             return switch (ctx.preOP().getText()) {
                 case "!", "not" -> new c_NotExprNode(exprNode);
                 case "-" -> new c_NegExprNode(exprNode);
-                case "+" -> exprNode;
+                case "+" -> new c_PlusExprNode(exprNode);
                 default -> throw new RuntimeException("Unknown unary operator: " + ctx.preOP().getText());
             };
         } else {

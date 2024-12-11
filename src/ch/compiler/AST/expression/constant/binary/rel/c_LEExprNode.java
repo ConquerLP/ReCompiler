@@ -8,5 +8,9 @@ public class c_LEExprNode extends c_RelExprNode {
         super(left, right);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 
 }

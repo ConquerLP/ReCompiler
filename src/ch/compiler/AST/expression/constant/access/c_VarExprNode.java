@@ -8,4 +8,8 @@ public class c_VarExprNode extends c_AccessExprNode {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

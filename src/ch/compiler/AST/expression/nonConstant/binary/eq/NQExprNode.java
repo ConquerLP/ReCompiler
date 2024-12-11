@@ -7,4 +7,9 @@ public class NQExprNode extends EqualityExprNode {
         super(left, right);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
+
 }

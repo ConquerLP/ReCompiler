@@ -17,4 +17,8 @@ public class FunctionBlock extends StatementNode {
         statements.add(statement);
     }
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }
