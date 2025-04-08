@@ -19,6 +19,14 @@ public class ListExprNode extends ExprNode {
 
     @Override
     public String toString() {
-        return "";
+        StringBuilder sb = new StringBuilder();
+        expressions.forEach(sb::append);
+        return "{ " + sb + " }";
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

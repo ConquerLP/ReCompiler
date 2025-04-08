@@ -14,7 +14,12 @@ public class VFunctionJump extends ReFuggBaseVisitor<StatementNode> {
         if (ctx.identifier() != null) {
             return new GotoNode(ctx.identifier().getText());
         } else {
-            return new ReturnNode(new VExpr().visitExpression(ctx.expression()));
+            if(ctx.expression() != null) {
+                return new ReturnNode(new VExpr().visitExpression(ctx.expression()));
+            } else {
+                return new ReturnNode();
+            }
+
         }
     }
 

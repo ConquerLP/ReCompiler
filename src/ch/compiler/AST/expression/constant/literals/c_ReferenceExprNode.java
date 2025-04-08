@@ -10,8 +10,11 @@ public class c_ReferenceExprNode extends c_ConstantExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return switch (value) {
+            case NULL -> "null";
+            default -> "Reference";
+        };
     }
 
 }

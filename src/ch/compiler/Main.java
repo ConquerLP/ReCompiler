@@ -1,5 +1,7 @@
 package ch.compiler;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import ch.compiler.AST.program.ProgramNode;
@@ -16,7 +18,13 @@ public class Main {
 		String filename = "demo.fugg";
 		ReFuggParser parser = getParser(filename);
 		ProgramNode p = new VProgram().visitProgram(parser.program());
-		System.out.println(p);
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter("AST_Tree.txt"));
+			writer.write(p.toString(0));
+			writer.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		System.out.println("Done compiling!");
 	}
 	

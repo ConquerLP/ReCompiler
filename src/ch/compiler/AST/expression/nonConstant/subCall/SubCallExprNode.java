@@ -28,4 +28,25 @@ public abstract class SubCallExprNode extends ExprNode {
         this.exprTail.addAll(exprTails);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name);
+        sb.append("( ");
+        if (!args.isEmpty()) {
+            args.forEach(a -> sb.append(a).append(", "));
+            sb.delete(sb.length() - 2, sb.length());
+        }
+        sb.append(" )");
+        if (!arrayAccess.isEmpty()) {
+            sb.append(" [ ");
+            arrayAccess.forEach(sb::append);
+            sb.append(" ]");
+        }
+        if (!exprTail.isEmpty()) {
+            exprTail.forEach(sb::append);
+        }
+        return sb.toString();
+    }
+
 }

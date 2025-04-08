@@ -8,6 +8,11 @@ public class NewObjExprNode extends SubCallExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return "New: " + super.toString();
+    }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
     }
 }

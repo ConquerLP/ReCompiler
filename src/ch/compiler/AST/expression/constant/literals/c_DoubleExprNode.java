@@ -9,7 +9,8 @@ public class c_DoubleExprNode extends c_ConstantExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return String.valueOf(value);
     }
+
 }

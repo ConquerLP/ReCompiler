@@ -20,7 +20,7 @@ public class VUnary extends ReFuggBaseVisitor<ExprNode> {
                     return new NegExprNode(visitUnaryExpression(ctx.unaryExpression()));
                 }
                 case "+" -> {
-                    return visitUnaryExpression(ctx.unaryExpression());
+                    return new PlusExprNode(visitUnaryExpression(ctx.unaryExpression()));
                 }
                 default -> throw new RuntimeException("Unknown unary operator: " + ctx.preOP().getText());
             }

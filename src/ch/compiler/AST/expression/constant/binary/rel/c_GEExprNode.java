@@ -9,7 +9,7 @@ public class c_GEExprNode extends c_RelExprNode {
         super(left, right);
     }
     @Override
-    public String toString() {
+    public String toString(int depth) {
         return "";
     }
 }

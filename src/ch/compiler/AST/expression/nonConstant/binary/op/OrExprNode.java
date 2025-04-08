@@ -11,6 +11,12 @@ public class OrExprNode extends BinaryExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return left + " or " + right;
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

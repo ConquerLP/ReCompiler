@@ -15,4 +15,15 @@ public class GlobalVarDecNode extends VarDecNode {
         this.value = value;
     }
 
+    @Override
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        sb.append(" ".repeat(depth)).append("GlobalVariable: ").append(modifier).append(" ").append(super.toString());
+        if(value != null) {
+            sb.append(value.toString(deeper));
+        }
+        return sb.toString();
+    }
+
 }

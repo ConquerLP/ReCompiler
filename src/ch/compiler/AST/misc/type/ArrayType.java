@@ -12,7 +12,7 @@ public class ArrayType extends Type {
     private int counter = 0;
 
     public ArrayType(String name, int dim) {
-        super("array of " + name);
+        super(name);
         this.baseType = new SimpleType(name);
         this.dim = dim;
     }
@@ -27,7 +27,7 @@ public class ArrayType extends Type {
 
     @Override
     public String toString() {
-        return name + " (Dimension(s)): " + dim;
+        return name + "[]".repeat(dim);
     }
 
 }

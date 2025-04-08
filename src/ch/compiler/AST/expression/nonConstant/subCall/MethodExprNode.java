@@ -8,6 +8,11 @@ public class MethodExprNode extends SubCallExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return "MethodCall: " + super.toString();
+    }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
     }
 }

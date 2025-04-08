@@ -20,7 +20,12 @@ public class SwitchNode extends StatementNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        sb.append(" ".repeat(depth)).append("Switch:\n").append(check.toString(deeper));
+        cases.forEach(c -> sb.append(c.toString(deeper)));
+        return sb.toString();
     }
+
 }

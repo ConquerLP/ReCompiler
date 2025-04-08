@@ -9,7 +9,8 @@ public class c_AssignEQExprNode extends c_AssignExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return left + " = " + right;
     }
+
 }

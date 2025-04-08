@@ -25,7 +25,8 @@ public abstract class VarDecNode extends StatementNode {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name).append(" Type: ").append(type);
-        return sb.toString();
+        array.forEach(c -> sb.append("[ ").append(c.toString()).append(" ]"));
+        return type + " " + name + " " + sb;
     }
+
 }

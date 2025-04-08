@@ -8,4 +8,9 @@ public class ReturnTypeNode extends VarDecNode {
         super(name, type);
     }
 
+    @Override
+    public String toString(int depth) {
+        return super.toString();
+    }
+
 }

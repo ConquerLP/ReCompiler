@@ -4,6 +4,12 @@ public class ArrayExprNode extends AccessExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return super.toString();
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

@@ -31,12 +31,4 @@ public abstract class SubDecNode extends ASTNode {
         this.returntype = type;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Name: ").append(name).append("\tReturntype: ").append(returntype);
-        sb.append("\n\t\t\tArgs: ");
-        args.forEach(argVarDecNode -> sb.append("\t").append(argVarDecNode.toString()).append("\n"));
-        return sb.toString();
-    }
 }

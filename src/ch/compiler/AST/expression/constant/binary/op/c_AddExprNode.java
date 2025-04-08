@@ -9,7 +9,8 @@ public class c_AddExprNode extends c_OpExprNode {
         super(left, right);
     }
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return left + " + " + right;
     }
+
 }

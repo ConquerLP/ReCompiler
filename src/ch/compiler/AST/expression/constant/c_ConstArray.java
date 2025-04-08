@@ -15,7 +15,8 @@ public class c_ConstArray extends c_ExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return "ConstArray[ " + expr + " ]";
     }
+
 }

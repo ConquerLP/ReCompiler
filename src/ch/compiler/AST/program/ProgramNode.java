@@ -38,13 +38,16 @@ public class ProgramNode extends ASTNode {
     }
 
     @Override
-    public String toString() {
+    public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
-        classes.forEach(c -> sb.append(c).append("\n"));
-        functions.forEach(f -> sb.append(f).append("\n"));
-        globalVars.forEach(g -> sb.append(g).append("\n"));
-        labels.forEach(l -> sb.append(l).append("\n"));
-        sb.append(main);
+        int deeper = depth + 1;
+        sb.append("Program:\n");
+        classes.forEach(c -> sb.append(c.toString(deeper)));
+        functions.forEach(f -> sb.append(f.toString(deeper)));
+        globalVars.forEach(g -> sb.append(g.toString(deeper)));
+        labels.forEach(l -> sb.append(l.toString(deeper)));
+        sb.append(main.toString(deeper));
         return sb.toString();
     }
+
 }

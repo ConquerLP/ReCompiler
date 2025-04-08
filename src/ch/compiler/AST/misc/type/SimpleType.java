@@ -14,4 +14,5 @@ public class SimpleType extends Type {
     public String toString() {
         return name;
     }
+
 }

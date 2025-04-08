@@ -22,8 +22,16 @@ public class CaseNode extends ASTNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        sb.append(" ".repeat(depth));
+        if(isDefault) {
+            sb.append("Default:\n").append(block.toString(deeper));
+        } else {
+            sb.append("Case:\n").append(comparison.toString(deeper)).append(block.toString(deeper));
+        }
+        return sb.toString();
     }
 
 }

@@ -10,6 +10,12 @@ public class MemberExprNode extends AccessExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return "." + member + super.toString();
     }
+
+    @Override
+    public String toString(int depth) {
+       return this.toString();
+    }
+
 }

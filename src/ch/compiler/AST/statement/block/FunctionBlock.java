@@ -2,6 +2,7 @@ package ch.compiler.AST.statement.block;
 
 import ch.compiler.AST.statement.StatementNode;
 import ch.compiler.AST.statement.jumps.loop.LoopJump;
+import ch.compiler.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,17 @@ public class FunctionBlock extends StatementNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" ".repeat(depth)).append("FunctionBlock:\n");
+        final int deeper = depth + 1;
+        if(!statements.isEmpty()) {
+            statements.forEach(s -> sb.append(s.toString(deeper)).append("\n"));
+        } else {
+            sb.append(" ".repeat(deeper)).append("No statement(s)");
+        }
+        String str = sb.toString();
+        return StringUtils.normalizeTrailingNewline(str);
     }
+
 }

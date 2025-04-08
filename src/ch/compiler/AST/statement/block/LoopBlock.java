@@ -15,7 +15,16 @@ public class LoopBlock extends ASTNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        sb.append(" ".repeat(depth)).append("LoopBlock:\n");
+        if(!statements.isEmpty()) {
+            statements.forEach(s -> sb.append(s.toString(deeper)).append("\n"));
+        } else {
+            sb.append(" ".repeat(deeper)).append("No statement(s)\n");
+        }
+        return sb.toString();
     }
+
 }

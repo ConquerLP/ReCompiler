@@ -21,7 +21,20 @@ public class IfNode extends StatementNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        final int deepest = depth + 2;
+        sb.append(" ".repeat(depth));
+        sb.append("If:\n");
+        sb.append(condition.toString(deeper));
+        sb.append(ifBlock.toString(deepest));
+        if(elseBlock != null) {
+            sb.append(" ".repeat(depth));
+            sb.append("Else:\n");
+            sb.append(elseBlock.toString(deeper));
+        }
+        return sb.toString();
     }
+
 }

@@ -1,15 +1,41 @@
-class: Point {
-    public:
-        //method: int getX() {}
-        method: void[] getX() {}
-        method: string getX() {}
-        method: string[] getX() {}
-        method: Point getX() {}
-        method: Point[] getX() {}
+/*
+func: int f(){
+    while(true){
 
+    }
+    return 0;
 }
 
 
+func: int f(){}
+func: int[] f(){}
+func: int[] f(int a){}
+func: int[] f(int a, int[][] b){}
+
+class: Point isa: Cunt {
+    private:
+        field: int x;
+        field: final int[][] x;
+        field: static int x;
+    public:
+        field: string y;
+        field: final int[][] y;
+        field: static int[] y;
+    public:
+        method: int[][] getX(int[][] a, int b) {}
+        constructor: Point() {}
+        constructor: Point(int x) {}
+    private:
+        constructor: Point() {}
+        constructor: Point(int x, int y) {}
+        method: int[][] getX(int[][] a, int b) {}
+    protected:
+        constructor: Point() {}
+        constructor: Point(int x) {}
+        method: int[][] getX(int[][] a, int b) {}
+}
+
+*/
 main: {
 /*
     A.a();
@@ -26,7 +52,10 @@ main: {
     this.a[0];
     this.a()[0];
     this = {1};
+    */
+    // this one crashes
     A.a() = {1};
+/*
     int[1] a;
     int[2] b = {1};
     int[3] c = 1;
@@ -35,6 +64,6 @@ main: {
     Class a = new A();
     f(new A());
     f(new A().a()[g()].b[f(x)]);
-*/
 
+*/
 }

@@ -8,6 +8,12 @@ public class fCallExprNode extends SubCallExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return "FunctionCall: " + super.toString();
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

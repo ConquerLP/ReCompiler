@@ -7,8 +7,10 @@ public class c_OrExprNode extends c_OpExprNode {
     public c_OrExprNode(c_ExprNode left, c_ExprNode right) {
         super(left, right);
     }
+
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return left + " or " + right;
     }
+
 }

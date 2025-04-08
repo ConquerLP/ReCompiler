@@ -21,4 +21,15 @@ public class Visibility {
         }
     }
 
+    @Override
+    public String toString() {
+        String visibility = switch (this.visibility) {
+            case PUBLIC -> "public";
+            case PROTECTED -> "protected";
+            case PRIVATE -> "private";
+            default -> throw new IllegalArgumentException("Invalid visibility: " + this.visibility);
+        };
+        return String.format("%-10s", visibility);
+    }
+
 }

@@ -19,4 +19,21 @@ public class MethodNode extends SubDecNode {
         this.visibility = visibility;
     }
 
+    @Override
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        final int deepest = depth + 2;
+        sb.append(" ".repeat(depth));
+        sb.append("Method: ").append(name).append(" returns ").append(returntype).append(" is ").append(visibility);
+        if(!args.isEmpty()) {
+            sb.append("\n").append(" ".repeat(deeper)).append("Parameters:\n");
+            args.forEach(arg -> sb.append(arg.toString(deepest)).append("\n"));
+        } else {
+            sb.append(" has no parameter(s)\n");
+        }
+        sb.append(block.toString(deeper));
+        return sb.toString();
+    }
+
 }

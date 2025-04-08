@@ -9,6 +9,12 @@ public class AssignExpoExprNode extends AssignExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return left + " ^= " + right;
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

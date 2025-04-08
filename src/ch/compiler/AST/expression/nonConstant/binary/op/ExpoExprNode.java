@@ -11,6 +11,12 @@ public class ExpoExprNode extends BinaryExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return left + " ^ " + right;
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

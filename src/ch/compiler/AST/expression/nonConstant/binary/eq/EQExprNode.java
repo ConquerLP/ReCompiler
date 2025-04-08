@@ -9,6 +9,12 @@ public class EQExprNode extends EqualityExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return left + " == " + right;
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

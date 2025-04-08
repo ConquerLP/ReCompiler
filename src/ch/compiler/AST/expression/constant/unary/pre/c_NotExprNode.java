@@ -9,7 +9,8 @@ public class c_NotExprNode extends c_PreExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return "not: " + expr;
     }
+
 }

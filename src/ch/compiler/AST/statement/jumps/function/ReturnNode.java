@@ -1,9 +1,8 @@
 package ch.compiler.AST.statement.jumps.function;
 
 import ch.compiler.AST.expression.nonConstant.ExprNode;
-import ch.compiler.AST.statement.StatementNode;
 
-public class ReturnNode extends StatementNode {
+public class ReturnNode extends FunctionJump {
 
     private final ExprNode expr;
 
@@ -16,7 +15,15 @@ public class ReturnNode extends StatementNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" ".repeat(depth)).append("Return: ");
+        if (expr != null) {
+            sb.append(expr);
+        } else {
+            sb.append("void");
+        }
+        return sb.append("\n").toString();
     }
+
 }

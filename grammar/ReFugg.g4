@@ -20,7 +20,7 @@ poly: ISA identifier ;
 visibilty: PUBLIC | PRIVATE | PROTECTED ;
 classConstructor: CONST identifier fParam functionBlock ;
 method: METH fHeader fParam functionBlock ;
-classField: FIELD typemodifier varDescription constInit? SEMI ;
+classField: FIELD typemodifier? varDescription constInit? SEMI ;
 
 //programflow & statements
 functionBlock: '{' functionBlockStmt* '}' ;

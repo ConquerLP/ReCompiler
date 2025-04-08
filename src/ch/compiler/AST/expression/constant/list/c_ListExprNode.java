@@ -18,7 +18,11 @@ public class c_ListExprNode extends c_ExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("List:\t");
+        expressions.forEach(e -> sb.append(e.toString()).append("\t"));
+        return sb.toString();
     }
+
 }

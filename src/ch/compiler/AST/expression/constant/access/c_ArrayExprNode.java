@@ -19,7 +19,12 @@ public class c_ArrayExprNode extends c_AccessExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ArrayExprNode: ").append(name).append(" [");
+        array.forEach(e -> sb.append(e).append(", "));
+        sb.append("]");
+        return sb.toString();
     }
+
 }

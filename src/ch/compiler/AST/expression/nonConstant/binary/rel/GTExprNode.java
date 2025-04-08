@@ -4,12 +4,18 @@ import ch.compiler.AST.expression.nonConstant.ExprNode;
 
 public class GTExprNode extends RelExprNode {
 
-
     public GTExprNode(ExprNode left, ExprNode right) {
         super(left, right);
     }
+
     @Override
     public String toString() {
-        return "";
+        return left + " > " + right;
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

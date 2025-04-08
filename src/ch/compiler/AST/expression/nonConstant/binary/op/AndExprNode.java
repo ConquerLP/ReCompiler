@@ -11,6 +11,12 @@ public class AndExprNode extends BinaryExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return left + " and " + right;
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

@@ -13,4 +13,11 @@ public abstract class AccessExprNode extends ExprNode {
         expressions.add(expr);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        expressions.forEach(e -> sb.append("[ ").append(e).append(" ]"));
+        return sb.toString();
+    }
+
 }

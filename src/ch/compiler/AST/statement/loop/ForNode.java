@@ -14,7 +14,11 @@ public class ForNode extends StatementNode {
     private final LoopBlock block;
 
     public ForNode(StatementNode first, ExprNode second, ExprNode third, LoopBlock block) {
-        hasVarDec = first instanceof VarDecNode;
+        if(first == null) {
+            hasVarDec = false;
+        } else {
+            hasVarDec = first instanceof VarDecNode;
+        }
         this.first = first;
         this.second = second;
         this.third = third;
@@ -22,7 +26,32 @@ public class ForNode extends StatementNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        final int deepest = depth + 2;
+        sb.append("For:\n");
+        String firstType = hasVarDec ? "VarDeclaration" : "Statement" + " (first):\n";
+        sb.append(" ".repeat(deeper)).append(firstType);
+        if(first != null) {
+            sb.append(first.toString(deepest));
+        } else {
+            sb.append(" ".repeat(deepest)).append("None\n");
+        }
+        sb.append(" ".repeat(deeper)).append("Expression (second):\n");
+        if(second != null) {
+            sb.append(second.toString(deepest));
+        } else {
+            sb.append(" ".repeat(deepest)).append("None\n");
+        }
+        sb.append(" ".repeat(deeper)).append("Expression (third):\n");
+        if(third != null) {
+            sb.append(third.toString(deepest));
+        } else {
+            sb.append(" ".repeat(deepest)).append("None\n");
+        }
+        sb.append(block.toString(deeper));
+        return sb.toString();
     }
+
 }

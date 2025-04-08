@@ -10,7 +10,13 @@ public class StringExprNode extends ConstantExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return this.toString();
     }
+
+    @Override
+    public String toString() {
+        return value;
+    }
+
 }

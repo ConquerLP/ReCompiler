@@ -4,6 +4,7 @@ import ch.compiler.AST.ASTNode;
 import ch.compiler.AST.expression.vars.MemberVarDecNode;
 import ch.compiler.AST.function.ConstructorNode;
 import ch.compiler.AST.function.MethodNode;
+import ch.compiler.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,19 +37,31 @@ public class ClassNode extends ASTNode {
     }
 
     @Override
-    public String toString() {
+    public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
+        final int deeper = depth + 1;
+        final int deepest = depth + 2;
+        sb.append(" ".repeat(depth));
+        sb.append("Class: ").append(name).append(position);
         if(hasParent) {
-            sb.append("Class: ").append(name).append(" extends ").append(parent).append("\n");
-        } else {
-            sb.append("Class: ").append(name).append("\n");
+            sb.append(" extends ").append(parent);
         }
-        sb.append("\tMembers (").append(member.size()).append("):\n");
-        member.forEach(memberVarDecNode -> sb.append("\t").append(memberVarDecNode.toString()).append("\n"));
-        sb.append("\tConstructors (").append(constructors.size()).append("):\n");
-        constructors.forEach(constructorNode -> sb.append("\t").append(constructorNode.toString()).append("\n"));
-        sb.append("\tMethods (").append(methods.size()).append("):\n");
-        methods.forEach(methodNode -> sb.append("\t\t").append(methodNode.toString()).append("\n"));
+        sb.append("\n");
+        if(!member.isEmpty()) {
+            sb.append(" ".repeat(deeper));
+            sb.append("Members (").append(member.size()).append("):\n");
+            member.forEach(m -> sb.append(m.toString(deepest)).append("\n"));
+        }
+        if(!constructors.isEmpty()) {
+            sb.append(" ".repeat(deeper));
+            sb.append("Constructors (").append(constructors.size()).append("):\n");
+            constructors.forEach(c -> sb.append(c.toString(deepest)).append("\n"));
+        }
+        if(!methods.isEmpty()) {
+            sb.append(" ".repeat(deeper));
+            sb.append("Methods (").append(methods.size()).append("):\n");
+            methods.forEach(m -> sb.append(m.toString(deepest)).append("\n"));
+        }
         return sb.toString();
     }
 

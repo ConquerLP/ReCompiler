@@ -9,7 +9,8 @@ public class c_PlusExprNode extends c_PreExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return "+ " + expr;
     }
+
 }

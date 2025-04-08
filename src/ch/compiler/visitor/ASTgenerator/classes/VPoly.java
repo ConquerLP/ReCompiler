@@ -7,7 +7,7 @@ public class VPoly extends ReFuggBaseVisitor<String> {
 
     @Override
     public String visitPoly(ReFuggParser.PolyContext ctx) {
-        return ctx == null ? "" : ctx.getText();
+        return ctx == null ? "" : ctx.identifier().getText();
     }
 
 }

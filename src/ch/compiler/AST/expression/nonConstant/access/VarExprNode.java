@@ -10,6 +10,12 @@ public class VarExprNode extends AccessExprNode {
 
     @Override
     public String toString() {
-        return "";
+        return varName + super.toString();
     }
+
+    @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
 }

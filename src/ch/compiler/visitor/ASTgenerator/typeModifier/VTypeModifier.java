@@ -11,7 +11,7 @@ public class VTypeModifier extends ReFuggBaseVisitor<TypeModifier> {
         if(ctx != null) {
             return new TypeModifier(ctx.getText());
         } else {
-            return null;
+            return new TypeModifier();
         }
     }
 }

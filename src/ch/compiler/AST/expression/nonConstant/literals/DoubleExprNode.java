@@ -10,7 +10,12 @@ public class DoubleExprNode extends ConstantExprNode {
     }
 
     @Override
+    public String toString(int depth) {
+        return this.toString();
+    }
+
+    @Override
     public String toString() {
-        return "";
+        return String.valueOf(value);
     }
 }

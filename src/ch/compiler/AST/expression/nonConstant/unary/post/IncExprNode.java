@@ -9,7 +9,8 @@ public class IncExprNode extends PostExprNode {
     }
 
     @Override
-    public String toString() {
-        return "";
+    public String toString(int depth) {
+        return expr + "++";
     }
+
 }
