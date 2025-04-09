@@ -17,7 +17,8 @@ public class WhileNode extends StatementNode {
     @Override
     public String toString(int depth) {
         final int deeper = depth + 1;
-        return " ".repeat(depth) + "While:\n"
+        return " ".repeat(depth) + "While"
+                + position + "\n"
                 + condition.toString(deeper) + "\n"
                 + block.toString(deeper);
     }

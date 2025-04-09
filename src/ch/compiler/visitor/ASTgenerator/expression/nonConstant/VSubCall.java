@@ -7,60 +7,59 @@ import ch.compiler.AST.expression.nonConstant.subCall.fCallExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
-import java.util.List;
+import static ch.compiler.utils.ASTUtils.withPosition;
 
 public class VSubCall extends ReFuggBaseVisitor<ExprNode> {
 
     @Override
     public ExprNode visitNewObject(ReFuggParser.NewObjectContext ctx) {
-        List<ExprNode> exprNodes = new VManyExpr().visitFArgs(ctx.fArgs());
         NewObjExprNode obj = new NewObjExprNode(ctx.identifier().getText());
         obj.addArgs(new VManyExpr().visitFArgs(ctx.fArgs()));
-        if(ctx.arrayAccess() != null) {
+        if (ctx.arrayAccess() != null) {
             ctx.arrayAccess().forEach(arrayAccessContext -> {
                 obj.addArrayAccess(new VAccess().visitArrayAccess(arrayAccessContext));
             });
         }
-        if(ctx.exprTail() != null) {
+        if (ctx.exprTail() != null) {
             ctx.exprTail().forEach(exprTailContext -> {
                 obj.addExprTails(new VManyExpr().visitExprTail(exprTailContext));
             });
         }
-        return obj;
+        return withPosition(obj, ctx);
     }
 
     @Override
     public ExprNode visitFCall(ReFuggParser.FCallContext ctx) {
         fCallExprNode fCall = new fCallExprNode(ctx.identifier().getText());
         fCall.addArgs(new VManyExpr().visitFArgs(ctx.fArgs()));
-        if(ctx.arrayAccess() != null) {
+        if (ctx.arrayAccess() != null) {
             ctx.arrayAccess().forEach(arrayAccessContext -> {
                 fCall.addArrayAccess(new VAccess().visitArrayAccess(arrayAccessContext));
             });
         }
-        if(ctx.exprTail() != null) {
+        if (ctx.exprTail() != null) {
             ctx.exprTail().forEach(exprTailContext -> {
                 fCall.addExprTails(new VManyExpr().visitExprTail(exprTailContext));
             });
         }
-        return fCall;
+        return withPosition(fCall, ctx);
     }
 
     @Override
     public ExprNode visitMethodCall(ReFuggParser.MethodCallContext ctx) {
         MethodExprNode method = new MethodExprNode(ctx.identifier().getText());
         method.addArgs(new VManyExpr().visitFArgs(ctx.fArgs()));
-        if(ctx.arrayAccess() != null) {
+        if (ctx.arrayAccess() != null) {
             ctx.arrayAccess().forEach(arrayAccessContext -> {
                 method.addArrayAccess(new VAccess().visitArrayAccess(arrayAccessContext));
             });
         }
-        if(ctx.exprTail() != null) {
+        if (ctx.exprTail() != null) {
             ctx.exprTail().forEach(exprTailContext -> {
                 method.addExprTails(new VManyExpr().visitExprTail(exprTailContext));
             });
         }
-        return method;
+        return withPosition(method, ctx);
     }
 
 }

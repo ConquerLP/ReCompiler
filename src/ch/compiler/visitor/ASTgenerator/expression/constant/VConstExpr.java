@@ -6,14 +6,16 @@ import ch.compiler.AST.expression.constant.c_ExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VConstExpr extends ReFuggBaseVisitor<c_ExprNode> {
 
     @Override
     public c_ExprNode visitConstArray(ReFuggParser.ConstArrayContext ctx) {
         if(ctx.constExpr() != null) {
-            return new c_ConstArray(visitConstExpr(ctx.constExpr()));
+            return withPosition(new c_ConstArray(visitConstExpr(ctx.constExpr())), ctx);
         } else {
-            return new c_ConstArray();
+            return withPosition(new c_ConstArray(), ctx);
         }
     }
 
@@ -31,7 +33,8 @@ public class VConstExpr extends ReFuggBaseVisitor<c_ExprNode> {
     @Override
     public c_ExprNode visitConstExpr(ReFuggParser.ConstExprContext ctx) {
         if (ctx.orOP() != null) {
-            return new c_OrExprNode(visitConstExpr(ctx.constExpr()), new VConstBinary().visitConstJoin(ctx.constJoin()));
+            return withPosition(new c_OrExprNode(visitConstExpr(ctx.constExpr()),
+                    new VConstBinary().visitConstJoin(ctx.constJoin())), ctx);
         } else {
             return new VConstBinary().visitConstJoin(ctx.constJoin());
         }

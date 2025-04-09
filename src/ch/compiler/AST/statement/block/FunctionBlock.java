@@ -21,7 +21,7 @@ public class FunctionBlock extends StatementNode {
     @Override
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
-        sb.append(" ".repeat(depth)).append("FunctionBlock:\n");
+        sb.append(" ".repeat(depth)).append("FunctionBlock").append(position).append("\n");
         final int deeper = depth + 1;
         if(!statements.isEmpty()) {
             statements.forEach(s -> sb.append(s.toString(deeper)).append("\n"));

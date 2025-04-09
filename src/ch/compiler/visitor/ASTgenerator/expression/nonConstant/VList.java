@@ -5,6 +5,8 @@ import ch.compiler.AST.expression.nonConstant.list.ListExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VList extends ReFuggBaseVisitor<ExprNode> {
 
     @Override
@@ -18,7 +20,7 @@ public class VList extends ReFuggBaseVisitor<ExprNode> {
                 list.addExpression(visitSubList(subListContext));
             });
         }
-        return list;
+        return withPosition(list, ctx);
     }
 
     @Override

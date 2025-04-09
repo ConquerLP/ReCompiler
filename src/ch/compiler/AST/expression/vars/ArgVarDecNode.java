@@ -18,7 +18,7 @@ public class ArgVarDecNode extends VarDecNode {
     @Override
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
-        sb.append(" ".repeat(depth)).append("Argument: ").append(super.toString());
+        sb.append(" ".repeat(depth)).append("Argument").append(position).append(super.toString());
         return sb.toString();
     }
 

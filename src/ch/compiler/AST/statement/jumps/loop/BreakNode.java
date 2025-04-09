@@ -4,7 +4,7 @@ public class BreakNode extends LoopJump {
 
     @Override
     public String toString(int depth) {
-        return " ".repeat(depth) + "Break";
+        return " ".repeat(depth) + "Break" + position;
     }
 
 }

@@ -17,7 +17,7 @@ public class MainNode extends ASTNode {
 
     @Override
     public String toString(int depth) {
-        return " ".repeat(depth) + "Main:\n" + mainBlock.toString(depth + 1);
+        return " ".repeat(depth) + "Main" + position + "\n" + mainBlock.toString(depth + 1);
     }
 
 }

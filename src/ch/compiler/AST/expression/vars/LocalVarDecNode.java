@@ -24,7 +24,7 @@ public class LocalVarDecNode extends VarDecNode {
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
-        sb.append(" ".repeat(depth)).append("LocalVariable: ").append(modifier).append(" ").append(super.toString());
+        sb.append(" ".repeat(depth)).append("LocalVariable").append(position).append(modifier).append(" ").append(super.toString());
         if(value != null) {
             sb.append(value.toString(deeper));
         }

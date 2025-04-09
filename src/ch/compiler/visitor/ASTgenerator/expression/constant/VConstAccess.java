@@ -5,11 +5,13 @@ import ch.compiler.AST.expression.constant.c_ExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VConstAccess extends ReFuggBaseVisitor<c_ExprNode> {
 
     @Override
     public c_ExprNode visitConstVar(ReFuggParser.ConstVarContext ctx) {
-        return new c_VarExprNode(ctx.getText());
+        return withPosition(new c_VarExprNode(ctx.getText()), ctx);
     }
 
     @Override
@@ -18,7 +20,7 @@ public class VConstAccess extends ReFuggBaseVisitor<c_ExprNode> {
         ctx.constExpr().forEach(constExprContext -> {
             arrayExprNode.add(visitConstExpr(constExprContext));
         });
-        return arrayExprNode;
+        return withPosition(arrayExprNode, ctx);
     }
 
 }

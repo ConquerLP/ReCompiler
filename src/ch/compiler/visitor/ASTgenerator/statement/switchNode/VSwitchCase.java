@@ -6,6 +6,8 @@ import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 import ch.compiler.visitor.ASTgenerator.statement.VCheck;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VSwitchCase extends ReFuggBaseVisitor<StatementNode> {
 
     @Override
@@ -14,7 +16,7 @@ public class VSwitchCase extends ReFuggBaseVisitor<StatementNode> {
         ctx.caseBlock().forEach(caseBlockContext -> {
             switchNode.addCase(new VCaseBlock().visitCaseBlock(caseBlockContext));
         });
-        return switchNode;
+        return withPosition(switchNode, ctx);
     }
 
 }

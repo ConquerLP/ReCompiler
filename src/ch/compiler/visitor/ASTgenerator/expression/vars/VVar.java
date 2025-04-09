@@ -11,32 +11,35 @@ import ch.compiler.visitor.ASTgenerator.expression.nonConstant.VList;
 import ch.compiler.visitor.ASTgenerator.function.VVarDesc;
 import ch.compiler.visitor.ASTgenerator.typeModifier.VTypeModifier;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VVar extends ReFuggBaseVisitor<VarDecNode> {
 
     @Override
     public VarDecNode visitVarDec(ReFuggParser.VarDecContext ctx) {
-        if(ctx.orExpression() != null ){
-            return new LocalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
+        if (ctx.orExpression() != null) {
+            return withPosition(new LocalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
                     new VVarDesc().visitVarDescription(ctx.varDescription()),
                     new VTypeModifier().visitTypemodifier(ctx.typemodifier()),
-                    new VBinary().visitOrExpression(ctx.orExpression()));
-        } else if(ctx.list() != null ){
-            return new LocalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
+                    new VBinary().visitOrExpression(ctx.orExpression())), ctx);
+        } else if (ctx.list() != null) {
+            return withPosition(new LocalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
                     new VVarDesc().visitVarDescription(ctx.varDescription()),
                     new VTypeModifier().visitTypemodifier(ctx.typemodifier()),
-                    new VList().visitList(ctx.list()));
+                    new VList().visitList(ctx.list())), ctx);
         } else {
-            return new LocalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
+            return withPosition(new LocalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
                     new VVarDesc().visitVarDescription(ctx.varDescription()),
-                    new VTypeModifier().visitTypemodifier(ctx.typemodifier()));
+                    new VTypeModifier().visitTypemodifier(ctx.typemodifier())), ctx);
         }
     }
 
     @Override
     public GlobalVarDecNode visitGlobalVar(ReFuggParser.GlobalVarContext ctx) {
-        return new GlobalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
+        return withPosition(new GlobalVarDecNode(VVarDesc.getVarName(ctx.varDescription()),
                 new VVarDesc().visitVarDescription(ctx.varDescription()),
                 new VTypeModifier().visitTypemodifier(ctx.typemodifier()),
-                new VConstExpr().visitConstInit(ctx.constInit()));
+                new VConstExpr().visitConstInit(ctx.constInit())), ctx);
     }
+
 }

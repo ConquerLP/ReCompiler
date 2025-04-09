@@ -17,7 +17,8 @@ public class DoWhileNode extends StatementNode {
     @Override
     public String toString(int depth) {
         final int deeper = depth + 1;
-        return " ".repeat(depth) + "DoWhile:\n"
+        return " ".repeat(depth) + "DoWhile"
+                + position + "\n"
                 + block.toString(deeper)
                 + condition.toString(deeper);
     }

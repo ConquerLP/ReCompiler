@@ -23,7 +23,7 @@ public class SwitchNode extends StatementNode {
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
-        sb.append(" ".repeat(depth)).append("Switch:\n").append(check.toString(deeper));
+        sb.append(" ".repeat(depth)).append("Switch").append(position).append("\n").append(check.toString(deeper));
         cases.forEach(c -> sb.append(c.toString(deeper)));
         return sb.toString();
     }

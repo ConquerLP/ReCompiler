@@ -17,7 +17,7 @@ public class ReturnNode extends FunctionJump {
     @Override
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
-        sb.append(" ".repeat(depth)).append("Return: ");
+        sb.append(" ".repeat(depth)).append("Return").append(position);
         if (expr != null) {
             sb.append(expr);
         } else {

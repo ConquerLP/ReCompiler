@@ -4,7 +4,7 @@ public class ContinueNode extends LoopJump {
 
     @Override
     public String toString(int depth) {
-        return "".repeat(depth) + "Continue";
+        return "".repeat(depth) + "Continue" + position;
     }
 
 }

@@ -4,6 +4,8 @@ import ch.compiler.AST.statement.block.FunctionBlock;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VFunctionBlock extends ReFuggBaseVisitor<FunctionBlock> {
 
     @Override
@@ -14,7 +16,7 @@ public class VFunctionBlock extends ReFuggBaseVisitor<FunctionBlock> {
                 functionBlock.addStatement(new VBlockPart().visitFunctionBlockStmt(stmt));
             });
         }
-        return functionBlock;
+        return withPosition(functionBlock, ctx);
     }
 
 }

@@ -19,7 +19,7 @@ public class GlobalVarDecNode extends VarDecNode {
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
-        sb.append(" ".repeat(depth)).append("GlobalVariable: ").append(modifier).append(" ").append(super.toString());
+        sb.append(" ".repeat(depth)).append("GlobalVariable").append(position).append(modifier).append(" ").append(super.toString());
         if(value != null) {
             sb.append(value.toString(deeper));
         }

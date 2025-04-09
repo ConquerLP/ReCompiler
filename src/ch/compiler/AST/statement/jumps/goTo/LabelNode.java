@@ -15,7 +15,7 @@ public class LabelNode extends StatementNode {
 
     @Override
     public String toString(int depth) {
-        return " ".repeat(depth) + label + "\n" + block.toString(depth + 1);
+        return " ".repeat(depth) + "Label" + position + label + "\n" + block.toString(depth + 1);
     }
 
 }

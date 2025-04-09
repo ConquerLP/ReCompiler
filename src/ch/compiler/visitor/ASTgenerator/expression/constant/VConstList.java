@@ -4,6 +4,8 @@ import ch.compiler.AST.expression.constant.list.c_ListExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VConstList extends ReFuggBaseVisitor<c_ListExprNode> {
 
     @Override
@@ -17,14 +19,14 @@ public class VConstList extends ReFuggBaseVisitor<c_ListExprNode> {
                 list.addExpression(visitConstSubList(subListContext));
             });
         }
-        return list;
+        return withPosition(list, ctx);
     }
 
     @Override
     public c_ListExprNode visitConstSubList(ReFuggParser.ConstSubListContext ctx) {
         c_ListExprNode list = new c_ListExprNode();
         list.addExpressions(new VConstMany().visitConstExprMany(ctx.constExprMany()));
-        return list;
+        return withPosition(list, ctx);
     }
 
 }

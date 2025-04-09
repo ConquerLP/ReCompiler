@@ -5,6 +5,8 @@ import ch.compiler.AST.expression.constant.unary.pre.*;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VConstUnary extends ReFuggBaseVisitor<c_ExprNode> {
 
     @Override
@@ -12,9 +14,9 @@ public class VConstUnary extends ReFuggBaseVisitor<c_ExprNode> {
         c_ExprNode exprNode = new VConstExpr().visitConstFactor(ctx.constFactor());
         if(ctx.preOP() != null) {
             return switch (ctx.preOP().getText()) {
-                case "!", "not" -> new c_NotExprNode(exprNode);
-                case "-" -> new c_NegExprNode(exprNode);
-                case "+" -> new c_PlusExprNode(exprNode);
+                case "!", "not" -> withPosition(new c_NotExprNode(exprNode), ctx);
+                case "-" -> withPosition(new c_NegExprNode(exprNode), ctx);
+                case "+" -> withPosition(new c_PlusExprNode(exprNode), ctx);
                 default -> throw new RuntimeException("Unknown unary operator: " + ctx.preOP().getText());
             };
         } else {

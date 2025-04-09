@@ -13,7 +13,7 @@ public class CheckNode extends ASTNode {
 
     @Override
     public String toString(int depth) {
-        return " ".repeat(depth) + "Condition: " + condition.toString();
+        return " ".repeat(depth) + "Condition" + position + condition.toString();
     }
 
 }

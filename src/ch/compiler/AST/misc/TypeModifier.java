@@ -1,7 +1,5 @@
 package ch.compiler.AST.misc;
 
-import ch.compiler.AST.misc.type.Type;
-
 public class TypeModifier {
 
     public final int FINAL = 0, STATIC = 1, NONE = 2;
@@ -29,10 +27,10 @@ public class TypeModifier {
         String modifier = switch (this.modifier) {
             case FINAL -> "final";
             case STATIC -> "static";
-            case NONE -> "none";
+            case NONE -> "no modifier";
             default -> throw new IllegalArgumentException("Invalid modifier: " + this.modifier);
         };
-        return String.format("%-10s", modifier);
+        return String.format("%-12s", modifier);
     }
 
 }

@@ -1,4 +1,4 @@
-/*
+
 func: int f(){
     while(true){
 
@@ -35,7 +35,6 @@ class: Point isa: Cunt {
         method: int[][] getX(int[][] a, int b) {}
 }
 
-*/
 main: {
 /*
     A.a();
@@ -52,10 +51,7 @@ main: {
     this.a[0];
     this.a()[0];
     this = {1};
-    */
-    // this one crashes
     A.a() = {1};
-/*
     int[1] a;
     int[2] b = {1};
     int[3] c = 1;
@@ -64,6 +60,5 @@ main: {
     Class a = new A();
     f(new A());
     f(new A().a()[g()].b[f(x)]);
-
-*/
+    */
 }

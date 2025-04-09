@@ -5,9 +5,14 @@ import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 import ch.compiler.visitor.ASTgenerator.statement.block.VFunctionBlock;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VLabel extends ReFuggBaseVisitor<LabelNode> {
+
     @Override
     public LabelNode visitLabel(ReFuggParser.LabelContext ctx) {
-        return new LabelNode(ctx.identifier().getText(), new VFunctionBlock().visitFunctionBlock(ctx.functionBlock()));
+        return withPosition(new LabelNode(ctx.identifier().getText(),
+                new VFunctionBlock().visitFunctionBlock(ctx.functionBlock())), ctx);
     }
+
 }

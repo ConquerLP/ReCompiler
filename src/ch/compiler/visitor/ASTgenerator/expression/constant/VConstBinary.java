@@ -7,12 +7,15 @@ import ch.compiler.AST.expression.constant.c_ExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VConstBinary extends ReFuggBaseVisitor<c_ExprNode> {
 
     @Override
     public c_ExprNode visitConstJoin(ReFuggParser.ConstJoinContext ctx) {
         if(ctx.andOP() != null) {
-            return new c_AndExprNode(visitConstJoin(ctx.constJoin()), visitConstEQ(ctx.constEQ()));
+            return withPosition(new c_AndExprNode(visitConstJoin(ctx.constJoin()),
+                    visitConstEQ(ctx.constEQ())), ctx);
         } else {
             return visitConstEQ(ctx.constEQ());
         }
@@ -23,9 +26,11 @@ public class VConstBinary extends ReFuggBaseVisitor<c_ExprNode> {
         if(ctx.eqOP() != null) {
             return switch(ctx.eqOP().getText()) {
                 case "==" ->
-                    new c_EQExprNode(visitConstEQ(ctx.constEQ()), visitConstRel(ctx.constRel()));
+                        withPosition(new c_EQExprNode(visitConstEQ(ctx.constEQ()),
+                                visitConstRel(ctx.constRel())), ctx);
                 case "!=" ->
-                    new c_NQExprNode(visitConstEQ(ctx.constEQ()), visitConstRel(ctx.constRel()));
+                        withPosition(new c_NQExprNode(visitConstEQ(ctx.constEQ()),
+                                visitConstRel(ctx.constRel())), ctx);
                 default ->
                     throw new RuntimeException("Unknown equality operator: " + ctx.eqOP().getText());
             };
@@ -39,13 +44,17 @@ public class VConstBinary extends ReFuggBaseVisitor<c_ExprNode> {
         if(ctx.relOP() != null) {
             return switch (ctx.relOP().getText()) {
                 case "<" ->
-                    new c_LTExprNode(visitConstRel(ctx.constRel()), visitConstLogic(ctx.constLogic()));
+                        withPosition(new c_LTExprNode(visitConstRel(ctx.constRel()),
+                                visitConstLogic(ctx.constLogic())), ctx);
                 case "<=" ->
-                    new c_LEExprNode(visitConstRel(ctx.constRel()), visitConstLogic(ctx.constLogic()));
+                        withPosition(new c_LEExprNode(visitConstRel(ctx.constRel()),
+                                visitConstLogic(ctx.constLogic())), ctx);
                 case ">" ->
-                    new c_GTExprNode(visitConstRel(ctx.constRel()), visitConstLogic(ctx.constLogic()));
+                        withPosition(new c_GTExprNode(visitConstRel(ctx.constRel()),
+                                visitConstLogic(ctx.constLogic())), ctx);
                 case ">=" ->
-                    new c_GEExprNode(visitConstRel(ctx.constRel()), visitConstLogic(ctx.constLogic()));
+                        withPosition(new c_GEExprNode(visitConstRel(ctx.constRel()),
+                                visitConstLogic(ctx.constLogic())), ctx);
                 default ->
                     throw new RuntimeException("Unknown relational operator: " + ctx.relOP().getText());
             };
@@ -59,9 +68,11 @@ public class VConstBinary extends ReFuggBaseVisitor<c_ExprNode> {
         if(ctx.constLogic() != null) {
             return switch (ctx.constLogic().getText()) {
                 case "+" ->
-                    new c_AddExprNode(visitConstLogic(ctx.constLogic()), visitConstTerm(ctx.constTerm()));
+                        withPosition(new c_AddExprNode(visitConstLogic(ctx.constLogic()),
+                                visitConstTerm(ctx.constTerm())), ctx);
                 case "-" ->
-                    new c_SubExprNode(visitConstLogic(ctx.constLogic()), visitConstTerm(ctx.constTerm()));
+                        withPosition(new c_SubExprNode(visitConstLogic(ctx.constLogic()),
+                            visitConstTerm(ctx.constTerm())), ctx);
                 default ->
                     throw new RuntimeException("Unknown logical operator: " + ctx.constLogic().getText());
             };
@@ -75,11 +86,14 @@ public class VConstBinary extends ReFuggBaseVisitor<c_ExprNode> {
         if(ctx.multOP() != null) {
             return switch (ctx.multOP().getText()) {
                 case "*" ->
-                    new c_MultExprNode(visitConstTerm(ctx.constTerm()), visitConstExpo(ctx.constExpo()));
+                        withPosition(new c_MultExprNode(visitConstTerm(ctx.constTerm()),
+                            visitConstExpo(ctx.constExpo())), ctx);
                 case "/" ->
-                    new c_DivExprNode(visitConstTerm(ctx.constTerm()), visitConstExpo(ctx.constExpo()));
+                        withPosition(new c_DivExprNode(visitConstTerm(ctx.constTerm()),
+                            visitConstExpo(ctx.constExpo())), ctx);
                 case "%" ->
-                    new c_ModExprNode(visitConstTerm(ctx.constTerm()), visitConstExpo(ctx.constExpo()));
+                        withPosition(new c_ModExprNode(visitConstTerm(ctx.constTerm()),
+                            visitConstExpo(ctx.constExpo())), ctx);
                 default ->
                     throw new RuntimeException("Unknown term operator: " + ctx.multOP().getText());
             };
@@ -93,7 +107,8 @@ public class VConstBinary extends ReFuggBaseVisitor<c_ExprNode> {
         if(ctx.expOP() != null) {
             return switch (ctx.expOP().getText()) {
                 case "^", "**" ->
-                    new c_ExpoExprNode(visitConstUnary(ctx.constUnary()), visitConstExpo(ctx.constExpo()));
+                        withPosition(new c_ExpoExprNode(visitConstUnary(ctx.constUnary()),
+                            visitConstExpo(ctx.constExpo())), ctx);
                 default ->
                     throw new RuntimeException("Unknown exponentiation operator: " + ctx.expOP().getText());
             };

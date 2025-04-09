@@ -6,12 +6,14 @@ import ch.compiler.parser.ReFuggParser;
 import ch.compiler.visitor.ASTgenerator.statement.VCheck;
 import ch.compiler.visitor.ASTgenerator.statement.block.VLoopBlock;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VWhile extends ReFuggBaseVisitor<WhileNode> {
 
     @Override
     public WhileNode visitWhileStmt(ReFuggParser.WhileStmtContext ctx) {
-        return new WhileNode(new VCheck().visitCheck(ctx.check()),
-                new VLoopBlock().visitLoopBlock(ctx.loopBlock()));
+        return withPosition(new WhileNode(new VCheck().visitCheck(ctx.check()),
+                new VLoopBlock().visitLoopBlock(ctx.loopBlock())), ctx);
     }
 
 }

@@ -18,7 +18,7 @@ public class FunctionNode extends SubDecNode {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
         final int deepest = depth + 2;
-        sb.append(" ".repeat(depth)).append("Function: ").append(name).append(" returns ").append(returntype);
+        sb.append(" ".repeat(depth)).append("Function").append(position).append(name).append(" returns ").append(returntype);
         if(!args.isEmpty()) {
             sb.append("\n").append(" ".repeat(deeper)).append("Parameters:\n");
             args.forEach(arg -> sb.append(arg.toString(deepest)).append("\n"));

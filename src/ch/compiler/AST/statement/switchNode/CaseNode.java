@@ -27,9 +27,9 @@ public class CaseNode extends ASTNode {
         final int deeper = depth + 1;
         sb.append(" ".repeat(depth));
         if(isDefault) {
-            sb.append("Default:\n").append(block.toString(deeper));
+            sb.append("Default").append(position).append("\n").append(block.toString(deeper));
         } else {
-            sb.append("Case:\n").append(comparison.toString(deeper)).append(block.toString(deeper));
+            sb.append("Case").append(position).append("\n").append(comparison.toString(deeper)).append(block.toString(deeper));
         }
         return sb.toString();
     }

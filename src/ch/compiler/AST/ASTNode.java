@@ -6,10 +6,10 @@ public abstract class ASTNode {
 
     protected Position position;
 
-    public ASTNode(Position position) {
+    public abstract String toString(int depth);
+
+    public void setPosition(Position position) {
         this.position = position;
     }
-
-    public abstract String toString(int depth);
 
 }

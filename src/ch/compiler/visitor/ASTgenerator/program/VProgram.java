@@ -8,6 +8,8 @@ import ch.compiler.visitor.ASTgenerator.expression.vars.VVar;
 import ch.compiler.visitor.ASTgenerator.function.VSubDec;
 import ch.compiler.visitor.ASTgenerator.statement.jumps.VLabel;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VProgram extends ReFuggBaseVisitor<ProgramNode> {
 
     @Override
@@ -18,6 +20,6 @@ public class VProgram extends ReFuggBaseVisitor<ProgramNode> {
         ctx.globalVar().forEach(globalVar -> program.addGlobalVar(new VVar().visitGlobalVar(globalVar)));
         ctx.label().forEach(label -> program.addLabel(new VLabel().visitLabel(label)));
         program.addMain(new VMain().visitMain(ctx.main()));
-        return program;
+        return withPosition(program, ctx);
     }
 }

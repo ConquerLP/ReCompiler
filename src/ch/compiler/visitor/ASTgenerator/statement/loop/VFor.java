@@ -8,6 +8,8 @@ import ch.compiler.parser.ReFuggParser;
 import ch.compiler.visitor.ASTgenerator.statement.VStatement;
 import ch.compiler.visitor.ASTgenerator.statement.block.VLoopBlock;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VFor extends ReFuggBaseVisitor<ForNode> {
 
     @Override
@@ -15,6 +17,6 @@ public class VFor extends ReFuggBaseVisitor<ForNode> {
         StatementNode start = new VStatement().visitForStart(ctx.forStart());
         ExprNode check = new VStatement().visitForCheck(ctx.forCheck());
         ExprNode action = new VStatement().visitForAction(ctx.forAction());
-        return new ForNode(start, check, action, new VLoopBlock().visitLoopBlock(ctx.loopBlock()));
+        return withPosition(new ForNode(start, check, action, new VLoopBlock().visitLoopBlock(ctx.loopBlock())), ctx);
     }
 }

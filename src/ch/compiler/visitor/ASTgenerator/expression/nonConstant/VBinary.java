@@ -8,12 +8,15 @@ import ch.compiler.AST.expression.nonConstant.binary.rel.*;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VBinary extends ReFuggBaseVisitor<ExprNode> {
 
     @Override
     public ExprNode visitOrExpression(ReFuggParser.OrExpressionContext ctx) {
         if (ctx.orOP() != null) {
-            return new OrExprNode(visitOrExpression(ctx.orExpression()), visitAndExpression(ctx.andExpression()));
+            return withPosition(new OrExprNode(visitOrExpression(ctx.orExpression()),
+                    visitAndExpression(ctx.andExpression())), ctx);
         } else {
             return visitAndExpression(ctx.andExpression());
         }
@@ -22,7 +25,8 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
     @Override
     public ExprNode visitAndExpression(ReFuggParser.AndExpressionContext ctx) {
         if (ctx.andOP() != null) {
-            return new AndExprNode(visitAndExpression(ctx.andExpression()), visitEqualityExpression(ctx.equalityExpression()));
+            return withPosition(new AndExprNode(visitAndExpression(ctx.andExpression()),
+                    visitEqualityExpression(ctx.equalityExpression())), ctx);
         } else {
             return visitEqualityExpression(ctx.equalityExpression());
         }
@@ -33,9 +37,11 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
         if (ctx.eqOP() != null) {
             return switch (ctx.eqOP().getText()) {
                 case "==" ->
-                        new EQExprNode(visitEqualityExpression(ctx.equalityExpression()), visitRelationalExpression(ctx.relationalExpression()));
+                        withPosition(new EQExprNode(visitEqualityExpression(ctx.equalityExpression()),
+                                visitRelationalExpression(ctx.relationalExpression())), ctx);
                 case "!=" ->
-                        new NQExprNode(visitEqualityExpression(ctx.equalityExpression()), visitRelationalExpression(ctx.relationalExpression()));
+                        withPosition(new NQExprNode(visitEqualityExpression(ctx.equalityExpression()),
+                                visitRelationalExpression(ctx.relationalExpression())), ctx);
                 default -> throw new RuntimeException("Unknown equality operator: " + ctx.eqOP().getText());
             };
         } else {
@@ -48,13 +54,17 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
         if (ctx.relOP() != null) {
             return switch (ctx.relOP().getText()) {
                 case "<" ->
-                        new LTExprNode(visitRelationalExpression(ctx.relationalExpression()), visitAdditiveExpression(ctx.additiveExpression()));
+                        withPosition(new LTExprNode(visitRelationalExpression(ctx.relationalExpression()),
+                                visitAdditiveExpression(ctx.additiveExpression())), ctx);
                 case "<=" ->
-                        new LEExprNode(visitRelationalExpression(ctx.relationalExpression()), visitAdditiveExpression(ctx.additiveExpression()));
+                        withPosition(new LEExprNode(visitRelationalExpression(ctx.relationalExpression()),
+                                visitAdditiveExpression(ctx.additiveExpression())), ctx);
                 case ">" ->
-                        new GTExprNode(visitRelationalExpression(ctx.relationalExpression()), visitAdditiveExpression(ctx.additiveExpression()));
+                        withPosition(new GTExprNode(visitRelationalExpression(ctx.relationalExpression()),
+                                visitAdditiveExpression(ctx.additiveExpression())), ctx);
                 case ">=" ->
-                        new GEExprNode(visitRelationalExpression(ctx.relationalExpression()), visitAdditiveExpression(ctx.additiveExpression()));
+                        withPosition(new GEExprNode(visitRelationalExpression(ctx.relationalExpression()),
+                                visitAdditiveExpression(ctx.additiveExpression())), ctx);
                 default -> throw new RuntimeException("Unknown equality operator: " + ctx.relOP().getText());
             };
         } else {
@@ -67,9 +77,11 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
         if (ctx.addOP() != null) {
             return switch (ctx.addOP().getText()) {
                 case "+" ->
-                        new AddExprNode(visitAdditiveExpression(ctx.additiveExpression()), visitMultiplicativeExpression(ctx.multiplicativeExpression()));
+                        withPosition(new AddExprNode(visitAdditiveExpression(ctx.additiveExpression()),
+                                visitMultiplicativeExpression(ctx.multiplicativeExpression())), ctx);
                 case "-" ->
-                        new SubExprNode(visitAdditiveExpression(ctx.additiveExpression()), visitMultiplicativeExpression(ctx.multiplicativeExpression()));
+                        withPosition(new SubExprNode(visitAdditiveExpression(ctx.additiveExpression()),
+                                visitMultiplicativeExpression(ctx.multiplicativeExpression())), ctx);
                 default -> throw new RuntimeException("Unknown equality operator: " + ctx.addOP().getText());
             };
         } else {
@@ -82,11 +94,14 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
         if (ctx.multOP() != null) {
             return switch (ctx.multOP().getText()) {
                 case "*" ->
-                        new MultExprNode(visitMultiplicativeExpression(ctx.multiplicativeExpression()), visitExponentiationExpression(ctx.exponentiationExpression()));
+                        withPosition(new MultExprNode(visitMultiplicativeExpression(ctx.multiplicativeExpression()),
+                                visitExponentiationExpression(ctx.exponentiationExpression())), ctx);
                 case "/" ->
-                        new DivExprNode(visitMultiplicativeExpression(ctx.multiplicativeExpression()), visitExponentiationExpression(ctx.exponentiationExpression()));
+                        withPosition(new DivExprNode(visitMultiplicativeExpression(ctx.multiplicativeExpression()),
+                                visitExponentiationExpression(ctx.exponentiationExpression())), ctx);
                 case "%" ->
-                        new ModExprNode(visitMultiplicativeExpression(ctx.multiplicativeExpression()), visitExponentiationExpression(ctx.exponentiationExpression()));
+                        withPosition(new ModExprNode(visitMultiplicativeExpression(ctx.multiplicativeExpression()),
+                                visitExponentiationExpression(ctx.exponentiationExpression())), ctx);
                 default -> throw new RuntimeException("Unknown equality operator: " + ctx.multOP().getText());
             };
         } else {
@@ -97,9 +112,10 @@ public class VBinary extends ReFuggBaseVisitor<ExprNode> {
     @Override
     public ExprNode visitExponentiationExpression(ReFuggParser.ExponentiationExpressionContext ctx) {
         if (ctx.expOP() != null) {
-            new ExpoExprNode(visitExponentiationExpression(ctx.exponentiationExpression()), visitUnaryExpression(ctx.unaryExpression()));
+            withPosition(new ExpoExprNode(visitExponentiationExpression(ctx.exponentiationExpression()),
+                    visitUnaryExpression(ctx.unaryExpression())), ctx);
         } else {
-            return new VUnary().visitUnaryExpression(ctx.unaryExpression());
+            return withPosition(new VUnary().visitUnaryExpression(ctx.unaryExpression()), ctx);
         }
         throw new RuntimeException("Unknown exponential operator: " + ctx.expOP().getText());
     }

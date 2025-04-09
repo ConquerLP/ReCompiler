@@ -7,19 +7,20 @@ import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 import ch.compiler.visitor.ASTgenerator.expression.nonConstant.VExpr;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VFunctionJump extends ReFuggBaseVisitor<StatementNode> {
 
     @Override
     public StatementNode visitFunctionJumpStmt(ReFuggParser.FunctionJumpStmtContext ctx) {
         if (ctx.identifier() != null) {
-            return new GotoNode(ctx.identifier().getText());
+            return withPosition(new GotoNode(ctx.identifier().getText()), ctx);
         } else {
             if(ctx.expression() != null) {
-                return new ReturnNode(new VExpr().visitExpression(ctx.expression()));
+                return withPosition(new ReturnNode(new VExpr().visitExpression(ctx.expression())), ctx);
             } else {
-                return new ReturnNode();
+                return withPosition(new ReturnNode(), ctx);
             }
-
         }
     }
 

@@ -7,13 +7,15 @@ import ch.compiler.AST.expression.nonConstant.access.VarExprNode;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VAccess extends ReFuggBaseVisitor<ExprNode> {
 
     @Override
     public ExprNode visitArrayAccess(ReFuggParser.ArrayAccessContext ctx) {
         ArrayExprNode arrayExprNode = new ArrayExprNode();
         arrayExprNode.addExpression(new VExpr().visitExpression(ctx.expression()));
-        return arrayExprNode;
+        return withPosition(arrayExprNode, ctx);
     }
 
     @Override
@@ -22,7 +24,7 @@ public class VAccess extends ReFuggBaseVisitor<ExprNode> {
         ctx.exprTail().forEach(exprTailContext -> {
             new VManyExpr().visitExprTail(exprTailContext).forEach(thisExprNode::addExpression);
         });
-        return thisExprNode;
+        return withPosition(thisExprNode, ctx);
     }
 
     @Override

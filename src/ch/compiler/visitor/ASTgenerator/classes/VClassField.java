@@ -7,6 +7,8 @@ import ch.compiler.visitor.ASTgenerator.expression.constant.VConstExpr;
 import ch.compiler.visitor.ASTgenerator.function.VVarDesc;
 import ch.compiler.visitor.ASTgenerator.typeModifier.VTypeModifier;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VClassField extends ReFuggBaseVisitor<MemberVarDecNode> {
 
     @Override
@@ -17,7 +19,7 @@ public class VClassField extends ReFuggBaseVisitor<MemberVarDecNode> {
         if (ctx.constInit() != null) {
             memberVarDecNode.setExpr(new VConstExpr().visitConstInit(ctx.constInit()));
         }
-        return memberVarDecNode;
+        return withPosition(memberVarDecNode, ctx);
     }
 
 }

@@ -42,7 +42,7 @@ public class ClassNode extends ASTNode {
         final int deeper = depth + 1;
         final int deepest = depth + 2;
         sb.append(" ".repeat(depth));
-        sb.append("Class: ").append(name).append(position);
+        sb.append("Class").append(position).append(name);
         if(hasParent) {
             sb.append(" extends ").append(parent);
         }

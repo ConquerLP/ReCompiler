@@ -41,7 +41,7 @@ public class ProgramNode extends ASTNode {
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
         int deeper = depth + 1;
-        sb.append("Program:\n");
+        sb.append("Program").append(position).append("\n");
         classes.forEach(c -> sb.append(c.toString(deeper)));
         functions.forEach(f -> sb.append(f.toString(deeper)));
         globalVars.forEach(g -> sb.append(g.toString(deeper)));

@@ -26,12 +26,12 @@ public class IfNode extends StatementNode {
         final int deeper = depth + 1;
         final int deepest = depth + 2;
         sb.append(" ".repeat(depth));
-        sb.append("If:\n");
+        sb.append("If").append(position).append("\n");
         sb.append(condition.toString(deeper));
         sb.append(ifBlock.toString(deepest));
         if(elseBlock != null) {
             sb.append(" ".repeat(depth));
-            sb.append("Else:\n");
+            sb.append("Else").append(position).append("\n");
             sb.append(elseBlock.toString(deeper));
         }
         return sb.toString();

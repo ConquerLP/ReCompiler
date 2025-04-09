@@ -9,6 +9,7 @@ import ch.compiler.visitor.ASTgenerator.expression.nonConstant.VBinary;
 import ch.compiler.visitor.ASTgenerator.expression.nonConstant.VExpr;
 import ch.compiler.visitor.ASTgenerator.expression.vars.VVar;
 import ch.compiler.visitor.ASTgenerator.statement.block.VFunctionBlock;
+import ch.compiler.visitor.ASTgenerator.statement.loop.VDoWhile;
 import ch.compiler.visitor.ASTgenerator.statement.loop.VFor;
 import ch.compiler.visitor.ASTgenerator.statement.loop.VWhile;
 import ch.compiler.visitor.ASTgenerator.statement.switchNode.VSwitchCase;
@@ -22,7 +23,7 @@ public class VStatement extends ReFuggBaseVisitor<StatementNode> {
         } else if (ctx.whileStmt() != null) {
             return new VWhile().visitWhileStmt(ctx.whileStmt());
         } else if (ctx.doWhileStmt() != null) {
-            return new VWhile().visitDoWhileStmt(ctx.doWhileStmt());
+            return new VDoWhile().visitDoWhileStmt(ctx.doWhileStmt());
         } else if (ctx.forStmt() != null) {
             return new VFor().visitForStmt(ctx.forStmt());
         } else if (ctx.switchCase() != null) {
@@ -58,4 +59,5 @@ public class VStatement extends ReFuggBaseVisitor<StatementNode> {
             return new VBinary().visitOrExpression(ctx.orExpression());
         } else return null;
     }
+
 }

@@ -8,27 +8,29 @@ import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 import ch.compiler.visitor.ASTgenerator.statement.block.VFunctionBlock;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VSubDec extends ReFuggBaseVisitor<SubDecNode> {
 
     @Override
     public FunctionNode visitFunc(ReFuggParser.FuncContext ctx) {
-        return new FunctionNode(VVarDesc.getFunctionName(ctx.fHeader()),
+        return withPosition(new FunctionNode(VVarDesc.getFunctionName(ctx.fHeader()),
                 new VFunctionBlock().visitFunctionBlock(ctx.functionBlock()),
                 new VArgList().visitArgList(ctx.fParam().argList()),
-                new VVarDesc().visitFHeader(ctx.fHeader()));
+                new VVarDesc().visitFHeader(ctx.fHeader())), ctx);
     }
 
     @Override
     public MethodNode visitMethod(ReFuggParser.MethodContext ctx) {
-        return new MethodNode(VVarDesc.getFunctionName(ctx.fHeader()),
+        return withPosition(new MethodNode(VVarDesc.getFunctionName(ctx.fHeader()),
                 new VFunctionBlock().visitFunctionBlock(ctx.functionBlock()),
                 new VArgList().visitArgList(ctx.fParam().argList()),
-                new VVarDesc().visitFHeader(ctx.fHeader()));
+                new VVarDesc().visitFHeader(ctx.fHeader())), ctx);
     }
 
     @Override
     public ConstructorNode visitClassConstructor(ReFuggParser.ClassConstructorContext ctx) {
-        return new ConstructorNode(new VFunctionBlock().visitFunctionBlock(ctx.functionBlock()),
-                new VArgList().visitArgList(ctx.fParam().argList()));
+        return withPosition(new ConstructorNode(new VFunctionBlock().visitFunctionBlock(ctx.functionBlock()),
+                new VArgList().visitArgList(ctx.fParam().argList())), ctx);
     }
 }

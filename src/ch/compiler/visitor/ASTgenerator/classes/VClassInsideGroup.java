@@ -10,6 +10,8 @@ import ch.compiler.visitor.ASTgenerator.function.VSubDec;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VClassInsideGroup {
 
     private final List<MethodNode> methods = new ArrayList<>();
@@ -47,20 +49,20 @@ public class VClassInsideGroup {
     private MethodNode visitMethod(ReFuggParser.MethodContext ctx) {
         MethodNode method = new VSubDec().visitMethod(ctx);
         method.setVisibility(visibility);
-        return method;
+        return withPosition(method, ctx);
     }
 
     private ConstructorNode visitConstructor(ReFuggParser.ClassConstructorContext ctx) {
         ConstructorNode constructor = new VSubDec().visitClassConstructor(ctx);
         constructor.setVisibility(visibility);
         constructor.setClassName(className);
-        return constructor;
+        return withPosition(constructor, ctx);
     }
 
     private MemberVarDecNode visitField(ReFuggParser.ClassFieldContext ctx) {
         MemberVarDecNode field = new VClassField().visitClassField(ctx);
         field.setVisibility(visibility);
-        return field;
+        return withPosition(field, ctx);
     }
 
 }

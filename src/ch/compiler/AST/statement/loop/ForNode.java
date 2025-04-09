@@ -30,7 +30,7 @@ public class ForNode extends StatementNode {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
         final int deepest = depth + 2;
-        sb.append("For:\n");
+        sb.append("For").append(position).append("\n");
         String firstType = hasVarDec ? "VarDeclaration" : "Statement" + " (first):\n";
         sb.append(" ".repeat(deeper)).append(firstType);
         if(first != null) {

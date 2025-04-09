@@ -12,7 +12,7 @@ public class GotoNode extends StatementNode {
 
     @Override
     public String toString(int depth) {
-        return " ".repeat(depth) + "Goto: " + target;
+        return " ".repeat(depth) + "Goto" + position + target;
     }
 
 }

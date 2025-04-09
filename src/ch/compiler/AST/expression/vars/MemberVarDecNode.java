@@ -28,8 +28,9 @@ public class MemberVarDecNode extends VarDecNode {
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
-        sb.append(" ".repeat(depth)).append("Member in class: ");
-        sb.append(typeModifier).append(" ").append(visibility).append(" ").append(super.toString());
+        //sb.append(" ".repeat(depth)).append("Member in class").append(position);
+        sb.append(" ".repeat(depth)).append(position).append(super.toString()).append(" ").append(typeModifier).append(" ").append(visibility);
+        //sb.append(typeModifier).append(" ").append(visibility).append(" ").append(super.toString());;
         if(initExpr != null) {
             sb.append(initExpr.toString(deeper));
         }

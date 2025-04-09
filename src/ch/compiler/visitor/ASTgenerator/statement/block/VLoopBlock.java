@@ -4,6 +4,8 @@ import ch.compiler.AST.statement.block.LoopBlock;
 import ch.compiler.parser.ReFuggBaseVisitor;
 import ch.compiler.parser.ReFuggParser;
 
+import static ch.compiler.utils.ASTUtils.withPosition;
+
 public class VLoopBlock extends ReFuggBaseVisitor<LoopBlock> {
 
     @Override
@@ -12,7 +14,7 @@ public class VLoopBlock extends ReFuggBaseVisitor<LoopBlock> {
         ctx.loopBlockStmt().forEach(stmt -> {
             loopBlock.addStatement(new VBlockPart().visitLoopBlockStmt(stmt));
         });
-        return loopBlock;
+        return withPosition(loopBlock, ctx);
     }
 
 }
