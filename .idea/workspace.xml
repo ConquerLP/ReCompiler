@@ -7,73 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="toString, added pos">
-      <change afterPath="$PROJECT_DIR$/src/ch/compiler/utils/ASTUtils.java" afterDir="false" />
+    <list default="true" id="be3a64ec-77fd-4bfc-9bdb-57a51458b169" name="Changes" comment="added pos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.fugg" beforeDir="false" afterPath="$PROJECT_DIR$/demo.fugg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/ASTNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/classes/ClassNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/classes/ClassNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/ExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/BinaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/nonConstant/binary/BinaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/ArgVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/ArgVarDecNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/GlobalVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/GlobalVarDecNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/LocalVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/LocalVarDecNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/MemberVarDecNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/expression/vars/MemberVarDecNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/function/ConstructorNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/function/ConstructorNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/function/FunctionNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/function/FunctionNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/function/MethodNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/function/MethodNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/misc/TypeModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/misc/TypeModifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/program/MainNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/program/MainNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/program/ProgramNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/program/ProgramNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/CheckNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/CheckNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/IfNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/IfNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/StatementNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/StatementNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/block/FunctionBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/block/FunctionBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/block/LoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/block/LoopBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/function/ReturnNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/function/ReturnNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/goTo/GotoNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/goTo/GotoNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/goTo/LabelNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/goTo/LabelNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/loop/BreakNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/loop/BreakNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/loop/ContinueNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/jumps/loop/ContinueNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/DoWhileNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/DoWhileNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/ForNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/ForNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/WhileNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/loop/WhileNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/CaseNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/CaseNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/SwitchNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/AST/statement/switchNode/SwitchNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/utils/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/utils/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/classes/VClassDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/classes/VClassDec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/classes/VClassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/classes/VClassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/classes/VClassInsideGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/classes/VClassInsideGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstBinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstExpr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstUnary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/constant/VConstUnary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VBinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VExpr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VLiterals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VLiterals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VSubCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VSubCall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VUnary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/nonConstant/VUnary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/vars/VVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/expression/vars/VVar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/function/VArgList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/function/VArgList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/function/VSubDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/function/VSubDec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/program/VMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/program/VMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/program/VProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/program/VProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VIf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/VStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/block/VFunctionBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/block/VFunctionBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/block/VLoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/block/VLoopBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VFunctionJump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VFunctionJump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VLoopJump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/jumps/VLoopJump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VDoWhile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VDoWhile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VFor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VWhile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/loop/VWhile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/switchNode/VSwitchCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/visitor/ASTgenerator/statement/switchNode/VSwitchCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFugg.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/parser/ReFuggLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/compiler/utils/ASTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/compiler/utils/ASTUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +87,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -259,7 +200,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="added generated files" />
     <MESSAGE value="test" />
     <MESSAGE value="dfhbg" />
     <MESSAGE value="setup" />
@@ -284,6 +224,7 @@
     <MESSAGE value="start toString" />
     <MESSAGE value="doing ast toString" />
     <MESSAGE value="toString, added pos" />
-    <option name="LAST_COMMIT_MESSAGE" value="toString, added pos" />
+    <MESSAGE value="added pos" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pos" />
   </component>
 </project>

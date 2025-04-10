@@ -6,6 +6,7 @@ import ch.compiler.AST.function.ConstructorNode;
 import ch.compiler.AST.function.MethodNode;
 import ch.compiler.utils.StringUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +38,12 @@ public class ClassNode extends ASTNode {
     }
 
     @Override
+    public void dumpTree(Appendable out, int depth) throws IOException {
+        prefix(out, depth);
+        out.append("ClassNode").append(name).append("\n");
+
+    }
+
     public String toString(int depth) {
         StringBuilder sb = new StringBuilder();
         final int deeper = depth + 1;
